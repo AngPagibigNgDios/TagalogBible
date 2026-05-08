@@ -1,0 +1,252 @@
+
+/* --- SERIF FONTS --- */
+
+@font-face {
+    font-family: 'Literata';
+    src: url('../../fonts/serif/Literata/Literata-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Literata';
+    src: url('../../fonts/serif/Literata/Literata-Italic-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../../fonts/Cinzel/Cinzel-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 900;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../fonts/serif/Lora/Lora-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../fonts/serif/Lora/Lora-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../../fonts/serif/Gelasio/Gelasio-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../../fonts/serif/Gelasio/Gelasio-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+/* --- SANS-SERIF (UI) FONTS --- */
+
+
+
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../../fonts/sans/Arimo/Arimo-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../../fonts/sans/Arimo/Arimo-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/sans/Inter/Inter-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/sans/Inter/Inter-Italic-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../../fonts/sans/Lexend/Lexend-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/sans/Open_Sans/OpenSans-VariableFont_wdth_wght.woff2') format('woff2-variations');
+    font-weight: 300 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/sans/Open_Sans/OpenSans-Italic-VariableFont_wdth_wght.woff2') format('woff2-variations');
+    font-weight: 300 800;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../../fonts/sans/Public_Sans/PublicSans-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../../fonts/sans/Public_Sans/PublicSans-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+
+
+
+/* Literata: Range 200 - 900 */
+.literata-Diglot, .litF {
+  font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Lora: Range 400 - 700 */
+.lora-Diglot, .lorF {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Gelasio: Range 400 - 700 */
+.gelasio-Diglot, .elaF {
+  font-family: "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Open Sans: Range 300 - 800 */
+.open-sans-Diglot, .opsF {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Arimo: Range 400 - 700 */
+.arimo-Diglot, .ariF {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Inter: Range 100 - 900 */
+.inter-Diglot, .indF {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+
+/* Cinzel: Range 400 - 900 */
+.cinzel-Diglot, .czlF {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+
+/* weight Use a value from 100 to 900
+uniquifier Use a unique and descriptive class name
+ */
+.lexend-Diglot, .lexF{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* // weight Use a value from 300 to 700
+// uniquifier Use a unique and descriptive class name */
+
+/* // weight: Use a value from 100 to 900
+// uniquifier: Use a unique and descriptive class name */
+
+.public-sans-Diglot, .pbsF {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+.FW200 .FW300 .FW400 .FW450 .FW500 .FW550 .FW600 .FW650 .FW700 .FW800 .FW900
+
+
+.FW200 { font-weight: 200; }
+.FW300 { font-weight: 300; }
+.FW350 { font-weight: 300; }
+.FW400 { font-weight: 400; }
+.FW450 { font-weight: 450; }
+.FW500 { font-weight: 500; }
+.FW550 { font-weight: 550; }
+.FW600 { font-weight: 600; }
+
+
+.FW650 { font-weight: 650; }
+.FW700 { font-weight: 700; }
+.FW800 { font-weight: 800; }
+.FW900 { font-weight: 900; }
+
+
+
+
+/* litF lorF elaF opsF ariF indF lexF pbsF*/
+
+/*        FW200 FW300 FW350 FW400 FW450 FW500 FW550 FW600"> */
+
+.controls, .displaynoneMenu, #controls, #displaynoneMenu {display: none !important;}

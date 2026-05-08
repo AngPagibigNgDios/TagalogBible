@@ -1,0 +1,10 @@
+html {
+    background-color: rgb(246, 253, 255);
+    /* A dark brown that matches your wood image */
+    scroll-behavior: smooth;
+     background-image: url("defaultbackground.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+
+}

@@ -1,0 +1,898 @@
+.clink {
+  font-size: 1em;
+
+  /* Fixed width so all boxes are equal */
+  /* Fixed height */
+}
+
+.IndexChapterParent,
+.IndexChapterParent,
+.PageVerseParent {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#DisplayFlexOfBigFive,
+#DisplayFlexBigThree {
+  padding-bottom: 200px;
+}
+
+
+@media (min-width:800px){
+
+
+a.vlink,
+a.vlink:link,
+a.vlink:visited a.clink,
+a.clink:link,
+a.clink:visited {
+
+  gap: 0px;
+  height: 30px;
+  width: 30px;
+}
+
+.clink {
+  font-size: 1em;
+}
+
+}
+
+
+
+a.vlink,
+a.vlink:link,
+a.vlink:visited a.clink,
+a.clink:link,
+a.clink:visited {
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  display: inline-flex;
+  flex: 17%;
+  gap: 0px;
+
+  justify-content: center;
+
+}
+
+.verseLinks,
+.chapterLinks {
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 1em 1em;
+}
+
+.bible-container {
+  height: auto;
+  margin-bottom: 200px;
+  max-width: 1000px;
+  min-width: 200px;
+  position: absolute;
+  width: 100%;
+}
+
+
+.indeximage {
+  height: auto;
+  width: 100%;
+}
+
+.verticalimageindex {
+  height: auto;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 15px;
+  margin-top: 10px;
+  width: 24%;
+}
+
+.horizontalimageindex {
+  height: auto;
+  margin: 20px;
+  width: 40%;
+}
+
+.horizontalbiggerimageindex {
+  height: auto;
+  margin: 20px;
+  width: 42%;
+}
+
+.pinoybiblegmail {
+  margin-bottom: -5px;
+}
+
+.homepageh1 {
+  font-size: 2em;
+}
+
+.spanenglishbible,
+.spantagalogbible {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+.tdenglishbible {
+  padding: 10px 20px 10px 10px;
+}
+
+.tdtagalogbible {
+  padding: 10px 10px 10px 20px;
+}
+
+.biblepassages {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+.OtherLinks {
+  border-color: #bbbbbb;
+  border-style: solid;
+  border-width: 1px 0;
+  overflow: auto;
+  padding: 5px 10px;
+}
+
+.OtherLinks {
+  text-align: center;
+  transition: padding 0.3s ease;
+}
+
+.OtherLinks:hover {
+  background-color: #f1ffc3;
+  padding: 20px 0px;
+
+  .OtherMenu {
+    height: auto;
+  }
+}
+
+.clinkColumn {
+  display: flex;
+}
+
+#image1080,
+#image4k {
+  float: left;
+  height: auto;
+  max-width: 180px;
+  min-width: 50px;
+  width: 100%;
+}
+
+#DisplayFlexOfBigFive {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#DisplayFlexBigThree {
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+}
+
+#MenuContainer {
+  display: flex;
+  flex: 1;
+  flex: 1 0 5%;
+  flex-direction: column;
+  gap: 20px;
+  height: 80%;
+  left: 0;
+  margin-left: 0;
+  order: 2;
+  position: fixed;
+}
+
+.BibleChaptersMenu {
+  height: 650px;
+  overflow: auto;
+  padding-left: 20px;
+}
+
+@media (min-width:701px) {
+
+  .bible-container {
+    height: auto;
+    margin-bottom: 200px;
+    max-width: 750px;
+    min-width: 300px;
+    position: absolute;
+    width: 100%;
+    right: 1%;
+  }
+}
+
+.bible-container {
+  order: 1;
+
+}
+
+#DisplayFlexOfBigFive {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: flex-start;
+}
+
+#DisplayFlexBigThree {
+  justify-content: center;
+  margin-top: 50px;
+  position: absolute;
+}
+
+.BibleChaptersMenu {
+  height: 580px;
+  overflow: auto;
+  padding-left: 5px;
+  width: 70%;
+}
+
+.OtherMenu {
+  width: 62%;
+  overflow: auto;
+  font-size: .9em;
+}
+
+.OtherMenu {
+  height: 100%;
+  height: 320px;
+  max-height: 500px;
+  padding: 10px;
+}
+
+.indentHolder {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.homepageh1 {
+  margin: 1px;
+}
+
+#DisplayFlexOfBigFive {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: flex-start;
+}
+
+.diglotfullwidth {
+  width: 100%;
+}
+
+.diglotcutwidth {
+  margin: 0 auto;
+  width: 75% !important;
+}
+
+.previouschapter,
+.npspacer,
+.nextchapter {
+  font-size: 1.2em;
+}
+
+.BookIndexTitle {
+  font-size: 2.2em;
+}
+
+.OtherLinks:hover {
+  transition: ease .3s padding;
+}
+
+.OtherLinks:hover {
+  background-color: #f1ffc3;
+  padding: 10px 0px;
+
+  .OtherMenu {
+    height: auto;
+  }
+}
+
+.BookIndexChapter {
+  font-size: 1.5em;
+}
+
+
+.ChapterHomeText {
+  text-align: justify !important;
+  margin: 0px 0px 0px 0px;
+}
+
+
+.ChapterP,
+.ChapterPNI,
+.ChapterPCenter {
+  font-size: 1.2em;
+}
+
+.english {
+  font-size: 0.9em;
+}
+
+.tagalogleft,
+.diglotboth {
+  font-size: 1em;
+}
+
+.diglotnav {
+  font-size: 1.2em;
+}
+
+.bibleduo {
+  font-size: 0.9em;
+}
+
+.LCOldTestament,
+.LCNewTestament {
+  font-size: 1em;
+}
+
+#bgUpload {
+  font-size: 1.2em;
+}
+
+.BMONTgenesis,
+.BMONTexodus,
+.BMONTleviticus,
+.BMONTnumbers,
+.BMONTdeuteronomy,
+.BMONTjoshua,
+.BMONTjudges,
+.BMONTruth,
+.BMONT1samuel,
+.BMONT2samuel,
+.BMONT1kings,
+.BMONT2kings,
+.BMONT1chronicles,
+.BMONT2chronicles,
+.BMONTezra,
+.BMONTnehemiah,
+.BMONTesther,
+.BMONTjob,
+.BMONTpsalms,
+.BMONTproverbs,
+.BMONTecclesiastes,
+.BMONTsongofsolomon,
+.BMONTisaiah,
+.BMONTjeremiah,
+.BMONTlamentations,
+.BMONTezekiel,
+.BMONTdaniel,
+.BMONThosea,
+.BMONTjoel,
+.BMONTamos,
+.BMONTobadiah,
+.BMONTjonah,
+.BMONTmicah,
+.BMONTnahum,
+.BMONThabakkuk,
+.BMONTzephaniah,
+.BMONThaggai,
+.BMONTzechariah,
+.BMONTmalachi,
+.BMONTmatthew,
+.BMONTmark,
+.BMONTluke,
+.BMONTjohn,
+.BMONTacts,
+.BMONTromans,
+.BMONT1corinthians,
+.BMONT2corinthians,
+.BMONTgalatians,
+.BMONTephesians,
+.BMONTphilippians,
+.BMONTcolossians,
+.BMONT1thessalonians,
+.BMONT2thessalonians,
+.BMONT1timothy,
+.BMONT2timothy,
+.BMONTtitus,
+.BMONTphilemon,
+.BMONThebrews,
+.BMONTjames,
+.BMONT1peter,
+.BMONT2peter,
+.BMONT1john,
+.BMONT2john,
+.BMONT3john,
+.BMONTjude,
+.BMONTrevelation {
+  padding-left: 10px;
+}
+
+#labelTitle {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#bgUpload {
+  font-size: 1em;
+}
+
+#bgStyle {
+  font-size: 1em;
+}
+
+#buttonclick {
+  background-color: maroon;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition: padding 0.2s ease;
+}
+
+#bgColor {
+  height: 100px;
+  width: 100px;
+}
+
+#buttonclick:hover {
+  background-color: rgb(217, 255, 0);
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  padding: 20px 37px;
+}
+
+.CustomizerFlex {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.BackgroundImageFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+#labelTitleFlex {
+  display: flex;
+}
+
+#bgUploadFlex {
+  display: flex;
+}
+
+#labelTitleFlex {
+  display: flex;
+}
+
+#bgStyleFlex {
+  display: flex;
+}
+
+#applyImageThemeFlex {
+  display: flex;
+}
+
+#lesserhrnaFlex {
+  display: flex;
+}
+
+.BackgroundColorFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+#chooseplainFlex {
+  display: flex;
+}
+
+#labelTitleFlex2 {
+  display: flex;
+}
+
+#applyColorFlex {
+  display: flex;
+}
+
+.BackgroundImageFlex {
+  height: auto;
+  width: 100px;
+}
+
+#labelTitleFlex {
+  height: auto;
+  width: 100px;
+}
+
+#bgUploadFlex {
+  height: auto;
+  width: 100px;
+}
+
+#labelTitleFlex {
+  height: auto;
+  width: 100px;
+}
+
+#bgStyleFlex {
+  height: auto;
+  width: 100px;
+}
+
+#applyImageThemeFlex {
+  height: auto;
+  width: 100px;
+}
+
+#lesserhrnaFlex {
+  height: auto;
+  width: 100px;
+}
+
+.BackgroundColorFlex {
+  height: auto;
+  width: 100px;
+}
+
+#chooseplainFlex {
+  height: auto;
+  width: 100px;
+}
+
+#labelTitleFlex2 {
+  height: auto;
+  width: 100px;
+}
+
+#applyColorFlex {
+  height: auto;
+  width: 100px;
+}
+
+
+
+
+
+
+
+.bible-container,
+.previousspacernextFlexParent,
+.UpperPageParentFlexBox {
+  display: flex;
+}
+
+.bible-container,
+.UpperPageParentFlexBox {
+  flex-direction: column;
+}
+
+.previousspacernextFlexPare {
+  flex-direction: row;
+}
+
+.verseLinks,
+.chapterLinks {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+.ChapterPageTitle,
+.BookIndexTitle {
+  align-items: center;
+  justify-content: center;
+}
+
+.chapterLinks {
+  flex-direction: column;
+}
+
+.clinkColumn {
+  border-bottom: 0px solid gray;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+
+.nothinglastsBUTTHEWORDOFGOD {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+.LoveOfGodFlex {
+  display: flex;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.ChapterN1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ChapterN2 {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.N1 {
+  font-size: 1.7em;
+}
+
+.N2 {
+  font-size: 1.3em;
+}
+
+.N3 {
+  font-size: 1.1em;
+}
+
+.N4 {
+  font-size: 1em;
+}
+
+
+
+
+.bcbgPages {
+  padding: 0px 20px 20px 20px;
+}
+
+.bible-container-bg {
+  padding-bottom: 20px;
+}
+
+
+
+
+@media (max-width:970px) {}
+
+
+
+@media (max-width:700px) {
+
+  .bible-container {
+    height: auto;
+    margin-bottom: 200px;
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    right: 0% !important;
+    padding-left: 1%;
+
+
+  }
+
+  .bible-container-bg {
+    padding-bottom: 200px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .bcbgPages {
+    padding: 0px 20px 10px 20px;
+  }
+
+  .bcbgPages {
+    padding-bottom: 20px;
+  }
+
+  .horizontalimageindex {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .displaynoneMenu {
+    display: none !important;
+  }
+
+  #MenuContainer,
+  .BibleChaptersMenu,
+  .OtherMenu {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+
+@media (max-width:960px) {
+
+
+  .bible-container {
+    height: auto;
+    margin-bottom: 200px;
+
+    position: absolute;
+    width: 75%;
+    right: 0;
+    margin-left: 180px;
+    flex-grow: 3;
+
+  }
+
+
+  #MenuContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0%;
+    height: 80%;
+    left: 0%;
+  }
+
+
+
+}
+
+@media (max-width:700px) {
+
+  .bible-container {
+    height: auto;
+    margin-bottom: 200px;
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    right: 0% !important;
+    padding-left: 1%;
+
+
+  }
+
+  .bible-container-bg {
+    padding-bottom: 20px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .bcbgPages {
+    padding: 0px 20px 10px 20px;
+  }
+
+  .bcbgPages {
+    padding-bottom: 20px;
+    height: 100%;
+  }
+
+
+ .horizontalimageindex {
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+  
+    
+  }
+
+  .displaynoneMenu {
+    display: none !important;
+  }
+
+  #MenuContainer,
+  .BibleChaptersMenu,
+  .OtherMenu {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+.previousspacernextFlexParent {
+  display: flex;
+  justify-content: space-between;
+  gap: 0%;
+}
+
+
+.nextchapter{
+  display: flex !important;
+  justify-content: center;
+text-align: right;
+  a {
+    display: flex !important;
+                flex-direction: column-reverse;
+  }
+}
+
+.nextswitcher1, .nextswitcher1p  {
+  display: flex;
+}
+
+.nextswitcher, .nextswitcherp {
+  display: flex;
+}
+
+
+
+#bigthreeIndexFlexHolder {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexIndexStart {
+  order: 2;
+}
+
+.flexIndexChapterNumber {
+  order: 1;
+}
+
+.flexIndexEnd {
+  order: 3;
+}
+
+/* 1. Base Styles (Desktop) */
+.clinkColumn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  justify-content: center; /* Centers the grid */
+  margin-bottom: 20px;
+}
+
+/* Base button style for both Chapters and Verses */
+ #clinkColumn{display:flex; a{display: flex;}}
+a.clink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 233, 233);
+  box-sizing: border-box;
+  text-decoration: none;
+
+  color: #333;
+  border-radius: 4px; /* Optional: adds a slight curve */
+
+
+}
+
+/* 2. Tablet/Medium Screens (Max 960px) - 10 per row */
+@media (max-width: 960px) {
+  a.clink {
+    /* 10% width minus the gap */
+    flex: 0 0 calc(10% - 10px);
+    font-size: 1.2em;
+  }
+
+  .clinkColumn {
+    width: 90%; /* Center the container slightly */
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* 3. Small Mobile (Max 700px) - 5 per row */
+@media (max-width: 700px) {
+  a.clink {
+    /* 20% width (1/5th) minus the gap */
+    flex: 0 0 calc(20% - 10px);
+    padding: 15px 0; /* Vertical padding for better mobile tapping */
+    font-size: 1.5em;
+  }
+
+  .clinkColumn {
+    width: 100%;
+    gap: 8px; /* Slightly tighter gap on small screens */
+  }
+}
