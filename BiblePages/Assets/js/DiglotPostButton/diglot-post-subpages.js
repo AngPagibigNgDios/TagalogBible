@@ -112,9 +112,7 @@ class DiglotPostButton extends HTMLElement {
                             <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">
 
                             </form>
-                            <div class="controls-row">
-                                <div class="back-to-top control-btn" onclick="scrollToTop()"> GO UP </div>
-                            </div>
+              
                         </div>
                         <div class="controls-row input-row">
                             <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
@@ -130,17 +128,7 @@ class DiglotPostButton extends HTMLElement {
             </div>
 
 
-                        <div>
                         <combinedpostbutton></combindedpostbutton>
-                        <div class="chapter-controls">
-                        <button id="btnPrev">Previous</button>
-                        <button id="btnToggle">Disable Arrow Keys</button>
-                        <button id="btnNext">Next</button>
-                        </div>
-
-
-
-                        </div>
 
 
   </div>

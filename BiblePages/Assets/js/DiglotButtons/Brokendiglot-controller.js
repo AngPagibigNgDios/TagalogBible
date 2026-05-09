@@ -2,11 +2,7 @@ class DiglotController extends HTMLElement {
   connectedCallback () {
     // 1. Set the HTML structure
     this.innerHTML = `
-      <script>
-    function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-</script>
+      
 <div id="controls displaynoneMenu">
     <div class="controls-row">
         <div class="control-btn" onclick="showEnglishOnly()"> English </div>
@@ -25,9 +21,7 @@ class DiglotController extends HTMLElement {
                 value="Search the Bible" 
                 onblur="this.value=(this.value=='') ? 'Search the Bible' : this.value;" />
         </form>
-        <div class="controls-row">
-            <div class="back-to-top control-btn" onclick="scrollToTop()"> GO UP </div>
-        </div>
+  
     </div>
     <div class="controls-row input-row">
         <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,10,14-15, Press Enter" type="text"/>

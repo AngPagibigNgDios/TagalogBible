@@ -1,10 +1,10 @@
 html {
-    background-color: rgb(246, 253, 255);
+    background-color: rgb(59, 42, 26);
     /* A dark brown that matches your wood image */
     scroll-behavior: smooth;
-     background-image: url("defaultbackground.jpg");
+     background-image: url("/BiblePages/Assets/images/main/defaultbackground.jpg");
     background-repeat: repeat;
     background-attachment: fixed;
 
-
+colo: rgb(59, 42, 26); 
 }

@@ -689,16 +689,22 @@ a.clink:visited {
 
 /* DIGLOT MENU PAGES */
 
-#MenuContainer {
+#MenuContainer{
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 20px;
   margin-left: 1%;
-  height: 80%;
+   height: 80%;
   position: fixed;
   left: 1%;
   flex: 1 0 10%;
+
+}
+
+
+#MenuContainer, .OtherLinks {
+  max-width:250px;
 }
 
 .BibleChaptersMenu {
@@ -712,7 +718,7 @@ a.clink:visited {
   position: absolute;
   background-color: white;
   display: block;
-  width: 85%;
+  width: 92%;
 }
 
 /* DIGLOT POST BUTTON */
@@ -759,7 +765,7 @@ a.clink:visited {
 
 
 
- @media (min-width:px) {
+ @media (min-width:1101px) {
  .diglotcutwidth {
   width: 75%;
   margin: 0 auto;

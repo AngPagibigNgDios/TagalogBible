@@ -60,7 +60,7 @@ class DiglotPostButton extends HTMLElement {
                                 <span class="journalnumber">Bible Journal - 3</span>
                                 <br/>
                                 <span class="journaltitle">
-                                The Golden Gift of God is HIS LOVE.
+                                SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
                                 </span>
                             </div>
                         </a>                 
@@ -71,76 +71,13 @@ class DiglotPostButton extends HTMLElement {
                                 <span class="journalnumber">Bible Journal - 4</span>
                                 <br/>
                                 <span class="journaltitle">
-                                SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
-                                </span>
-                            </div>
-                        </a>                 
-                </div>
-                <div class="books" id="divOLDbg">
-                        <a href="../OldTestament/01-genesis.html">
-                            <div class="biblejournalposts">
-                                <span class="journalnumber">Bible Journal - 5</span>
-                                <br/>
-                                <span class="journaltitle">
-                                SHOCKING! GOD ADONAI'S VINEYARD FELL. And nothing left.
+                                There's no real enemy, than satan and his fallen angels.
                                 </span>
                             </div>
                         </a>                 
                 </div>
 
     </div>
-
-
-        <div id="combinedcontrols">
-
-
-                                
-                    <div id="controls displaynoneMenu">
-                        <div class="controls-row">
-                            <div class="control-btn" onclick="showEnglishOnly()"> English </div>
-                            <div class="control-btn" onclick="showTagalogOnly()"> Tagalog </div>
-                            <div class="control-btn" onclick="showAll()"> Diglot </div>
-                        </div>
-                        
-                        <div class="control-group">
-                                <div class="mini-btn" onclick="decreaseFont()"> SMALLER TEXT </div>
-                                <div class="mini-btn" onclick="resetFont()"> RESET </div>
-                                <div class="mini-btn" onclick="increaseFont()"> BIGGER TEXT </div>
-                        </div>
-                       
-                        <div class="search controls-row">
-                            <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">
-
-                            </form>
-                            <div class="controls-row">
-                                <div class="back-to-top control-btn" onclick="scrollToTop()"> GO UP </div>
-                            </div>
-                        </div>
-                        <div class="controls-row input-row">
-                            <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
-                        </div>
-                        <div class="controls-row">
-                            <div class="control-btn" onclick="copyEnglish()"> Copy English </div>
-                            <div class="control-btn" onclick="copyTagalog()"> Copy Tagalog </div>
-                            <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
-                        </div>
-                    </div>
-
-
-            </div>
-
-
-                        <div>
-                        <combinedpostbutton></combindedpostbutton>
-                        <div class="chapter-controls">
-                        <button id="btnPrev">Previous</button>
-                        <button id="btnToggle">Disable Arrow Keys</button>
-                        <button id="btnNext">Next</button>
-                        </div>
-
-
-
-                        </div>
 
 
   </div>

@@ -56,8 +56,8 @@ body {
 
 
 /* .bible-container, */
-.indexshadow, .bible-container-bg, .BibleChaptersMenu,
-.OtherMenu, #biblejournalpostsholder  {
+.indexshadow, .bible-container-bg, 
+.OtherMenu,  #combinedcontrols  {
   -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -69,9 +69,12 @@ body {
   transition: box-shadow 0.3s ease;
 }
 
+
+
+
 .bible-container-bg:hover,
 .BibleChaptersMenu:hover,
-.OtherMenu:hover, #biblejournalpostsholder:hover  {
+.OtherMenu:hover, #biblejournalpostsholder:hover, #combinedcontrols:hover  {
   -webkit-box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.8);
   box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.5);
 }
@@ -79,7 +82,7 @@ body {
 
 .horizontalbiggerimageindex,
 .horizontalsmallerimageindex,
-.shadow1 {
+.shadow1, .indexPanorama {
   -webkit-filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.5));
 }
@@ -682,3 +685,836 @@ flex-direction:column;
 #stats-container {position: absolute; left:-500 !important;
  text-align: center; position: absolute; bottom: 0; margin-bottom: 10px; font-family: sans-serif;
 }
+
+
+
+
+
+
+/*  --------  HEADER   ------------  */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#header {
+ 
+    color: white;
+    position: fixed;
+    z-index: 1;
+}
+.headermaroon {
+ 
+    background-color: maroon;
+
+}
+
+.headerblue {
+    background-color: #122051;
+}
+
+
+.HomeURLheader {
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+}
+
+#hrdivider {
+    width: 1.5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: flex;
+    align-items: center;
+
+    hr {
+        width: 100%;
+    }
+}
+
+#headerLink {
+    display: flex;
+}
+
+#headerVerse {
+    display: flex;
+}
+
+
+#header-content>div {
+    width: 50%;
+}
+
+@media (min-height: 801px) and (max-width:1920px) {
+
+    #display-title2 {
+        font-size: 1.4em;
+    }
+
+    #hrdivider,
+    .HomeURLheader,
+    #headerLink {
+        max-height: 30px;
+    }
+
+    .HomeURLheader {
+        font-size: 1.3em;
+    }
+
+    #header {
+
+        margin-bottom: 5px;
+
+    }
+
+    .HomeURLheader {
+        font-weight: normal;
+        text-decoration: none;
+        color: white;
+    }
+
+    #display-title {
+        text-align: left;
+        font-size: 1.2em;
+        /* margin-left: 10%; */
+        margin-top: 3px;
+        position: fixed;
+        top: 0;
+
+
+    }
+
+    @media (max-width:750px) {
+
+        #display-title2 {
+            font-size: 1em;
+        }
+
+        #header {
+            flex-direction: column !important;
+            gap: 2px;
+            padding-top: 0px;
+        }
+
+        #hrdivider,
+        .HomeURLheader,
+        #headerLink {
+            max-height: auto;
+        }
+
+        #display-title2 {
+            font-size: 1em;
+        }
+
+        #hrdivider {
+            width: 100%;
+            margin: -5px;
+            opacity: .5;
+            display: flex;
+            align-items: center;
+
+            hr {
+                width: 100%;
+
+            }
+        }
+
+
+
+
+    }
+
+
+}
+
+
+
+
+
+@media (max-height:800px) and (max-width:1536px) {
+
+
+    #hrdivider,
+    .HomeURLheader,
+    #headerLink {
+        max-height: 30px;
+    }
+
+    #header {
+        margin-bottom: 5px;
+        gap: 0px;
+        padding: 0px;
+    }
+
+
+    #display-title2 {
+        font-size: 1em;
+    }
+
+    .HomeURLheader {
+        font-size: 1em;
+    }
+
+    #display-title {
+        text-align: left;
+        font-size: 1.2em;
+        /* margin-left: 10%; */
+        margin-top: 3px;
+        position: fixed;
+        top: 0;
+
+    }
+
+    @media (max-width:700px) {
+
+        #display-title2 {
+            font-size: .9em;
+        }
+
+
+        #header {
+            flex-direction: column !important;
+            gap: 2px;
+            padding-top: 0px;
+        }
+
+        #hrdivider,
+        .HomeURLheader,
+        #headerLink {
+            max-height: auto;
+        }
+
+        #display-title2 {
+            font-size: .8em;
+        }
+
+        #hrdivider {
+            width: 100%;
+            margin: -5px;
+            opacity: .5;
+            display: flex;
+            align-items: center;
+
+            hr {
+                width: 100%;
+
+            }
+        }
+
+
+    }
+
+
+}
+
+#header::before,
+#header::after {
+    content: "";
+    flex: 1;
+    /* This makes the lines take up all available space */
+    border-bottom: 1px solid #ccc;
+    /* Adjust color and thickness here */
+    margin: 0 15px;
+    /* Adds space between the lines and the text */
+}
+
+#display-title,
+display-title2 {
+
+    z-index: 25 !important;
+    /* Higher than header */
+
+}
+
+.HomeURLheader {
+    z-index: 30 !important;
+
+}
+
+div#header {
+
+    z-index: 20 !important;
+}
+
+#header-content {
+    margin: 0px auto;
+    width: 840px;
+    font-size: 13px;
+}
+
+
+#header-content>div {
+    width: 50%;
+}
+
+/*HEADER*/
+
+
+
+
+
+/*  --------  CONTROL BUTTONS   ------------  */
+div.search {
+  width: 97%;
+}
+
+#controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: maroon;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  height: 50px;
+  z-index: 100;
+}
+
+.control-btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 5px;
+    background-color: #d9f8ff;
+    color: #000000;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: 1px solid black;
+    user-select: none;
+  transition: box-shadow 0.4s ease;
+}
+
+.mini-btn {
+  flex: 1;
+  background-color: rgb(251, 255, 35);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px 4px;
+  font-size: 0.75em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.control-btn:hover,
+.mini-btn:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+#verseInput:hover {
+  background-color: #fbffd4;
+  color: black;
+}
+
+#verseInput {
+  color: rgb(0, 0, 0);
+}
+
+.highlight-verse td {
+  background-color: #fff9d5 !important;
+}
+
+.highlight-range td {
+  background-color: #fff9d5 !important;
+}
+
+.highlight-single td {
+  background-color: #f5e9bb !important;
+}
+
+.controls-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+  flex: 1;
+  overflow-x: auto;
+}
+
+.input-row {
+  margin-bottom: 0;
+}
+
+.control-group {
+  display: flex;
+  gap: 2px;
+  flex: 0.7;
+}
+
+.control-btnx {
+  flex: 1;
+  text-align: center;
+  padding: 8px 5px;
+  background-color: #086782;
+  color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.control-groupx {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+  overflow-x: auto;
+}
+
+#verseInput,
+form#searchPassage > input#qry {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.search.controls-row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+#searchPassage {
+  flex-grow: 1;
+  display: flex;
+}
+
+#searchPassage input#qry {
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 980px) {
+  #controls {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 98% !important;
+  }
+  
+  .controls-row {
+    display: flex;
+    width: 100%;
+    gap: 4px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+  }
+  
+  .control-btn,
+    .control-btnx {
+    flex: 1;
+    white-space: nowrap;
+    padding: 8px 2px;
+    font-size: 0.85em;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  
+  .input-row {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  #verseInput,
+    form#searchPassage > input#qry,
+    div.search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+  
+  .control-group {
+    flex: 0.8;
+    display: flex;
+    gap: 2px;
+  }
+  
+  .mini-btn {
+    flex: 1;
+    padding: 6px 2px;
+  }
+}
+
+@media (max-height: 800px) and (max-width: 1536px) {
+  #verseInput,
+    form#searchPassage > input#qry {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  #controls {
+    flex-wrap: wrap;
+  }
+  
+  .control-btn {
+    flex: 1 1 18%;
+    font-size: 0.9em;
+    padding: 6px 3px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .control-btn {
+    font-size: 0.8em;
+    padding: 6px 3px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  #verseInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+  }
+}
+
+@media (min-height: 801px) and (max-width: 1920px) {
+  #verseInput,
+    form#searchPassage > input#qry {
+    font-size: 1em;
+  }
+}
+
+
+
+/*  --------  CONTROL BUTTONS   ------------  */
+
+
+
+
+/* --- SERIF FONTS --- */
+
+@font-face {
+    font-family: 'Literata';
+    src: url('../../fonts/serif/Literata/Literata-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Literata';
+    src: url('../../fonts/serif/Literata/Literata-Italic-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../../fonts/Cinzel/Cinzel-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 900;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../fonts/serif/Lora/Lora-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../fonts/serif/Lora/Lora-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../../fonts/serif/Gelasio/Gelasio-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../../fonts/serif/Gelasio/Gelasio-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+/* --- SANS-SERIF (UI) FONTS --- */
+
+
+
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../../fonts/sans/Arimo/Arimo-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../../fonts/sans/Arimo/Arimo-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/sans/Inter/Inter-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/sans/Inter/Inter-Italic-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../../fonts/sans/Lexend/Lexend-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/sans/Open_Sans/OpenSans-VariableFont_wdth_wght.woff2') format('woff2-variations');
+    font-weight: 300 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/sans/Open_Sans/OpenSans-Italic-VariableFont_wdth_wght.woff2') format('woff2-variations');
+    font-weight: 300 800;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../../fonts/sans/Public_Sans/PublicSans-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../../fonts/sans/Public_Sans/PublicSans-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+
+
+
+/* Literata: Range 200 - 900 */
+.literata-Diglot, .litF {
+  font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Lora: Range 400 - 700 */
+.lora-Diglot, .lorF {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Gelasio: Range 400 - 700 */
+.gelasio-Diglot, .elaF {
+  font-family: "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Open Sans: Range 300 - 800 */
+.open-sans-Diglot, .opsF {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Arimo: Range 400 - 700 */
+.arimo-Diglot, .ariF {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Inter: Range 100 - 900 */
+.inter-Diglot, .indF {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Cinzel: Range 400 - 900 */
+.cinzel-Diglot, .czlF {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+
+/* weight Use a value from 100 to 900
+uniquifier Use a unique and descriptive class name
+ */
+.lexend-Diglot, .lexF{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* // weight Use a value from 300 to 700
+// uniquifier Use a unique and descriptive class name */
+
+/* // weight: Use a value from 100 to 900
+// uniquifier: Use a unique and descriptive class name */
+
+.public-sans-Diglot, .pbsF {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+.FW200 .FW300 .FW400 .FW450 .FW500 .FW550 .FW600 .FW650 .FW700 .FW800 .FW900
+
+
+.FW200 { font-weight: 200; }
+.FW300 { font-weight: 300; }
+.FW350 { font-weight: 300; }
+.FW400 { font-weight: 400; }
+.FW450 { font-weight: 450; }
+.FW500 { font-weight: 500; }
+.FW550 { font-weight: 550; }
+.FW600 { font-weight: 600; }
+
+
+.FW650 { font-weight: 650; }
+.FW700 { font-weight: 700; }
+.FW800 { font-weight: 800; }
+.FW900 { font-weight: 900; }
+
+
+
+
+/* litF lorF elaF opsF ariF indF lexF pbsF*/
+
+/*        FW200 FW300 FW350 FW400 FW450 FW500 FW550 FW600"> */
+
+.controls, .displaynoneMenu, #controls, #displaynoneMenu {display: none !important;}
+
+
+.previousnextday{text-align:left; float:left;}
+.previousnextchild{font-size:1.2em;}
+.morningeveningbutton{text-align:right; float:right;}
+.morningeveningchild{font-size:1.2em;}
+
+.DevotionalTitle {margin-top:0px; margin-bottom:20px;}
+
+
+
+.bible-container-bg {  background-image: url("/BiblePages/Assets/images/journal/cornera.jpg");
+
+    /* NO REPEAT */
+    background-repeat: no-repeat;
+
+    /* PLACE IN CORNER */
+    background-position: top right;
+
+    /* KEEP ORIGINAL SIZE */
+    background-size: auto;
+
+    /* optional */
+    min-height: 200px;
+}
+
+
+
+
+.BibleChaptersMenu, #biblejournalpostsholder {background-image: url("/BiblePages/Assets/images/journal/colorbookmark.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+
+.BibleChaptersMenu, #biblejournalpostsholder{
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -webkit-box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.4);
+background: #ffffff;
+background: linear-gradient(127deg, rgba(255, 255, 255, 1) 0%, rgb(224, 249, 255) 50%, rgb(219, 241, 255) 100%);
+  border: solid thin rgb(192, 192, 192);
+  border-radius: 4px;
+  box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+
+.back-to-top {position:fixed; bottom:20px; right:20%; opacity:.5; height:50px; cursor: pointer;
+
+}
+.back-to-top:hover {position:fixed; bottom:20px; right:20%; opacity:1; background-color:white;
+.scrollup {scale:1.2; background-color:white; margin-bottom:20px;}
+
+}
+
+.scrollup {width:60px; height:48px;}
+
+#chapter{font-size:1.2em;}

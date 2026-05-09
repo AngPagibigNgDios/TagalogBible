@@ -1,5 +1,5 @@
 // ===============================
-// DIGLOT MODE (PERSISTENT)
+// HIDE SHOW BIBLE, DIGLOT TAGALOG ENGLISH DITO.
 // ===============================
 
 function applyMode (mode) {
@@ -74,8 +74,6 @@ function applyMode (mode) {
     });
   }
 
-  // SIDEBAR UPDATE
- updateSidebarLanguage (mode); 
 }
 
 // BUTTON FUNCTIONS
@@ -98,3 +96,248 @@ document.addEventListener ('DOMContentLoaded', function () {
   let savedMode = localStorage.getItem ('bibleMode') || 'both';
   applyMode (savedMode);
 });
+
+
+// ===============================
+// FONT SIZE CHANGE DITO
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  let savedFontSize = localStorage.getItem('bibleFontSize');
+  let fontSize = savedFontSize ? parseFloat(savedFontSize) : null;
+
+  function applyFontSize() {
+
+    document.querySelectorAll('.spanenglishbible').forEach(el => {
+      el.style.fontSize = fontSize + 'em';
+    });
+
+    document.querySelectorAll('.spantagalogbible').forEach(el => {
+      el.style.fontSize = fontSize + 'em';
+    });
+
+  }
+
+  window.increaseFont = function () {
+
+    if (fontSize === null) fontSize = 1;
+
+    fontSize += 0.1;
+
+    localStorage.setItem('bibleFontSize', fontSize);
+
+    applyFontSize();
+
+  };
+
+  window.decreaseFont = function () {
+
+    if (fontSize === null) fontSize = 1;
+
+    fontSize -= 0.05;
+
+    if (fontSize < 0.6) fontSize = 0.6;
+
+    localStorage.setItem('bibleFontSize', fontSize);
+
+    applyFontSize();
+
+  };
+
+  window.resetFont = function () {
+
+    fontSize = null;
+
+    localStorage.removeItem('bibleFontSize');
+
+    document.querySelectorAll('.spanenglishbible').forEach(el => {
+      el.style.fontSize = '';
+    });
+
+    document.querySelectorAll('.spantagalogbible').forEach(el => {
+      el.style.fontSize = '';
+    });
+
+  };
+
+  if (fontSize !== null) {
+    applyFontSize();
+  }
+
+});
+
+
+
+
+// ===============================
+// FONT STYLE DITO
+//
+
+
+function applyFont(fontClass) {
+
+  // SAVE
+  localStorage.setItem('fontFamilyS', fontClass);
+
+  // MAIN CONTAINER
+  const container = document.getElementById('FontChanger');
+
+  // REMOVE ALL FONT CLASSES
+  container.classList.remove(
+    'litF',
+    'lorF',
+    'elaF',
+    'opsF',
+    'indF',
+    'lexF',
+    'pbsF',
+    'ariF'
+  );
+
+  // ADD SELECTED FONT
+  container.classList.add(fontClass);
+}
+
+
+// ===============================
+// BUTTON FUNCTIONS
+// ===============================
+
+function LiterataSF() {
+  applyFont('litF');
+}
+
+function LoraSF() {
+  applyFont('lorF');
+}
+
+function GelasioSF() {
+  applyFont('elaF');
+}
+
+function OpenSS() {
+  applyFont('opsF');
+}
+
+function InterSS() {
+  applyFont('indF');
+}
+
+function LexendSS() {
+  applyFont('lexF');
+}
+
+function PublicSS() {
+  applyFont('pbsF');
+}
+
+function ArimoSS() {
+  applyFont('ariF');
+}
+
+
+// ===============================
+// AUTO RESTORE
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const saved =
+    localStorage.getItem('fontFamilyS') || 'ariF';
+
+  applyFont(saved);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+// ===============================
+// FONT WEIGHT DITO
+// ===============================
+// ===============================
+// FONT WEIGHT
+// ===============================
+
+function applyFontWeight(fontWeight) {
+
+  // SAVE
+  localStorage.setItem('fontFamilyWeight', fontWeight);
+
+  // CONTAINER
+  const container =
+    document.getElementById('FontWeightChanger');
+
+  // REMOVE OLD
+  container.classList.remove(
+    'FW200',
+    'FW300',
+    'FW350',
+    'FW400',
+    'FW450',
+    'FW500',
+    'FW550',
+    'FW600',
+    'FW650',
+    'FW700',
+    'FW800',
+    'FW900'
+  );
+
+  // ADD NEW
+  container.classList.add(fontWeight);
+}
+
+
+// ===============================
+// BUTTONS
+// ===============================
+
+function FW600FF() {
+  applyFontWeight('FW600');
+}
+
+function FW550FF() {
+  applyFontWeight('FW550');
+}
+
+function FW500FF() {
+  applyFontWeight('FW500');
+}
+
+function FW450FF() {
+  applyFontWeight('FW450');
+}
+
+function FW400FF() {
+  applyFontWeight('FW400');
+}
+
+function FW350FF() {
+  applyFontWeight('FW350');
+}
+
+
+// ===============================
+// AUTO RESTORE
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const saved =
+    localStorage.getItem('fontFamilyWeight')
+    || 'FW400';
+
+  applyFontWeight(saved);
+
+});
+
+

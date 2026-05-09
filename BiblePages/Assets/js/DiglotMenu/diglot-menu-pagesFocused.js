@@ -121,35 +121,57 @@ class DiglotMenu extends HTMLElement {
 <div class="OtherMenu" id="more-links">
 
 
-<a href="../Others/pages/bible-passages.html"><div class="OtherLinks">
-Popular Passages
-</div>
-</a>
 
 
-<a href="../Others/pages/daily-devotion/index.html">
-<div class="OtherLinks">
-<span class="tr2">Daily Devotion</span></div>
-</a>
+
+                                
+                 
+                        <div class="controls-row">
+                            <div class="control-btn" onclick="showEnglishOnly()"> English </div>
+                            <div class="control-btn" onclick="showTagalogOnly()"> Tagalog </div>
+                            <div class="control-btn" onclick="showAll()"> Diglot </div>
+                        </div>
+                        
+                        <div class="control-group">
+                                <div class="mini-btn" onclick="decreaseFont()"> SMALLER TEXT </div>
+                                <div class="mini-btn" onclick="resetFont()"> RESET </div>
+                                <div class="mini-btn" onclick="increaseFont()"> BIGGER TEXT </div>
+                        </div>
+                       
+                        <div class="search controls-row">
+                            <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">
+
+                            </form>
+
+                        </div>
+                        <div class="controls-row input-row">
+                            <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-btn" onclick="copyEnglish()"> Copy English </div>
+                            <div class="control-btn" onclick="copyTagalog()"> Copy Tagalog </div>
+                            <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
+                        </div>
+             
 
 
-<a href="../Others/pages/bridge-to-life.html">
-<div class="OtherLinks">
-<span class="tr3"></span>
-The Bridge to Life</div></a>
+         
 
-<a href="http://facebook.com/authorizedbible">
-<div class="OtherLinks">
-<span class="tr5">
-Facebook Page of<br/>
-EnglishTagalogBible.Com</span>
-</div></a>
 
-<a href="http://philnavs.org">
-<div class="OtherLinks">
-<span class="tr5" style="display:inline;">This website is</span><br/><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;"class="navigatorslink">NAVIGATORS</span><br>
-<span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
-</div></a>
+                   
+                        <combinedpostbutton></combindedpostbutton>
+                        <div class="chapter-controls">
+                        <button id="btnPrev">Previous</button>
+                        <button id="btnToggle">Disable Arrow Keys</button>
+                        <button id="btnNext">Next</button>
+                        </div>
+
+
+
+                      
+
+               
+
 
 </div>
 
