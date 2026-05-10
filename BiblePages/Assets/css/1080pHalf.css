@@ -449,10 +449,6 @@ a.clink:visited {
   justify-items: center;
 }
 
-.BackgroundImageFlex {
-  display: flex;
-  flex-direction: row;
-}
 
 #labelTitleFlex {
   display: flex;
@@ -961,3 +957,690 @@ a.clink {
         margin: 10px 10px 0px 10px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#calltoactionhanging {
+ position:relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 5% 0%;
+  height: 50px;
+  width:100%;
+  
+  text-align: center;
+}
+
+
+#calltoactionhanging2 {
+ position:relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 5% 0%;
+  height: 50px;
+  width:100%;
+
+
+  align-self:flex-end;
+  text-align: center;
+}
+
+
+
+
+/* daily devotional */
+
+#dev-content {
+  font-size: 1.2em;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.4em;
+}
+
+#dev-content>pre {
+  font-size: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.4em;
+  font-family: "Arimo", Arial, FreeSans, Helvetica, sans-serif;
+}
+
+#quote {
+  font-size: 1.5em;
+}
+
+#image10802,
+#image4k2 {
+  float: right;
+  max-width: 400px;
+  min-width: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.devotionalindex {
+  font-size: 1.2em;
+}
+
+
+
+
+
+
+
+#customizationheader {
+  font-size: 1.2em;
+  display: flex;
+}
+
+/*DIGLOT BUTTON*/
+
+#diglot-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  flex: 1 0 10%;
+  border: 2px solid rgb(10, 10, 14);
+}
+
+#diglot-holder-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  flex: 1 0 10%;
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
+
+#diglot-subholderdiglot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  flex: 1 0 10%;
+  justify-content: space-evenly;
+}
+
+.controldiglot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+  height: 30px;
+}
+
+#holderdiglottext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  width: 100%;
+  height: 180px;
+  padding-bottom:1%;
+  margin-bottom:1%;
+}
+
+.choosediglottext {
+  display: flex;
+  margin: 1%;
+    text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.choosediglot {
+  display: flex;
+  margin-top: 1%;
+  padding-top: 2%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#holderoftwonavi {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5%;
+}
+
+
+/*DIGLOT BUTTON*/
+
+
+
+#diglot-subholdertext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+height:200px;
+  width: 100%;
+  text-align: center;
+
+  border: 2px solid rgb(10, 10, 14);
+}
+
+#textsizebuttonholders {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  flex: 1 0 10%;
+  justify-content: space-evenly;
+}
+
+
+.textresizerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+  width: 15%;
+  height: 30px;
+}
+
+
+
+.textresizerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+  width: 15%;
+  height: 30px;
+}
+
+
+
+
+.textresizerButton,
+.controldiglot,
+.fontchoiceButton {
+  display: flex;
+
+}
+
+.philnavsfloat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  cursor: pointer;
+}
+
+.philnavsfloatimg {
+  width: 361px;
+  height: 40x;
+  cursor: pointer;
+}
+
+.marginparagraph {
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 1.4em;
+}
+
+.controldiglot:hover,
+.textresizerButton:hover,
+.fontchoiceButton:hover, #buttonclick:hover, .fontweightButton:hover  {
+  background-color: #daff06;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+
+#fontfacebox {
+  display: flex;
+  border: 2px solid rgb(10, 10, 14);
+
+  justify-content: center;
+  width: 100%;
+  margin: 1% auto;
+  place-items: center;
+
+}
+
+
+.fontchoiceButton {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 150px;
+  height: 40px;
+  align-content: center;
+  justify-items: center;
+  flex: 1 0 15%;
+  gap: 5%;
+  margin-bottom: 3%;
+
+
+}
+
+.fontchoicesHolder {
+  display: flex;
+  gap: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+#fontfacebox {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.fontweightHolder {
+  display: flex;
+  gap: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  flex-direction: column;
+  border: 2px solid rgb(10, 10, 14);
+}
+
+#choosediglottext {width: 100%;}
+
+
+.fontweightHolderButton {
+display: flex;
+        gap: 1%;
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 1rem;
+        flex-direction: row;
+        width: 100%;
+        flex: 1 0 20%;
+        flex-wrap: wrap;
+}
+
+
+.linerindex {width:100%; border: 1px solid black;}
+
+#customizationheader {display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; width: 100%;}
+
+
+
+.fontweightButton {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 150px;
+  height: 40px;
+  align-content: center;
+  justify-items: center;
+  gap: 5%;
+  margin-bottom: 3%;
+  cursor: pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.bible-container-bgs,
+.gray {
+  background-color: #adadad;
+  color: black;
+}
+
+.bible-container-bgs,
+.blue {
+  color: #ffffff;
+  background-color: #416e97;
+}
+.bible-container-bgs,
+.brown {
+background-color: #bbb19c;
+        color: #33311e;}
+
+.bible-container-bgs,
+.sepia {
+        background-color:#b8a88a;
+        color:white;
+}
+
+
+.bible-container-bgs,
+.brownish {
+        background-color: #897560;
+        color: white;
+}
+
+
+
+.bible-container-bgs,
+.visionimpaired {
+        background-color: #000000 !important;
+        color: white;
+}
+
+
+
+
+
+
+/** BACKGROUND IMAGE AND COLOR **/
+
+
+
+.BackgroundImageFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+#bgUploadFlex {
+  display: flex;
+}
+
+
+#bgStyleFlex {
+  display: flex;
+}
+
+#applyImageThemeFlex {
+  display: flex;
+}
+
+#lesserhrnaFlex {
+  display: flex;
+}
+
+.BackgroundColorFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+#chooseplainFlex {
+  display: flex;
+}
+
+#labelTitleFlex2 {
+  display: flex;
+}
+
+#applyColorFlex {
+  display: flex;
+}
+
+.BackgroundImageFlex {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+#bgStyleFlex {
+  width: 100px;
+  height: auto;
+}
+
+
+
+#lesserhrnaFlex {
+  width: 100px;
+  height: auto;
+}
+
+.BackgroundColorFlex {
+  width: 100px;
+  height: auto;
+}
+
+#chooseplainFlex {
+  width: 100px;
+  height: auto;
+}
+
+#labelTitleFlex2 {
+  width: 100px;
+  height: auto;
+}
+
+#applyColorFlex {
+  width: 100px;
+  height: auto;
+}
+
+
+
+.CustomizerFlex {
+  display: flex;
+  justify-items: center;
+  flex-direction: row;
+  gap:5%;
+}
+
+#plaincoloronly {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  flex: 1 0 10%;
+  border: 2px solid rgb(10, 10, 14);
+width: 100%;
+
+}
+
+
+#plainimageonly {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5%;
+        flex: 1 0 10%;
+        border: 2px solid rgb(10, 10, 14);
+        width: 100%;
+        height: 250px;
+        align-items: center;
+}
+
+
+
+
+.BackgroundImageFlex {
+  width: 100%;
+  height: auto;
+  text-align: center;
+align-self: center;
+justify-content:center;
+
+h3{  width: 100%;
+  height: auto;
+  text-align: center;
+align-self: center;
+justify-content:center;}
+}
+
+.uploadholder {display:flex;
+flex-direction: column;
+width: 100%;
+justify-content: flex-start;
+margin-left:2%;
+}
+
+#labelTitleFlex {
+  display: flex;
+  width: 50%;
+  height: auto;
+}
+
+    #labelTitle {
+        font-size: 1.2em;
+        font-weight: bold;
+        width: 100% !important;
+        display: flex;
+    }
+
+        #labelTitleFlex {
+        height: auto;
+        width: 100% !important;
+    }
+
+
+
+#bgUploadFlex {
+  width: 50%;
+  height: auto;
+}
+
+
+#applyImageThemeFlex {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+#buttonclick{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 150px;
+  height: 40px;
+  align-content: center;
+  justify-items: center;
+  gap: 5%;
+  margin-bottom: 3%;
+  cursor: pointer;
+
+
+
+}
+
+.BackgroundImageFlex{display: flex; flex-direction: column !important; width: 100% !important;}
+
+
+.BackgroundImageFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.uploadholder {display: flex; flex-direction: column;}
+
+    #labelTitleFlex2 {
+        height: auto;
+        width: 100px;
+        justify-content: center;
+    }
+
+    .uploadholder3 {display: flex; justify-content:  center !important; flex-direction: column; align-items: center; gap: 5%;}
+
+
+        #labelTitleFlex {
+        height: auto;
+        width: 100px;
+        margin:5%;
+    }
