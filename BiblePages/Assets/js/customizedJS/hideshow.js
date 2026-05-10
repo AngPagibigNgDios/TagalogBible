@@ -174,29 +174,39 @@ document.addEventListener('DOMContentLoaded', function () {
 // FONT STYLE DITO
 //
 
+// ===============================
+// FONT FAMILY
+// ===============================
 
 function applyFont(fontClass) {
 
   // SAVE
   localStorage.setItem('fontFamilyS', fontClass);
 
-  // MAIN CONTAINER
-  const container = document.getElementById('FontChanger');
+  // GET ALL CONTAINERS
+  const containers =
+    document.querySelectorAll('.FontChanger');
 
-  // REMOVE ALL FONT CLASSES
-  container.classList.remove(
-    'litF',
-    'lorF',
-    'elaF',
-    'opsF',
-    'indF',
-    'lexF',
-    'pbsF',
-    'ariF'
-  );
+  // LOOP THROUGH ALL
+  containers.forEach(container => {
 
-  // ADD SELECTED FONT
-  container.classList.add(fontClass);
+    // REMOVE ALL FONT CLASSES
+    container.classList.remove(
+      'litF',
+      'lorF',
+      'elaF',
+      'opsF',
+      'indF',
+      'lexF',
+      'pbsF',
+      'ariF'
+    );
+
+    // ADD SELECTED FONT
+    container.classList.add(fontClass);
+
+  });
+
 }
 
 
@@ -253,16 +263,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
-
-// ===============================
-// FONT WEIGHT DITO
-// ===============================
 // ===============================
 // FONT WEIGHT
 // ===============================
@@ -272,28 +272,31 @@ function applyFontWeight(fontWeight) {
   // SAVE
   localStorage.setItem('fontFamilyWeight', fontWeight);
 
-  // CONTAINER
-  const container =
-    document.getElementById('FontWeightChanger');
+  // GET ALL CONTAINERS
+  const containers =
+    document.querySelectorAll('.FontWeightChanger');
 
-  // REMOVE OLD
-  container.classList.remove(
-    'FW200',
-    'FW300',
-    'FW350',
-    'FW400',
-    'FW450',
-    'FW500',
-    'FW550',
-    'FW600',
-    'FW650',
-    'FW700',
-    'FW800',
-    'FW900'
-  );
+  // LOOP THROUGH ALL
+  containers.forEach(container => {
 
-  // ADD NEW
-  container.classList.add(fontWeight);
+    // REMOVE OLD
+    container.classList.remove(
+      'FW200',
+      'FW300',
+      'FW350',
+      'FW400',
+      'FW500',
+      'FW600',
+      'FW650',
+      'FW700',
+      'FW800',
+    );
+
+    // ADD NEW
+    container.classList.add(fontWeight);
+
+  });
+
 }
 
 
@@ -301,21 +304,24 @@ function applyFontWeight(fontWeight) {
 // BUTTONS
 // ===============================
 
+
+function FW800FF() {
+  applyFontWeight('FW800');
+}
+
+function FW700FF() {
+  applyFontWeight('FW700');
+}
+
 function FW600FF() {
   applyFontWeight('FW600');
 }
 
-function FW550FF() {
-  applyFontWeight('FW550');
-}
 
 function FW500FF() {
   applyFontWeight('FW500');
 }
 
-function FW450FF() {
-  applyFontWeight('FW450');
-}
 
 function FW400FF() {
   applyFontWeight('FW400');
@@ -334,10 +340,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const saved =
     localStorage.getItem('fontFamilyWeight')
-    || 'FW400';
+    || 'FW500';
 
   applyFontWeight(saved);
 
 });
-
-

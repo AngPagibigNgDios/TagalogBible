@@ -82,7 +82,7 @@ body {
 
 .horizontalbiggerimageindex,
 .horizontalsmallerimageindex,
-.shadow1, .indexPanorama {
+.shadow1, .indexPanorama, .indexfour {
   -webkit-filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.5));
 }
@@ -395,7 +395,7 @@ tr {
 }
 
 .tdtagalogbible {
-  background-color: rgba(154, 226, 255, 0.13);
+  background-color: rgba(154, 226, 255, 0.07);
   height: 100%;
   width: 50%;
 }
@@ -629,7 +629,7 @@ div.indent {
 
 
 .TITLETR {
-    background-color: #b8ecfa;
+    background-color: rgb(184, 236, 250, 0.5);
     font-weight: bold;
     text-align: center !important;
     /* Horizontal centering */
@@ -1468,7 +1468,7 @@ uniquifier Use a unique and descriptive class name
 
 
 
-.bible-container-bg {  background-image: url("/BiblePages/Assets/images/journal/cornera.jpg");
+.bible-container-bg {  background-image: url("../../../Assets/images/journal/cornera.jpg");
 
     /* NO REPEAT */
     background-repeat: no-repeat;
@@ -1518,3 +1518,11 @@ background: linear-gradient(127deg, rgba(255, 255, 255, 1) 0%, rgb(224, 249, 255
 .scrollup {width:60px; height:48px;}
 
 #chapter{font-size:1.2em;}
+
+
+.marginbot{ margin-bottom: 5% !important;}
+
+.indexfour {width:90%; margin:0 auto; height:auto;}
+
+
+.centernonitalic {text-align: center;}

@@ -285,7 +285,8 @@ a.clink:visited {
 .ChapterP,
 .ChapterPNI,
 .ChapterPCenter,
-.CenterIndex {
+.CenterIndex,
+.centernonitalic {
   font-size: 1.2em;
 }
 
@@ -689,13 +690,13 @@ a.clink:visited {
 
 /* DIGLOT MENU PAGES */
 
-#MenuContainer{
+#MenuContainer {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 20px;
   margin-left: 1%;
-   height: 80%;
+  height: 80%;
   position: fixed;
   left: 1%;
   flex: 1 0 10%;
@@ -703,8 +704,9 @@ a.clink:visited {
 }
 
 
-#MenuContainer, .OtherLinks {
-  max-width:250px;
+#MenuContainer,
+.OtherLinks {
+  max-width: 250px;
 }
 
 .BibleChaptersMenu {
@@ -742,55 +744,351 @@ a.clink:visited {
   height: 500px;
   overflow: auto;
 
- text-align: center;
+  text-align: center;
   /* Moves scrollbar to the left */
   overflow-y: auto;
 }
 
 
 
- .biblejournalposts {
+.biblejournalposts {
   border-bottom: 1px solid rgba(128, 128, 128, 0.281);
   border-top: 1px solid rgba(128, 128, 128, 0.281);
   padding: 5px 5px;
-  transition: padding 0.3s;}
+  transition: padding 0.3s;
+}
 
-  .biblejournalposts:hover {
+.biblejournalposts:hover {
   background-color: rgba(181, 255, 249, 0.7);
   padding: 10px 5px;
 }
- .biblejournalposts { font-size: 1em; direction: ltr; text-align: center;}
- .journalnumber {font-weight: bold;}
- .journaltitle {font-size: 1.1em; color: #0f0f46;}
 
-
-
- @media (min-width:1101px) {
- .diglotcutwidth {
-  width: 75%;
-  margin: 0 auto;
-}
+.biblejournalposts {
+  font-size: 1em;
+  direction: ltr;
+  text-align: center;
 }
 
- @media (max-width:1100px) {
- .diglotcutwidth {
-  width: 85%;
-  margin: 0 auto;
+.journalnumber {
+  font-weight: bold;
 }
+
+.journaltitle {
+  font-size: 1.1em;
+  color: #0f0f46;
+}
+
+
+
+@media (min-width:1101px) {
+  .diglotcutwidth {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:1100px) {
+  .diglotcutwidth {
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 
 
 /* daily devotional */
 
-#dev-content {font-size:1.2em; margin-left:10%; margin-right:10%; line-height: 1.4em;}
-#dev-content>pre  {font-size:1em; margin-left:10%; margin-right:10%; line-height: 1.4em; font-family: "Arimo", Arial, FreeSans,  Helvetica, sans-serif;}
-#quote {font-size:1.5em;}
-    #image10802, #image4k2 {
-        float: right;
-        max-width: 400px;
-        min-width: 50px;
-        width: 100%;
-        height: auto;
-    }
-    .devotionalindex {font-size:1.2em;}
+#dev-content {
+  font-size: 1.2em;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.4em;
+}
+
+#dev-content>pre {
+  font-size: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+  line-height: 1.4em;
+  font-family: "Arimo", Arial, FreeSans, Helvetica, sans-serif;
+}
+
+#quote {
+  font-size: 1.5em;
+}
+
+#image10802,
+#image4k2 {
+  float: right;
+  max-width: 400px;
+  min-width: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.devotionalindex {
+  font-size: 1.2em;
+}
+
+
+
+
+
+
+
+#customizationheader {
+  font-size: 1.2em;
+  display: flex;
+}
+
+/*DIGLOT BUTTON*/
+
+#diglot-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  flex: 1 0 10%;
+  border: 2px solid rgb(10, 10, 14);
+}
+
+#diglot-holder-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  flex: 1 0 10%;
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
+
+#diglot-subholderdiglot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  flex: 1 0 10%;
+  justify-content: space-evenly;
+}
+
+.controldiglot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+  height: 30px;
+}
+
+#holderdiglottext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  width: 50%;
+  height: 210px;
+}
+
+.choosediglottext {
+  display: flex;
+  margin: 1%;
+}
+
+.choosediglot {
+  display: flex;
+  margin-top: 1%;
+  padding-top: 2%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#holderoftwonavi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 5%;
+}
+
+
+/*DIGLOT BUTTON*/
+
+
+
+#diglot-subholdertext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+
+  width: 100%;
+  text-align: center;
+  width: 50%;
+  border: 2px solid rgb(10, 10, 14);
+}
+
+#textsizebuttonholders {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  flex: 1 0 10%;
+  justify-content: space-evenly;
+}
+
+
+.textresizerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+  width: 15%;
+  height: 30px;
+}
+
+
+
+.textresizerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+  width: 15%;
+  height: 30px;
+}
+
+
+
+
+.textresizerButton,
+.controldiglot,
+.fontchoiceButton {
+  display: flex;
+
+}
+
+.philnavsfloat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  cursor: pointer;
+}
+
+.philnavsfloatimg {
+  width: 361px;
+  height: 40x;
+  cursor: pointer;
+}
+
+.marginparagraph {
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 1.4em;
+}
+
+.controldiglot:hover,
+.textresizerButton:hover,
+.fontchoiceButton:hover {
+  background-color: #daff06;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+
+#fontfacebox {
+  display: flex;
+  border: 2px solid rgb(10, 10, 14);
+
+  justify-content: center;
+  width: 100%;
+  margin: 1% auto;
+  place-items: center;
+
+}
+
+
+.fontchoiceButton {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 150px;
+  height: 40px;
+  align-content: center;
+  justify-items: center;
+  flex: 1 0 15%;
+  gap: 5%;
+  margin-bottom: 3%;
+
+
+}
+
+.fontchoicesHolder {
+  display: flex;
+
+  gap: 5%;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+#fontfacebox {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.bible-container-bgs,
+.gray {
+  background-color: #adadad;
+  color: black;
+}
+
+.bible-container-bgs,
+.blue {
+  color: #ffffff;
+  background-color: #416e97;
+}
+.bible-container-bgs,
+.brown {
+background-color: #bbb19c;
+        color: #33311e;}
+
+.bible-container-bgs,
+.sepia {
+        background-color:#b8a88a;
+        color:white;
+}
+
+
+.bible-container-bgs,
+.brownish {
+        background-color: #897560;
+        color: white;
+}
+
+
+
+.bible-container-bgs,
+.visionimpaired {
+        background-color: #000000 !important;
+        color: white;
+}
+
+
+
