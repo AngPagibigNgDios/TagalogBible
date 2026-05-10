@@ -7,9 +7,9 @@ class DiglotNote extends HTMLElement {
 
 <div class="nothinglastsBUTTHEWORDOFGOD"><div class="LoveOfGodFlex">
 
-<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2" id="image1080" src="../Assets/images/PersonalBlog/HDT/LoveOfGodHD400.png" />
-<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2" id="image4k" src="../Assets/images//PersonalBlog/4KT/LoveOfGod4K800.png" />
-<img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="../Assets/images//PersonalBlog/800/LoveOfGod200.png" />
+<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2" id="image1080" src="../Assets/images/PersonalBlog/HDT/LoveOfGodHD400.webp" />
+<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2" id="image4k" src="../Assets/images//PersonalBlog/4KT/LoveOfGod4K800.webp" />
+<img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="../Assets/images//PersonalBlog/800/LoveOfGod200.webp" />
 
 
 <p class="ChapterN1 czlF FW700 N1"> The love of GOD is the center of it all.</p>

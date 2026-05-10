@@ -1468,7 +1468,7 @@ uniquifier Use a unique and descriptive class name
 
 
 
-.bible-container-bg {  background-image: url("../../../Assets/images/journal/cornera.jpg");
+.bible-container-bg {  background-image: url("../../../Assets/images/journal/cornera.webp");
 
     /* NO REPEAT */
     background-repeat: no-repeat;
@@ -1486,7 +1486,7 @@ uniquifier Use a unique and descriptive class name
 
 
 
-.BibleChaptersMenu, #biblejournalpostsholder {background-image: url("/BiblePages/Assets/images/journal/colorbookmark.jpg");
+.BibleChaptersMenu, #biblejournalpostsholder {background-image: url("/BiblePages/Assets/images/journal/colorbookmark.webp");
 background-repeat: no-repeat;
 background-size: cover;
 }
