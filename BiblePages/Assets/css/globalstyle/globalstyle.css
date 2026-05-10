@@ -229,7 +229,7 @@ body {
 .divhaggai:hover,
 .divzechariah:hover,
 .divmalachi:hover {
-  background-color: rgba(181, 255, 249, 0.7);
+  background-color: rgba(241, 255, 254, 0.617);
   padding: 20px 10px;
 }
 
@@ -260,8 +260,9 @@ body {
 .div3john:hover,
 .divjude:hover,
 .divrevelation:hover {
-  background-color: rgba(245, 255, 191, 0.7);
+  background-color: rgba(241, 255, 254, 0.617);
   padding: 20px 10px;
+    
 }
 
 .verseLinksTD {
@@ -617,11 +618,15 @@ div.indent {
 
 
 #OLDTB {
-  background-color: rgba(181, 255, 249, 0.7);
+  background-color: rgba(143, 200, 221, 0.24);
+  border-bottom: 5px double #1C6EA4;
+border-top: 5px double #1C6EA4;
 }
 
 #NEWTB {
   background-color: rgba(245, 255, 191, 0.7);
+  border-bottom: 5px double #1C6EA4;
+border-top: 5px double #1C6EA4;
 }
 
 
@@ -1486,14 +1491,10 @@ uniquifier Use a unique and descriptive class name
 
 
 
-.BibleChaptersMenu, #biblejournalpostsholder {background-image: url("/BiblePages/Assets/images/journal/colorbookmark.webp");
-background-repeat: no-repeat;
-background-size: cover;
-}
 
 
 
-.BibleChaptersMenu, #biblejournalpostsholder{
+.BibleChaptersMenu, #biblejournalpostsholder, .OtherMenu {
   -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1504,8 +1505,11 @@ background: linear-gradient(127deg, rgba(255, 255, 255, 1) 0%, rgb(224, 249, 255
   border-radius: 4px;
   box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease;
-}
+  background-image: url("../../../Assets/images/journal/colorbookmark.webp");
+background-repeat: no-repeat;
+background-size: cover;
 
+}
 
 .back-to-top {position:fixed; bottom:20px; right:20%; opacity:.5; height:50px; cursor: pointer;
 
