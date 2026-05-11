@@ -1,3 +1,12 @@
+/////////////////////////
+//                     //
+//  HEADER DITO      //
+//                     //
+/////////////////////////
+
+
+
+
 class DiglotHeader extends HTMLElement {
   connectedCallback () {
     // 1. Set the HTML structure
@@ -73,6 +82,12 @@ customElements.define ('diglot-header', DiglotHeader);
 
 
 
+/////////////////////////
+//                     //
+//  DIGLOT END NOTE     //
+//                     //
+/////////////////////////
+
 
 
 
@@ -128,6 +143,12 @@ customElements.define('diglot-note', DiglotNote);
 
 
 
+/////////////////////////
+//                     //
+//  NAVIGATION ALL JS  //
+//                     //
+/////////////////////////
+
 
 
 
@@ -138,11 +159,11 @@ class DiglotNavigation extends HTMLElement {
    connectedCallback() {
 
       this.innerHTML = `
-
+<div id="navigationall">
          <div id="btnPrev">Previous</div>
          <div id="btnToggle">Disable Arrow Keys</div>
          <div id="btnNext">Next</div>
-
+   </div>
          <div class="back-to-top">
             <img class="scrollup" src="scrollup.svg">
          </div>
@@ -332,6 +353,17 @@ customElements.define(
    'diglot-navigation',
    DiglotNavigation
 );
+
+
+
+
+
+/////////////////////////
+//                     //
+//  BIBLE JOURNAL KO    //
+//                     //
+/////////////////////////
+
 
 
 

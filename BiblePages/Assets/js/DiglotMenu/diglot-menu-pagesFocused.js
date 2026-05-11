@@ -157,17 +157,6 @@ class DiglotMenu extends HTMLElement {
 
          
 
-
-                   
-                        <combinedpostbutton></combindedpostbutton>
-                        <div class="chapter-controls">
-                        <button id="btnPrev">Previous</button>
-                        <button id="btnToggle">Disable Arrow Keys</button>
-                        <button id="btnNext">Next</button>
-                        </div>
-
-
-
                       
 
                

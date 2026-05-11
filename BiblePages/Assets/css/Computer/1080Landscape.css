@@ -62,9 +62,6 @@ a.clink:visited {
 @media (max-width:1400px) {
 
   /*spacerawayfrommenubarito*/
-  .bible-container {
-
-  }
 
   .bible-container {
     position: absolute;
@@ -1281,3 +1278,54 @@ align-items: center;
 }
 
 #labelTitleFlex2{width:100%; justify-content: center; align-self: center;}
+
+
+
+.back-to-top {position:fixed; bottom:20px; right:20%; opacity:.5; height:50px; cursor: pointer;
+
+}
+.back-to-top:hover {position:fixed; bottom:20px; right:20%; opacity:1; background-color:white;
+.scrollup {scale:1.2; background-color:white; margin-bottom:20px;}
+
+}
+
+.scrollup {width:60px; height:48px;}
+
+
+
+#btnPrev, #btnToggle, #btnNext {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 100px;
+  height: 40px;
+  align-content: center;
+  justify-items: center;
+
+  cursor: pointer;
+
+
+  font-size:.8em;
+
+}
+
+
+#btnPrev:hover, #btnToggle:hover, #btnNext:hover {
+
+  background-color: #daff06;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+
+}
+
+
+
+
+#navigationall {position: fixed; bottom:0px; right:1%; display: flex; flex-direction:row;   gap: 2%;   opacity: .2; }
+
+
+#navigationall:hover {opacity: 1; }

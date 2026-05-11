@@ -1511,16 +1511,6 @@ background-size: cover;
 
 }
 
-.back-to-top {position:fixed; bottom:20px; right:20%; opacity:.5; height:50px; cursor: pointer;
-
-}
-.back-to-top:hover {position:fixed; bottom:20px; right:20%; opacity:1; background-color:white;
-.scrollup {scale:1.2; background-color:white; margin-bottom:20px;}
-
-}
-
-.scrollup {width:60px; height:48px;}
-
 #chapter{font-size:1.2em;}
 
 
