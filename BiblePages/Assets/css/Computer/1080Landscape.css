@@ -1331,8 +1331,8 @@ align-items: center;
 #navigationall:hover {opacity: 1; }
 
 
-.resultbox {width:100%; position: relative; height: 50px;}
+.resultbox {width:100%; position: relative; height: auto;}
 
-#searchBox{border: 1px solid gray; height:1.2em; }
+#searchBox{border: 1px solid gray; font-size:1.2em; height:50px; }
 
 #searchResults {width: 100; height: auto; position: relative;}
