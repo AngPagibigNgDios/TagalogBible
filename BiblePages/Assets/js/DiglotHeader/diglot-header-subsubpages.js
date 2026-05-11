@@ -5,7 +5,7 @@ class DiglotHeader extends HTMLElement {
     
       <div id="header" class="headerblue">
         <div id="headerLink">
-        <a href="../../../../index.html" class="HomeURLheader" title="English-Tagalog Bible Home Page">EnglishTagalogBible.Com</a>
+        <a href="../index.html" class="HomeURLheader" title="English-Tagalog Bible Home Page">EnglishTagalogBible.Com</a>
         </div>
         <div id="hrdivider"><hr class="title-divider"></div>
         <div id="headerVerse">

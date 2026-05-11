@@ -1,3 +1,7 @@
+/////////////////////////
+//   CUSTOMIZED BG    //
+///////////////////////
+
 (function () {
     const html = document.documentElement;
 

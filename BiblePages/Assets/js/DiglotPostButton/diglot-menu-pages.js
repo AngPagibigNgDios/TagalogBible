@@ -253,19 +253,19 @@ this.innerHTML = `
 
   <div class="OtherMenu" id="more-links">
 
-    <a href="../Others/pages/bible-passages.html">
+    <a href="../BridgePassages/bible-passages.html">
       <div class="OtherLinks">
         Popular Passages
       </div>
     </a>
 
-    <a href="../Others/pages/daily-devotion/index.html">
+    <a href="../DailyDevotion/index.html">
       <div class="OtherLinks">
         <span class="tr2">Daily Devotion</span>
       </div>
     </a>
 
-    <a href="../Others/pages/bridge-to-life.html">
+    <a href="../BridgePassages/bridge-to-life.html">
       <div class="OtherLinks">
         <span class="tr3"></span>
         The Bridge to Lfe

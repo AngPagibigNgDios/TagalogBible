@@ -30,7 +30,7 @@ this.innerHTML = `
     <hr />
 
     <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+      <a href="BiblePages/OldTestament/01-genesis.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 1</span>
           <br />
@@ -41,7 +41,7 @@ this.innerHTML = `
       </a>
     </div>
     <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+      <a href="BiblePages/OldTestament/01-genesis.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 2</span>
           <br />
@@ -52,7 +52,7 @@ this.innerHTML = `
       </a>
     </div>
     <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+      <a href="BiblePages/OldTestament/01-genesis.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 3</span>
           <br />
@@ -63,7 +63,7 @@ this.innerHTML = `
       </a>
     </div>
     <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+      <a href="BiblePages/OldTestament/01-genesis.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 4</span>
           <br />
@@ -78,19 +78,19 @@ this.innerHTML = `
 
   <div class="OtherMenu" id="more-links">
 
-    <a href="../../Others/pages/bible-passages.html">
+    <a href="BiblePages/BridgePassages/bible-passages.html">
       <div class="OtherLinks">
         Popular Passages
       </div>
     </a>
 
-    <a href="../../Others/pages/daily-devotion/index.html">
+    <a href="BiblePages/DailyDevotion/index.html">
       <div class="OtherLinks tr2">
         <span class="tr2">Daily Devotion</span>
       </div>
     </a>
 
-    <a href="../../Others/pages/bridge-to-life.html">
+    <a href="BiblePages/BridgePassages/bridge-to-life.html">
       <div class="OtherLinks">
         <span class="tr3"></span>
         The Bridge to Life
