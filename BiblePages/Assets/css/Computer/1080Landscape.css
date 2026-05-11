@@ -1333,6 +1333,6 @@ align-items: center;
 
 .resultbox {width:100%; position: relative; height: 50px;}
 
-#searchBox{border: none;}
+#searchBox{border: 1px solid gray; height:1.2em; }
 
 #searchResults {width: 100; height: auto; position: relative;}
