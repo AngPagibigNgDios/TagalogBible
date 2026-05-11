@@ -6,7 +6,6 @@
 <meta content="English-Tagalog Bible gives you fast searching &amp; browsing of the KJV and Ang Bibliya." name="description" />
 <title>Homepage</title>
 <link rel="stylesheet" href="BiblePages/Assets/css/globalstyle/globalstyle.css">
-<link href="BiblePages/Assets/css/globalstyle/pages-bg-image.css" rel="stylesheet" />
 <link rel="apple-touch-icon" sizes="180x180" href="BiblePages/Assets/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="BiblePages/Assets/images/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="BiblePages/Assets/images/favicon/favicon-16x16.png">
@@ -20,9 +19,8 @@
 <link rel="stylesheet" href="BiblePages/Assets/css/mobile.css" media="screen and (max-width: 600px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/index1080p.css" media="screen and (min-height: 750px) and (min-width: 961px)">
 <script src="BiblePages/Assets/js/jquery-4.0.0.min.js"></script>
-<script class="NTIndex" src="BiblePages/Assets/js/DiglotUniversal/DiglotUniversalIndex.js"></script>
+<script class="NTIndex" src="BiblePages/Assets/js/DiglotUniversal/DiglotUniversal.js"></script>
 <script src="BiblePages/Assets/js/customizedJS/CustomizedUniversal.js"></script>
-<script src="BiblePages/Assets/js/DiglotHeader/diglot-header.js"></script>
 <script src="BiblePages/Assets/js/DiglotMenu/diglot-menu.js"></script>
 
 
@@ -33,11 +31,11 @@
 </head>
 <body>
 <div id="DisplayFlexOfBigFive">
-<diglot-header>
-</diglot-header>
+<diglot-header-index>
+</diglot-header-index>
 <div id="DisplayFlexBigThree">
-<diglot-menu id="DesktopMenuOnly">
-</diglot-menu>
+<diglot-menu-index id="DesktopMenuOnly">
+</diglot-menu-index>
 <div class="bible-container">
 <div class="bible-container-bg bcbpages">
 <div class="UpperPageParentFlexBox">
@@ -58,6 +56,11 @@
 <img alt="Mount Sinai Ten Commandments" class="indexPanorama marginbot" id="indeximage4k" src="BiblePages/Assets/images/4KT/00WordOfGod.webp" />
 <img alt="Book Image" class="NTIndex horizontalimageindex shadow1" class="NTIndex" id="himageHoriz" src="BiblePages/Assets/images/HDT/00HWordOfGod800.webp" />
 </div>
+
+<input type="text" id="searchBox">
+
+<div id="searchResults"></div>
+
 <p class="OTIndex ChapterP PFlexIndented marginparagraph">
 Tagalog Spanish English Online Bible for your Journaling, that <strong>can be stacked up four windows on one desktop.</strong> This year 2026, I redesigned a website from 2012 <a href="http://englishtagalogbible.com">EnglishTagalogBible.Com</a> for my need of reading Matthew, Mark, Lucas, and John's gospel simultaneously, to write on my journal. Helpful to people who love to read side by side scattered bible verses. The 2012 website was made by Navigator Philippines with their details at the end of this page.Listed is their running advocacy, website and online bible.
 </p>
@@ -426,6 +429,9 @@ localStorage.setItem('bgColor', color);
 localStorage.setItem('bgType', 'color');
 location.reload();
 }
+</script>
+<script type="module"
+src="BiblePages/Assets/js/fuse/fusemodule.js">
 </script>
 </body>
 </html>

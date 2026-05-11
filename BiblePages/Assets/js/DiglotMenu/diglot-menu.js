@@ -1,4 +1,4 @@
-class DiglotMenu extends HTMLElement {
+class DiglotMenuIndex extends HTMLElement {
 connectedCallback () {
 // 1. Set the HTML structure
 this.innerHTML = `
@@ -287,4 +287,4 @@ this.innerHTML = `
   }
   }
 
-  customElements.define('diglot-menu', DiglotMenu);
+  customElements.define('diglot-menu-index', DiglotMenuIndex);

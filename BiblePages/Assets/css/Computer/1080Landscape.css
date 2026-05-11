@@ -1329,3 +1329,10 @@ align-items: center;
 
 
 #navigationall:hover {opacity: 1; }
+
+
+.resultbox {width:100%; position: relative; height: 50px;}
+
+#searchBox{border: none;}
+
+#searchResults {width: 100; height: auto; position: relative;}

@@ -1,4 +1,4 @@
-class DiglotHeader extends HTMLElement {
+class DiglotHeaderIndex extends HTMLElement {
   connectedCallback () {
     // 1. Set the HTML structure
     this.innerHTML = `
@@ -74,4 +74,4 @@ title = title.replace(/\s*:\s*\d+([—\-\s,]\d+)*/g, '').trim();
 }
 }
 
-customElements.define ('diglot-header', DiglotHeader);
+customElements.define ('diglot-header-index', DiglotHeaderIndex);
