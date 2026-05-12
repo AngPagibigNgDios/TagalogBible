@@ -615,7 +615,7 @@ a.clink:visited {
   }
 }
 
-
+@media (min-width:1470px) {
 #calltoactionhanging {
  position:relative;
   justify-content: center;
@@ -623,7 +623,7 @@ a.clink:visited {
   background-color: #0f0f46;
   color: white;
   padding: 2% 5%;
-  height: 50px;
+
   width:50%;
   margin-left:-100px;
   text-align: center;
@@ -637,7 +637,7 @@ a.clink:visited {
   background-color: #0f0f46;
   color: white;
   padding: 2% 5%;
-  height: 50px;
+
   width:50%;
   margin-left:125%;
   right:-100px;
@@ -645,7 +645,39 @@ a.clink:visited {
   text-align: center;
 }
 
+}
 
+
+@media (max-width:1469px) {
+#calltoactionhanging {
+ position:relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+
+  width:100%;
+
+  text-align: center;
+}
+
+
+#calltoactionhanging2 {
+ position:relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+
+  width:100%;
+
+  align-self:flex-end;
+  text-align: center;
+}
+
+}
 
 
 /* daily devotional */
@@ -1232,10 +1264,10 @@ align-items: center;
 
 
 
-.back-to-top {position:fixed; bottom:20px; right:20%; opacity:.5; height:50px; cursor: pointer;
+.back-to-top {position:fixed; bottom:7%; right:20%; opacity:.3; height:50px; cursor: pointer;
 
 }
-.back-to-top:hover {position:fixed; bottom:20px; right:20%; opacity:1; background-color:white;
+.back-to-top:hover {position:fixed; bottom:7.2%; right:20%; opacity:1; background-color:white;
 .scrollup {scale:1.2; background-color:white; margin-bottom:20px;}
 
 }
@@ -1324,3 +1356,14 @@ align-items: center;
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+.marginbot{ margin-bottom: 2% !important;}

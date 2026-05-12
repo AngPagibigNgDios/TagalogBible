@@ -1,4 +1,6 @@
-body {font-size: 1em; }
+body {
+  font-size: 1em;
+}
 
 .clink {
   font-size: 1em;
@@ -336,25 +338,6 @@ a.clink:visited {
   padding-left: 10px;
 }
 
-#labelTitle {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-#bgUpload {
-  font-size: 1em;
-}
-
-#bgStyle {
-  font-size: 1em;
-}
-
-
-#bgColor {
-  width: 100px;
-  height: 100px;
-}
-
 
 
 .bible-container,
@@ -586,33 +569,20 @@ a.clink:visited {
 }
 
 
-#calltoactionhanging {
- position:relative;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f0f46;
-  color: white;
-  padding: 2% 5%;
-  height: 50px;
-  width:50%;
-  margin-left:-100px;
-  text-align: center;
-}
-
-
+#calltoactionhanging,
 #calltoactionhanging2 {
- position:relative;
+  position: relative;
   justify-content: center;
   align-items: center;
+  vertical-align: center;
   background-color: #0f0f46;
   color: white;
-  padding: 2% 5%;
+  padding: 5% 5%;
   height: 50px;
-  width:50%;
-  margin-left:125%;
-  right:-100px;
-  align-self:flex-end;
+  width: 90%;
+
   text-align: center;
+  margin: 5% auto;
 }
 
 
@@ -700,7 +670,7 @@ a.clink:visited {
   align-items: center;
   background-color: #0f0f46;
   color: white;
-  padding: 2% 5%;
+  padding: 1% 6%;
   height: 30px;
 }
 
@@ -709,14 +679,14 @@ a.clink:visited {
   flex-direction: row;
   justify-content: center;
   gap: 5%;
-  width: 50%;
-  height: 210px;
+  width: 100%;
+  height: 180px;
 }
 
 .choosediglottext {
   display: flex;
   margin: 1%;
-    text-align: center;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -732,7 +702,7 @@ a.clink:visited {
 
 #holderoftwonavi {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   gap: 5%;
 }
@@ -746,11 +716,11 @@ a.clink:visited {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5%;
 
 
+  height: 180px;
   text-align: center;
-  width: 50%;
+
   border: 2px solid rgb(10, 10, 14);
 }
 
@@ -820,7 +790,9 @@ a.clink:visited {
 
 .controldiglot:hover,
 .textresizerButton:hover,
-.fontchoiceButton:hover, #buttonclick:hover, .fontweightButton:hover  {
+.fontchoiceButton:hover,
+#buttonclick:hover,
+.fontweightButton:hover {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -890,7 +862,9 @@ a.clink:visited {
   border: 2px solid rgb(10, 10, 14);
 }
 
-#choosediglottext {width: 100%;}
+#choosediglottext {
+  width: 100%;
+}
 
 
 .fontweightHolderButton {
@@ -906,9 +880,19 @@ a.clink:visited {
 }
 
 
-.linerindex {width:100%; border: 1px solid black;}
+.linerindex {
+  width: 100%;
+  border: 1px solid black;
+}
 
-#customizationheader {display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; width: 100%;}
+#customizationheader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
 
 
 
@@ -953,30 +937,32 @@ a.clink:visited {
   color: #ffffff;
   background-color: #416e97;
 }
+
 .bible-container-bgs,
 .brown {
-background-color: #bbb19c;
-        color: #33311e;}
+  background-color: #bbb19c;
+  color: #33311e;
+}
 
 .bible-container-bgs,
 .sepia {
-        background-color:#b8a88a;
-        color:white;
+  background-color: #b8a88a;
+  color: white;
 }
 
 
 .bible-container-bgs,
 .brownish {
-        background-color: #897560;
-        color: white;
+  background-color: #897560;
+  color: white;
 }
 
 
 
 .bible-container-bgs,
 .visionimpaired {
-        background-color: #000000 !important;
-        color: white;
+  background-color: #000000 !important;
+  color: white;
 }
 
 
@@ -1039,8 +1025,9 @@ background-color: #bbb19c;
 
 
 #bgStyleFlex {
-  width: 100px;
+  width: 100%;
   height: auto;
+  justify-content: center;
 }
 
 
@@ -1076,7 +1063,7 @@ background-color: #bbb19c;
   display: flex;
   justify-items: center;
   flex-direction: row;
-  gap:5%;
+  gap: 5%;
 }
 
 #plaincoloronly {
@@ -1086,7 +1073,7 @@ background-color: #bbb19c;
   gap: 5%;
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
-width: 45%;
+  width: 45%;
 }
 
 
@@ -1097,8 +1084,8 @@ width: 45%;
   gap: 5%;
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
-width: 45%;
-height:250px;
+  width: 45%;
+  height: auto;
 }
 
 
@@ -1108,32 +1095,44 @@ height:250px;
   width: 100%;
   height: auto;
   text-align: center;
-align-self: center;
-justify-content:center;
+  align-self: center;
+  justify-content: center;
 
-h3{  width: 100%;
-  height: auto;
-  text-align: center;
-align-self: center;
-justify-content:center;}
+  h3 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+  }
 }
 
-.uploadholder {display:flex;
-flex-direction: row;
-width: 90%;
-justify-content: flex-start;
-margin-left:2%;
+.uploadholder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+
 }
 
 #labelTitleFlex {
   display: flex;
-  width: 50%;
+  width: 100%;
   height: auto;
+  justify-content: center;
 }
 
 #bgUploadFlex {
-  width: 50%;
+  display: flex;
+  width: 100%;
   height: auto;
+  justify-content: center;
+
+  input {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 
@@ -1148,7 +1147,30 @@ margin-left:2%;
 
 
 
-#buttonclick{
+#labelTitle {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 2%;
+}
+
+#bgUpload {
+  font-size: 1em;
+  width: 100%;
+}
+
+#bgStyle {
+  font-size: 1em;
+}
+
+
+#bgColor {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+#buttonclick {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1168,12 +1190,16 @@ margin-left:2%;
 
 }
 
-.BackgroundImageFlex{display: flex; flex-direction: column;}
+.BackgroundImageFlex {
+  display: flex;
+  flex-direction: column;
+}
 
-.uploadholder2 {display:flex;
-flex-direction: row;
-width: 100%;
-justify-content: CENTER;
+.uploadholder2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: CENTER;
 
 }
 
@@ -1185,36 +1211,43 @@ justify-content: CENTER;
   gap: 5%;
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
-width: 40%;
-height:250px;
+  width: 40%;
+  height: 250px;
 }
 
 
-.uploadholder3 {display:flex;
-flex-direction: column;
-width: 100%;
-justify-content: center;
-align-items: center;
+.uploadholder3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 
 }
 
-#labelTitleFlex2{width:100%; justify-content: center; align-self: center;}
 
 
 
-.back-to-top {position:fixed; bottom:20px; right:20%; opacity:.5; height:50px; cursor: pointer;
 
-}
-.back-to-top:hover {position:fixed; bottom:20px; right:20%; opacity:1; background-color:white;
-.scrollup {scale:1.2; background-color:white; margin-bottom:20px;}
-
+#labelTitleFlex2 {
+  width: 100%;
+  justify-content: center;
+  align-self: center;
 }
 
-.scrollup {width:60px; height:48px;}
 
 
 
-#btnPrev, #btnToggle, #btnNext {
+.scrollup {
+  width: 60px;
+  height: 48px;
+}
+
+
+
+#btnPrev,
+#btnToggle,
+#btnNext {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1229,65 +1262,98 @@ align-items: center;
 
   cursor: pointer;
 
-
-  font-size:.8em;
+  transition: ease .1s background-color;
+  font-size: .8em;
 
 }
 
 
-#btnPrev:hover, #btnToggle:hover, #btnNext:hover {
+#btnPrev:hover,
+#btnToggle:hover,
+#btnNext:hover {
 
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
 
+
 }
 
 
 
 
-#navigationall {position: fixed; bottom:0px; right:1%; display: flex; flex-direction:row;   gap: 2%;   opacity: .2; }
+#navigationall {
+  position: fixed;
+  bottom: 0px;
+  right: 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  opacity: 0;
+  transition: ease .2s opacity;
+}
 
 
-#navigationall:hover {opacity: 1; }
+#navigationall:hover {
+  opacity: 1;
+}
 
 
-.resultbox {width:100%; position: relative; height: auto;}
+.resultbox {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
 
-#searchBox{border: 1px solid gray; font-size:1.2em; height:35px; }
+#searchBox {
+  border: 1px solid gray;
+  font-size: 1.2em;
+  height: 35px;
+}
 
-#searchResults {width: 100; height: 100%; overflow: auto; position: relative;}
-
-
-
-
-
-  /*spacerawayfrommenubarito*/
-
-  .bible-container {
-    position: absolute;
-    width: 70%;
-    height: auto;
-    margin-bottom: 200px;
-    margin-left: 27.5%;
-    margin-right:2.5%;
-    left:0;
-  }
+#searchResults {
+  width: 100;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
 
 
-  #MenuContainerMirrored {
+
+
+
+/*spacerawayfrommenubarito*/
+
+.bible-container {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  margin-bottom: 200px;
+  margin-left: 27.5%;
+  margin-right: 2.5%;
+  left: 0;
+}
+
+
+#MenuContainerMirrored {
 
   height: 30%;
   position: fixed;
   width: 25%;
-  left:0;
-  bottom:0;
+  left: 0;
+  bottom: 0;
+  max-width: 250px;
 }
 
 
 
-#separatedivider {display: none;}
-#joinerdivider {display: block;}
+#separatedivider {
+  display: none;
+}
+
+#joinerdivider {
+  display: block;
+}
 
 
 #MenuContainer {
@@ -1315,5 +1381,58 @@ align-items: center;
   position: fixed;
 
   flex: 1 0 10%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.marginbot {
+  margin-bottom: 5% !important;
+}
+
+
+
+
+
+
+
+.back-to-top {
+
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+
+  /* Shorthand: Name | Duration | Timing | Delay | Iteration | Direction */
+  animation: ease .1s opacity;
+}
+
+
+.back-to-top:hover {
+
+  opacity: 1;
+  background-color: white;
+
+
 
 }
