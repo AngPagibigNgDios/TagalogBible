@@ -649,7 +649,7 @@ border-top: 5px double #1C6EA4;
 
     td {
         position: relative;
-        width: 100%;
+        width: 50%;
         text-align: center !important;
         border-bottom: none !important;
         /* Horizontal centering */
