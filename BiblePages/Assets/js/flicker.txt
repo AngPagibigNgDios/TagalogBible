@@ -1,64 +1,56 @@
-(function () {
+/////////////////////////
+//                     //
+//  CUSTOMIZED BG      //
+//                     //
+/////////////////////////
 
+
+
+(function () {
     const html = document.documentElement;
 
+    const defaultColor = '#3b2a1a';
+
     const bgType =
-        localStorage.getItem('bgType');
+        localStorage.getItem('bgType') || 'image';
 
     const bgStyle =
-        localStorage.getItem('bgStylePreference');
+        localStorage.getItem('bgStylePreference') || 'repeat';
 
     const bgColor =
-        localStorage.getItem('bgColor');
+        localStorage.getItem('bgColor') || defaultColor;
 
     const customBG =
         localStorage.getItem('customBG');
 
-    // USER CHOSE COLOR
-    if (bgType === 'color' && bgColor) {
+    // =========================
+    // APPLY BACKGROUND
+    // =========================
 
+    if (bgType === 'color') {
         html.style.backgroundImage = 'none';
         html.style.backgroundColor = bgColor;
+    } else {
 
-    }
+        // Let CSS handle default background
+        if (customBG) {
+            html.style.backgroundImage = `url(${customBG})`;
+            html.style.backgroundAttachment = 'fixed';
+        }
 
-    // USER CHOSE CUSTOM IMAGE
-    else if (customBG) {
+        if (bgStyle === 'cover') {
+            html.style.backgroundRepeat = 'no-repeat';
+            html.style.backgroundSize = 'cover';
 
-        const img = new Image();
+        } else if (bgStyle === 'contain') {
+            html.style.backgroundRepeat = 'no-repeat';
+            html.style.backgroundSize = 'contain';
+            html.style.backgroundPosition = 'center';
 
-        img.onload = () => {
-
-            html.style.backgroundImage =
-                `url(${customBG})`;
-
-            if (bgStyle === 'cover') {
-
-                html.style.backgroundRepeat =
-                    'no-repeat';
-
-                html.style.backgroundSize =
-                    'cover';
-
-            }
-
-            else if (bgStyle === 'contain') {
-
-                html.style.backgroundRepeat =
-                    'no-repeat';
-
-                html.style.backgroundSize =
-                    'contain';
-
-                html.style.backgroundPosition =
-                    'center';
-
-            }
-
-        };
-
-        img.src = customBG;
-
+        } else {
+            html.style.backgroundRepeat = 'repeat';
+            html.style.backgroundSize = 'auto';
+        }
     }
 
     // =========================
