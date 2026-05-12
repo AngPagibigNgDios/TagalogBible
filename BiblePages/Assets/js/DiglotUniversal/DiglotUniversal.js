@@ -888,27 +888,7 @@ class DiglotMenuFocused extends HTMLElement {
 
 
 
-                                
-                 
-                        <div class="controls-row">
-                            <div class="control-btn" onclick="showEnglishOnly()"> English </div>
-                            <div class="control-btn" onclick="showTagalogOnly()"> Tagalog </div>
-                            <div class="control-btn" onclick="showAll()"> Diglot </div>
-                        </div>
-                        
-                        <div class="control-group">
-                                <div class="mini-btn" onclick="decreaseFont()"> SMALLER TEXT </div>
-                                <div class="mini-btn" onclick="resetFont()"> RESET </div>
-                                <div class="mini-btn" onclick="increaseFont()"> BIGGER TEXT </div>
-                        </div>
-                       
-                        <div class="search controls-row">
-                            <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">
-
-                            </form>
-
-                        </div>
-                        <div class="controls-row input-row">
+                       <div class="controls-row input-row">
                             <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
                         </div>
                         <div class="controls-row">
@@ -917,6 +897,21 @@ class DiglotMenuFocused extends HTMLElement {
                             <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
                         </div>
              
+                   
+<div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
+<div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
+<div class="controldiglot" onclick="showAll()"> DIGLOT </div>
+
+
+
+<div class="textresizerButton" onclick="decreaseFont()"> SMALLER TEXT </div>
+<div class="textresizerButton" onclick="resetFont()"> RESET SIZE</div>
+<div class="textresizerButton" onclick="increaseFont()"> BIGGER TEXT </div>
+
+
+
+
+
 
 
          
@@ -1345,3 +1340,305 @@ this.innerHTML = `
   }
 
   customElements.define('diglot-menu-index', DiglotMenuIndex);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+class JoinerDiglotPostAIndex extends HTMLElement {
+connectedCallback () {
+// 1. Set the HTML structure
+this.innerHTML = `
+
+
+
+<div id="MenuContainerMirrored">
+
+  <div id="biblejournalpostsholder">
+
+    <div class="remainhere">
+      <hr class="lefthrliner" />
+      <span class="diglotnav">
+        BIBLE JOURNALS
+      </span>
+      <br />
+      <span class="bibleduo">
+        Bible and Life Lessons
+      </span>
+      <hr />
+    </div>
+
+    <hr class="lefthrliner" />
+    <span class="diglotnav">
+      BIBLE JOURNALS
+    </span>
+    <br />
+    <span class="bibleduo">
+      Bible and Life Lessons
+    </span>
+    <hr />
+
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 1</span>
+          <br />
+          <span class="journaltitle">
+            The Golden Gift of God is HIS LOVE.
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 2</span>
+          <br />
+          <span class="journaltitle">
+            If angels and demons are afraid of God, then we humans should be too, in correct way.
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 3</span>
+          <br />
+          <span class="journaltitle">
+            SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 4</span>
+          <br />
+          <span class="journaltitle">
+            There's no real enemy, than satan and his fallen angels.
+          </span>
+        </div>
+      </a>
+    </div>
+
+
+
+
+ </div>
+
+  <div class="OtherMenu" id="more-links">
+
+
+
+
+  
+
+    <a href="BiblePages/BridgePassages/bible-passages.html">
+      <div class="OtherLinks">
+        Popular Passages
+      </div>
+    </a>
+
+    <a href="BiblePages/DailyDevotion/index.html">
+      <div class="OtherLinks tr2">
+        <span class="tr2">Daily Devotion</span>
+      </div>
+    </a>
+
+    <a href="BiblePages/BridgePassages/bridge-to-life.html">
+      <div class="OtherLinks">
+        <span class="tr3"></span>
+        The Bridge to Life
+      </div>
+    </a>
+
+    <a href="http://facebook.com/authorizedbible">
+      <div class="OtherLinks">
+        <span class="tr5">
+          Facebook Page of<br />
+          EnglishTagalogBible.Com</span>
+      </div>
+    </a>
+
+    <a href="http://philnavs.org">
+      <div class="OtherLinks">
+        <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
+        <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+`;
+}
+}
+
+customElements.define ('joiner-diglot-post-a-index', JoinerDiglotPostAIndex);
+
+
+
+
+
+
+class JoinerDiglotPostBIndex extends HTMLElement {
+connectedCallback () {
+// 1. Set the HTML structure
+this.innerHTML = `
+
+
+
+<div id="MenuContainerMirrored">
+
+  <div id="biblejournalpostsholder">
+
+    <div class="remainhere">
+      <hr class="lefthrliner" />
+      <span class="diglotnav">
+        BIBLE JOURNALS
+      </span>
+      <br />
+      <span class="bibleduo">
+        Bible and Life Lessons
+      </span>
+      <hr />
+    </div>
+
+    <hr class="lefthrliner" />
+    <span class="diglotnav">
+      BIBLE JOURNALS
+    </span>
+    <br />
+    <span class="bibleduo">
+      Bible and Life Lessons
+    </span>
+    <hr />
+
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 1</span>
+          <br />
+          <span class="journaltitle">
+            The Golden Gift of God is HIS LOVE.
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 2</span>
+          <br />
+          <span class="journaltitle">
+            If angels and demons are afraid of God, then we humans should be too, in correct way.
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 3</span>
+          <br />
+          <span class="journaltitle">
+            SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="books" id="divOLDbg">
+      <a href="BiblePages/OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 4</span>
+          <br />
+          <span class="journaltitle">
+            There's no real enemy, than satan and his fallen angels.
+          </span>
+        </div>
+      </a>
+    </div>
+
+ 
+
+    <a href="BiblePages/BridgePassages/bible-passages.html">
+      <div class="OtherLinks">
+        Popular Passages
+      </div>
+    </a>
+
+    <a href="BiblePages/DailyDevotion/index.html">
+      <div class="OtherLinks tr2">
+        <span class="tr2">Daily Devotion</span>
+      </div>
+    </a>
+
+    <a href="BiblePages/BridgePassages/bridge-to-life.html">
+      <div class="OtherLinks">
+        <span class="tr3"></span>
+        The Bridge to Life
+      </div>
+    </a>
+
+    <a href="http://facebook.com/authorizedbible">
+      <div class="OtherLinks">
+        <span class="tr5">
+          Facebook Page of<br />
+          EnglishTagalogBible.Com</span>
+      </div>
+    </a>
+
+    <a href="http://philnavs.org">
+      <div class="OtherLinks">
+        <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
+        <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
+      </div>
+    </a>
+
+  </div>
+
+</div>
+
+`;
+}
+}
+
+customElements.define ('joiner-diglot-post-b-index', JoinerDiglotPostBIndex);
+
+
+
+
+
+class DiglotPostButtonIndex extends HTMLElement {
+connectedCallback () {
+// 1. Set the HTML structure
+this.innerHTML = `
+
+
+<joiner-diglot-post-a-index id="separatedivider"></joiner-diglot-post-a-index>
+
+<joiner-diglot-post-b-index id="joinerdivider"></joiner-diglot-post-b-index>
+
+
+
+`;
+}
+}
+
+customElements.define ('diglot-post-button-index', DiglotPostButtonIndex);

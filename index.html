@@ -402,8 +402,8 @@ Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya 
 </div>
 </div>
 </div>
-<diglot-post-button class="NTIndex" id="DesktopMenuOnly">
-</diglot-post-button>
+<diglot-post-button-index class="Index" id="DesktopMenuOnly">
+</diglot-post-button-index>
 </div>
 </div>
 </div>
@@ -411,38 +411,7 @@ Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya 
 <script data-goatcounter="https://biblejournal.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <diglot-navigationx>
 </diglot-navigationx>
-<script>
-// APPLY IMAGE
-function applyImageTheme() {
-const file = document.getElementById('bgUpload').files[0];
-const style = document.getElementById('bgStyle').value;
-localStorage.setItem('bgStylePreference', style);
-if (file) {
-const reader = new FileReader();
-reader.onloadend = function () {
-localStorage.setItem('customBG', reader.result);
-localStorage.setItem('bgType', 'image');
-location.reload();
-};
-reader.readAsDataURL(file);
-} else {
-// no upload → reuse existing image
-if (localStorage.getItem('customBG')) {
-localStorage.setItem('bgType', 'image');
-location.reload();
-} else {
-alert("Upload an image first.");
-}
-}
-}
-// APPLY COLOR
-function applyColorTheme() {
-const color = document.getElementById('bgColor').value;
-localStorage.setItem('bgColor', color);
-localStorage.setItem('bgType', 'color');
-location.reload();
-}
-</script>
+
 <script type="module"
 src="BiblePages/Assets/js/fuse/fusemodule.js">
 </script>

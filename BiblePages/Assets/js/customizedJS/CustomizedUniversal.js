@@ -65,15 +65,18 @@
     // UI SYNCHRONIZATION
     // =========================
 
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+    const mode = localStorage.getItem('bgMode') || 'image';
+    const style = localStorage.getItem('bgStylePreference') || 'repeat';
+    const color = localStorage.getItem('bgColor') || '#3b2a1a';
 
-        const modeEl = document.getElementById('bgMode');
-        const styleEl = document.getElementById('bgStyle');
-        const colorEl = document.getElementById('bgColor');
+    const modeEl = document.getElementById('bgMode');
+    const styleEl = document.getElementById('bgStyle');
+    const colorEl = document.getElementById('bgColor');
 
-        if (modeEl) modeEl.value = bgType;
-        if (styleEl) styleEl.value = bgStyle;
-        if (colorEl) colorEl.value = bgColor;
+    if (modeEl) modeEl.value = mode;
+    if (styleEl) styleEl.value = style;
+    if (colorEl) colorEl.value = color;
 
     });
 
@@ -938,3 +941,55 @@ document.addEventListener('DOMContentLoaded', function () {
   applyFontWeight(saved);
 
 });
+
+
+
+// APPLY IMAGE// APPLY IMAGE
+function applyImageTheme() {
+    const file = document.getElementById('bgUpload').files[0];
+    const style = document.getElementById('bgStyle').value;
+    const html = document.documentElement;
+
+    localStorage.setItem('bgStylePreference', style);
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onloadend = function () {
+            localStorage.setItem('customBG', reader.result);
+            localStorage.setItem('bgType', 'image');
+
+            // APPLY DIRECTLY
+            html.style.backgroundImage = `url(${reader.result})`;
+
+            if (style === 'cover') {
+                html.style.backgroundRepeat = 'no-repeat';
+                html.style.backgroundSize = 'cover';
+            } else if (style === 'contain') {
+                html.style.backgroundRepeat = 'no-repeat';
+                html.style.backgroundSize = 'contain';
+                html.style.backgroundPosition = 'center';
+            }
+        };
+        reader.readAsDataURL(file);
+    } else {
+        const existingBG = localStorage.getItem('customBG');
+        if (existingBG) {
+            html.style.backgroundImage = `url(${existingBG})`;
+        } else {
+            alert("Upload an image first.");
+        }
+    } // <--- Added this to close the ELSE
+} // <--- Added this to close the FUNCTION
+
+// APPLY COLOR
+function applyColorTheme() {
+    const color = document.getElementById('bgColor').value;
+    const html = document.documentElement;
+
+    localStorage.setItem('bgColor', color);
+    localStorage.setItem('bgType', 'color');
+
+    // APPLY DIRECTLY
+    html.style.backgroundImage = 'none';
+    html.style.backgroundColor = color;
+}
