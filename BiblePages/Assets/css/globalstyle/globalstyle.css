@@ -1,0 +1,1542 @@
+\html {
+  scroll-behavior: smooth;
+  height: auto;
+  width: 100%;
+    font-family: "Arimo", Arial, FreeSans,  Helvetica, sans-serif;
+
+
+}
+
+
+
+body {
+  color: #000;
+
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+#indeximage1080,
+#indeximage4k,
+#image4k,
+#indeximage10802,
+#indeximage4k2,
+#image4k2  {
+  height: auto;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.previouschapter, .nextchapter{  
+  transition: background-color 0.3s ease;
+}
+
+.previouschapter:hover, .nextchapter:hover, a:hover {  background-color: #f3ff87;
+  transition: background-color 0.3s ease;
+  color: #090947;
+
+
+}
+
+
+.chapterLinks, .verseLinks
+{
+  transition: box-shadow 0.3s ease;
+
+}
+
+
+.chapterLinks :hover, .verseLinks :hover
+{
+  -webkit-box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* .bible-container, */
+.indexshadow, .bible-container-bg, 
+.OtherMenu,  #combinedcontrols  {
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -webkit-box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.4);
+  background-color: #fbfeff;
+  border: solid thin rgb(192, 192, 192);
+  border-radius: 4px;
+  box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+
+
+
+.bible-container-bg:hover,
+.BibleChaptersMenu:hover,
+.OtherMenu:hover, #biblejournalpostsholder:hover, #combinedcontrols:hover  {
+  -webkit-box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.horizontalbiggerimageindex,
+.horizontalsmallerimageindex,
+.shadow1, .indexPanorama, .indexfour {
+  -webkit-filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.5));
+}
+
+
+.shadow3 {
+  -webkit-filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.2)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.2)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.3));
+}
+
+
+.shadow2 {
+  -webkit-filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.1));
+}
+
+.homepageh1,
+.BookIndexTitle,
+.ChapterPageTitle,
+.BookIndexChapter,
+.ChapterLinkName,
+.VerseTitle {
+  text-align: center;
+}
+
+#ulNEWbg {
+  background-color: rgba(245, 255, 191, 0.3);
+  padding: 0 10px;
+}
+
+#ulOLDbg {
+  background-color: rgba(181, 255, 249, 0.3);
+  padding: 0 10px;
+}
+
+.divgenesis,
+.divexodus,
+.divleviticus,
+.divnumbers,
+.divdeuteronomy,
+.divjoshua,
+.divjudges,
+.divruth,
+.div1samuel,
+.div2samuel,
+.div1kings,
+.div2kings,
+.div1chronicles,
+.div2chronicles,
+.divezra,
+.divnehemiah,
+.divesther,
+.divjob,
+.divpsalms,
+.divproverbs,
+.divecclesiastes,
+.divsongofsolomon,
+.divisaiah,
+.divjeremiah,
+.divlamentations,
+.divezekiel,
+.divdaniel,
+.divhosea,
+.divjoel,
+.divamos,
+.divobadiah,
+.divjonah,
+.divmicah,
+.divnahum,
+.divhabakkuk,
+.divzephaniah,
+.divhaggai,
+.divzechariah,
+.divmalachi {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+  border-top: 1px solid rgba(128, 128, 128, 0.281);
+  padding: 5px 0;
+  transition: padding 0.3s ease;
+}
+
+.divmatthew,
+.divmark,
+.divluke,
+.divjohn,
+.divacts,
+.divromans,
+.div1corinthians,
+.div2corinthians,
+.divgalatians,
+.divephesians,
+.divphilippians,
+.divcolossians,
+.div1thessalonians,
+.div2thessalonians,
+.div1timothy,
+.div2timothy,
+.divtitus,
+.divphilemon,
+.divhebrews,
+.divjames,
+.div1peter,
+.div2peter,
+.div1john,
+.div2john,
+.div3john,
+.divjude,
+.divrevelation.divactsc {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+  border-top: 1px solid rgba(128, 128, 128, 0.281);
+  padding: 5px 0;
+  transition: padding 0.3s ease;
+}
+
+.divgenesis:hover,
+.divexodus:hover,
+.divleviticus:hover,
+.divnumbers:hover,
+.divdeuteronomy:hover,
+.divjoshua:hover,
+.divjudges:hover,
+.divruth:hover,
+.div1samuel:hover,
+.div2samuel:hover,
+.div1kings:hover,
+.div2kings:hover,
+.div1chronicles:hover,
+.div2chronicles:hover,
+.divezra:hover,
+.divnehemiah:hover,
+.divesther:hover,
+.divjob:hover,
+.divpsalms:hover,
+.divproverbs:hover,
+.divecclesiastes:hover,
+.divsongofsolomon:hover,
+.divisaiah:hover,
+.divjeremiah:hover,
+.divlamentations:hover,
+.divezekiel:hover,
+.divdaniel:hover,
+.divhosea:hover,
+.divjoel:hover,
+.divamos:hover,
+.divobadiah:hover,
+.divjonah:hover,
+.divmicah:hover,
+.divnahum:hover,
+.divhabakkuk:hover,
+.divzephaniah:hover,
+.divhaggai:hover,
+.divzechariah:hover,
+.divmalachi:hover {
+  background-color: rgba(241, 255, 254, 0.617);
+  padding: 20px 10px;
+}
+
+.divmatthew:hover,
+.divmark:hover,
+.divluke:hover,
+.divjohn:hover,
+.divacts:hover,
+.divromans:hover,
+.div1corinthians:hover,
+.div2corinthians:hover,
+.divgalatians:hover,
+.divephesians:hover,
+.divphilippians:hover,
+.divcolossians:hover,
+.div1thessalonians:hover,
+.div2thessalonians:hover,
+.div1timothy:hover,
+.div2timothy:hover,
+.divtitus:hover,
+.divphilemon:hover,
+.divhebrews:hover,
+.divjames:hover,
+.div1peter:hover,
+.div2peter:hover,
+.div1john:hover,
+.div2john:hover,
+.div3john:hover,
+.divjude:hover,
+.divrevelation:hover {
+  background-color: rgba(241, 255, 254, 0.617);
+  padding: 20px 10px;
+    
+}
+
+.verseLinksTD {
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
+}
+
+a.vlink,
+a.vlink:link,
+a.vlink:visited a.clink,
+a.clink:link,
+a.clink:visited {
+  align-items: center;
+  background-color: white;
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+
+
+a.vlink:hover,
+a.clink:hover {
+  background-color: #dcff3d;
+  transform: scale(1.2) !important;
+  z-index: 2;
+}
+
+.verseliner {
+  display: flex;
+  width: 100%;
+}
+
+.verseLinks {
+  display: flex;
+}
+
+a.home {
+  border: 0 none;
+  color: white;
+  padding-top: 5px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.home {
+  display: block;
+}
+
+.homepageh1 {
+  display: block;
+  font-weight: bold;
+}
+
+.lesserhrnav {
+  color: #d8d8d8;
+  width: 100%;
+}
+
+.aboveindexttitle {
+  border: rgba(128, 0, 0, 0.628) 1px solid;
+
+  width: 100%;
+}
+
+.previouschapter {
+  text-align: right;
+}
+
+.nextchapter {
+  text-align: left;
+}
+
+.previouschapter,
+.npspacer,
+.nextchapter, .previouschapter-x {
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  word-wrap: break-word;
+}
+
+
+.i {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clink {
+  background-color: #f9feff !important;
+  font-weight: bold;
+  transition: ease background-color .3s;
+}
+
+.clink:hover {
+  background-color: #eeff00 !important;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+
+
+
+.ChapterP, .ChapterPNI {
+  text-align: justify !important;
+}
+
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+a,
+a.active {
+  color: #086782;
+  text-decoration: none;
+}
+
+tr {
+  width: 100%;
+}
+
+.tdenglishbible {
+  width: 50%;
+}
+
+.tdtagalogbible {
+  background-color: rgba(154, 226, 255, 0.07);
+  height: 100%;
+  width: 50%;
+}
+
+span.verseNo,
+.sup {
+  color: blue;
+  font-size: 100%;
+  font-weight: blue;
+  vertical-align: super;
+}
+
+table#chapter,
+table.searchResult {
+  margin-bottom: 2em;
+  margin-top: 1.5em;
+}
+
+table#chapter td,
+table.searchResult td {
+  border-bottom: dotted thin blue;
+  text-align: justify;
+  vertical-align: top;
+}
+
+.spantagalogbible,
+.spanenglishbible {
+  z-index: 2 !important;
+}
+
+.verse td {
+  transition: background-color 0.3s ease;
+}
+
+.verse tr:hover td {
+  background-color: rgb(250, 250, 202);
+}
+
+tr:target td {
+  background-color: #fff9d5 !important;
+}
+
+.em {
+  font-weight: bold;
+}
+
+tr.em {
+  background-color: #fff9d5 !important;
+  border-right: dotted thin silver;
+  font-weight: normal;
+  z-index: 10;
+}
+
+.clear,
+.VLclear {
+  clear: both;
+}
+
+.VLclear {
+  font-size: 1.2em !important;
+  font-weight: bold;
+}
+
+a.slink2,
+a.slink2:link,
+a.slink2:visited {
+  border: 1px solid #ebebeb;
+  font-weight: normal;
+  margin-left: 2px;
+  padding: 2px 5px;
+  text-decoration: none;
+  width: 30px;
+}
+
+img.devotion-day-time {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+  vertical-align: top;
+}
+
+div#quote>div {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.just {
+  text-align: justify;
+}
+
+#dev-content>pre {
+  text-align: center;
+}
+
+.to-left {
+  float: left;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.block {
+  width: 100%;
+}
+
+.additional-text>td {
+  font-size: 85%;
+}
+
+table#chapter {
+  table-layout: fixed;
+
+}
+
+.center {
+  text-align: center;
+}
+
+div.indent {
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: justify;
+}
+
+.diglotboth {
+  color: rgb(95, 95, 95) !important;
+  text-transform: uppercase;
+}
+
+.tagalogleft {
+  color: #333383 !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.diglotnav {
+  font-weight: bold;
+  color: maroon;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .horizontalimageindex {
+    display: block;
+  }
+
+  #indeximage4k,
+  #image4k,
+  #indeximage1080,
+  #image1080,   #indeximage4k2,
+  #image4k2,
+  #indeximage10802,
+  #image10802  {
+    display: none;
+  }
+}
+
+
+
+@media (min-width: 700px) {
+  .horizontalimageindex {
+    display: none;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.horizontalimageindex {
+  height: auto;
+  margin: 0 auto;
+  width: 70%;
+}
+
+
+
+@media (min-width: 701px) and (max-width: 1920px) {
+
+  #indeximage1080,
+  #image1080,   #indeximage10802,
+  #image10802 {
+    display: block;
+    float: left;
+    visibility: visible;
+  }
+
+  #indeximage4k,
+  #image4k, #himageHoriz,   #indeximage4k2,
+  #image4k2, #himageHoriz2 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1921px) {
+
+  #indeximage1080,
+  #image1080,   #indeximage10802,
+  #image10802 {
+    display: none;
+    visibility: hidden;
+  }
+
+  #indeximage4k,
+  #image4k,   #indeximage4k2,
+  #image4k2 {
+    display: block;
+    float: left;
+    visibility: visible;
+  }
+}
+
+
+
+#OLDTB {
+  background-color: rgba(143, 200, 221, 0.24);
+  border-bottom: 5px double #1C6EA4;
+border-top: 5px double #1C6EA4;
+}
+
+#NEWTB {
+  background-color: rgba(245, 255, 191, 0.7);
+  border-bottom: 5px double #1C6EA4;
+border-top: 5px double #1C6EA4;
+}
+
+
+
+
+
+.TITLETR {
+    background-color: rgb(184, 236, 250, 0.5);
+    font-weight: bold;
+    text-align: center !important;
+    /* Horizontal centering */
+    vertical-align: middle;
+    text-align: center !important;
+
+    td {
+        position: relative;
+        width: 100%;
+        text-align: center !important;
+        border-bottom: none !important;
+        /* Horizontal centering */
+        vertical-align: middle;
+    }
+}
+
+
+
+/* .BookIndexTitle {
+     margin-block-end: 0;
+     margin-bottom: 0;
+
+     a{     margin-block-end: 0;
+     margin-bottom: 0;}
+
+} */
+.KapituloChapter {
+margin-top:0;
+margin-bottom:5%;
+    margin-block-start: 0;
+    margin-block-end: 5%;
+
+}
+
+
+.MarginRemover{
+     margin-block-end: 0;
+     margin-bottom: 0;
+
+     a{     margin-block-end: 0;
+     margin-bottom: 0;}
+
+}
+
+
+#bigthreeIndexFlexHolder{display:flex;
+flex-direction:column;
+}
+
+
+.textcenter {text-align: center !important;}
+
+#stats-container {position: absolute; left:-500 !important;
+ text-align: center; position: absolute; bottom: 0; margin-bottom: 10px; font-family: sans-serif;
+}
+
+
+
+
+
+
+/*  --------  HEADER   ------------  */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#header {
+ 
+    color: white;
+    position: fixed;
+    z-index: 1;
+}
+.headermaroon {
+ 
+    background-color: maroon;
+
+}
+
+.headerblue {
+    background-color: #122051;
+}
+
+
+.HomeURLheader {
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+}
+
+#hrdivider {
+    width: 1.5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: flex;
+    align-items: center;
+
+    hr {
+        width: 100%;
+    }
+}
+
+#headerLink {
+    display: flex;
+}
+
+#headerVerse {
+    display: flex;
+}
+
+
+#header-content>div {
+    width: 50%;
+}
+
+@media (min-height: 801px) and (max-width:1920px) {
+
+    #display-title2 {
+        font-size: 1.4em;
+    }
+
+    #hrdivider,
+    .HomeURLheader,
+    #headerLink {
+        max-height: 30px;
+    }
+
+    .HomeURLheader {
+        font-size: 1.3em;
+    }
+
+    #header {
+
+        margin-bottom: 5px;
+
+    }
+
+    .HomeURLheader {
+        font-weight: normal;
+        text-decoration: none;
+        color: white;
+    }
+
+    #display-title {
+        text-align: left;
+        font-size: 1.2em;
+        /* margin-left: 10%; */
+        margin-top: 3px;
+        position: fixed;
+        top: 0;
+
+
+    }
+
+    @media (max-width:750px) {
+
+        #display-title2 {
+            font-size: 1em;
+        }
+
+        #header {
+            flex-direction: column !important;
+            gap: 2px;
+            padding-top: 0px;
+        }
+
+        #hrdivider,
+        .HomeURLheader,
+        #headerLink {
+            max-height: auto;
+        }
+
+        #display-title2 {
+            font-size: 1em;
+        }
+
+        #hrdivider {
+            width: 100%;
+            margin: -5px;
+            opacity: .5;
+            display: flex;
+            align-items: center;
+
+            hr {
+                width: 100%;
+
+            }
+        }
+
+
+
+
+    }
+
+
+}
+
+
+
+
+
+@media (max-height:800px) and (max-width:1536px) {
+
+
+    #hrdivider,
+    .HomeURLheader,
+    #headerLink {
+        max-height: 30px;
+    }
+
+    #header {
+        margin-bottom: 5px;
+        gap: 0px;
+        padding: 0px;
+    }
+
+
+    #display-title2 {
+        font-size: 1em;
+    }
+
+    .HomeURLheader {
+        font-size: 1em;
+    }
+
+    #display-title {
+        text-align: left;
+        font-size: 1.2em;
+        /* margin-left: 10%; */
+        margin-top: 3px;
+        position: fixed;
+        top: 0;
+
+    }
+
+    @media (max-width:700px) {
+
+        #display-title2 {
+            font-size: .9em;
+        }
+
+
+        #header {
+            flex-direction: column !important;
+            gap: 2px;
+            padding-top: 0px;
+        }
+
+        #hrdivider,
+        .HomeURLheader,
+        #headerLink {
+            max-height: auto;
+        }
+
+        #display-title2 {
+            font-size: .8em;
+        }
+
+        #hrdivider {
+            width: 100%;
+            margin: -5px;
+            opacity: .5;
+            display: flex;
+            align-items: center;
+
+            hr {
+                width: 100%;
+
+            }
+        }
+
+
+    }
+
+
+}
+
+#header::before,
+#header::after {
+    content: "";
+    flex: 1;
+    /* This makes the lines take up all available space */
+    border-bottom: 1px solid #ccc;
+    /* Adjust color and thickness here */
+    margin: 0 15px;
+    /* Adds space between the lines and the text */
+}
+
+#display-title,
+display-title2 {
+
+    z-index: 25 !important;
+    /* Higher than header */
+
+}
+
+.HomeURLheader {
+    z-index: 30 !important;
+
+}
+
+div#header {
+
+    z-index: 20 !important;
+}
+
+#header-content {
+    margin: 0px auto;
+    width: 840px;
+    font-size: 13px;
+}
+
+
+#header-content>div {
+    width: 50%;
+}
+
+/*HEADER*/
+
+
+
+
+
+/*  --------  CONTROL BUTTONS   ------------  */
+div.search {
+  width: 97%;
+}
+
+#controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: maroon;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  height: 50px;
+  z-index: 100;
+}
+
+.control-btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 5px;
+    background-color: #d9f8ff;
+    color: #000000;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: 1px solid black;
+    user-select: none;
+  transition: box-shadow 0.4s ease;
+}
+
+.mini-btn {
+  flex: 1;
+  background-color: rgb(251, 255, 35);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 4px;
+  padding: 6px 4px;
+  font-size: 0.75em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.control-btn:hover,
+.mini-btn:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+#verseInput:hover {
+  background-color: #fbffd4;
+  color: black;
+}
+
+#verseInput {
+  color: rgb(0, 0, 0);
+}
+
+.highlight-verse td {
+  background-color: #fff9d5 !important;
+}
+
+.highlight-range td {
+  background-color: #fff9d5 !important;
+}
+
+.highlight-single td {
+  background-color: #f5e9bb !important;
+}
+
+.controls-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+  flex: 1;
+  overflow-x: auto;
+}
+
+.input-row {
+  margin-bottom: 0;
+}
+
+.control-group {
+  display: flex;
+  gap: 2px;
+  flex: 0.7;
+}
+
+.control-btnx {
+  flex: 1;
+  text-align: center;
+  padding: 8px 5px;
+  background-color: #086782;
+  color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.control-groupx {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+  overflow-x: auto;
+}
+
+#verseInput,
+form#searchPassage > input#qry {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.search.controls-row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+#searchPassage {
+  flex-grow: 1;
+  display: flex;
+}
+
+#searchPassage input#qry {
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 980px) {
+  #controls {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 98% !important;
+  }
+  
+  .controls-row {
+    display: flex;
+    width: 100%;
+    gap: 4px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+  }
+  
+  .control-btn,
+    .control-btnx {
+    flex: 1;
+    white-space: nowrap;
+    padding: 8px 2px;
+    font-size: 0.85em;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  
+  .input-row {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  #verseInput,
+    form#searchPassage > input#qry,
+    div.search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+  
+  .control-group {
+    flex: 0.8;
+    display: flex;
+    gap: 2px;
+  }
+  
+  .mini-btn {
+    flex: 1;
+    padding: 6px 2px;
+  }
+}
+
+@media (max-height: 800px) and (max-width: 1536px) {
+  #verseInput,
+    form#searchPassage > input#qry {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  #controls {
+    flex-wrap: wrap;
+  }
+  
+  .control-btn {
+    flex: 1 1 18%;
+    font-size: 0.9em;
+    padding: 6px 3px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .control-btn {
+    font-size: 0.8em;
+    padding: 6px 3px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  #verseInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+  }
+}
+
+@media (min-height: 801px) and (max-width: 1920px) {
+  #verseInput,
+    form#searchPassage > input#qry {
+    font-size: 1em;
+  }
+}
+
+
+
+/*  --------  CONTROL BUTTONS   ------------  */
+
+
+
+
+/* --- SERIF FONTS --- */
+
+@font-face {
+    font-family: 'Literata';
+    src: url('../../fonts/serif/Literata/Literata-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Literata';
+    src: url('../../fonts/serif/Literata/Literata-Italic-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../../fonts/Cinzel/Cinzel-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 900;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../fonts/serif/Lora/Lora-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../fonts/serif/Lora/Lora-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../../fonts/serif/Gelasio/Gelasio-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gelasio';
+    src: url('../../fonts/serif/Gelasio/Gelasio-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+/* --- SANS-SERIF (UI) FONTS --- */
+
+
+
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../../fonts/sans/Arimo/Arimo-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../../fonts/sans/Arimo/Arimo-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 400 700;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/sans/Inter/Inter-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/sans/Inter/Inter-Italic-VariableFont_opsz_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../../fonts/sans/Lexend/Lexend-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/sans/Open_Sans/OpenSans-VariableFont_wdth_wght.woff2') format('woff2-variations');
+    font-weight: 300 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../fonts/sans/Open_Sans/OpenSans-Italic-VariableFont_wdth_wght.woff2') format('woff2-variations');
+    font-weight: 300 800;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../../fonts/sans/Public_Sans/PublicSans-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../../fonts/sans/Public_Sans/PublicSans-Italic-VariableFont_wght.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+
+
+
+/* Literata: Range 200 - 900 */
+.literata-Diglot, .litF {
+  font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Lora: Range 400 - 700 */
+.lora-Diglot, .lorF {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Gelasio: Range 400 - 700 */
+.gelasio-Diglot, .elaF {
+  font-family: "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Open Sans: Range 300 - 800 */
+.open-sans-Diglot, .opsF {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Arimo: Range 400 - 700 */
+.arimo-Diglot, .ariF {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Inter: Range 100 - 900 */
+.inter-Diglot, .indF {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+/* Cinzel: Range 400 - 900 */
+.cinzel-Diglot, .czlF {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+
+/* weight Use a value from 100 to 900
+uniquifier Use a unique and descriptive class name
+ */
+.lexend-Diglot, .lexF{
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* // weight Use a value from 300 to 700
+// uniquifier Use a unique and descriptive class name */
+
+/* // weight: Use a value from 100 to 900
+// uniquifier: Use a unique and descriptive class name */
+
+.public-sans-Diglot, .pbsF {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+.FW200 .FW300 .FW400 .FW450 .FW500 .FW550 .FW600 .FW650 .FW700 .FW800 .FW900
+
+
+.FW200 { font-weight: 200; }
+.FW300 { font-weight: 300; }
+.FW350 { font-weight: 300; }
+.FW400 { font-weight: 400; }
+.FW450 { font-weight: 450; }
+.FW500 { font-weight: 500; }
+.FW550 { font-weight: 550; }
+.FW600 { font-weight: 600; }
+
+
+.FW650 { font-weight: 650; }
+.FW700 { font-weight: 700; }
+.FW800 { font-weight: 800; }
+.FW900 { font-weight: 900; }
+
+
+
+
+/* litF lorF elaF opsF ariF indF lexF pbsF*/
+
+/*        FW200 FW300 FW350 FW400 FW450 FW500 FW550 FW600"> */
+
+.controls, .displaynoneMenu, #controls, #displaynoneMenu {display: none !important;}
+
+
+.previousnextday{text-align:left; float:left;}
+.previousnextchild{font-size:1.2em;}
+.morningeveningbutton{text-align:right; float:right;}
+.morningeveningchild{font-size:1.2em;}
+
+.DevotionalTitle {margin-top:0px; margin-bottom:20px;}
+
+
+
+.bible-container-bg {  background-image: url("../../../Assets/images/journal/cornera.webp");
+
+    /* NO REPEAT */
+    background-repeat: no-repeat;
+
+    /* PLACE IN CORNER */
+    background-position: top right;
+
+    /* KEEP ORIGINAL SIZE */
+    background-size: auto;
+
+}
+
+
+
+
+
+
+
+.BibleChaptersMenu, #biblejournalpostsholder, .OtherMenu {
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -webkit-box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.4);
+background: #ffffff;
+background: linear-gradient(127deg, rgba(255, 255, 255, 1) 0%, rgb(224, 249, 255) 50%, rgb(219, 241, 255) 100%);
+  border: solid thin rgb(192, 192, 192);
+  border-radius: 4px;
+  box-shadow: -5px 4px 16px 4px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  background-image: url("../../../Assets/images/journal/colorbookmark.webp");
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+#chapter{font-size:1.2em;}
+
+
+
+.indexfour {width:90%; margin:0 auto; height:auto;}
+
+
+.centernonitalic {text-align: center;}
+
+
+
+
+
+
+#navigationall {position: fixed; bottom:0px; right:1%; display: flex; flex-direction:row;   gap: 2%;   opacity: .2; }
+
+
+#navigationall:hover {opacity: 1; }
+
+
+.resultbox {width:100%; position: relative; height: auto;}
+
+#searchBox{border: 1px solid gray; font-size:1.2em; height:50px; }
+
+#searchResults {width: 100; height: auto; position: relative;}

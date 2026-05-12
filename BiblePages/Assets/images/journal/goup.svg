@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="65.874008"
+   height="70.479881"
+   viewBox="0 0 17.429165 18.647802"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <rect
+       x="11.80857"
+       y="7.1878252"
+       width="37.479374"
+       height="52.111732"
+       id="rect5" />
+    <rect
+       x="4.1073289"
+       y="39.533039"
+       width="123.21986"
+       height="51.855026"
+       id="rect1" />
+    <rect
+       x="11.80857"
+       y="7.1878252"
+       width="37.479374"
+       height="52.111732"
+       id="rect5-4" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-0.60100566,-0.91827089)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.22976988,0,0,0.38149494,-0.4479665,-1.7289817)"
+       id="text1"
+       style="font-size:13.3333px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);fill:#000000"><tspan
+         x="4.1074219"
+         y="51.543232"
+         id="tspan4"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Arial Bold'"
+           id="tspan3">SCROLL UP</tspan></tspan></text>
+  </g>
+  <text
+     xml:space="preserve"
+     transform="matrix(-1.1583586,0,0,-0.48686942,31.959765,20.765961)"
+     id="text5"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29.3333px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect5);fill:#000000"><tspan
+       x="11.808594"
+       y="33.818458"
+       id="tspan7"><tspan
+         style="font-weight:normal;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic'"
+         id="tspan6">v</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     transform="matrix(-1.1583586,0,0,-0.48686942,31.792641,16.465173)"
+     id="text5-8"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29.3333px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect5-4);fill:#000000"><tspan
+       x="11.808594"
+       y="33.818458"
+       id="tspan9"><tspan
+         style="font-weight:normal;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic'"
+         id="tspan8">v</tspan></tspan></text>
+  <rect
+     style="fill:#000000;stroke-width:0.264583"
+     id="rect6"
+     width="17.429165"
+     height="1.0684545"
+     x="1.1587911e-08"
+     y="17.57935" />
+</svg>

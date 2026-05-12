@@ -1,0 +1,232 @@
+
+#main-wrapper{
+    width: 50%;
+    height: 80%;
+    position: fixed;
+    margin: 0 auto;
+    z-index: 5;
+}
+#banner{
+height:242px;
+width:100%;
+margin:0 auto;
+text-align:center;
+margin-bottom:15px;
+background-image:url ("images/banner/english_tagalog_bible_batanes.webp")
+}
+#topsection h1{
+margin:0;
+}
+#contentwrapper{
+float:left;
+width:100%;
+}
+#contentcolumn{
+margin:0 0px 0 155px;
+}
+#leftcolumn{
+float:left;
+width:155px;
+margin-left:-840px;
+background-color:#F8F8F8;
+border:1px;
+margin-bottom:15px;
+}
+div.footer{
+clear:both;
+width:100%;
+padding:5px;
+text-align:left;
+}
+.round-bordered{
+border:solid thin silver;
+-webkit-border-radius:6px;
+-khtml-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+}
+.white-bg{
+background-color:white;
+}
+.clear{
+clear:both;
+}
+.verseLinks, .chapterLinks{
+text-align:center;
+background-color:white;
+}
+.center{
+text-align:center;
+}
+.verseLinks > a{
+padding-right:2px;
+padding-left:2px;
+}
+span.verseNo{
+font-size:70%;
+vertical-align:super;
+}
+table#chapter, table.searchResult{
+margin-top:1.5em;
+margin-bottom:2em;
+}
+table#chapter td, table.searchResult  td{
+vertical-align:top;
+border-bottom:dotted thin silver;
+text-align:justify;
+padding:3px 5px 3px 5px;
+}
+h3{
+color:#779125;
+text-transform:uppercase;
+}
+#leftcolumn h3{
+margin-top:0;
+margin-bottom:-3px;
+text-align:center;
+}
+#contentcolumn h3{
+margin-bottom:-10px;
+}
+ul.books>li{
+margin-left:-2em;
+}
+ul.books>li>a{
+display:block;
+font-size: 1em;
+border-bottom: 1px dotted silver;
+font-weight: 300;
+color: #555555;
+font-weight: normal;
+}
+ul.books>li>a:hover{
+background-color: white;
+color:#E25401
+}
+ul.books>li{
+list-style-type:none;
+}
+ul.books>li:first-child>a{
+border-top: 1px dotted silver;
+}
+#book-links{
+width:90%;
+height:500px;
+overflow:auto;
+border:solid thin silver;
+border-right:0px;
+-webkit-border-radius:6px;
+-khtml-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+}
+a.vlink, a.clink{
+line-height:2em;
+}
+a.vlink,  a.vlink:link, a.vlink:visited, a.clink,  a.clink:link, a.clink:visited, a.slink, a.slink:link, a.slink:visited{
+border:1px solid #EBEBEB;
+font-weight:normal;
+margin-left:2px;
+padding:2px 5px;
+text-decoration:none;
+width:22px;
+}
+a.slink2, a.slink2:link, a.slink2:visited{
+border:1px solid #EBEBEB;
+font-weight:normal;
+margin-left:2px;
+padding:2px 5px;
+text-decoration:none;
+width:30px;
+}
+a.vlink:hover, a.clink:hover, a.slink:hover, a.slink2:hover{
+border-color:#E25401;
+background-color:snow;
+}
+a.nav-disabled{
+color:silver;
+}
+div.search{
+text-align:right;
+float:left;
+padding-top:2px;
+}
+form#searchPassage>input#qry{
+width:200px;
+padding-left:3px;
+}
+.intro-note{
+color:gray;
+}
+fieldset{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+-khtml-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+background-color:#FBFBFB;
+border:1px solid #E1E1E2;
+margin:15px 15px 20px 15px;
+padding:10px 20px 0px 20px;
+}
+legend{
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+-khtml-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+background-color:#086782;
+color:#FFFFFF;
+margin-left:-8px;
+padding:1px 8px 1px 9px;
+}
+span.chapter{
+font-weight:bold;
+font-size:150%;
+}
+.chapter-1{
+text-align:right;
+}
+.bold{
+font-weight:bold;
+}
+.orange{
+color:#E25401;
+}
+#contentcolumn .innertube{
+padding-left:15px;
+}
+img.shadowed{
+text-align:center;
+-moz-box-shadow:5px 5px 7px #919191; /* <x-offset (can be negative)> <y-offset>, <radius of the shadow> <color> */
+-webkit-box-shadow:5px 5px 7px #919191;
+box-shadow:5px 5px 7px #919191;
+-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')"; /* For IE 8 */
+filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000'); /* For IE 5.5 - 7 */
+}
+img.left{
+float:left;
+}
+a.download{
+-moz-border-radius:4px;
+-webkit-border-radius:4px;
+-khtml-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+background-color:#086782;
+color:#FFFFFF;
+padding:1px 5px 1px 5px;
+}
+
+a.download:hover{
+background-color:#779125;
+}
+div.indent{
+margin-left:15px;
+margin-right:15px;
+text-align:justify;
+}
+#sponsor {
+text-align:center;
+padding:10px;
+}
