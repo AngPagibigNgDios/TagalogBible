@@ -1,179 +1,995 @@
-import os
-import re
+(function () {
 
-# ==========================================
-# CONFIGURATION
-# ==========================================
+    const html = document.documentElement;
 
-BOOK_NAME = "genesis"
-txt_file = r"D:\Bible\BibleJournal\BiblePages\FileLists.txt"
+    const bgType =
+        localStorage.getItem('bgType');
 
-# ==========================================
-# TITLES DATA
-# ==========================================
-# Note: Pwedeng string "Title" o list ["Title 1", "Title 2"]
-english_titles = {
-    1: "Creation of Heaven, Earth, and All Life",
-    2: "Garden of Eden and Humanity’s Beginning",
-    3: "The Fall of Man and First Sin",
-    4: "Cain and Abel, First Murder and Legacy",
-    5: "Generations from Adam to Noah’s Line",
-    6: "Human Wickedness and God’s Flood Warning",
-    7: "Noah’s Ark and Worldwide Flood Judgment",
-    8: "Flood Subsides, Covenant with Noah Begins",
-    9: "God’s Covenant, Rainbow, and Noah’s Sons",
-    10: "Nations Descend from Noah’s Three Sons",
-    11: "Tower of Babel and Abraham’s Lineage",
-    12: "God Calls Abram, Promise of Blessing",
-    13: "Abram and Lot Separate, God’s Promise",
-    14: "Abram Rescues Lot, Meets Melchizedek",
-    15: "God’s Covenant Promise to Abram",
-    16: "Hagar and Ishmael, Sarai’s Struggle",
-    17: "Covenant of Circumcision, Abram Becomes Abraham",
-    18: "Abraham Hosts Angels, Promise of Isaac",
-    19: "Destruction of Sodom, Lot’s Escape",
-    20: "Abraham and Abimelech, God’s Protection",
-    21: "Birth of Isaac, Expulsion of Hagar",
-    22: "Abraham Tested, Sacrifice of Isaac",
-    23: "Sarah’s Death and Burial in Canaan",
-    24: "Isaac and Rebekah’s Marriage Arranged",
-    25: "Abraham’s Death, Esau and Jacob’s Birth",
-    26: "Isaac’s Life, Covenant Renewed by God",
-    27: "Jacob Deceives Isaac, Steals Esau’s Blessing",
-    28: "Jacob’s Dream of Ladder to Heaven",
-    29: "Jacob Marries Leah and Rachel",
-    30: "Jacob’s Children and Growing Prosperity",
-    31: "Jacob Leaves Laban, God’s Protection",
-    32: "Jacob Wrestles with God, Becomes Israel",
-    33: "Jacob Reconciles with Esau Peacefully",
-    34: "Dinah’s Story and Shechem’s Revenge",
-    35: "Jacob Returns to Bethel, Covenant Renewed",
-    36: "Descendants of Esau, Edomite Lineage",
-    37: "Joseph’s Dreams and Brothers’ Betrayal",
-    38: "Judah and Tamar’s Story of Justice",
-    39: "Joseph in Egypt, Temptation and Prison",
-    40: "Joseph Interprets Dreams in Prison",
-    41: "Joseph Rises to Power in Egypt",
-    42: "Brothers Visit Egypt, Joseph Tests Them",
-    43: "Joseph’s Brothers Return with Benjamin",
-    44: "Joseph Tests Brothers with Silver Cup",
-    45: "Joseph Reveals Himself, Family Reunited",
-    46: "Jacob’s Family Moves to Egypt",
-    47: "Jacob and Joseph in Pharaoh’s Court",
-    48: "Jacob Blesses Joseph’s Sons, Ephraim Preferred",
-    49: "Jacob Blesses His Twelve Sons",
-    50: "Joseph’s Forgiveness and Death in Egypt"
+    const bgStyle =
+        localStorage.getItem('bgStylePreference');
+
+    const bgColor =
+        localStorage.getItem('bgColor');
+
+    const customBG =
+        localStorage.getItem('customBG');
+
+    // USER CHOSE COLOR
+    if (bgType === 'color' && bgColor) {
+
+        html.style.backgroundImage = 'none';
+        html.style.backgroundColor = bgColor;
+
+    }
+
+    // USER CHOSE CUSTOM IMAGE
+    else if (customBG) {
+
+        const img = new Image();
+
+        img.onload = () => {
+
+            html.style.backgroundImage =
+                `url(${customBG})`;
+
+            if (bgStyle === 'cover') {
+
+                html.style.backgroundRepeat =
+                    'no-repeat';
+
+                html.style.backgroundSize =
+                    'cover';
+
+            }
+
+            else if (bgStyle === 'contain') {
+
+                html.style.backgroundRepeat =
+                    'no-repeat';
+
+                html.style.backgroundSize =
+                    'contain';
+
+                html.style.backgroundPosition =
+                    'center';
+
+            }
+
+        };
+
+        img.src = customBG;
+
+    }
+
+    // =========================
+    // UI SYNCHRONIZATION
+    // =========================
+
+document.addEventListener("DOMContentLoaded", () => {
+    const mode = localStorage.getItem('bgMode') || 'image';
+    const style = localStorage.getItem('bgStylePreference') || 'repeat';
+    const color = localStorage.getItem('bgColor') || '#3b2a1a';
+
+    const modeEl = document.getElementById('bgMode');
+    const styleEl = document.getElementById('bgStyle');
+    const colorEl = document.getElementById('bgColor');
+
+    if (modeEl) modeEl.value = mode;
+    if (styleEl) styleEl.value = style;
+    if (colorEl) colorEl.value = color;
+
+    });
+
+})();
+
+
+
+
+
+
+
+
+/////////////////////////
+//                     //
+//  BIBLE LANGUAGE     //
+//                     //
+/////////////////////////
+
+
+
+
+
+
+
+const bibleBooksTL = {
+  Genesis: 'Genesis',
+  Exodus: 'Exodo',
+  Leviticus: 'Levitico',
+  Numbers: 'Mga Bilang',
+  Deuteronomy: 'Deuteronomio',
+  Joshua: 'Josue',
+  Judges: 'Mga Hukom',
+  Ruth: 'Ruth',
+  '1 Samuel': '1 Samuel',
+  '2 Samuel': '2 Samuel',
+  '1 Kings': '1 Mga Hari',
+  '2 Kings': '2 Mga Hari',
+  '1 Chronicles': '1 Mga Cronica',
+  '2 Chronicles': '2 Mga Cronica',
+  Ezra: 'Ezra',
+  Nehemiah: 'Nehemias',
+  Esther: 'Ester',
+  Job: 'Job',
+  Psalms: 'Mga Awit',
+  Proverbs: 'Kawikaan',
+  Ecclesiastes: 'Eclesiastes',
+  'Song of Solomon': 'Awit ni Solomon',
+  Isaiah: 'Isaias',
+  Jeremiah: 'Jeremias',
+  Lamentations: 'Mga Panaghoy',
+  Ezekiel: 'Ezekiel',
+  Daniel: 'Daniel',
+  Hosea: 'Oseas',
+  Joel: 'Joel',
+  Amos: 'Amos',
+  Obadiah: 'Obadias',
+  Jonah: 'Jonas',
+  Micah: 'Mikas',
+  Nahum: 'Naum',
+  Habakkuk: 'Habacuc',
+  Zephaniah: 'Sofonias',
+  Haggai: 'Ageo',
+  Zechariah: 'Zacarias',
+  Malachi: 'Malakias',
+  Matthew: 'Mateo',
+  Mark: 'Marcos',
+  Luke: 'Lucas',
+  John: 'Juan',
+  Acts: 'Mga Gawa',
+  Romans: 'Mga Taga Roma',
+  '1 Corinthians': '1 Mga Taga Corinto',
+  '2 Corinthians': '2 Mga Taga Corinto',
+  Galatians: 'Mga Taga Galacia',
+  Ephesians: 'Mga Taga Efeso',
+  Philippians: 'Mga Taga Filipos',
+  Colossians: 'Mga Taga Colosas',
+  '1 Thessalonians': '1 Mga Taga Tesalonica',
+  '2 Thessalonians': '2 Mga Taga Tesalonica',
+  '1 Timothy': '1 Timoteo',
+  '2 Timothy': '2 Timoteo',
+  Titus: 'Tito',
+  Philemon: 'Filemon',
+  Hebrews: 'Mga Hebreo',
+  James: 'Santiago',
+  '1 Peter': '1 Pedro',
+  '2 Peter': '2 Pedro',
+  '1 John': '1 Juan',
+  '2 John': '2 Juan',
+  '3 John': '3 Juan',
+  Jude: 'Judas',
+  Revelation: 'Pahayag',
+};
+
+// 1. Function to clean the title and update the header div instantly
+function refreshHeaderDisplay () {
+  const inputField = document.getElementById ('verseInput');
+  const displayDiv = document.getElementById ('display-title2');
+  if (!inputField || !displayDiv) return;
+
+  let rawInput = inputField.value.trim ();
+
+  // Update the URL hash
+  if (rawInput) {
+    window.location.hash = 'verse-' + rawInput;
+  } else {
+    history.replaceState (null, null, ' ');
+  }
+
+  // Get the base title from the document (removing any old verse string)
+  let baseTitle = document.title.split (' :')[0].trim ();
+
+  // Format the verse string for display
+  let cleanInput = decodeURIComponent (rawInput)
+    .replace (/[,\s]+/g, ',\u00A0')
+    .replace (/-/g, '\u00A0\u2014\u00A0');
+
+  let verseDisplay = rawInput ? `\u00A0\u00A0:\u00A0\u00A0${cleanInput}` : '';
+
+  // Update Browser Tab
+  document.title = baseTitle + (rawInput ? ' : ' + rawInput : '');
+
+  // Update the Div
+  displayDiv.innerHTML = `${baseTitle}${verseDisplay}`;
 }
 
-tagalog_titles = {
-    1: "Paglikha ng Langit, Lupa, at Lahat ng Buhay",
-    2: "Halamanan ng Eden at ang Simula ng Sangkatauhan",
-    3: "Ang Pagbagsak ng Tao at Unang Kasalanan",
-    4: "Cain at Abel, Unang Pagpatay at Pamana",
-    5: "Mga Henerasyon mula kay Adan hanggang sa Linya ni Noe",
-    6: "Kasamaan ng Tao at Babala ng Diyos sa Baha",
-    7: "Ang Arka ni Noe at ang Pandaigdigang Paghatol sa Baha",
-    8: "Humaba ang Baha, Nagsimula ang Tipan kay Noe",
-    9: "Tipan ng Diyos, Bahaghari, at ang mga Anak ni Noe",
-    10: "Nagmula ang mga Bansa sa Tatlong Anak ni Noe",
-    11: "Tore ng Babel at ang Linya ni Abraham",
-    12: "Tinawag ng Diyos si Abram, Pangako ng Pagpapala",
-    13: "Naghiwalay sina Abram at Lot, Pangako ng Diyos",
-    14: "Iniligtas ni Abram si Lot, Nakilala si Melquisedec",
-    15: "Pangako ng Tipan ng Diyos kay Abram",
-    16: "Hagar at Ismael, Ang Pakikibaka ni Sarai",
-    17: "Tipan ng Pagtutuli, Si Abram ay Naging Abraham",
-    18: "Si Abraham ay Nag-host ng mga Anghel, Pangako ni Isaac",
-    19: "Pagkawasak ng Sodoma, Pagtakas ni Lot",
-    20: "Si Abraham at Abimelech, Proteksyon ng Diyos",
-    21: "Pagsilang ni Isaac, Pagpapalayas kay Hagar",
-    22: "Sinubukan si Abraham, Paghain kay Isaac",
-    23: "Pagkamatay at Paglilibing ni Sarah sa Canaan",
-    24: "Isinaayos ang Kasal nina Isaac at Rebekah",
-    25: "Pagkamatay ni Abraham, Ang Kapanganakan nina Esau at Jacob",
-    26: "Ang Buhay ni Isaac, Ang Tipang Pinanibago ng Diyos",
-    27: "Nilinlang ni Jacob si Isaac, Ninakaw ang Pagpapala ni Esau",
-    28: "Ang Panaginip ni Jacob ng Hagdan Patungong Langit",
-    29: "Pinagkasal ni Jacob sina Lea at Rachel",
-    30: "Ang kay Jacob Mga Bata at Lumalagong Kasaganaan",
-    31: "Iniwan ni Jacob si Laban, ang Proteksyon ng Diyos",
-    32: "Nakipagbuno si Jacob sa Diyos, Naging Israel",
-    33: "Mapayapang Nakipagkasundo si Jacob kay Esau",
-    34: "Ang Kwento ni Dina at ang Paghihiganti ni Shechem",
-    35: "Bumalik si Jacob sa Bethel, Pinanibago ang Tipan",
-    36: "Mga Inapo ni Esau, ang Lipi ng mga Edomita",
-    37: "Mga Panaginip ni Jose at ang Pagtataksil ng mga Kapatid",
-    38: "Ang Kwento ng Katarungan nina Juda at Tamar",
-    39: "Si Jose sa Ehipto, ang Tukso at Bilangguan",
-    40: "Ipinaliwanag ni Jose ang mga Panaginip sa Bilangguan",
-    41: "Umakyat si Jose sa Kapangyarihan sa Ehipto",
-    42: "Binisita ng mga Kapatid ang Ehipto, Sinubukan Sila ni Jose",
-    43: "Bumalik ang mga Kapatid ni Jose kasama si Benjamin",
-    44: "Sinubukan ni Jose ang mga Kapatid gamit ang Kopang Pilak",
-    45: "Ipinakita ni Jose ang Kanyang Sarili, Pamilya Muling Nagkasama",
-    46: "Lumipat ang Pamilya ni Jacob sa Ehipto",
-    47: "Sina Jacob at Jose sa Korte ng Paraon",
-    48: "Binasbasan ni Jacob ang mga Anak ni Jose, Mas Pinili si Efraim",
-    49: "Binasbasan ni Jacob ang Kanyang Labindalawang Anak",
-    50: "Ang Pagpapatawad at Pagkamatay ni Jose sa Ehipto"
+// 2. Click Listener for verse links (vlink) AND clicking the rows
+document.addEventListener ('click', function (e) {
+  const vlink = e.target.closest ('.vlink');
+  const row = e.target.closest ("tr[id^='verse-']");
+  const inputField = document.getElementById ('verseInput');
+
+  if (vlink && inputField) {
+    const verseNum = vlink.getAttribute ('href').split ('#verse-')[1];
+    inputField.value = decodeURIComponent (verseNum);
+    applyVerseHighlight ();
+    refreshHeaderDisplay ();
+  } else if (row && inputField) {
+    const verseNum = row.id.replace ('verse-', '');
+    inputField.value = verseNum;
+    applyVerseHighlight ();
+    refreshHeaderDisplay ();
+  }
+});
+
+// 3. Combined Load logic
+window.onload = function () {
+  const input = document.getElementById ('verseInput');
+  const hash = window.location.hash;
+
+  if (input && hash.includes ('#verse-')) {
+    input.value = decodeURIComponent (hash.replace ('#verse-', ''));
+    applyVerseHighlight ();
+  }
+
+  if (input) {
+    input.addEventListener ('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault ();
+        applyVerseHighlight ();
+        refreshHeaderDisplay ();
+      }
+    });
+  }
+
+  refreshHeaderDisplay (); // Initial draw
+
+  if (typeof updateSidebarLanguage === 'function') {
+    updateSidebarLanguage ('both');
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////
+//                       //
+//HIGHLIGHT JS AND VERSE //
+//                       //
+///////////////////////////
+
+
+
+
+
+
+
+
+let verseLanguageMode = 'both'; // display mode
+let copyMode = 'both'; // copy mode
+
+// ---------------------------
+// HELPER: Get Title
+// ---------------------------
+function getCleanCitation () {
+  var fullTitle = document.title || '';
+  var cleanTitle = fullTitle
+    .replace (/EnglishTagalogBible\.Com\s*—\s*/gi, '')
+    .trim ();
+  return cleanTitle;
 }
 
-# ==========================================
-# PROCESS
-# ==========================================
+// ---------------------------
+// HELPER: Sort & Format Range (e.g., 1, 5, 9-11)
+// ---------------------------
+function getSortedRangeString (highlightedRows) {
+  const nums = highlightedRows.map (row =>
+    parseInt (row.id.replace ('verse-', ''), 10)
+  );
+  if (nums.length === 0) return '';
 
-with open(txt_file, "r", encoding="utf-8") as f:
-    files = f.readlines()
+  let result = [];
+  let start = nums[0];
+  let end = nums[0];
 
-for filepath in files:
-    filepath = filepath.strip()
-    if not filepath: continue
+  for (let i = 1; i <= nums.length; i++) {
+    if (i < nums.length && nums[i] === end + 1) {
+      end = nums[i];
+    } else {
+      result.push (start === end ? start : `${start}-${end}`);
+      if (i < nums.length) {
+        start = nums[i];
+        end = nums[i];
+      }
+    }
+  }
+  return result.join (', ');
+}
 
-    filename = os.path.basename(filepath).lower()
+// ---------------------------
+// HELPER: Parse Title into components
+// ---------------------------
+function getParsedTitle () {
+  let fullTitle = getCleanCitation ().trim ();
 
-    if BOOK_NAME not in filename:
-        continue
+  let data = {
+    engBook: '',
+    tlBook: '',
+    chapter: ''
+  };
 
-    if "copy" in filename:
-        continue
+  // Matches:
+  // (Mateo) Matthew 1
+  // (Exodo) Exodus 4
+  const match = fullTitle.match (/^\((.*?)\)\s*(.*?)\s+(\d+)$/);
 
-    match = re.search(r'chapter-(\d+)\.html$', filename)
-    if not match:
-        continue
+  if (match) {
+    data.tlBook = match[1].trim ();
+    data.engBook = match[2].trim ();
+    data.chapter = match[3].trim ();
+  }
 
-    chapter = int(match.group(1))
+  return data;
+}
+// ---------------------------
+// CORE FUNCTIONS: Highlight & Clear
+// ---------------------------
+function clearHighlights () {
+  document.querySelectorAll ('tr').forEach (tr => {
+    tr.classList.remove ('highlight-verse');
+    const eng = tr.querySelector ('.tdenglishbible');
+    const tl = tr.querySelector ('.tdtagalogbible');
+    if (eng) eng.style.display = '';
+    if (tl) tl.style.display = '';
+  });
+}
 
-    # Kunin ang data mula sa dictionaries
-    eng_data = english_titles.get(chapter)
-    tag_data = tagalog_titles.get(chapter)
+function applyVerseHighlight () {
+  clearHighlights ();
+  const inputField = document.getElementById ('verseInput');
+  if (!inputField) return;
+  const input = inputField.value.trim ();
+  if (!input) return;
 
-    if not eng_data or not tag_data:
-        continue
+  let targets = [];
+  let parts = input.split (/[,\s]+/);
 
-    # TRANSFORM DATA: Kung list ang nilagay mo, gagawin itong string na may <br>
-    # Kung string lang, mananatiling string.
-    if isinstance(eng_data, list):
-        eng_replacement = "<br>".join(eng_data)
-    else:
-        eng_replacement = eng_data
+  parts.forEach (part => {
+    part = part.trim ();
+    if (!part) return;
+    if (part.includes ('-')) {
+      let [start, end] = part.split ('-').map (n => parseInt (n.trim (), 10));
+      if (!isNaN (start) && !isNaN (end)) {
+        let actualStart = Math.min (start, end);
+        let actualEnd = Math.max (start, end);
+        for (let i = actualStart; i <= actualEnd; i++)
+          targets.push (i);
+      }
+    } else {
+      let num = parseInt (part, 10);
+      if (!isNaN (num)) targets.push (num);
+    }
+  });
 
-    if isinstance(tag_data, list):
-        tag_replacement = "<br>".join(tag_data)
-    else:
-        tag_replacement = tag_data
+  targets = [...new Set (targets)];
+  let firstMatch = null;
 
-    # Read the file
-    with open(filepath, "r", encoding="utf-8") as file:
-        html = file.read()
+  targets.forEach (num => {
+    const row = document.getElementById ('verse-' + num);
+    if (row) {
+      row.classList.add ('highlight-verse');
+      const eng = row.querySelector ('.tdenglishbible');
+      const tl = row.querySelector ('.tdtagalogbible');
+      if (verseLanguageMode === 'english' && tl) tl.style.display = 'none';
+      if (verseLanguageMode === 'tagalog' && eng) eng.style.display = 'none';
+      if (!firstMatch) firstMatch = row;
+    }
+  });
 
-    # PERFORM REPLACEMENTS
-    html = html.replace("**INSERTENGLISH**", eng_replacement)
-    html = html.replace("**INSERTAGALOG**", tag_replacement)
+  if (firstMatch)
+    firstMatch.scrollIntoView ({behavior: 'smooth', block: 'center'});
+}
 
-    # Save the file
-    with open(filepath, "w", encoding="utf-8") as file:
-        file.write(html)
+// ---------------------------
+// COPY FUNCTIONS
+// ---------------------------
+async function performCopy (text, label) {
+  try {
+    await navigator.clipboard.writeText (text);
+    alert (label + ' COPIED!');
+  } catch (err) {
+    console.error ('Copy failed', err);
+  }
+}
 
-    print(f"Success: Updated {filename}")
+function copyEnglish () {
+  const highlightedRows = Array.from (
+    document.querySelectorAll ('tr.highlight-verse')
+  );
+  if (highlightedRows.length === 0) return alert ('No verses highlighted!');
 
-print("\nDONE")
+  highlightedRows.sort (
+    (a, b) =>
+      parseInt (a.id.replace ('verse-', ''), 10) -
+      parseInt (b.id.replace ('verse-', ''), 10)
+  );
+
+  const info = getParsedTitle ();
+  const sortedRanges = getSortedRangeString (highlightedRows);
+  const cleanTitle = `${info.engBook} ${info.chapter} : ${sortedRanges}`;
+
+  let output = [cleanTitle];
+  highlightedRows.forEach (row => {
+    const verseNo = row.id.replace ('verse-', '');
+    let text = row
+      .querySelector ('.tdenglishbible')
+      .innerText.trim ()
+      .replace (/^\d+\s*/, '');
+    output.push (`${verseNo} ${text}`);
+  });
+
+  performCopy (output.join ('\n\n'), 'ENGLISH');
+}
+
+function copyTagalog () {
+  const highlightedRows = Array.from (
+    document.querySelectorAll ('tr.highlight-verse')
+  );
+  if (highlightedRows.length === 0) return alert ('No verses highlighted!');
+
+  highlightedRows.sort (
+    (a, b) =>
+      parseInt (a.id.replace ('verse-', ''), 10) -
+      parseInt (b.id.replace ('verse-', ''), 10)
+  );
+
+  const info = getParsedTitle ();
+  const sortedRanges = getSortedRangeString (highlightedRows);
+  const cleanTitle = `${info.tlBook} ${info.chapter} : ${sortedRanges}`;
+
+  let output = [cleanTitle];
+  highlightedRows.forEach (row => {
+    const verseNo = row.id.replace ('verse-', '');
+    let text = row
+      .querySelector ('.tdtagalogbible')
+      .innerText.trim ()
+      .replace (/^\d+\s*/, '');
+    output.push (`${verseNo} ${text}`);
+  });
+
+  performCopy (output.join ('\n\n'), 'TAGALOG');
+}
+
+function copyBoth () {
+  const highlightedRows = Array.from (
+    document.querySelectorAll ('tr.highlight-verse')
+  );
+  if (highlightedRows.length === 0) return alert ('No verses highlighted!');
+
+  highlightedRows.sort (
+    (a, b) =>
+      parseInt (a.id.replace ('verse-', ''), 10) -
+      parseInt (b.id.replace ('verse-', ''), 10)
+  );
+
+  const info = getParsedTitle ();
+  const sortedRanges = getSortedRangeString (highlightedRows);
+
+  let tagalogLines = [`${info.tlBook} ${info.chapter} : ${sortedRanges}`];
+  let englishLines = [`${info.engBook} ${info.chapter} : ${sortedRanges}`];
+
+  highlightedRows.forEach (row => {
+    const verseNo = row.id.replace ('verse-', '');
+    let engText = row
+      .querySelector ('.tdenglishbible')
+      .innerText.trim ()
+      .replace (/^\d+\s*/, '');
+    let tlText = row
+      .querySelector ('.tdtagalogbible')
+      .innerText.trim ()
+      .replace (/^\d+\s*/, '');
+    englishLines.push (`${verseNo} ${engText}`);
+    tagalogLines.push (`${verseNo} ${tlText}`);
+  });
+
+  const finalOutput = [
+    tagalogLines.join ('\n'),
+    '',
+    englishLines.join ('\n'),
+  ].join ('\n');
+  performCopy (finalOutput, 'TAGALOG & ENGLISH');
+}
+
+// ---------------------------
+// LISTENERS & INITIALIZE
+// ---------------------------
+document.addEventListener ('click', function (e) {
+  const vlink = e.target.closest ('.vlink');
+  const row = e.target.closest ("tr[id^='verse-']");
+  const inputField = document.getElementById ('verseInput');
+
+  if ((vlink || row) && inputField) {
+    if (vlink) e.preventDefault ();
+    const verseNum = vlink
+      ? vlink.getAttribute ('href').split ('#verse-')[1]
+      : row.id.replace ('verse-', '');
+
+    inputField.value = decodeURIComponent (verseNum);
+    history.replaceState (null, null, '#verse-' + verseNum);
+
+    // ADD THIS LINE to ensure the highlights trigger correctly
+    applyVerseHighlight ();
+  }
+});
+
+function syncFromHash () {
+  const input = document.getElementById('verseInput');
+  if (!input) return;
+
+  const hash = decodeURIComponent(window.location.hash);
+
+  if (hash.startsWith('#verse-')) {
+    const value = hash.replace('#verse-', '');
+
+    // avoid unnecessary re-run
+    if (input.value !== value) {
+      input.value = value;
+      applyVerseHighlight();
+    }
+  }
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  const input = document.getElementById('verseInput');
+
+  if (input) {
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+
+        // keep URL in sync
+        history.replaceState(null, null, '#verse-' + input.value.trim());
+
+        applyVerseHighlight();
+      }
+    });
+  }
+
+  // ✅ use shared function
+  syncFromHash();
+});
+
+
+
+
+
+
+
+
+
+
+/////////////////////////
+//                     //
+//  HIDE SHOW JS      //
+//                     //
+/////////////////////////
+
+
+
+// ===============================
+// HIDE SHOW BIBLE, DIGLOT TAGALOG ENGLISH DITO.
+// ===============================
+
+function applyMode (mode) {
+  // SAVE MODE FOR ALL PAGES
+  localStorage.setItem ('bibleMode', mode);
+
+  // TEXT VISIBILITY CONTROL
+  document.querySelectorAll ('.tdenglishbible').forEach (td => {
+    td.style.display = mode === 'tagalog' ? 'none' : '';
+  });
+
+  document.querySelectorAll ('.tdtagalogbible').forEach (td => {
+    td.style.display = mode === 'english' ? 'none' : '';
+  });
+
+  const engList = document.querySelectorAll ('.englishLabel');
+  const tagList = document.querySelectorAll ('.tagalogLabel');
+  const nonDiglot = document.querySelectorAll ('.nondiglotLabel');
+
+  if (mode === 'both') {
+    // REVERSE
+    engList.forEach (el => {
+      el.classList.add ('diglotboth');
+      el.classList.remove ('tagalogleft');
+    });
+
+    tagList.forEach (el => {
+      el.classList.remove ('english');
+      el.classList.add ('tagalogleft');
+    });
+
+    nonDiglot.forEach (el => {
+      el.classList.remove ('diglotcutwidth');
+      el.classList.add ('diglotfullwidth');
+    });
+  }
+
+  if (mode === 'english') {
+    // REVERSE
+    engList.forEach (el => {
+      el.classList.remove ('english');
+      el.classList.remove ('diglotboth');
+      el.classList.add ('tagalogleft');
+    });
+
+    tagList.forEach (el => {
+      el.classList.remove ('tagalogleft');
+      el.classList.add ('english');
+    });
+
+    nonDiglot.forEach (el => {
+      el.classList.remove ('diglotfullwidth');
+      el.classList.add ('diglotcutwidth');
+    });
+  }
+
+  if (mode === 'tagalog') {
+    // NORMAL (DIGLOT + TAGALOG ONLY)
+    engList.forEach (el => {
+      el.classList.remove ('tagalogleft');
+      el.classList.remove ('diglotboth');
+      el.classList.add ('english');
+    });
+
+    tagList.forEach (el => {
+      el.classList.remove ('english');
+      el.classList.add ('tagalogleft');
+    });
+    nonDiglot.forEach (el => {
+      el.classList.remove ('diglotfullwidth');
+      el.classList.add ('diglotcutwidth');
+    });
+  }
+
+}
+
+// BUTTON FUNCTIONS
+function showAll () {
+  applyMode ('both');
+}
+
+function showEnglishOnly () {
+  applyMode ('english');
+}
+
+function showTagalogOnly () {
+  applyMode ('tagalog');
+}
+
+// ===============================
+// AUTO RESTORE ON EVERY PAGE
+// ===============================
+document.addEventListener ('DOMContentLoaded', function () {
+  let savedMode = localStorage.getItem ('bibleMode') || 'both';
+  applyMode (savedMode);
+});
+
+
+// ===============================
+// FONT SIZE CHANGE DITO
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  let savedFontSize = localStorage.getItem('bibleFontSize');
+  let fontSize = savedFontSize ? parseFloat(savedFontSize) : null;
+
+  function applyFontSize() {
+
+    document.querySelectorAll('.spanenglishbible').forEach(el => {
+      el.style.fontSize = fontSize + 'em';
+    });
+
+    document.querySelectorAll('.spantagalogbible').forEach(el => {
+      el.style.fontSize = fontSize + 'em';
+    });
+
+  }
+
+  window.increaseFont = function () {
+
+    if (fontSize === null) fontSize = 1;
+
+    fontSize += 0.1;
+
+    localStorage.setItem('bibleFontSize', fontSize);
+
+    applyFontSize();
+
+  };
+
+  window.decreaseFont = function () {
+
+    if (fontSize === null) fontSize = 1;
+
+    fontSize -= 0.05;
+
+    if (fontSize < 0.6) fontSize = 0.6;
+
+    localStorage.setItem('bibleFontSize', fontSize);
+
+    applyFontSize();
+
+  };
+
+  window.resetFont = function () {
+
+    fontSize = null;
+
+    localStorage.removeItem('bibleFontSize');
+
+    document.querySelectorAll('.spanenglishbible').forEach(el => {
+      el.style.fontSize = '';
+    });
+
+    document.querySelectorAll('.spantagalogbible').forEach(el => {
+      el.style.fontSize = '';
+    });
+
+  };
+
+  if (fontSize !== null) {
+    applyFontSize();
+  }
+
+});
+
+
+
+
+
+
+/////////////////////////
+//                     //
+//  FONT FAMILY ITO     //
+//                     //
+/////////////////////////
+
+
+
+// ===============================
+// FONT STYLE DITO
+//
+
+// ===============================
+// FONT FAMILY
+// ===============================
+
+function applyFont(fontClass) {
+
+  // SAVE
+  localStorage.setItem('fontFamilyS', fontClass);
+
+  // GET ALL CONTAINERS
+  const containers =
+    document.querySelectorAll('.FontChanger');
+
+  // LOOP THROUGH ALL
+  containers.forEach(container => {
+
+    // REMOVE ALL FONT CLASSES
+    container.classList.remove(
+      'litF',
+      'lorF',
+      'elaF',
+      'opsF',
+      'indF',
+      'lexF',
+      'pbsF',
+      'ariF'
+    );
+
+    // ADD SELECTED FONT
+    container.classList.add(fontClass);
+
+  });
+
+}
+
+
+// ===============================
+// BUTTON FUNCTIONS
+// ===============================
+
+function LiterataSF() {
+  applyFont('litF');
+}
+
+function LoraSF() {
+  applyFont('lorF');
+}
+
+function GelasioSF() {
+  applyFont('elaF');
+}
+
+function OpenSS() {
+  applyFont('opsF');
+}
+
+function InterSS() {
+  applyFont('indF');
+}
+
+function LexendSS() {
+  applyFont('lexF');
+}
+
+function PublicSS() {
+  applyFont('pbsF');
+}
+
+function ArimoSS() {
+  applyFont('ariF');
+}
+
+
+// ===============================
+// AUTO RESTORE
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const saved =
+    localStorage.getItem('fontFamilyS') || 'ariF';
+
+  applyFont(saved);
+
+});
+
+
+
+
+// ===============================
+// FONT WEIGHT
+// ===============================
+
+function applyFontWeight(fontWeight) {
+
+  // SAVE
+  localStorage.setItem('fontFamilyWeight', fontWeight);
+
+  // GET ALL CONTAINERS
+  const containers =
+    document.querySelectorAll('.FontWeightChanger');
+
+  // LOOP THROUGH ALL
+  containers.forEach(container => {
+
+    // REMOVE OLD
+    container.classList.remove(
+      'FW200',
+      'FW300',
+      'FW350',
+      'FW400',
+      'FW500',
+      'FW600',
+      'FW650',
+      'FW700',
+      'FW800',
+    );
+
+    // ADD NEW
+    container.classList.add(fontWeight);
+
+  });
+
+}
+
+
+// ===============================
+// BUTTONS
+// ===============================
+
+
+function FW800FF() {
+  applyFontWeight('FW800');
+}
+
+function FW700FF() {
+  applyFontWeight('FW700');
+}
+
+function FW600FF() {
+  applyFontWeight('FW600');
+}
+
+
+function FW500FF() {
+  applyFontWeight('FW500');
+}
+
+
+function FW400FF() {
+  applyFontWeight('FW400');
+}
+
+function FW350FF() {
+  applyFontWeight('FW350');
+}
+
+
+// ===============================
+// AUTO RESTORE
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const saved =
+    localStorage.getItem('fontFamilyWeight')
+    || 'FW500';
+
+  applyFontWeight(saved);
+
+});
+
+
+
+// APPLY IMAGE// APPLY IMAGE
+function applyImageTheme() {
+    const file = document.getElementById('bgUpload').files[0];
+    const style = document.getElementById('bgStyle').value;
+    const html = document.documentElement;
+
+    localStorage.setItem('bgStylePreference', style);
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onloadend = function () {
+            localStorage.setItem('customBG', reader.result);
+            localStorage.setItem('bgType', 'image');
+
+            // APPLY DIRECTLY
+            html.style.backgroundImage = `url(${reader.result})`;
+
+            if (style === 'cover') {
+                html.style.backgroundRepeat = 'no-repeat';
+                html.style.backgroundSize = 'cover';
+            } else if (style === 'contain') {
+                html.style.backgroundRepeat = 'no-repeat';
+                html.style.backgroundSize = 'contain';
+                html.style.backgroundPosition = 'center';
+            }
+        };
+        reader.readAsDataURL(file);
+    } else {
+        const existingBG = localStorage.getItem('customBG');
+        if (existingBG) {
+            html.style.backgroundImage = `url(${existingBG})`;
+        } else {
+            alert("Upload an image first.");
+        }
+    } // <--- Added this to close the ELSE
+} // <--- Added this to close the FUNCTION
+
+// APPLY COLOR
+function applyColorTheme() {
+    const color = document.getElementById('bgColor').value;
+    const html = document.documentElement;
+
+    localStorage.setItem('bgColor', color);
+    localStorage.setItem('bgType', 'color');
+
+    // APPLY DIRECTLY
+    html.style.backgroundImage = 'none';
+    html.style.backgroundColor = color;
+}
