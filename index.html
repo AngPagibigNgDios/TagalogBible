@@ -12,11 +12,11 @@
 <link rel="manifest" href="BiblePages/Assets/images/favicon/site.webmanifest">
 <link rel="stylesheet" href="BiblePages/Assets/css/4k.css" media="screen and (min-height: 1500px) and (min-width: 2500px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/2k.css" media="screen and (min-height: 1090px) and (min-width: 2000px)">
-<link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Landscape.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (max-width: 1920px)">
-<link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Portrait.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (max-width: 958px)">
+<link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Landscape.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (min-width:1201px) and (max-width: 1920px)">
+<link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Portrait.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (min-width:701px) and (max-width: 1200px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Narrow.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (max-width: 700px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/720p.css" media="screen and (max-height: 768px) and (max-width: 1600px)">
-<link rel="stylesheet" href="BiblePages/Assets/css/mobile.css" media="screen and (max-width: 600px)">
+<link rel="stylesheet" href="BiblePages/Assets/css/mobile.css" media="screen and (hover: none) and (pointer: coarse) and (max-width: 600px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/index1080p.css" media="screen and (min-height: 750px) and (min-width: 961px)">
 <script src="BiblePages/Assets/js/jquery-4.0.0.min.js"></script>
 <script class="NTIndex" src="BiblePages/Assets/js/DiglotUniversal/DiglotUniversal.js"></script>
@@ -34,6 +34,7 @@
 <diglot-header-index>
 </diglot-header-index>
 <div id="DisplayFlexBigThree">
+<diglot-thumb-menu></diglot-thumb-menu>
 <diglot-menu-index id="DesktopMenuOnly">
 </diglot-menu-index>
 <div class="bible-container">
@@ -57,10 +58,6 @@
 <img alt="Book Image" class="NTIndex horizontalimageindex shadow1" class="NTIndex" id="himageHoriz" src="BiblePages/Assets/images/HDT/00HWordOfGod800.webp" />
 </div>
 
-<input type="text" id="searchBox" placeholder="Search Bible and Press Enter."">
-
-<div id="searchResults"></div>
-
 <p class="OTIndex ChapterP PFlexIndented marginparagraph">
 Tagalog Spanish English Online Bible for your Journaling, that <strong>can be stacked up four windows on one desktop.</strong> This year 2026, I redesigned a website from 2012 <a href="http://englishtagalogbible.com">EnglishTagalogBible.Com</a> for my need of reading Matthew, Mark, Lucas, and John's gospel simultaneously, to write on my journal. Helpful to people who love to read side by side scattered bible verses. The 2012 website was made by Navigator Philippines with their details at the end of this page.Listed is their running advocacy, website and online bible.
 </p>
@@ -68,6 +65,9 @@ Tagalog Spanish English Online Bible for your Journaling, that <strong>can be st
 <strong>MAKE WONDERFUL TIME READING THE BIBLE AND LEARNING FROM GOD'S WORDS, AND SEENG JESUS AS THE BEST WORD AND LIGHT OF GOD.</strong>
 </div>
 <br />
+<input type="text" id="searchBox" placeholder="Search Bible and Press Enter."">
+
+<div id="searchResults"></div>
 <p class="OTIndex ChapterP PFlexIndented marginparagraph">
 Bible Journaling is also the best thing there is, as you're learning as you read and write, and contemplate God's wonderful knowledge. Lessons from Old Testament, up to given to Jesus on New Testament, and shared to us God's Word, Light and Salvation, and Golden Promise, and Most important of all, Love.
 </p>
@@ -283,14 +283,14 @@ Some likes heavier or bolder letter, for easier to read, some likes it thin and 
 <div class="fontweightButton FW800" onclick="FW800FF()">Font Weight <br />800</div>
 </div>
 </div>
-<div class="ChapterPageTitle">
+<div class="ChapterPageTitle narrowgone">
 <h2>Background Settings For Website and Pages</h2>
 <br />The picture is sample of how you can customize. You can upload below, or choose background color if you like simple one.<br />
 <img class="indexfour" src="BiblePages/Assets/images/journal/bgchange.webp" alt="Four Bible Windows">
 <br />
 <br />
 </div>
-<div class="CustomizerFlex">
+<div class="CustomizerFlex narrowgone">
 <div id="plaincoloronly">
 <div class="uploadholder3">
 <div class="BackgroundImageFlex">
@@ -360,9 +360,9 @@ The online bible was freely distributed through the mnistry of <a href="http://e
 <br />
 <div class="nothinglastsBUTTHEWORDOFGOD">
 <div class="LoveOfGodFlex">
-<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2" id="image1080" src="BiblePages/Assets/images/PersonalBlog/HDT/LoveOfGodHD400.webp" />
-<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2" id="image4k" src="BiblePages/Assets/images//PersonalBlog/4KT/LoveOfGod4K800.webp" />
-<img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="BiblePages/Assets/images//PersonalBlog/800/LoveOfGod200.webp" />
+<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2 shadow3" id="image1080" src="BiblePages/Assets/images/PersonalBlog/HDT/LoveOfGodHD400.webp" />
+<img alt="Book Image" class="verticalimageindexNOTE nothinglasts shadow2 shadow3" id="image4k" src="BiblePages/Assets/images//PersonalBlog/4KT/LoveOfGod4K800.webp" />
+<img alt="Book Image" class="horizontalimageindexNOTE nothinglasts shadow3" id="himageHoriz" src="BiblePages/Assets/images//PersonalBlog/800/LoveOfGod200.webp" />
 <p class="ChapterN1 czlF FW700 N1"> The love of GOD is the center of it all.</p>
 <p class="ChapterN1 czlF FW600 N2">Nothing lasts, but the word of God.</p>
 <p class="ChapterN2 litf FW400 N3 MG10">God is the word, and God's words will last. And on Earth Jesus is the Word of God who feeds us Knowledge of God's Love for All of Us.</p>
@@ -389,7 +389,7 @@ Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya 
 </div>
 </div>
 </div>
-<diglot-post-button class="NTIndex">
+<diglot-post-button class="NTIndex" id="DesktopMenuOnly">
 </diglot-post-button>
 </div>
 </div>

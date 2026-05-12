@@ -9,7 +9,8 @@ fetch('BiblePages/Assets/js/fuse/diglotkjvbiblia.json')
     console.log("Search index loaded!");
     fuse = new Fuse(data, {
       keys: ['bke', 'eng', 'tag'], // Focusing on text for better results
-      threshold: 0.4,
+      threshold: 0.3,
+      distance: 80,
       ignoreLocation: true
     });
   })
@@ -32,7 +33,7 @@ document.getElementById('searchBox').addEventListener('keydown', function (e) {
       html += `
         <div style="margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #ccc;">
           <a href="BiblePages/${item.tesl}/${item.bn}-${item.bkl}-chapter-${item.chp}.html#verse-${item.v}" style="font-weight: bold; font-size: 1.2em;">
-            (${item.bkt}) ${item.bke} ${item.chp}:${item.v}
+            ${item.tes}<br/> (${item.bkt}) ${item.bke} ${item.chp}:${item.v}
           </a>
           <p style="margin-top: 5px;">${item.eng}</p>
           <p style="color: #666; font-style: italic;">${item.tag}</p>

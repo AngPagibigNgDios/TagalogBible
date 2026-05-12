@@ -88,6 +88,12 @@ body {
 }
 
 
+.shadow3 {
+  -webkit-filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.2)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.2)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.3));
+}
+
+
 .shadow2 {
   -webkit-filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.2));
   filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.5)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.1));
@@ -1484,8 +1490,6 @@ uniquifier Use a unique and descriptive class name
     /* KEEP ORIGINAL SIZE */
     background-size: auto;
 
-    /* optional */
-    min-height: 200px;
 }
 
 
