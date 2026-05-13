@@ -5,19 +5,12 @@ let searchReady = false;
 HELPER: FLATTEN JSON
 -------------------------------------------------- */
 function flattenBible(rawData) {
-
   const result = [];
-
   Object.keys(rawData).forEach(bookId => {
-
     const book = rawData[bookId];
-
     Object.keys(book.chapters).forEach(chapterId => {
-
       const verses = book.chapters[chapterId];
-
       verses.forEach(verse => {
-
         result.push({
           bookId,
           chapterId,
@@ -31,13 +24,9 @@ function flattenBible(rawData) {
           bkt: book.bkt,
           bkl: book.bkl,
         });
-
       });
-
     });
-
   });
-
   return result;
 }
 
@@ -55,32 +44,28 @@ const fuseOptions = {
 };
 
 /* -------------------------------------------------
-LOAD BIBLE
+LOAD BIBLE (with IndexedDB cache via localForage)
 -------------------------------------------------- */
-
-
 async function loadBible() {
   const searchResultsDiv = document.getElementById('searchResults');
-  searchResultsDiv.innerHTML = '<p style="text-align:center;">Preparing Bible for offline search...</p>';
+  if (searchResultsDiv) {
+    searchResultsDiv.innerHTML = '<p style="text-align:center;">Preparing Bible for offline search...</p>';
+  }
 
   try {
     console.log('Checking IndexedDB...');
-
-    /* 1. TRY RESTORE FROM INDEXEDDB */
     const savedData = await localforage.getItem('fuseData');
 
     if (savedData && savedData.length) {
       console.log('Restoring Bible from IndexedDB...');
       fuse = new Fuse(savedData, fuseOptions);
       searchReady = true;
-      searchResultsDiv.innerHTML = ''; // Clear loading message
+      if (searchResultsDiv) searchResultsDiv.innerHTML = '';
       console.log('Search ready from IndexedDB');
       return;
     }
 
-    /* 2. FETCH JSON FILES (Relative paths for GitHub/MAMP compatibility) */
     console.log('IndexedDB empty. Fetching JSON...');
-
     const files = [
       'BiblePages/Assets/js/fuse/NT01M.json',
       'BiblePages/Assets/js/fuse/NT02M.json',
@@ -106,50 +91,44 @@ async function loadBible() {
 
     fuse = new Fuse(flat, fuseOptions);
     searchReady = true;
-    searchResultsDiv.innerHTML = ''; // Clear loading message
+    if (searchResultsDiv) searchResultsDiv.innerHTML = '';
     console.log('Search ready');
 
-    /* 3. SAVE CACHE IN BACKGROUND */
     localforage.setItem('fuseData', flat)
       .then(() => console.log('IndexedDB saved'))
       .catch(err => console.error('IndexedDB save failed:', err));
 
   } catch (err) {
     console.error('Bible loading error:', err);
-    searchResultsDiv.innerHTML = `
-      <div style="color: red; padding: 20px; text-align: center;">
-        <p>Search failed to load.</p>
-        <small>${err.message}</small>
-      </div>`;
+    if (searchResultsDiv) {
+      searchResultsDiv.innerHTML = `
+        <div style="color: red; padding: 20px; text-align: center;">
+          <p>Search failed to load.</p>
+          <small>${err.message}</small>
+        </div>`;
+    }
   }
 }
-/* -------------------------------------------------
-START LOADING
--------------------------------------------------- */
-loadBible();
 
 /* -------------------------------------------------
-SEARCH BOX
+SEARCH BOX LISTENER
 -------------------------------------------------- */
-document.addEventListener('DOMContentLoaded', () => {
+function setupSearchBox() {
+  const searchBox = document.getElementById('searchBox');
+  if (!searchBox) return;
 
-  document.getElementById('searchBox').addEventListener('keydown', function (e) {
-
+  searchBox.addEventListener('keydown', function (e) {
     if (e.key !== 'Enter') return;
 
-    /* ---------------------------------------------
-    WAIT UNTIL SEARCH READY
-    --------------------------------------------- */
+    const searchResultsDiv = document.getElementById('searchResults');
     if (!searchReady) {
-
-      document.getElementById('searchResults').innerHTML =
-        '<p>Loading search index...</p>';
-
+      if (searchResultsDiv) {
+        searchResultsDiv.innerHTML = '<p>Loading search index...</p>';
+      }
       return;
     }
 
     const results = fuse.search(this.value);
-
     let html = '';
 
     if (results.length > 0) {
@@ -157,139 +136,74 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     results.forEach((r, index) => {
-
       const item = r.item;
-
       let displayEng = item.eng;
       let displayTag = item.tag;
 
       if (r.matches) {
-
         r.matches.forEach(match => {
-
-          if (match.key === 'eng') {
-            displayEng = highlightMatches(match.value, match.indices);
-          }
-
-          if (match.key === 'tag') {
-            displayTag = highlightMatches(match.value, match.indices);
-          }
-
+          if (match.key === 'eng') displayEng = highlightMatches(match.value, match.indices);
+          if (match.key === 'tag') displayTag = highlightMatches(match.value, match.indices);
         });
-
       }
 
       html += `
         <div class="FontChanger">
           <div class="FontWeightChanger">
-
-            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG"
-                   style="margin-bottom:1%;">
-
+            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" style="margin-bottom:1%;">
               <tr class="TITLETR">
-
                 <td class="tdenglishbible TITLETD TITLETDR">
-
-                  <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}"
-                     style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
-
-                    <span class="englishresulttitle">
-                      ${item.bke} ${item.chapterId} : ${item.v}
-                    </span>
-
-                    <span class="TestamentResult">
-                      ${item.tes}
-                    </span>
-
+                  <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
+                    <span class="englishresulttitle">${item.bke} ${item.chapterId} : ${item.v}</span>
+                    <span class="TestamentResult">${item.tes}</span>
                   </a>
-
                 </td>
-
                 <td class="tdtagalogbible TITLETDT TITLETDR">
-
-                  <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}"
-                     style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
-
-                    <span class="tagalogresulttitle">
-                      ${item.bkt} ${item.chapterId} : ${item.v}
-                    </span>
-
-                    <span class="TestamentResult">
-                      ${item.test}
-                    </span>
-
+                  <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
+                    <span class="tagalogresulttitle">${item.bkt} ${item.chapterId} : ${item.v}</span>
+                    <span class="TestamentResult">${item.test}</span>
                   </a>
-
                 </td>
-
               </tr>
-
               <tr id="verse-${item.v}" class="verse">
-
                 <td class="tdenglishbible">
-
                   <span class="verse spanenglishbible">
-
-                    <span class="verseNo verseNoEnglishBible">
-                      ${item.v}
-                    </span>
-
+                    <span class="verseNo verseNoEnglishBible">${item.v}</span>
                     ${displayEng}
-
                   </span>
-
                 </td>
-
                 <td class="tdtagalogbible">
-
                   <div class="bgseparatortagalog">
-
                     <span class="verse spantagalogbible">
-
-                      <span class="verseNo verseNoTagalog">
-                        ${item.v}
-                      </span>
-
+                      <span class="verseNo verseNoTagalog">${item.v}</span>
                       ${displayTag}
-
                     </span>
-
                   </div>
-
                 </td>
-
               </tr>
-
             </table>
-
           </div>
         </div>
       `;
-
     });
 
     if (results.length > 0) {
-
       html += `
         <div class="searchFooter">
-          <button onclick="closeSearch()">
-            Close All Results
-          </button>
-        </div>
-      `;
+          <button onclick="closeSearch()">Close All Results</button>
+        </div>`;
     }
 
-    document.getElementById('searchResults').innerHTML =
-      html || '<p>No results found.</p>';
+    if (searchResultsDiv) {
+      searchResultsDiv.innerHTML = html || '<p>No results found.</p>';
+    }
 
     restoreSettings();
-
   });
-
-});
+}
 
 /* -------------------------------------------------
-RESTORE SETTINGS & HIGHLIGHTER (Unchanged)
+RESTORE SETTINGS & HIGHLIGHTER
 -------------------------------------------------- */
 function restoreSettings() {
   const savedMode = localStorage.getItem('bibleMode') || 'both';
@@ -329,3 +243,11 @@ function highlightMatches(text, indices) {
   result += text.slice(lastIndex);
   return result;
 }
+
+/* -------------------------------------------------
+INIT
+-------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  loadBible();
+  setupSearchBox();
+});
