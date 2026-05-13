@@ -57,95 +57,71 @@ const fuseOptions = {
 /* -------------------------------------------------
 LOAD BIBLE
 -------------------------------------------------- */
+
+
 async function loadBible() {
+  const searchResultsDiv = document.getElementById('searchResults');
+  searchResultsDiv.innerHTML = '<p style="text-align:center;">Preparing Bible for offline search...</p>';
 
   try {
-
     console.log('Checking IndexedDB...');
 
-    /* ---------------------------------------------
-    TRY RESTORE FROM INDEXEDDB
-    --------------------------------------------- */
+    /* 1. TRY RESTORE FROM INDEXEDDB */
     const savedData = await localforage.getItem('fuseData');
 
     if (savedData && savedData.length) {
-
       console.log('Restoring Bible from IndexedDB...');
-
       fuse = new Fuse(savedData, fuseOptions);
-
       searchReady = true;
-
+      searchResultsDiv.innerHTML = ''; // Clear loading message
       console.log('Search ready from IndexedDB');
-
       return;
     }
 
-    /* ---------------------------------------------
-    FETCH JSON FILES
-    --------------------------------------------- */
+    /* 2. FETCH JSON FILES (Relative paths for GitHub/MAMP compatibility) */
     console.log('IndexedDB empty. Fetching JSON...');
 
     const files = [
-      '/BiblePages/Assets/js/fuse/NT01M.json',
-      '/BiblePages/Assets/js/fuse/NT02M.json',
-      '/BiblePages/Assets/js/fuse/OT01M.json',
-      '/BiblePages/Assets/js/fuse/OT02M.json',
-      '/BiblePages/Assets/js/fuse/OT03M.json',
-      '/BiblePages/Assets/js/fuse/OT04M.json',
-      '/BiblePages/Assets/js/fuse/OT05M.json'
+      'BiblePages/Assets/js/fuse/NT01M.json',
+      'BiblePages/Assets/js/fuse/NT02M.json',
+      'BiblePages/Assets/js/fuse/OT01M.json',
+      'BiblePages/Assets/js/fuse/OT02M.json',
+      'BiblePages/Assets/js/fuse/OT03M.json',
+      'BiblePages/Assets/js/fuse/OT04M.json',
+      'BiblePages/Assets/js/fuse/OT05M.json'
     ];
 
     const responses = await Promise.all(
       files.map(url =>
-        fetch(url).then(r => r.json())
+        fetch(url).then(r => {
+          if (!r.ok) throw new Error(`HTTP error! status: ${r.status} for file: ${url}`);
+          return r.json();
+        })
       )
     );
 
     console.log('JSON fetched');
-
     const rawData = Object.assign({}, ...responses);
-
-    console.log('Flattening Bible...');
-
     const flat = flattenBible(rawData);
 
-    console.log('Flatten complete');
-
-    console.log('Building Fuse...');
-
     fuse = new Fuse(flat, fuseOptions);
-
-    console.log('Fuse build complete');
-
     searchReady = true;
-
+    searchResultsDiv.innerHTML = ''; // Clear loading message
     console.log('Search ready');
 
-    /* ---------------------------------------------
-    SAVE CACHE IN BACKGROUND
-    --------------------------------------------- */
+    /* 3. SAVE CACHE IN BACKGROUND */
     localforage.setItem('fuseData', flat)
-      .then(() => {
-
-        console.log('IndexedDB saved');
-
-      })
-      .catch(err => {
-
-        console.error('IndexedDB save failed:', err);
-
-      });
+      .then(() => console.log('IndexedDB saved'))
+      .catch(err => console.error('IndexedDB save failed:', err));
 
   } catch (err) {
-
     console.error('Bible loading error:', err);
-
-    document.getElementById('searchResults').innerHTML =
-      '<p>Search failed to load.</p>';
-
+    searchResultsDiv.innerHTML = `
+      <div style="color: red; padding: 20px; text-align: center;">
+        <p>Search failed to load.</p>
+        <small>${err.message}</small>
+      </div>`;
   }
-
 }
 /* -------------------------------------------------
 START LOADING
