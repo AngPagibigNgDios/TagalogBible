@@ -150,7 +150,7 @@ function setupSearchBox() {
       html += `
         <div class="FontChanger">
           <div class="FontWeightChanger">
-            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" style="margin-bottom:1%;">
+            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
               <tr class="TITLETR">
                 <td class="tdenglishbible TITLETD TITLETDR">
                   <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
@@ -185,6 +185,18 @@ function setupSearchBox() {
           </div>
         </div>
       `;
+
+
+// Check for 10 first! 
+if ((index + 1) % 10 === 0) {
+    html += `<div class="closesearch" onclick="closeSearch()">Close Search Result</div>`;
+} 
+// If it wasn't the 10th, check if it's the 5th
+else if ((index + 1) % 5 === 0) {
+    html += `<div class="gobacktosearch" onclick="gobackToSearchBar()">Go Back &#8607; To Search</div>`;
+}
+
+      
     });
 
     if (results.length > 0) {
@@ -197,6 +209,8 @@ function setupSearchBox() {
     if (searchResultsDiv) {
       searchResultsDiv.innerHTML = html || '<p>No results found.</p>';
     }
+
+
 
     restoreSettings();
   });
