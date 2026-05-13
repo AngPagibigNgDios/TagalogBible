@@ -1,7 +1,11 @@
 body {
   font-size: 1em;
-
+overflow-x: hidden;;
 }
+
+html{overflow-x: hidden;}
+
+
 
 .clink {
   font-size: 1em;
@@ -160,7 +164,7 @@ a.clink:visited {
   position: absolute;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 65px auto;
 }
 
 
@@ -177,7 +181,7 @@ a.clink:visited {
 #DisplayFlexBigThree {
   display: flex;
   justify-content: center;
-  position: relative;
+
 }
 
 

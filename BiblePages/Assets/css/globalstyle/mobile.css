@@ -1,7 +1,12 @@
 body {
-  font-size: 1em;
-
+  font-size: .85em;
+overflow-x: hidden;
+width:100%;
 }
+
+html{overflow-x: hidden;}
+
+
 
 .clink {
   font-size: 1em;
@@ -27,8 +32,8 @@ a.clink:visited {
   display: inline-flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   font-weight: bold;
 }
 
@@ -37,8 +42,7 @@ a.clink:visited {
 .verseLinks,
 .chapterLinks {
   flex-wrap: wrap;
-  gap: 15px;
-  padding: 1em 1em;
+
   margin: 0 auto;
 }
 
@@ -128,7 +132,7 @@ a.clink:visited {
   text-align: center;
 }
 
-.OtherLinks:hover {
+.OtherLinks:active {
   background-color: #f1ffc3;
   padding: 20px 0px;
 
@@ -138,7 +142,11 @@ a.clink:visited {
 }
 
 .clinkColumn {
-  display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
 }
 
 #image1080,
@@ -160,7 +168,7 @@ a.clink:visited {
   position: absolute;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 65px auto;
 }
 
 
@@ -177,7 +185,7 @@ a.clink:visited {
 #DisplayFlexBigThree {
   display: flex;
   justify-content: center;
-  position: relative;
+ 
 }
 
 
@@ -394,7 +402,7 @@ a.clink:visited {
 
 .clinkColumn {
   border-bottom: 2px solid rgba(128, 128, 128, 0.0);
-  gap: 10px;
+
 }
 
 .nothinglastsBUTTHEWORDOFGOD {
@@ -592,7 +600,7 @@ a.clink:visited {
   transition: padding 0.3s;
 }
 
-.biblejournalposts:hover {
+.biblejournalposts:active {
   background-color: rgba(181, 255, 249, 0.7);
   padding: 10px 5px;
 }
@@ -863,11 +871,11 @@ a.clink:visited {
 
 
 
-.controldiglot:hover,
-.textresizerButton:hover,
-.fontchoiceButton:hover,
-#buttonclick:hover,
-.fontweightButton:hover {
+.controldiglot:active,
+.textresizerButton:active,
+.fontchoiceButton:active,
+#buttonclick:active,
+.fontweightButton:active {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -1310,7 +1318,7 @@ a.clink:visited {
 
 }
 
-.back-to-top:hover {
+.back-to-top:active {
   position: fixed;
   bottom: 20px;
   right: 20%;
@@ -1356,9 +1364,9 @@ a.clink:visited {
 }
 
 
-#btnPrev:hover,
-#btnToggle:hover,
-#btnNext:hover {
+#btnPrev:active,
+#btnToggle:active,
+#btnNext:active {
 
   background-color: #daff06;
   color: rgb(0, 0, 0);
@@ -1376,7 +1384,7 @@ a.clink:visited {
 }
 
 
-#navigationall:hover {
+#navigationall:active {
   opacity: 1;
 }
 
@@ -1570,7 +1578,7 @@ a.clink:visited {
 
 
 
-.bibleversesthumb:hover, .goupthumb:hover, .biblecontrollthumb:hover 
+.bibleversesthumb:active, .goupthumb:active, .biblecontrollthumb:active 
 {
     background-color: #daff06;
   color: rgb(0, 0, 0);
