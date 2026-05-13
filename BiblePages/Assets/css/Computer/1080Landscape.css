@@ -1358,7 +1358,6 @@ align-items: center;
 
 
 
-
 .marginbot{ margin-bottom: 2% !important;}
 
 
@@ -1410,3 +1409,7 @@ align-items: center;
   cursor: pointer;
 
 }
+
+
+
+#onlymobilenarrow{display:none;}
