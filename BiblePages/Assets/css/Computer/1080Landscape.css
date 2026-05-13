@@ -1293,6 +1293,7 @@ align-items: center;
 
 
   font-size:.8em;
+    transition: background-color 0.3s ease;
 
 }
 
@@ -1302,6 +1303,7 @@ align-items: center;
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
+  
 
 }
 
@@ -1312,15 +1314,6 @@ align-items: center;
 
 
 #navigationall:hover {opacity: 1; }
-
-
-.resultbox {width:100%; position: relative; height: auto;}
-
-#searchBox{border: 1px solid gray; font-size:1.2em; height:35px; }
-
-#searchResults {width: 100%; height: 100%; overflow: auto; position: relative;}
-
-
 
 
 
@@ -1367,3 +1360,53 @@ align-items: center;
 
 
 .marginbot{ margin-bottom: 2% !important;}
+
+
+
+
+
+.englishresulttitle {text-decoration:underline;}
+
+
+.tagalogresulttitle {text-decoration:underline;}
+.TestamentResult {color:#416e97; font-style: italic; font-size: 80%;}
+
+
+.resultbox {width: 100%; position: relative; height: 90%; overflow:auto;}
+
+#searchBox{width:90%; margin-left:5%; margin-right:5%; border: 1px solid gray; font-size:1.2em; height:1.5em; }
+
+#searchResults {width: 100%; height: 100%; overflow: auto; position: relative;}
+
+.resultdiglot{display:flex; flex-direction: row; gap: 5%; justify-content: space-evenly;}
+.searchHeader{background-color: rgba(136, 136, 255, 0.178);font-size: 1.5em; font-weight: bold; text-align: center; margin-top: 5%; border-bottom: 1px double gray;}
+
+
+.closesearch, .gobacktosearch {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 100px;
+  height: 40px;
+  align-content: center;
+  justify-items: center;
+
+  cursor: pointer;
+
+  font-size:.8em;
+  transition: background-color 0.3s ease;
+
+}
+
+
+.closesearch:hover, .gobacktosearch:hover {
+
+  background-color: #daff06;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+
+}

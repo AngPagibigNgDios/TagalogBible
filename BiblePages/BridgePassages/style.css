@@ -66,11 +66,11 @@ span.verseNo{
 font-size:70%;
 vertical-align:super;
 }
-table#chapter, table.searchResult{
+table.chapter, table.searchResult{
 margin-top:1.5em;
 margin-bottom:2em;
 }
-table#chapter td, table.searchResult  td{
+table.chapter td, table.searchResult  td{
 vertical-align:top;
 border-bottom:dotted thin silver;
 text-align:justify;

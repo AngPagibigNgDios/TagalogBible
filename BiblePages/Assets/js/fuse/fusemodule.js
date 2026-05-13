@@ -132,7 +132,10 @@ function setupSearchBox() {
     let html = '';
 
     if (results.length > 0) {
-      html += `<div class="searchHeader">SEARCH RESULTS</div>`;
+      html += `<div class="searchHeader">SEARCH RESULTS</div><br/>
+      <div class="resultdiglot"><div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
+<div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
+<div class="controldiglot" onclick="showAll()"> DIGLOT </div></div>`;
     }
 
     results.forEach((r, index) => {
@@ -153,13 +156,13 @@ function setupSearchBox() {
             <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
               <tr class="TITLETR">
                 <td class="tdenglishbible TITLETD TITLETDR">
-                  <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
+                  <a href="../${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
                     <span class="englishresulttitle">${item.bke} ${item.chapterId} : ${item.v}</span>
                     <span class="TestamentResult">${item.tes}</span>
                   </a>
                 </td>
                 <td class="tdtagalogbible TITLETDT TITLETDR">
-                  <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
+                  <a href="../${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
                     <span class="tagalogresulttitle">${item.bkt} ${item.chapterId} : ${item.v}</span>
                     <span class="TestamentResult">${item.test}</span>
                   </a>
