@@ -223,10 +223,10 @@ this.innerHTML = `
         <div class="BMONTjames divjames"><span class="english englishLabel">James</span><br /><span class="tagalogleft tagalogLabel">Santiago</span></div>
       </a>
       <a href="../NewTestament/60-1st-peter.html">
-        <div class="BMONT1peter div1peter"><span class="english englishLabel">1 Pedro</span><br /><span class="tagalogleft tagalogLabel">1 Pedro</span></div>
+        <div class="BMONT1peter div1peter"><span class="english englishLabel">1 Peter</span><br /><span class="tagalogleft tagalogLabel">1 Pedro</span></div>
       </a>
       <a href="../NewTestament/61-2nd-peter.html">
-        <div class="BMONT2peter div2peter"><span class="english englishLabel">2 Pedro</span><br /><span class="tagalogleft tagalogLabel">2 Pedro</span></div>
+        <div class="BMONT2peter div2peter"><span class="english englishLabel">2 Peter</span><br /><span class="tagalogleft tagalogLabel">2 Pedro</span></div>
       </a>
       <a href="../NewTestament/62-1st-john.html">
         <div class="BMONT1john div1john"><span class="english englishLabel">1 John</span><br /><span class="tagalogleft tagalogLabel">1 Juan</span></div>

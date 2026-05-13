@@ -101,6 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
+
+
+
+
 const bibleBooksTL = {
   Genesis: 'Genesis',
   Exodus: 'Exodo',
@@ -243,17 +250,8 @@ window.onload = function () {
 
   refreshHeaderDisplay (); // Initial draw
 
-  if (typeof updateSidebarLanguage === 'function') {
-    updateSidebarLanguage ('both');
-  }
+
 };
-
-
-
-
-
-
-
 
 
 
@@ -588,6 +586,7 @@ window.addEventListener('DOMContentLoaded', function () {
 // HIDE SHOW BIBLE, DIGLOT TAGALOG ENGLISH DITO.
 // ===============================
 
+
 function applyMode (mode) {
   // SAVE MODE FOR ALL PAGES
   localStorage.setItem ('bibleMode', mode);
@@ -682,6 +681,9 @@ document.addEventListener ('DOMContentLoaded', function () {
   let savedMode = localStorage.getItem ('bibleMode') || 'both';
   applyMode (savedMode);
 });
+
+
+
 
 
 // ===============================
@@ -993,3 +995,4 @@ function applyColorTheme() {
     html.style.backgroundImage = 'none';
     html.style.backgroundColor = color;
 }
+

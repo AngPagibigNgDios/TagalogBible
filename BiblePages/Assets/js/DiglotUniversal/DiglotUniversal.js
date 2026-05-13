@@ -116,45 +116,9 @@ class DiglotHeader extends HTMLElement {
     window.addEventListener ('hashchange', () => this.updateHeaderDisplay ());
   }
 
-  updateHeaderDisplay () {
-    const displayLink = this.querySelector ('#display-title2');
-    if (!displayLink) return;
-
-    // 1. Get the raw hash (e.g., #verse-1 7 22 4 33-35 14)
-    let hash = decodeURIComponent (window.location.hash);
-    let verseDisplay = '';
-
-    if (hash.includes ('#verse-')) {
-      let content = hash.split ('#verse-')[1];
-      if (content) {
-        // 2. Break the input into an array (splitting by spaces and commas)
-        let parts = content.trim ().split (/[,\s]+/).filter (Boolean);
-
-        // 3. SORT the parts numerically
-        // This ensures 4 comes before 7, even if you typed 7 first.
-        parts.sort ((a, b) => parseInt (a, 10) - parseInt (b, 10));
-
-        // 4. Clean up the parts for display
-        // This changes "-" to " — " (your preferred style)
-        let cleanContent = parts.map (p => p.replace ('-', ' — ')).join (', ');
-        verseDisplay = ' : ' + cleanContent;
-      }
-    }
-
-    // Ensure baseChapterTitle is defined globally or passed in
-    const title = typeof baseChapterTitle !== 'undefined'
-      ? baseChapterTitle
-      : document.title;
-
-    document.title = title + verseDisplay;
-
-    // 6. Update the Page Header (displayLink)&nbsp;&nbsp;&nbsp;
-    const spacing = '';
-    //ORIGINAL DASH, PINALITAN KO NG STRAIGHT LINE PARA MAGANDA — |
-    const dash = '';
-    displayLink.innerHTML = `${spacing}${dash}${spacing}${title}${verseDisplay}`;
+  
   }
-}
+
 
 customElements.define ('diglot-header', DiglotHeader);
 
@@ -867,8 +831,8 @@ class DiglotMenuFocused extends HTMLElement {
             <a href="../NewTestament/57-philemon.html"><div class="BMONTphilemon divphilemon"><span class="english englishLabel">Philemon</span><br/><span class="tagalogleft tagalogLabel">Filemon</span></div></a>
             <a href="../NewTestament/58-hebrews.html"><div class="BMONThebrews divhebrews"><span class="english englishLabel">Hebrews</span><br/><span class="tagalogleft tagalogLabel">Mga Hebreo</span></div></a>
             <a href="../NewTestament/59-james.html"><div class="BMONTjames divjames"><span class="english englishLabel">James</span><br/><span class="tagalogleft tagalogLabel">Santiago</span></div></a>
-            <a href="../NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Pedro</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
-            <a href="../NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Pedro</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
+            <a href="../NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Peter</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
+            <a href="../NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Peter</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
             <a href="../NewTestament/62-1st-john.html"><div class="BMONT1john div1john"><span class="english englishLabel">1 John</span><br/><span class="tagalogleft tagalogLabel">1 Juan</span></div></a>
             <a href="../NewTestament/63-2nd-john.html"><div class="BMONT2john div2john"><span class="english englishLabel">2 John</span><br/><span class="tagalogleft tagalogLabel">2 Juan</span></div></a>
             <a href="../NewTestament/64-3rd-john.html"><div class="BMONT3john div3john"><span class="english englishLabel">3 John</span><br/><span class="tagalogleft tagalogLabel">3 Juan</span></div></a>
@@ -888,21 +852,19 @@ class DiglotMenuFocused extends HTMLElement {
 
 
 
-                       <div class="controls-row input-row">
-                            <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
-                        </div>
-                        <div class="controls-row">
-                            <div class="control-btn" onclick="copyEnglish()"> Copy English </div>
-                            <div class="control-btn" onclick="copyTagalog()"> Copy Tagalog </div>
-                            <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
-                        </div>
-             
+<div class="controls-row input-row">
+<input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
+</div>
+<div class="controls-row">
+<div class="control-btn" onclick="copyEnglish()"> Copy English </div>
+<div class="control-btn" onclick="copyTagalog()"> Copy Tagalog </div>
+<div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
+</div>
+           
                    
 <div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
 <div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
 <div class="controldiglot" onclick="showAll()"> DIGLOT </div>
-
-
 
 <div class="textresizerButton" onclick="decreaseFont()"> SMALLER TEXT </div>
 <div class="textresizerButton" onclick="resetFont()"> RESET SIZE</div>
@@ -1073,8 +1035,8 @@ class DiglotMenu extends HTMLElement {
             <a href="../NewTestament/57-philemon.html"><div class="BMONTphilemon divphilemon"><span class="english englishLabel">Philemon</span><br/><span class="tagalogleft tagalogLabel">Filemon</span></div></a>
             <a href="../NewTestament/58-hebrews.html"><div class="BMONThebrews divhebrews"><span class="english englishLabel">Hebrews</span><br/><span class="tagalogleft tagalogLabel">Mga Hebreo</span></div></a>
             <a href="../NewTestament/59-james.html"><div class="BMONTjames divjames"><span class="english englishLabel">James</span><br/><span class="tagalogleft tagalogLabel">Santiago</span></div></a>
-            <a href="../NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Pedro</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
-            <a href="../NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Pedro</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
+            <a href="../NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Peter</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
+            <a href="../NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Peter</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
             <a href="../NewTestament/62-1st-john.html"><div class="BMONT1john div1john"><span class="english englishLabel">1 John</span><br/><span class="tagalogleft tagalogLabel">1 Juan</span></div></a>
             <a href="../NewTestament/63-2nd-john.html"><div class="BMONT2john div2john"><span class="english englishLabel">2 John</span><br/><span class="tagalogleft tagalogLabel">2 Juan</span></div></a>
             <a href="../NewTestament/64-3rd-john.html"><div class="BMONT3john div3john"><span class="english englishLabel">3 John</span><br/><span class="tagalogleft tagalogLabel">3 Juan</span></div></a>
@@ -1094,35 +1056,14 @@ class DiglotMenu extends HTMLElement {
 
 
 
-                                
-                   
-                        <div class="controls-row">
-                            <div class="control-btn" onclick="showEnglishOnly()"> English </div>
-                            <div class="control-btn" onclick="showTagalogOnly()"> Tagalog </div>
-                            <div class="control-btn" onclick="showAll()"> Diglot </div>
-                        </div>
-                        
-                        <div class="control-group">
-                                <div class="mini-btn" onclick="decreaseFont()"> SMALLER TEXT </div>
-                                <div class="mini-btn" onclick="resetFont()"> RESET </div>
-                                <div class="mini-btn" onclick="increaseFont()"> BIGGER TEXT </div>
-                        </div>
-                       
-                                            <div class="controls-row input-row">
-                            <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
-                        </div>
-                        <div class="controls-row">
-                            <div class="control-btn" onclick="copyEnglish()"> Copy English </div>
-                            <div class="control-btn" onclick="copyTagalog()"> Copy Tagalog </div>
-                            <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
-                        </div>
-  
+                        <div class="openingpagesearch">
+                          
+                        <input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
+  </div>
 
          
 
-
-                        <div>
-                        <combinedpostbutton></combindedpostbutton>
+                
      
 
      
@@ -1278,8 +1219,8 @@ this.innerHTML = `
             <a href="BiblePages/NewTestament/57-philemon.html"><div class="BMONTphilemon divphilemon"><span class="english englishLabel">Philemon</span><br/><span class="tagalogleft tagalogLabel">Filemon</span></div></a>
             <a href="BiblePages/NewTestament/58-hebrews.html"><div class="BMONThebrews divhebrews"><span class="english englishLabel">Hebrews</span><br/><span class="tagalogleft tagalogLabel">Mga Hebreo</span></div></a>
             <a href="BiblePages/NewTestament/59-james.html"><div class="BMONTjames divjames"><span class="english englishLabel">James</span><br/><span class="tagalogleft tagalogLabel">Santiago</span></div></a>
-            <a href="BiblePages/NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Pedro</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
-            <a href="BiblePages/NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Pedro</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
+            <a href="BiblePages/NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Peter</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
+            <a href="BiblePages/NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Peter</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
             <a href="BiblePages/NewTestament/62-1st-john.html"><div class="BMONT1john div1john"><span class="english englishLabel">1 John</span><br/><span class="tagalogleft tagalogLabel">1 Juan</span></div></a>
             <a href="BiblePages/NewTestament/63-2nd-john.html"><div class="BMONT2john div2john"><span class="english englishLabel">2 John</span><br/><span class="tagalogleft tagalogLabel">2 Juan</span></div></a>
             <a href="BiblePages/NewTestament/64-3rd-john.html"><div class="BMONT3john div3john"><span class="english englishLabel">3 John</span><br/><span class="tagalogleft tagalogLabel">3 Juan</span></div></a>

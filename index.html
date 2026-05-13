@@ -15,28 +15,18 @@
 <link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Landscape.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (min-width:1201px) and (max-width: 1920px)">
 
 <link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080LandscapeAnimation.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (min-width:1201px) and (max-width: 1920px)">
-
-
-
 <link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Portrait.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (min-width:701px) and (max-width: 1200px)">
-
-
-
-
 <link rel="stylesheet" href="BiblePages/Assets/css/Computer/1080Narrow.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (max-width: 700px)">
-
-
-
 
 <link rel="stylesheet" href="BiblePages/Assets/css/720p.css" media="screen and (max-height: 768px) and (max-width: 1600px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/mobile.css" media="screen and (hover: none) and (pointer: coarse) and (max-width: 600px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/index1080p.css" media="screen and (min-height: 750px) and (min-width: 961px)">
+
+
 <script src="BiblePages/Assets/js/jquery-4.0.0.min.js"></script>
 <script class="NTIndex" src="BiblePages/Assets/js/DiglotUniversal/DiglotUniversal.js"></script>
 <script src="BiblePages/Assets/js/customizedJS/CustomizedUniversal.js"></script>
 <script src="BiblePages/Assets/js/DiglotMenu/diglot-menu.js"></script>
-
-
 
 <link rel="stylesheet" href="BiblePages/Assets/css/globalstyle/1080image.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 1080px) and (max-width: 1920px)">
 <link rel="stylesheet" href="BiblePages/Assets/css/globalstyle/720image.css" media="screen and (hover: hover) and (pointer: fine) and (max-height: 750px) and (max-width: 1366px)">
@@ -78,9 +68,10 @@ Tagalog Spanish English Online Bible for your Journaling, that <strong>can be st
 <strong>MAKE WONDERFUL TIME READING THE BIBLE AND LEARNING FROM GOD'S WORDS, AND SEENG JESUS AS THE BEST WORD AND LIGHT OF GOD.</strong>
 </div>
 <br />
-<input type="text" id="searchBox" placeholder="Search Bible and Press Enter."">
+<input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
 
-<div id="searchResults"></div>
+<div id="searchResults">
+</div>
 <p class="OTIndex ChapterP PFlexIndented marginparagraph">
 Bible Journaling is also the best thing there is, as you're learning as you read and write, and contemplate God's wonderful knowledge. Lessons from Old Testament, up to given to Jesus on New Testament, and shared to us God's Word, Light and Salvation, and Golden Promise, and Most important of all, Love.
 </p>
@@ -415,5 +406,59 @@ Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya 
 <script type="module"
 src="BiblePages/Assets/js/fuse/fusemodule.js">
 </script>
+
+<script>
+function closeSearch() {
+  $("#searchResults").hide();   // hides the results
+  $("#searchBox").focus();      // puts cursor back in the search box
+}
+
+// When you perform a search, always show results again
+function performSearch() {
+  const query = $("#searchBox").val();
+  if (!fuse) {
+    console.log("Search not ready yet...");
+    return;
+  }
+
+  if (query.length > 0) {
+    const results = fuse.search(query);
+    let html = "";
+
+    results.forEach((r, index) => {
+      const item = r.item;
+      // build your rowHtml here...
+      html += `<div>${item.eng}</div>`;
+
+      if ((index + 1) % 5 === 0) {
+        html += `<div class="closesearch" onclick="closeSearch()">CLOSE ALL SEARCH</div>`;
+      }
+    });
+
+    $("#searchResults").html(html || "<p>No results found.</p>");
+    $("#searchResults").show();   // CRITICAL: make sure it’s visible again
+    restoreSettings();
+  } else {
+    $("#searchResults").hide();
+  }
+}
+
+// Hook up Enter key
+$("#searchBox").on("keydown", function(e) {
+  if (e.key === "Enter") {
+    performSearch();
+  }
+});
+
+// Hook up close button
+$("#closeBtn").on("click", closeSearch);
+</script>
+<script>
+function gobackToSearchBar() {
+      document.getElementById("searchBox").focus(); // put cursor back in search box
+  }
+
+</script>
+
 </body>
 </html>

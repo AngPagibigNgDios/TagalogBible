@@ -1,4 +1,4 @@
-\html {
+html {
   scroll-behavior: smooth;
   height: auto;
   width: 100%;
@@ -1540,3 +1540,10 @@ background-size: cover;
 #searchBox{border: 1px solid gray; font-size:1.2em; height:50px; }
 
 #searchResults {width: 100; height: auto; position: relative;}
+
+
+mark {
+background-color: transparent !important;
+  text-decoration: underline !important;
+  color: cornflowerblue !important;
+}

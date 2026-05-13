@@ -103,8 +103,8 @@ class DiglotMenu extends HTMLElement {
             <a href="../NewTestament/57-philemon.html"><div class="BMONTphilemon divphilemon"><span class="english englishLabel">Philemon</span><br/><span class="tagalogleft tagalogLabel">Filemon</span></div></a>
             <a href="../NewTestament/58-hebrews.html"><div class="BMONThebrews divhebrews"><span class="english englishLabel">Hebrews</span><br/><span class="tagalogleft tagalogLabel">Mga Hebreo</span></div></a>
             <a href="../NewTestament/59-james.html"><div class="BMONTjames divjames"><span class="english englishLabel">James</span><br/><span class="tagalogleft tagalogLabel">Santiago</span></div></a>
-            <a href="../NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Pedro</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
-            <a href="../NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Pedro</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
+            <a href="../NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Peter</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
+            <a href="../NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Peter</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
             <a href="../NewTestament/62-1st-john.html"><div class="BMONT1john div1john"><span class="english englishLabel">1 John</span><br/><span class="tagalogleft tagalogLabel">1 Juan</span></div></a>
             <a href="../NewTestament/63-2nd-john.html"><div class="BMONT2john div2john"><span class="english englishLabel">2 John</span><br/><span class="tagalogleft tagalogLabel">2 Juan</span></div></a>
             <a href="../NewTestament/64-3rd-john.html"><div class="BMONT3john div3john"><span class="english englishLabel">3 John</span><br/><span class="tagalogleft tagalogLabel">3 Juan</span></div></a>
