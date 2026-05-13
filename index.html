@@ -406,58 +406,7 @@ Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya 
 <script type="module"
 src="BiblePages/Assets/js/fuse/fusemodule.js">
 </script>
-
-<script>
-function closeSearch() {
-  $("#searchResults").hide();   // hides the results
-  $("#searchBox").focus();      // puts cursor back in the search box
-}
-
-// When you perform a search, always show results again
-function performSearch() {
-  const query = $("#searchBox").val();
-  if (!fuse) {
-    console.log("Search not ready yet...");
-    return;
-  }
-
-  if (query.length > 0) {
-    const results = fuse.search(query);
-    let html = "";
-
-    results.forEach((r, index) => {
-      const item = r.item;
-      // build your rowHtml here...
-      html += `<div>${item.eng}</div>`;
-
-      if ((index + 1) % 5 === 0) {
-        html += `<div class="closesearch" onclick="closeSearch()">CLOSE ALL SEARCH</div>`;
-      }
-    });
-
-    $("#searchResults").html(html || "<p>No results found.</p>");
-    $("#searchResults").show();   // CRITICAL: make sure it’s visible again
-    restoreSettings();
-  } else {
-    $("#searchResults").hide();
-  }
-}
-
-// Hook up Enter key
-$("#searchBox").on("keydown", function(e) {
-  if (e.key === "Enter") {
-    performSearch();
-  }
-});
-
-// Hook up close button
-$("#closeBtn").on("click", closeSearch);
-</script>
-<script>
-function gobackToSearchBar() {
-      document.getElementById("searchBox").focus(); // put cursor back in search box
-  }
-
+<script src="BiblePages/Assets/js/fuse/fusefunctions.js">
 </script>
 
 </body>
