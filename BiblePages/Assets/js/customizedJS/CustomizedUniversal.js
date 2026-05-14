@@ -176,35 +176,39 @@ const bibleBooksTL = {
 };
 
 // 1. Function to clean the title and update the header div instantly
+const originalTitle = document.title;
+
 function refreshHeaderDisplay() {
 	const inputField = document.getElementById('verseInput');
 	const displayDiv = document.getElementById('display-title2');
+
 	if (!inputField || !displayDiv) return;
 
 	let rawInput = inputField.value.trim();
 
-	// Update the URL hash
+	// Update URL hash
 	if (rawInput) {
 		window.location.hash = 'verse-' + rawInput;
 	} else {
 		history.replaceState(null, null, ' ');
 	}
 
-	// Get the base title from the document (removing any old verse string)
-	let baseTitle = document.title.split(' :')[0].trim();
-
-	// Format the verse string for display
+	// Format verse text
 	let cleanInput = decodeURIComponent(rawInput)
 		.replace(/[,\s]+/g, ',\u00A0')
 		.replace(/-/g, '\u00A0\u2014\u00A0');
 
-	let verseDisplay = rawInput ? `\u00A0\u00A0:\u00A0\u00A0${cleanInput}` : '';
+	let verseDisplay = rawInput
+		? `\u00A0\u00A0:\u00A0\u00A0${cleanInput}`
+		: '';
 
-	// Update Browser Tab
-	document.title = baseTitle + (rawInput ? ' : ' + rawInput : '');
+	// Browser tab title
+	document.title = rawInput
+		? `${originalTitle} : ${rawInput}`
+		: originalTitle;
 
-	// Update the Div
-	displayDiv.innerHTML = `${baseTitle}${verseDisplay}`;
+	// Visible header
+	displayDiv.innerHTML = `${originalTitle}${verseDisplay}`;
 }
 
 // 2. Click Listener for verse links (vlink) AND clicking the rows

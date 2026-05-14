@@ -7,27 +7,39 @@
     -ms-box-sizing:     border-box;
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
-    font-family: 'PT Serif', georgia, serif;
-    font-size: 48px;
+
+
     line-height: 1.5;
-}/* fade out inactive slides */
-.step {
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
-}.step:not(.active) {
-    opacity: 0.3;
-}/* STEP SPECIFIC STYLES *//* hint on the first slide */.hint {
+}
+
+/* fade out inactive slides */
+
+.step:not(.active)  {
+opacity:1;  /* Shorthand: Name | Duration | Timing | Delay | Iteration | Direction */
+  animation: stepsinactive 1s ease-in-out 0.1s forwards;
+}
+
+@keyframes stepsinactive {
+  from {opacity: 1;}
+  to   { opacity: .1;}
+}
+
+
+
+/* STEP SPECIFIC STYLES */
+
+/* hint on the first slide */
+
+.hint {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 200px;
+    bottom: 5%;
     background: rgba(0,0,0,0.5);
     color: #EEE;
     text-align: center;
-    font-size: 50px;
+    font-size:2em;
+
     padding: 20px;
     z-index: 100;
     opacity: 0;
@@ -41,70 +53,117 @@
     -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
     -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
     transition:         opacity 1s,         transform 0.5s 1s;
-}.step-start + .hint {
+}
+
+.step-start + .hint {
     opacity: 1;
-    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s;
-    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s;
-    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s;
-    -o-transition:      opacity 1s 5s,      -o-transform 0.5s;
-    transition:         opacity 1s 5s,         transform 0.5s;
+    -webkit-transition: opacity 1s 5s, -webkit-transform 1s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 1s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 1s;
+    -o-transition:      opacity 1s 5s,      -o-transform 1s;
+    transition:         opacity 1s 5s,         transform 1s;
     -webkit-transform: translateY(0px);
     -moz-transform:    translateY(0px);
     -ms-transform:     translateY(0px);
     -o-transform:      translateY(0px);
     transform:         translateY(0px);
-}#separation {
+}
+
+.step2-start {
+    position: absolute;
+    transform: translate(-50%, -50%) translate3d(0px, -1500px, 0px);
+    transform-style: preserve-3d;
+    opacity: 0; /* starting opacity */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.step2-start.active {
+    transform: translate(-50%, -50%) translate3d(0px, 0px, 0px);
+    opacity: 1; /* ending opacity */
+}
+
+
+
+
+
+#separation {
     padding: 0;
-}.footnote {
-    font-size: 32px;
-}.footnote2 {
-    font-size: 20px;
-}#punishment {
+}
+
+.footnote {
+
+}
+
+.footnote2 {
+
+}
+
+#punishment {
     width: 600px;
     text-align: center;
     line-height: 1;
-    font-size: 40px;
-}#solution {
+
+}
+
+#solution {
     width: 700px;
     text-align: center;
-}#sacrifice {
+}
+
+#sacrifice {
     width: 800px;
-    font-size: 2.5em;
-}#sacrifice b {
+
+}
+
+#sacrifice b {
     display: inline-block;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
     -ms-transition:     0.5s;
     -o-transition:      0.5s;
     transition:         0.5s;
-}#sacrifice.active .positioning, #sacrifice.active .positioning2 {
+}
+
+#sacrifice.active .positioning, #sacrifice.active .positioning2 {
     -webkit-transform: translateY(-5px);
     -moz-transform:    translateY(-5px);
     -ms-transform:     translateY(-5px);
     -o-transform:      translateY(-5px);
     transform:         translateY(-5px);
-}#sacrifice.active .positioning {
+}
+
+#sacrifice.active .positioning {
     -webkit-transition-delay: 1.5s;
     -moz-transition-delay:    1.5s;
     -ms-transition-delay:     1.5s;
     -o-transition-delay:      1.5s;
     transition-delay:         1.5s;
-}#sacrifice.active .positioning2 {
+}
+
+#sacrifice.active .positioning2 {
     -webkit-transition-delay: 2.0s;
     -moz-transition-delay:    2.0s;
     -ms-transition-delay:     2.0s;
     -o-transition-delay:      2.0s;
     transition-delay:         2.0s;
-}#receive {
+}
+
+#receive {
     width: 800px;
-}#receive p {
-    font-size: 35px;
-}#children-of-god {
+}
+
+#receive p {
+
+}
+
+#children-of-god {
     width: 800px;
     padding-bottom: 100px;
     background-position: bottom right;
     background-repeat: no-repeat;
-}/* it's in 3D */
+}
+
+/* it's in 3D */
 #ask span,
 #ask b {
     display: inline-block;
@@ -119,43 +178,57 @@
     -ms-transition:     0.5s;
     -o-transition:      0.5s;
     transition:         0.5s;
-}#ask .have {
+}
+
+#ask .have {
     -webkit-transform: translateZ(-40px);
     -moz-transform:    translateZ(-40px);
     -ms-transform:     translateZ(-40px);
     -o-transform:      translateZ(-40px);
     transform:         translateZ(-40px);
-}#ask .you {
+}
+
+#ask .you {
     -webkit-transform: translateZ(20px);
     -moz-transform:    translateZ(20px);
     -ms-transform:     translateZ(20px);
     -o-transform:      translateZ(20px);
     transform:         translateZ(20px);
-}#ask .noticed {
+}
+
+#ask .noticed {
     -webkit-transform: translateZ(-40px);
     -moz-transform:    translateZ(-40px);
     -ms-transform:     translateZ(-40px);
     -o-transform:      translateZ(-40px);
     transform:         translateZ(-40px);
-}#ask .its {
+}
+
+#ask .its {
     -webkit-transform: translateZ(60px);
     -moz-transform:    translateZ(60px);
     -ms-transform:     translateZ(60px);
     -o-transform:      translateZ(60px);
     transform:         translateZ(60px);
-}#ask .in {
+}
+
+#ask .in {
     -webkit-transform: translateZ(-10px);
     -moz-transform:    translateZ(-10px);
     -ms-transform:     translateZ(-10px);
     -o-transform:      translateZ(-10px);
     transform:         translateZ(-10px);
-}#ask .footnote {
+}
+
+#ask .footnote {
     -webkit-transform: translateZ(-10px);
     -moz-transform:    translateZ(-10px);
     -ms-transform:     translateZ(-10px);
     -o-transform:      translateZ(-10px);
     transform:         translateZ(-10px);
-}#ask.active span,
+}
+
+#ask.active span,
 #ask.active b {
     -webkit-transform: translateZ(0px);
     -moz-transform:    translateZ(0px);
@@ -168,79 +241,108 @@
     -ms-transition-delay:     1s;
     -o-transition-delay:      1s;
     transition-delay:         1s;
-}/* overview step */
+}
+
+/* overview step */
 #overview {
     z-index: -1;
     padding: 0;
-}/* on overview step everything is visible */#impress.step-overview .step {
+}
+
+/* on overview step everything is visible */
+
+#impress.step-overview .step {
     opacity: 1;
     cursor: pointer;
-}/*
+}
+
+/*
  * SLIDE STEP STYLES
  *
  * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
  *
  * ;)
- */.slide {
+ */
+
+.slide {
 	margin-top: 5px;
     display: block;
     width: 700px;
     height: 500px;
     padding: 20px 30px;
     border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
     border: 1px solid rgba(0, 0, 0, .3);
     font-family: 'Open Sans', Arial, sans-serif;
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-    font-size:1em;
-    line-height: 36px;
-    letter-spacing: -1px;
+
     -webkit-border-radius:6px;
 	-khtml-border-radius:6px;
 	-moz-border-radius:6px;
 	border-radius:6px;
-}.center {text-align: center;}.slide p.large {
-    display: block;
-    font-size: 1em;
-    line-height: 1em;
-    margin-top: .5em;
+  background-image: url("../Assets/images/journal/colorbookmark.webp");
+  background-repeat: repeat;
+
+  background-size: cover;
 }
-.slide p.large2 {
+
+.slide p.large {
     display: block;
-    font-size: .8em;
-    line-height: 1em;
-    margin-top: .5em;
-}#decide {
-	font-size: 2.5em;
-}/* IMPRESS NOT SUPPORTED STYLES */
+
+    line-height: 72px;
+    margin-top: 50px;
+}
+
+#decide {
+
+}
+
+/* IMPRESS NOT SUPPORTED STYLES */
 .fallback-message {
-    font-family: sans-serif;
+
     line-height: 1.3;
     
     display: none;
     width: 780px;
     padding: 10px 10px 0;
-    margin: 20px auto;    border-radius: 10px;
+    margin: 20px auto;
+
+    border-radius: 10px;
     border: 1px solid #E4C652;
     background: #EEDC94;
-}.fallback-message p {
+}
+
+.fallback-message p {
     margin-bottom: 10px;
-}.impress-not-supported .step {
+}
+
+.impress-not-supported .step {
     position: relative;
     opacity: 1;
     margin: 20px auto;
-}.impress-not-supported .fallback-message {
+}
+
+.impress-not-supported .fallback-message {
     display: block;
-}p {
+}
+
+p {
 	margin: 1em 0;
-}.center {
+}
+
+.center {
 text-align:center;
-}.justify {
+}
+
+.justify {
 text-align:justify;
-}.ref {
+}
+
+.ref {
 	color: gray;
-}.ref2 {
-	color: silver;    font-size:.9em;
+}
+
+.ref2 {
+	color: silver;
 }

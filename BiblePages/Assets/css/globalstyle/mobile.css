@@ -1,20 +1,58 @@
 body {
   font-size: .85em;
-overflow-x: hidden;
-width:100%;
-}html{overflow-x: hidden;}.clink {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.clink {
   font-size: 1em;
-  width: 35px;
-  /* Fixed width so all boxes are equal */
-  height: 30px;
+
   /* Fixed height */
-}.IndexChapterParent,
+}
+
+
+    #header {
+      flex-direction: column !important;
+      gap: 2px;
+      padding-top: 0px;
+    }
+
+    #hrdivider,
+    .HomeURLheader,
+    #headerLink {
+      max-height: auto;
+    }
+
+    #display-title2 {
+      font-size: 1em;
+    }
+
+    #hrdivider {
+      width: 100%;
+      margin: -5px;
+      opacity: .5;
+      display: flex;
+      align-items: center;
+
+      hr {
+        width: 100%;
+      }
+    }
+
+
+.IndexChapterParent,
 .IndexChapterParent,
 .PageVerseParent {
   display: flex;
   align-items: center;
   justify-content: center;
-}a.vlink,
+}
+
+a.vlink,
 a.vlink:link,
 a.vlink:visited a.clink,
 a.clink:link,
@@ -22,153 +60,238 @@ a.clink:visited {
   display: inline-flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 50px;
+  width: 17%;
   height: 50px;
   font-weight: bold;
-}.verseLinks,
-.chapterLinks {
-  flex-wrap: wrap;  margin: 0 auto;
 }
+
+.verseLinks,
+.chapterLinks {
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 /*spacerawayfrommenubarito*/
 .bible-container {
-  margin-bottom: auto;}#DisplayFlexOfBigFive,
+  margin-bottom: auto;
+}
+
+#DisplayFlexOfBigFive,
 #DisplayFlexBigThree {
   padding-bottom: 200px;
-}.bible-container-bg {
+}
+
+.bible-container-bg {
   height: auto;
   overflow: visible;
 }
+
 .indeximage {
   width: 100%;
   height: auto;
-}.verticalimageindex {
+}
+
+.verticalimageindex {
   width: 24%;
   height: auto;
   margin-right: 15px;
   margin-bottom: 20px;
   margin-top: 0px;
   margin-left: 20px;
-}.horizontalimageindex {
+}
+
+.horizontalimageindex {
   width: 90%;
   height: auto;
   margin: 20px;
-}.horizontalbiggerimageindex {
+}
+
+.horizontalbiggerimageindex {
   width: 42%;
   height: auto;
   margin: 20px;
-}.pinoybiblegmail {
+}
+
+.pinoybiblegmail {
   margin-bottom: -5px;
-}.homepageh1 {
+}
+
+.homepageh1 {
   font-size: 2em;
-}.spanenglishbible,
+}
+
+.spanenglishbible,
 .spantagalogbible {
   font-size: 1em;
   line-height: 1.1em;
-}.tdenglishbible {
+}
+
+.tdenglishbible {
   padding: 10px 20px 10px 10px;
-}.tdtagalogbible {
+}
+
+.tdtagalogbible {
   padding: 10px 10px 10px 20px;
-}.biblepassages {
+}
+
+.biblepassages {
   padding-left: 10% !important;
   padding-right: 10% !important;
-}.OtherLinks {
+}
+
+.OtherLinks {
   border-style: solid;
   border-width: 1px 0;
   border-color: #bbbbbb;
   padding: 5px 10px;
   overflow: auto;
-}.OtherLinks {
+}
+
+.OtherLinks {
   transition: padding 0.3s ease;
   text-align: center;
-}.OtherLinks:active {
+}
+
+.OtherLinks:active {
   background-color: #f1ffc3;
-  padding: 20px 0px;  .OtherMenu {
+  padding: 20px 0px;
+
+  .OtherMenu {
     height: auto;
   }
-}.clinkColumn {
+}
+
+.clinkColumn {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-        justify-content: center;
-}#image1080,
+        gap: 2%;
+        justify-content: flex-start;
+        width: 100%;
+
+
+}
+
+.hidemobile {display:none;}
+
+#image1080,
 #image4k {
   float: left;
   max-width: 220px;
   min-width: 50px;
   width: 100%;
   height: auto;
-}#DisplayFlexOfBigFive {
+}
+
+#DisplayFlexOfBigFive {
   display: flex;
   flex-direction: column;
   gap: 50px;
-}#DisplayFlexBigThree {
+}
+
+#DisplayFlexBigThree {
   position: absolute;
   width: 100%;
   height: 100%;
   margin: 65px auto;
 }
+
 #DisplayFlexOfBigFive {
   display: flex;
   flex-direction: column;
   gap: 50px;
   justify-content: flex-start;
   align-items: flex-start;
-}#DisplayFlexBigThree {
+}
+
+#DisplayFlexBigThree {
   display: flex;
   justify-content: center;
- 
-}.OtherMenu {
+
+}
+
+.OtherMenu {
   height: 100%;
   height: 300px;
   overflow: hidden;
   padding: 10px;
   max-height: 250px;
-}.indentHolder {
+}
+
+.indentHolder {
   margin-left: 15px;
   margin-right: 15px;
-}.homepageh1 {
+}
+
+.homepageh1 {
   margin: 1px;
-}#DisplayFlexOfBigFive {
+}
+
+#DisplayFlexOfBigFive {
   display: flex;
   flex-direction: column;
   gap: 50px;
   justify-content: flex-start;
   align-items: flex-start;
-}.diglotfullwidth {
+}
+
+.diglotfullwidth {
   width: 100%;
-}.previouschapter,
+}
+
+.previouschapter,
 .npspacer,
 .nextchapter {
   font-size: 1.2em;
-}.BookIndexTitle {
+}
+
+.BookIndexTitle {
   font-size: 2.2em;
-}.BookIndexChapter {
+}
+
+.BookIndexChapter {
   font-size: 1.5em;
-}.ChapterHomeText {
+}
+
+.ChapterHomeText {
   text-align: justify;
   margin: 20px 20px 0px 20px;
-}.ChapterP,
+}
+
+.ChapterP,
 .ChapterPNI,
 .ChapterPCenter,
 .CenterIndex,
 .centernonitalic {
   font-size: 1.2em;
-}.english {
+}
+
+.english {
   font-size: 0.9em;
-}.tagalogleft,
+}
+
+.tagalogleft,
 .diglotboth {
   font-size: 1em;
-}.diglotnav {
+}
+
+.diglotnav {
   font-size: 1.2em;
-}.bibleduo {
+}
+
+.bibleduo {
   font-size: 0.9em;
-}.LCOldTestament,
+}
+
+.LCOldTestament,
 .LCNewTestament {
   font-size: 1.4em;
-}#bgUpload {
+}
+
+#bgUpload {
   font-size: 1.2em;
-}.BMONTgenesis,
+}
+
+.BMONTgenesis,
 .BMONTexodus,
 .BMONTleviticus,
 .BMONTnumbers,
@@ -235,42 +358,71 @@ a.clink:visited {
 .BMONTjude,
 .BMONTrevelation {
   padding-left: 10px;
-}#labelTitle {
+}
+
+#labelTitle {
   font-weight: bold;
   font-size: 1.2em;
-}#bgUpload {
-  font-size: 1em;
-}#bgStyle {
+}
+
+#bgUpload {
   font-size: 1em;
 }
+
+#bgStyle {
+  font-size: 1em;
+}
+
 #bgColor {
   width: 100px;
   height: 100px;
-}.bible-container,
+}
+
+.bible-container,
 .previousspacernextFlexParent,
 .UpperPageParentFlexBox {
   display: flex;
-}.bible-container,
+}
+
+.bible-container,
 .UpperPageParentFlexBox {
   flex-direction: column;
-}.previousspacernextFlexPare {
+}
+
+.previousspacernextFlexPare {
   flex-direction: row;
-}.verseLinks,
+}
+
+.verseLinks,
 .chapterLinks {
   display: flex;
   justify-content: flex-start;
-}.ChapterPageTitle,
+}
+
+.ChapterPageTitle,
 .BookIndexTitle {
   align-items: center;
-  justify-content: center;}.chapterLinks {
+  justify-content: center;
+}
+
+.chapterLinks {
   flex-direction: column;
-}.clinkColumn {
-  border-bottom: 2px solid rgba(128, 128, 128, 0.0);}.nothinglastsBUTTHEWORDOFGOD {
+          width: 100%;
+          margin:0px 0px;
+}
+
+.clinkColumn {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.0);
+}
+
+.nothinglastsBUTTHEWORDOFGOD {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
-}.LoveOfGodFlex {
+}
+
+.LoveOfGodFlex {
   display: flex;
   width: 100%;
   height: auto;
@@ -279,122 +431,186 @@ a.clink:visited {
   flex-direction: column;
   align-content: center;
   align-items: center;
-}.ChapterN1 {
+}
+
+.ChapterN1 {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-}.ChapterN2 {
+}
+
+.ChapterN2 {
   text-align: center;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
-}.N1 {
+}
+
+.N1 {
   font-size: 1.7em;
-}.N2 {
+}
+
+.N2 {
   font-size: 1.3em;
-}.N3 {
+}
+
+.N3 {
   font-size: 1.1em;
-}.N4 {
+}
+
+.N4 {
   font-size: 1em;
-}/* Top → Right → Bottom → Left */.bible-container-bg {  margin-bottom: 100px !important;
-}.bcbgPages {
+}
+
+/* Top → Right → Bottom → Left */
+.bible-container-bg {
+  margin-bottom: 100px !important;
+}
+
+.bcbgPages {
   padding: 0px 20px 20px 20px;
 }
+
 .previousspacernextFlexParent {
   display: flex;
   justify-content: space-between;
   gap: 20%;
 }
+
 .previouschapter {
   display: inline-flex;
-  justify-content: center;  a {
+  justify-content: center;
+
+  a {
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
   }
 }
+
 .nextchapter {
   display: flex;
   justify-content: center;
   flex-direction: column-reverse;
-  align-content: flex-end;  a {
+  align-content: flex-end;
+
+  a {
     display: flex;
     flex-direction: column-reverse;
     align-content: center;
     flex-wrap: wrap;
   }
 }
+
 .nextswitcher1,
 .nextswitcher1p {
   display: inline-flex;
-}.nextswitcher1,
+}
+
+.nextswitcher1,
 .nextswitcher {
   justify-content: flex-end
 }
+
 .nextswitcher,
 .nextswitcherp {
   display: inline-flex;
-}.nextswitcher1p {  a {
+}
+
+.nextswitcher1p {
+  a {
     display: flex !important;
     justify-content: flex-start;
-  }}.nextswitcherp {  a {
+  }
+}
+
+.nextswitcherp {
+  a {
     display: flex !important;
     justify-content: flex-end;
-  }}.PFlexIndented {
+  }
+}
+
+.PFlexIndented {
   text-indent: 3rem;
-}.ReversedPFlexIndented,
+}
+
+.ReversedPFlexIndented,
 .CenterIndex {
   text-indent: 0px;
 }
+
 .CenterIndex {
   text-align: center !important;
   font-style: italic;
   margin-left: 3rem;
   margin-right: 3rem;
-}/* DIGLOT MENU PAGES */.BibleChaptersMenu {
+}
+
+/* DIGLOT MENU PAGES */
+.BibleChaptersMenu {
   height: 580px;
   overflow: auto;
   padding-left: 5px;
 }
+
 .remainhere {
   position: absolute;
   background-color: white;
   display: block;
   width: 92%;
-}/* DIGLOT POST BUTTON */
-#biblejournalpostsholder {  overflow: auto;
+}
+
+/* DIGLOT POST BUTTON */
+#biblejournalpostsholder {
+  overflow: auto;
   text-align: center;
   overflow-y: auto;
-}.biblejournalposts {
+}
+
+.biblejournalposts {
   border-bottom: 1px solid rgba(128, 128, 128, 0.281);
   border-top: 1px solid rgba(128, 128, 128, 0.281);
   padding: 5px 5px;
   transition: padding 0.3s;
-}.biblejournalposts:active {
+}
+
+.biblejournalposts:active {
   background-color: rgba(181, 255, 249, 0.7);
   padding: 10px 5px;
-}.biblejournalposts {
+}
+
+.biblejournalposts {
   font-size: 1em;
   direction: ltr;
   text-align: center;
-}.journalnumber {
+}
+
+.journalnumber {
   font-weight: bold;
-}.journaltitle {
+}
+
+.journaltitle {
   font-size: 1.1em;
   color: #0f0f46;
-}@media (min-width:1101px) {
+}
+
+@media (min-width:1101px) {
   .diglotcutwidth {
     width: 75%;
     margin: 0 auto;
   }
-}@media (max-width:1100px) {
+}
+
+@media (max-width:1100px) {
   .diglotcutwidth {
     width: 100%;
     margin: 0 auto;
   }
 }
+
 #calltoactionhanging,
 #calltoactionhanging2 {
   position: relative;
@@ -404,41 +620,60 @@ a.clink:visited {
   color: white;
   padding: 2% 5%;
   height: auto;
-  width: 80%;  text-align: center;
+  width: 80%;
+  text-align: center;
   margin: 0 auto;
-}/* daily devotional */#dev-content {
+}
+
+/* daily devotional */
+#dev-content {
   font-size: 1.2em;
   margin-left: 10%;
   margin-right: 10%;
   line-height: 1.4em;
-}#dev-content>pre {
+}
+
+#dev-content>pre {
   font-size: 1em;
   margin-left: 10%;
   margin-right: 10%;
   line-height: 1.4em;
   font-family: "Arimo", Arial, FreeSans, Helvetica, sans-serif;
-}#quote {
+}
+
+#quote {
   font-size: 1.5em;
-}#image10802,
+}
+
+#image10802,
 #image4k2 {
   float: right;
   max-width: 400px;
   min-width: 50px;
   width: 100%;
   height: auto;
-}.devotionalindex {
+}
+
+.devotionalindex {
   font-size: 1.2em;
-}#customizationheader {
+}
+
+#customizationheader {
   font-size: 1.2em;
   display: flex;
-}/*DIGLOT BUTTON*/#diglot-holder {
+}
+
+/*DIGLOT BUTTON*/
+#diglot-holder {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5%;
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
-}#diglot-holder-text {
+}
+
+#diglot-holder-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,14 +682,18 @@ a.clink:visited {
   width: 100%;
   text-align: center;
   height: 200px;
-}#diglot-subholderdiglot {
+}
+
+#diglot-subholderdiglot {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2%;
   flex: 1 0 10%;
   justify-content: space-evenly;
-}.controldiglot {
+}
+
+.controldiglot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -462,38 +701,52 @@ a.clink:visited {
   color: white;
   padding: 2% 5%;
   height: 30px;
-}#holderdiglottext {
+}
+
+#holderdiglottext {
   display: flex;
   flex-direction: row;
-  justify-content: center;  width: 100%;
+  justify-content: center;
+  width: 100%;
   height: auto;
   padding-bottom: 5%;
-}.choosediglottext {
+}
+
+.choosediglottext {
   display: flex;
   margin: 1%;
   text-align: center;
   align-items: center;
   justify-content: center;
-}.choosediglot {
+}
+
+.choosediglot {
   display: flex;
   margin-top: 1%;
   padding-top: 2%;
   text-align: center;
   align-items: center;
   justify-content: center;
-}#holderoftwonavi {
+}
+
+#holderoftwonavi {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 5%;
 }
-/*DIGLOT BUTTON*/#diglot-subholdertext {
+
+/*DIGLOT BUTTON*/
+#diglot-subholdertext {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5%;
-  text-align: center;  border: 2px solid rgb(10, 10, 14);
-}#textsizebuttonholders {
+  text-align: center;
+  border: 2px solid rgb(10, 10, 14);
+}
+
+#textsizebuttonholders {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -501,6 +754,7 @@ a.clink:visited {
   flex: 1 0 10%;
   justify-content: space-evenly;
 }
+
 .textresizerButton {
   display: flex;
   justify-content: center;
@@ -510,7 +764,9 @@ a.clink:visited {
   padding: 2% 5%;
   width: 15%;
   height: 30px;
-}.textresizerButton {
+}
+
+.textresizerButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,24 +776,33 @@ a.clink:visited {
   width: 15%;
   height: 30px;
 }
+
 .textresizerButton,
 .controldiglot,
 .fontchoiceButton {
-  display: flex;}.philnavsfloat {
+  display: flex;
+}
+
+.philnavsfloat {
   display: flex;
   align-items: center;
   justify-content: center;
   clear: both;
   cursor: pointer;
-}.philnavsfloatimg {
+}
+
+.philnavsfloatimg {
   width: 361px;
   height: 40x;
   cursor: pointer;
-}.marginparagraph {
+}
+
+.marginparagraph {
   margin-left: 5%;
   margin-right: 5%;
   line-height: 1.4em;
-}  
+}
+
 .controldiglot,
 .textresizerButton,
 .fontchoiceButton,
@@ -545,6 +810,7 @@ a.clink:visited {
 .fontweightButton {
   transition: background-color 0.3s ease;
 }
+
 .controldiglot:active,
 .textresizerButton:active,
 .fontchoiceButton:active,
@@ -554,12 +820,16 @@ a.clink:visited {
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
+
 #fontfacebox {
   display: flex;
-  border: 2px solid rgb(10, 10, 14);  justify-content: center;
+  border: 2px solid rgb(10, 10, 14);
+  justify-content: center;
   width: 100%;
   margin: 1% auto;
-  place-items: center;}
+  place-items: center;
+}
+
 .fontchoiceButton {
   text-align: center;
   display: flex;
@@ -569,13 +839,15 @@ a.clink:visited {
   color: white;
   padding: 1% 1%;
   width: 150px;
-  height: 70px;
+  height: auto;
   align-content: center;
   justify-items: center;
   flex: 1 0 15%;
   gap: 5%;
   margin-bottom: 3%;
-}.fontchoicesHolder {
+}
+
+.fontchoicesHolder {
   display: flex;
   gap: 5%;
   flex-wrap: wrap;
@@ -585,10 +857,14 @@ a.clink:visited {
   height: auto;
   margin: 0 auto;
   margin-top: 1rem;
-}#fontfacebox {
+}
+
+#fontfacebox {
   display: flex;
   flex-direction: column;
-}.fontweightHolder {
+}
+
+.fontweightHolder {
   display: flex;
   gap: 5%;
   flex-wrap: wrap;
@@ -599,9 +875,12 @@ a.clink:visited {
   margin-top: 1rem;
   flex-direction: column;
   border: 2px solid rgb(10, 10, 14);
-}#choosediglottext {
+}
+
+#choosediglottext {
   width: 100%;
 }
+
 .fontweightHolderButton {
   display: flex;
   gap: 1%;
@@ -613,17 +892,22 @@ a.clink:visited {
   flex-direction: row;
   width: 100%;
 }
+
 .linerindex {
   width: 100%;
   border: 1px solid black;
-}#customizationheader {
+}
+
+#customizationheader {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
   width: 100%;
-}.fontweightButton {
+}
+
+.fontweightButton {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -639,91 +923,142 @@ a.clink:visited {
   margin-bottom: 3%;
   cursor: pointer;
 }
+
 .bible-container-bgs,
 .gray {
   background-color: #adadad;
   color: black;
-}.bible-container-bgs,
+}
+
+.bible-container-bgs,
 .blue {
   color: #ffffff;
   background-color: #416e97;
-}.bible-container-bgs,
+}
+
+.bible-container-bgs,
 .brown {
   background-color: #bbb19c;
   color: #33311e;
-}.bible-container-bgs,
+}
+
+.bible-container-bgs,
 .sepia {
   background-color: #b8a88a;
   color: white;
 }
+
 .bible-container-bgs,
 .brownish {
   background-color: #897560;
   color: white;
-}.bible-container-bgs,
+}
+
+.bible-container-bgs,
 .visionimpaired {
   background-color: #000000 !important;
   color: white;
 }
+
 #bigthreeIndexFlexHolder {
   display: flex;
   flex-direction: column;
-}.flexIndexStart {
+}
+
+.flexIndexStart {
   order: 2;
-}.flexIndexChapterNumber {
+}
+
+.flexIndexChapterNumber {
   order: 1;
-}.flexIndexEnd {
+}
+
+.flexIndexEnd {
   order: 3;
-}/** BACKGROUND IMAGE AND COLOR **/.BackgroundImageFlex {
+}
+
+/** BACKGROUND IMAGE AND COLOR **/
+.BackgroundImageFlex {
   display: flex;
   flex-direction: row;
 }
+
 #bgUploadFlex {
   display: flex;
 }
+
 #bgStyleFlex {
   display: flex;
-}#applyImageThemeFlex {
+}
+
+#applyImageThemeFlex {
   display: flex;
-}#lesserhrnaFlex {
+}
+
+#lesserhrnaFlex {
   display: flex;
-}.BackgroundColorFlex {
+}
+
+.BackgroundColorFlex {
   display: flex;
   flex-direction: row;
-}#chooseplainFlex {
+}
+
+#chooseplainFlex {
   display: flex;
-}#labelTitleFlex2 {
+}
+
+#labelTitleFlex2 {
   display: flex;
-}#applyColorFlex {
+}
+
+#applyColorFlex {
   display: flex;
-}.BackgroundImageFlex {
+}
+
+.BackgroundImageFlex {
   width: 100%;
   height: auto;
 }
+
 #bgStyleFlex {
   width: 100px;
   height: auto;
-}#lesserhrnaFlex {
+}
+
+#lesserhrnaFlex {
   width: 100px;
   height: auto;
-}.BackgroundColorFlex {
+}
+
+.BackgroundColorFlex {
   width: 100px;
   height: auto;
-}#chooseplainFlex {
+}
+
+#chooseplainFlex {
   width: 100px;
   height: auto;
-}#labelTitleFlex2 {
+}
+
+#labelTitleFlex2 {
   width: 100px;
   height: auto;
-}#applyColorFlex {
+}
+
+#applyColorFlex {
   width: 100px;
   height: auto;
-}.CustomizerFlex {
+}
+
+.CustomizerFlex {
   display: flex;
   justify-items: center;
   flex-direction: column;
   gap: 5%;
-}#plaincoloronly {
+}
+
+#plaincoloronly {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -732,6 +1067,7 @@ a.clink:visited {
   border: 2px solid rgb(10, 10, 14);
   width: 45%;
 }
+
 #plainimageonly {
   display: flex;
   flex-direction: column;
@@ -742,32 +1078,42 @@ a.clink:visited {
   width: 45%;
   height: 250px;
 }
+
 .BackgroundImageFlex {
   width: 100%;
   height: auto;
   text-align: center;
   align-self: center;
-  justify-content: center;  h3 {
+  justify-content: center;
+
+  h3 {
     width: 100%;
     height: auto;
     text-align: center;
     align-self: center;
     justify-content: center;
   }
-}.uploadholder {
+}
+
+.uploadholder {
   display: flex;
   flex-direction: row;
   width: 90%;
   justify-content: flex-start;
   margin-left: 2%;
-}#labelTitleFlex {
+}
+
+#labelTitleFlex {
   display: flex;
   width: 50%;
   height: auto;
-}#bgUploadFlex {
+}
+
+#bgUploadFlex {
   width: 50%;
   height: auto;
 }
+
 #applyImageThemeFlex {
   width: 100%;
   height: auto;
@@ -775,7 +1121,9 @@ a.clink:visited {
   justify-content: center;
   text-align: center;
   align-items: center;
-}#buttonclick {
+}
+
+#buttonclick {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -789,14 +1137,21 @@ a.clink:visited {
   justify-items: center;
   gap: 5%;
   margin-bottom: 3%;
-  cursor: pointer;}.BackgroundImageFlex {
+  cursor: pointer;
+}
+
+.BackgroundImageFlex {
   display: flex;
   flex-direction: column;
-}.uploadholder2 {
+}
+
+.uploadholder2 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: CENTER;}
+  justify-content: CENTER;
+}
+
 #plaincoloronly {
   display: flex;
   flex-direction: column;
@@ -807,34 +1162,50 @@ a.clink:visited {
   width: 40%;
   height: 250px;
 }
+
 .uploadholder3 {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  align-items: center;}#labelTitleFlex2 {
+  align-items: center;
+}
+
+#labelTitleFlex2 {
   width: 100%;
   justify-content: center;
   align-self: center;
-}.back-to-top {
+}
+
+.back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20%;
   opacity: .5;
   height: 50px;
-  cursor: pointer;}.back-to-top:active {
+  cursor: pointer;
+}
+
+.back-to-top:active {
   position: fixed;
   bottom: 20px;
   right: 20%;
   opacity: 1;
-  background-color: white;  .scrollup {
+  background-color: white;
+
+  .scrollup {
     scale: 1.2;
     background-color: white;
     margin-bottom: 20px;
-  }}.scrollup {
+  }
+}
+
+.scrollup {
   width: 60px;
   height: 48px;
-}#btnPrev,
+}
+
+#btnPrev,
 #btnToggle,
 #btnNext {
   text-align: center;
@@ -847,70 +1218,108 @@ a.clink:visited {
   width: 100px;
   height: 40px;
   align-content: center;
-  justify-items: center;  cursor: pointer;
+  justify-items: center;
+  cursor: pointer;
   font-size: .8em;
 }
+
 #btnPrev:active,
 #btnToggle:active,
-#btnNext:active {  background-color: #daff06;
+#btnNext:active {
+  background-color: #daff06;
   color: rgb(0, 0, 0);
-  cursor: pointer;}
-#navigationall,
-.back-to-top {  display: none !important;
+  cursor: pointer;
 }
+
+#navigationall,
+.back-to-top {
+  display: none !important;
+}
+
 #navigationall:active {
   opacity: 1;
 }
+
 .resultbox {
   width: 100%;
   position: relative;
   height: auto;
-}#searchBox {
+}
+
+#searchBox {
   border: 1px solid gray;
   font-size: 1.2em;
   height: 35px;
   width: 80%;
   margin: 5% auto;
-  padding: 2% 5%;}#searchResults {
+  padding: 2% 5%;
+}
+
+#searchResults {
   width: 100;
   height: 100%;
   overflow: auto;
   position: relative;
-}/*spacerawayfrommenubarito*/.bible-container {
+}
+
+/*spacerawayfrommenubarito*/
+.bible-container {
   position: absolute;
   width: 100%;
   height: auto;
-  margin-bottom: 100px;  left: 0;
+  margin-bottom: 100px;
+  left: 0;
 }
-#MenuContainerMirrored {  height: 30%;
+
+#MenuContainerMirrored {
+  height: 30%;
   position: fixed;
   width: 25%;
   left: 0;
   bottom: 0;
-}#separatedivider {
+}
+
+#separatedivider {
   display: none;
-}#joinerdivider {
+}
+
+#joinerdivider {
   display: block;
 }
-#MenuContainer {  height: 65%;
+
+#MenuContainer {
+  height: 65%;
   position: fixed;
   left: 0;
-  width: 25%;}
+  width: 25%;
+}
+
 #MenuContainer,
 .OtherLinks {
   max-width: 250px;
-}#MenuContainer {
+}
+
+#MenuContainer {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 10px;
-  margin-left: 0;  position: fixed;  flex: 1 0 10%;}#DesktopMenuOnly,
+  margin-left: 0;
+  position: fixed;
+  flex: 1 0 10%;
+}
+
+#DesktopMenuOnly,
 .narrowgone {
   display: none !important;
-}.marginbot {
+}
+
+.marginbot {
   margin-bottom: 5% !important;
 }
-/* DIGLOT THUMB MENU UNIVERSAL    */#thumbmenuholder {
+
+/* DIGLOT THUMB MENU UNIVERSAL    */
+#thumbmenuholder {
   position: fixed;
   position: bottom;
   height: 50px;
@@ -920,21 +1329,28 @@ a.clink:visited {
   flex-direction: row;
   bottom: 0;
 }
+
 .bibleversesthumb {
   width: 35%;
   background-color: #16166b;
-    color: white;
+  color: white;
   font-size: .8em;
   text-align: center;
   justify-content: center;
   align-items: center;
   align-self: center;
   align-items: center;
-  height:100%;
-  max-height:50px;
-  cursor:pointer;
-  display:flex;
-}#closebiblemenu, #closemenu {display: none;}
+  height: 100%;
+  max-height: 50px;
+  cursor: pointer;
+  display: flex;
+}
+
+#closebiblemenu,
+#closemenu {
+  display: none;
+}
+
 .goupthumb {
   width: 30%;
   background-color: #0f0f46;
@@ -945,41 +1361,71 @@ a.clink:visited {
   align-items: center;
   align-self: center;
   align-items: center;
-  height:100%;
-  max-height:50px;
-  cursor:pointer;
-  display:flex;}.biblecontrollthumb {
+  height: 100%;
+  max-height: 50px;
+  cursor: pointer;
+  display: flex;
+}
+
+.biblecontrollthumb {
   width: 35%;
   background-color: #16166b;
-    color: white;
+  color: white;
   font-size: .8em;
   text-align: center;
   justify-content: center;
   align-items: center;
   align-self: center;
   align-items: center;
-  height:100%;
-  max-height:50px;
-  cursor:pointer;
-  display:flex;
+  height: 100%;
+  max-height: 50px;
+  cursor: pointer;
+  display: flex;
 }
-#biblemenuanimation {width:100%; height:92%; position: fixed; overflow:auto; background-color: white; display: none; bottom:0; left:0; color: black;}
-.bibleversesthumb, .goupthumb, .biblecontrollthumb 
-{
-    transition: background-color 0.3s ease;}.bibleversesthumb:active, .goupthumb:active, .biblecontrollthumb:active 
-{
-    background-color: #daff06;
+
+#biblemenuanimation {
+  width: 100%;
+  height: 92%;
+  position: fixed;
+  overflow: auto;
+  background-color: white;
+  display: none;
+  bottom: 0;
+  left: 0;
+  color: black;
+}
+
+.bibleversesthumb,
+.goupthumb,
+.biblecontrollthumb {
+  transition: background-color 0.3s ease;
+}
+
+.bibleversesthumb:active,
+.goupthumb:active,
+.biblecontrollthumb:active {
+  background-color: #daff06;
   color: rgb(0, 0, 0);
-  cursor: pointer;}
-#biblemenuanimation{z-index: 5;}
-#header {z-index: 20;}
+  cursor: pointer;
+}
+
+#biblemenuanimation {
+  z-index: 5;
+}
+
+#header {
+  z-index: 20;
+}
+
 #upnimation {
   position: fixed;
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 7777777;
-}#upnimation li {
+}
+
+#upnimation li {
   font-size: 3em;
   position: fixed;
   bottom: -50px;
@@ -988,10 +1434,46 @@ a.clink:visited {
   color: white;
   list-style: none;
   opacity: 0;
-  filter: drop-shadow(-5px 5px 12px rgba(0,0,0,0.2)) 
-          drop-shadow(-5px 5px 20px rgba(0,0,0,0.2));
+  filter: drop-shadow(-5px 5px 12px rgba(0, 0, 0, 0.2)) drop-shadow(-5px 5px 20px rgba(0, 0, 0, 0.2));
   /* no animation here */
-}@keyframes upanimations {
-  0%   { bottom: -50px; opacity: 1; }  100% { bottom: 120vh; opacity: 0; }
-}    
-#DesktopMenuOnly {display: none;}
+}
+
+@keyframes upanimations {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: 120vh;
+    opacity: 0;
+  }
+}
+
+#DesktopMenuOnly {
+  display: none;
+}
+
+
+
+
+
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  /* padding-top: 5px; */
+  /* padding-bottom: 5px; */
+  font-size: 1.2em;
+}
+
+
+
+#display-title2 {
+  font-size: 1em;
+}
