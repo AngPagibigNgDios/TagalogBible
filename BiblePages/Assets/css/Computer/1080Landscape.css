@@ -1,4 +1,6 @@
-body {font-size: 1em; }
+body {
+  font-size: 1em;
+}
 
 .clink {
   font-size: 1em;
@@ -616,66 +618,66 @@ a.clink:visited {
 }
 
 @media (min-width:1470px) {
-#calltoactionhanging {
- position:relative;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f0f46;
-  color: white;
-  padding: 2% 5%;
+  #calltoactionhanging {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f46;
+    color: white;
+    padding: 2% 5%;
 
-  width:50%;
-  margin-left:-100px;
-  text-align: center;
-}
+    width: 50%;
+    margin-left: -100px;
+    text-align: center;
+  }
 
 
-#calltoactionhanging2 {
- position:relative;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f0f46;
-  color: white;
-  padding: 2% 5%;
+  #calltoactionhanging2 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f46;
+    color: white;
+    padding: 2% 5%;
 
-  width:50%;
-  margin-left:125%;
-  right:-100px;
-  align-self:flex-end;
-  text-align: center;
-}
+    width: 50%;
+    margin-left: 125%;
+    right: -100px;
+    align-self: flex-end;
+    text-align: center;
+  }
 
 }
 
 
 @media (max-width:1469px) {
-#calltoactionhanging {
- position:relative;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f0f46;
-  color: white;
-  padding: 2% 5%;
+  #calltoactionhanging {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f46;
+    color: white;
+    padding: 2% 5%;
 
-  width:100%;
+    width: 100%;
 
-  text-align: center;
-}
+    text-align: center;
+  }
 
 
-#calltoactionhanging2 {
- position:relative;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f0f46;
-  color: white;
-  padding: 2% 5%;
+  #calltoactionhanging2 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f46;
+    color: white;
+    padding: 2% 5%;
 
-  width:100%;
+    width: 100%;
 
-  align-self:flex-end;
-  text-align: center;
-}
+    align-self: flex-end;
+    text-align: center;
+  }
 
 }
 
@@ -778,7 +780,7 @@ a.clink:visited {
 .choosediglottext {
   display: flex;
   margin: 1%;
-    text-align: center;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -882,7 +884,9 @@ a.clink:visited {
 
 .controldiglot:hover,
 .textresizerButton:hover,
-.fontchoiceButton:hover, #buttonclick:hover, .fontweightButton:hover  {
+.fontchoiceButton:hover,
+#buttonclick:hover,
+.fontweightButton:hover {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -952,7 +956,9 @@ a.clink:visited {
   border: 2px solid rgb(10, 10, 14);
 }
 
-#choosediglottext {width: 100%;}
+#choosediglottext {
+  width: 100%;
+}
 
 
 .fontweightHolderButton {
@@ -968,9 +974,19 @@ a.clink:visited {
 }
 
 
-.linerindex {width:100%; border: 1px solid black;}
+.linerindex {
+  width: 100%;
+  border: 1px solid black;
+}
 
-#customizationheader {display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; width: 100%;}
+#customizationheader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
 
 
 
@@ -1015,30 +1031,32 @@ a.clink:visited {
   color: #ffffff;
   background-color: #416e97;
 }
+
 .bible-container-bgs,
 .brown {
-background-color: #bbb19c;
-        color: #33311e;}
+  background-color: #bbb19c;
+  color: #33311e;
+}
 
 .bible-container-bgs,
 .sepia {
-        background-color:#b8a88a;
-        color:white;
+  background-color: #b8a88a;
+  color: white;
 }
 
 
 .bible-container-bgs,
 .brownish {
-        background-color: #897560;
-        color: white;
+  background-color: #897560;
+  color: white;
 }
 
 
 
 .bible-container-bgs,
 .visionimpaired {
-        background-color: #000000 !important;
-        color: white;
+  background-color: #000000 !important;
+  color: white;
 }
 
 
@@ -1138,7 +1156,7 @@ background-color: #bbb19c;
   display: flex;
   justify-items: center;
   flex-direction: row;
-  gap:5%;
+  gap: 5%;
 }
 
 #plaincoloronly {
@@ -1148,7 +1166,7 @@ background-color: #bbb19c;
   gap: 5%;
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
-width: 45%;
+  width: 45%;
 }
 
 
@@ -1159,8 +1177,8 @@ width: 45%;
   gap: 5%;
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
-width: 45%;
-height:250px;
+  width: 45%;
+  height: 250px;
 }
 
 
@@ -1170,21 +1188,24 @@ height:250px;
   width: 100%;
   height: auto;
   text-align: center;
-align-self: center;
-justify-content:center;
+  align-self: center;
+  justify-content: center;
 
-h3{  width: 100%;
-  height: auto;
-  text-align: center;
-align-self: center;
-justify-content:center;}
+  h3 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+  }
 }
 
-.uploadholder {display:flex;
-flex-direction: row;
-width: 90%;
-justify-content: flex-start;
-margin-left:2%;
+.uploadholder {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: flex-start;
+  margin-left: 2%;
 }
 
 #labelTitleFlex {
@@ -1210,7 +1231,7 @@ margin-left:2%;
 
 
 
-#buttonclick{
+#buttonclick {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1230,12 +1251,16 @@ margin-left:2%;
 
 }
 
-.BackgroundImageFlex{display: flex; flex-direction: column;}
+.BackgroundImageFlex {
+  display: flex;
+  flex-direction: column;
+}
 
-.uploadholder2 {display:flex;
-flex-direction: row;
-width: 100%;
-justify-content: CENTER;
+.uploadholder2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: CENTER;
 
 }
 
@@ -1247,141 +1272,63 @@ justify-content: CENTER;
   gap: 5%;
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
-width: 40%;
-height:250px;
+  width: 40%;
+  height: 250px;
 }
 
 
-.uploadholder3 {display:flex;
-flex-direction: column;
-width: 100%;
-justify-content: center;
-align-items: center;
-
-}
-
-#labelTitleFlex2{width:100%; justify-content: center; align-self: center;}
-
-
-
-.back-to-top {position:fixed; bottom:7%; right:20%; opacity:.3; height:50px; cursor: pointer;
-
-}
-.back-to-top:hover {position:fixed; bottom:7.2%; right:20%; opacity:1; background-color:white;
-.scrollup {scale:1.2; background-color:white; margin-bottom:20px;}
-
-}
-
-.scrollup {width:60px; height:48px;}
-
-
-
-#btnPrev, #btnToggle, #btnNext {
-  text-align: center;
+.uploadholder3 {
   display: flex;
+  flex-direction: column;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #0f0f46;
-  color: white;
-  padding: 1% 1%;
-  width: 100px;
-  height: 40px;
-  align-content: center;
-  justify-items: center;
-
-  cursor: pointer;
-
-
-  font-size:.8em;
-    transition: background-color 0.3s ease;
 
 }
 
-
-#btnPrev:hover, #btnToggle:hover, #btnNext:hover {
-
-  background-color: #daff06;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  
-
+#labelTitleFlex2 {
+  width: 100%;
+  justify-content: center;
+  align-self: center;
 }
 
 
 
+.back-to-top {
+  position: fixed;
+  bottom: 7%;
+  right: 20%;
+  opacity: .3;
+  height: 50px;
+  cursor: pointer;
 
-#navigationall {position: fixed; bottom:0px; right:1%; display: flex; flex-direction:row;   gap: 2%;   opacity: .2; }
+}
 
+.back-to-top:hover {
+  position: fixed;
+  bottom: 7.2%;
+  right: 20%;
+  opacity: 1;
+  background-color: white;
 
-#navigationall:hover {opacity: 1; }
-
-
-
-  /*spacerawayfrommenubarito*/
-
-  .bible-container {
-    position: absolute;
-    width: 50%;
-    height: auto;
-    margin-bottom: 200px;
-    margin-left: 25%;
-    margin-right:25%;
+  .scrollup {
+    scale: 1.2;
+    background-color: white;
+    margin-bottom: 20px;
   }
 
+}
 
-  
-
-#separatedivider {display: block;}
-#joinerdivider {display: none;}
-
-
-
-@media (max-width:1200px) {
-  
-
-
-
-    #MenuContainerMirrored
-
- {
-
-        max-width: 250px;
-
-    }
+.scrollup {
+  width: 60px;
+  height: 48px;
 }
 
 
 
-
-
-
-
-
-
-.marginbot{ margin-bottom: 2% !important;}
-
-
-
-
-
-.englishresulttitle {text-decoration:underline;}
-
-
-.tagalogresulttitle {text-decoration:underline;}
-.TestamentResult {color:#416e97; font-style: italic; font-size: 80%;}
-
-
-.resultbox {width: 100%; position: relative; height: 90%; overflow:auto;}
-
-#searchBox{width:90%; margin-left:5%; margin-right:5%; border: 1px solid gray; font-size:1.2em; height:1.5em; }
-
-#searchResults {width: 100%; height: 100%; overflow: auto; position: relative;}
-
-.resultdiglot{display:flex; flex-direction: row; gap: 5%; justify-content: space-evenly;}
-.searchHeader{background-color: rgba(136, 136, 255, 0.178);font-size: 1.5em; font-weight: bold; text-align: center; margin-top: 5%; border-bottom: 1px double gray;}
-
-
-.closesearch, .gobacktosearch {
+#btnPrev,
+#btnToggle,
+#btnNext {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1396,13 +1343,176 @@ align-items: center;
 
   cursor: pointer;
 
-  font-size:.8em;
+
+  font-size: .8em;
   transition: background-color 0.3s ease;
 
 }
 
 
-.closesearch:hover, .gobacktosearch:hover {
+#btnPrev:hover,
+#btnToggle:hover,
+#btnNext:hover {
+
+  background-color: #daff06;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+
+
+}
+
+
+
+
+#navigationall {
+  position: fixed;
+  bottom: 0px;
+  right: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  opacity: .2;
+}
+
+
+#navigationall:hover {
+  opacity: 1;
+}
+
+
+
+/*spacerawayfrommenubarito*/
+
+.bible-container {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  margin-bottom: 200px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+
+
+
+#separatedivider {
+  display: block;
+}
+
+#joinerdivider {
+  display: none;
+}
+
+
+
+@media (max-width:1200px) {
+
+
+
+
+  #MenuContainerMirrored {
+
+    max-width: 250px;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+.marginbot {
+  margin-bottom: 2% !important;
+}
+
+
+
+
+
+.englishresulttitle {
+  text-decoration: underline;
+}
+
+
+.tagalogresulttitle {
+  text-decoration: underline;
+}
+
+.TestamentResult {
+  color: #416e97;
+  font-style: italic;
+  font-size: 80%;
+}
+
+
+.resultbox {
+  width: 100%;
+  position: relative;
+  height: 90%;
+  overflow: auto;
+}
+
+#searchBox {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid gray;
+  font-size: 1.2em;
+  height: 1.5em;
+}
+
+#searchResults {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+.resultdiglot {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: space-evenly;
+}
+
+.searchHeader {
+  background-color: rgba(136, 136, 255, 0.178);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5%;
+  border-bottom: 1px double gray;
+}
+
+
+.closesearch,
+.gobacktosearch {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 20%;
+  height: 2%;
+  align-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+
+  font-size: .8em;
+  transition: background-color 0.3s ease;
+
+}
+
+
+.closesearch:hover,
+.gobacktosearch:hover {
 
   background-color: #daff06;
   color: rgb(0, 0, 0);
@@ -1412,4 +1522,6 @@ align-items: center;
 
 
 
-#onlymobilenarrow{display:none;}
+#onlymobilenarrow {
+  display: none;
+}

@@ -1500,7 +1500,6 @@ a.clink:visited {
 
 #thumbmenuholder {
   position: fixed;
-  position: bottom;
   height: 50px;
   width: 100%;
   display: flex;

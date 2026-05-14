@@ -6,9 +6,9 @@
 
 
 class DiglotHeaderIndex extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
     
       <div id="header" class="headermaroon">
         <div id="headerLink">
@@ -22,76 +22,72 @@ class DiglotHeaderIndex extends HTMLElement {
       
     `;
 
-		// DITO ANG END NG INNER HTML
+      // DITO ANG END NG INNER HTML
 
-		// SA BABA LAHAT NG JAVA SCRIPT
+      // SA BABA LAHAT NG JAVA SCRIPT
 
-		// 2. Call your logic directly
-		this.updateHeaderDisplay();
+      // 2. Call your logic directly
+      this.updateHeaderDisplay();
 
-		// 3. (Optional) Listen for hash changes so it updates without refreshing
-		window.addEventListener('hashchange', () => this.updateHeaderDisplay());
-	}
+      // 3. (Optional) Listen for hash changes so it updates without refreshing
+      window.addEventListener('hashchange', () => this.updateHeaderDisplay());
+   }
 
-	updateHeaderDisplay() {
-		const displayLink = this.querySelector('#display-title2');
-		if (!displayLink) return;
+   updateHeaderDisplay() {
+      const displayLink = this.querySelector('#display-title2');
+      if (!displayLink) return;
 
-		let hash = decodeURIComponent(window.location.hash);
-		let verseDisplay = '';
+      let hash = decodeURIComponent(window.location.hash);
+      let verseDisplay = '';
 
-		if (hash.includes('#verse-')) {
-			let content = hash.split('#verse-')[1];
-			if (content) {
-				// Split by comma or space
-				let parts = content.trim().split(/[,\s]+/).filter(Boolean);
+      if (hash.includes('#verse-')) {
+         let content = hash.split('#verse-')[1];
+         if (content) {
+            // Split by comma or space
+            let parts = content.trim().split(/[,\s]+/).filter(Boolean);
 
-				// IMPROVED SORTING: 
-				// We look at the FIRST number if it's a range (like 8-11)
-				parts.sort((a, b) => {
-					let numA = parseInt(a.split('-')[0], 10);
-					let numB = parseInt(b.split('-')[0], 10);
-					return numA - numB;
-				});
+            // IMPROVED SORTING: 
+            // We look at the FIRST number if it's a range (like 8-11)
+            parts.sort((a, b) => {
+               let numA = parseInt(a.split('-')[0], 10);
+               let numB = parseInt(b.split('-')[0], 10);
+               return numA - numB;
+            });
 
-				// Formatting the display
-				let cleanParts = parts.map(p => {
-					// If it's a range like 8-11, make it 8 — 11
-					if (p.includes('-')) {
-						return p.replace('-', ' — ');
-					}
-					return p;
-				});
+            // Formatting the display
+            let cleanParts = parts.map(p => {
+               // If it's a range like 8-11, make it 8 — 11
+               if (p.includes('-')) {
+                  return p.replace('-', ' — ');
+               }
+               return p;
+            });
 
-				verseDisplay = ' : ' + cleanParts.join(', ');
-			}
-		}
+            verseDisplay = ' : ' + cleanParts.join(', ');
+         }
+      }
 
-		let title = typeof baseChapterTitle !== 'undefined' ?
-			baseChapterTitle :
-			document.title;
+      let title = typeof baseChapterTitle !== 'undefined' ?
+         baseChapterTitle :
+         document.title;
 
-		// Always sanitize (this is the real fix)
-		title = title.replace(/\s*:\s*\d+([—\-\s,]\d+)*/g, '').trim();
-		// Update browser tab
-		document.title = title + verseDisplay;
+      // Always sanitize (this is the real fix)
+      title = title.replace(/\s*:\s*\d+([—\-\s,]\d+)*/g, '').trim();
+      // Update browser tab
+      document.title = title + verseDisplay;
 
-		// Update the bar on the page
-		displayLink.innerHTML = `${title}${verseDisplay}`;
-	}
+      // Update the bar on the page
+      displayLink.innerHTML = `${title}${verseDisplay}`;
+   }
 }
 
 customElements.define('diglot-header-index', DiglotHeaderIndex);
 
 
-
-
-
-
 class DiglotHeader extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
     
       <div id="header" class="headerblue">
         <div id="headerLink">
@@ -105,26 +101,22 @@ class DiglotHeader extends HTMLElement {
       
     `;
 
-		// DITO ANG END NG INNER HTML
+      // DITO ANG END NG INNER HTML
 
-		// SA BABA LAHAT NG JAVA SCRIPT
+      // SA BABA LAHAT NG JAVA SCRIPT
 
-		// 2. Call your logic directly
-		this.updateHeaderDisplay();
+      // 2. Call your logic directly
+      this.updateHeaderDisplay();
 
-		// 3. (Optional) Listen for hash changes so it updates without refreshing
-		window.addEventListener('hashchange', () => this.updateHeaderDisplay());
-	}
+      // 3. (Optional) Listen for hash changes so it updates without refreshing
+      window.addEventListener('hashchange', () => this.updateHeaderDisplay());
+   }
 
 
 }
 
 
 customElements.define('diglot-header', DiglotHeader);
-
-
-
-
 
 
 /////////////////////////
@@ -134,13 +126,10 @@ customElements.define('diglot-header', DiglotHeader);
 /////////////////////////
 
 
-
-
-
 class DiglotNote extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
       
 
 
@@ -177,15 +166,11 @@ Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya 
 
   `;
 
-	}
+   }
 }
 
 
 customElements.define('diglot-note', DiglotNote);
-
-
-
-
 
 
 /////////////////////////
@@ -195,15 +180,10 @@ customElements.define('diglot-note', DiglotNote);
 /////////////////////////
 
 
-
-
-
-
-
 class DiglotNavigation extends HTMLElement {
-	connectedCallback() {
+   connectedCallback() {
 
-		this.innerHTML = `
+      this.innerHTML = `
 <div id="navigationall">
          <div id="btnPrev">Previous</div>
          <div id="btnToggle">Disable Arrow Keys</div>
@@ -215,194 +195,191 @@ class DiglotNavigation extends HTMLElement {
 
       `;
 
-		// =========================
-		// ELEMENTS INSIDE COMPONENT
-		// =========================
+      // =========================
+      // ELEMENTS INSIDE COMPONENT
+      // =========================
 
-		const btnPrev = this.querySelector('#btnPrev');
-		const btnNext = this.querySelector('#btnNext');
-		const btnToggle = this.querySelector('#btnToggle');
-		const backToTop = this.querySelector('.back-to-top');
+      const btnPrev = this.querySelector('#btnPrev');
+      const btnNext = this.querySelector('#btnNext');
+      const btnToggle = this.querySelector('#btnToggle');
+      const backToTop = this.querySelector('.back-to-top');
 
-		// =========================
-		// SCROLL TO TOP
-		// =========================
+      // =========================
+      // SCROLL TO TOP
+      // =========================
 
-		backToTop.onclick = function() {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			});
-		};
+      backToTop.onclick = function () {
+         window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+      };
 
-		// =========================
-		// SETTINGS
-		// =========================
+      // =========================
+      // SETTINGS
+      // =========================
 
-		const STORAGE_KEY = 'arrowNavEnabled';
+      const STORAGE_KEY = 'arrowNavEnabled';
 
-		let arrowNavEnabled = localStorage.getItem(STORAGE_KEY);
+      let arrowNavEnabled = localStorage.getItem(STORAGE_KEY);
 
-		arrowNavEnabled =
-			arrowNavEnabled === null ?
-			true :
-			(arrowNavEnabled === 'true');
+      arrowNavEnabled =
+         arrowNavEnabled === null ?
+         true :
+         (arrowNavEnabled === 'true');
 
-		// =========================
-		// LINKS
-		// =========================
+      // =========================
+      // LINKS
+      // =========================
 
-		const prevLink = document.getElementById('LinkToPrev');
-		const nextLink = document.getElementById('LinkToNext');
+      const prevLink = document.getElementById('LinkToPrev');
+      const nextLink = document.getElementById('LinkToNext');
 
-		// =========================
-		// BUTTON LABEL
-		// =========================
+      // =========================
+      // BUTTON LABEL
+      // =========================
 
-		btnToggle.textContent =
-			arrowNavEnabled ?
-			'Disable Arrow Keys' :
-			'Enable Arrow Keys';
+      btnToggle.textContent =
+         arrowNavEnabled ?
+         'Disable Arrow Keys' :
+         'Enable Arrow Keys';
 
-		// =========================
-		// BUTTON EVENTS
-		// =========================
+      // =========================
+      // BUTTON EVENTS
+      // =========================
 
-		btnPrev.onclick = function() {
-			if (prevLink?.href) {
-				window.location.href = prevLink.href;
-			}
-		};
+      btnPrev.onclick = function () {
+         if (prevLink?.href) {
+            window.location.href = prevLink.href;
+         }
+      };
 
-		btnNext.onclick = function() {
-			if (nextLink?.href) {
-				window.location.href = nextLink.href;
-			}
-		};
+      btnNext.onclick = function () {
+         if (nextLink?.href) {
+            window.location.href = nextLink.href;
+         }
+      };
 
-		btnToggle.onclick = function() {
+      btnToggle.onclick = function () {
 
-			arrowNavEnabled = !arrowNavEnabled;
+         arrowNavEnabled = !arrowNavEnabled;
 
-			localStorage.setItem(
-				STORAGE_KEY,
-				arrowNavEnabled
-			);
+         localStorage.setItem(
+            STORAGE_KEY,
+            arrowNavEnabled
+         );
 
-			btnToggle.textContent =
-				arrowNavEnabled ?
-				'Disable Arrow Keys' :
-				'Enable Arrow Keys';
-		};
+         btnToggle.textContent =
+            arrowNavEnabled ?
+            'Disable Arrow Keys' :
+            'Enable Arrow Keys';
+      };
 
-		// =========================
-		// SWIPE NAVIGATION
-		// =========================
+      // =========================
+      // SWIPE NAVIGATION
+      // =========================
 
-		let touchstartX = 0;
-		let touchendX = 0;
+      let touchstartX = 0;
+      let touchendX = 0;
 
-		const minSwipeDistance = 70;
+      const minSwipeDistance = 70;
 
-		document.addEventListener(
-			'touchstart',
-			e => {
-				touchstartX =
-					e.changedTouches[0].screenX;
-			}, {
-				passive: true
-			}
-		);
+      document.addEventListener(
+         'touchstart',
+         e => {
+            touchstartX =
+               e.changedTouches[0].screenX;
+         }, {
+            passive: true
+         }
+      );
 
-		document.addEventListener(
-			'touchend',
-			e => {
-				touchendX =
-					e.changedTouches[0].screenX;
+      document.addEventListener(
+         'touchend',
+         e => {
+            touchendX =
+               e.changedTouches[0].screenX;
 
-				handleGesture();
-			}, {
-				passive: true
-			}
-		);
+            handleGesture();
+         }, {
+            passive: true
+         }
+      );
 
-		function handleGesture() {
+      function handleGesture() {
 
-			const distance =
-				touchendX - touchstartX;
+         const distance =
+            touchendX - touchstartX;
 
-			if (distance > minSwipeDistance) {
+         if (distance > minSwipeDistance) {
 
-				if (prevLink?.href) {
-					window.location.href =
-						prevLink.href;
-				}
-			}
+            if (prevLink?.href) {
+               window.location.href =
+                  prevLink.href;
+            }
+         }
 
-			if (distance < -minSwipeDistance) {
+         if (distance < -minSwipeDistance) {
 
-				if (nextLink?.href) {
-					window.location.href =
-						nextLink.href;
-				}
-			}
-		}
+            if (nextLink?.href) {
+               window.location.href =
+                  nextLink.href;
+            }
+         }
+      }
 
-		// =========================
-		// KEYBOARD NAVIGATION
-		// =========================
+      // =========================
+      // KEYBOARD NAVIGATION
+      // =========================
 
-		document.addEventListener(
-			'keydown',
-			function(e) {
+      document.addEventListener(
+         'keydown',
+         function (e) {
 
-				if (!arrowNavEnabled) return;
+            if (!arrowNavEnabled) return;
 
-				if (
-					e.ctrlKey ||
-					e.shiftKey ||
-					e.altKey ||
-					e.metaKey
-				) return;
+            if (
+               e.ctrlKey ||
+               e.shiftKey ||
+               e.altKey ||
+               e.metaKey
+            ) return;
 
-				const active =
-					document.activeElement;
+            const active =
+               document.activeElement;
 
-				if (
-					active &&
-					(
-						active.tagName === 'INPUT' ||
-						active.tagName === 'TEXTAREA'
-					)
-				) return;
+            if (
+               active &&
+               (
+                  active.tagName === 'INPUT' ||
+                  active.tagName === 'TEXTAREA'
+               )
+            ) return;
 
-				if (e.key === 'ArrowLeft') {
+            if (e.key === 'ArrowLeft') {
 
-					if (prevLink?.href) {
-						window.location.href =
-							prevLink.href;
-					}
-				}
+               if (prevLink?.href) {
+                  window.location.href =
+                     prevLink.href;
+               }
+            }
 
-				if (e.key === 'ArrowRight') {
+            if (e.key === 'ArrowRight') {
 
-					if (nextLink?.href) {
-						window.location.href =
-							nextLink.href;
-					}
-				}
-			}
-		);
-	}
+               if (nextLink?.href) {
+                  window.location.href =
+                     nextLink.href;
+               }
+            }
+         }
+      );
+   }
 }
 
 customElements.define(
-	'diglot-navigation',
-	DiglotNavigation
+   'diglot-navigation',
+   DiglotNavigation
 );
-
-
-
 
 
 /////////////////////////
@@ -412,11 +389,10 @@ customElements.define(
 /////////////////////////
 
 
-
 class JoinerDiglotPostA extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
 
 
 
@@ -542,20 +518,16 @@ class JoinerDiglotPostA extends HTMLElement {
 </div>
 
 `;
-	}
+   }
 }
 
 customElements.define('joiner-diglot-post-a', JoinerDiglotPostA);
 
 
-
-
-
-
 class JoinerDiglotPostB extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
 
 
 
@@ -671,18 +643,16 @@ class JoinerDiglotPostB extends HTMLElement {
 </div>
 
 `;
-	}
+   }
 }
 
 customElements.define('joiner-diglot-post-b', JoinerDiglotPostB);
 
 
-
-
 class DiglotPostButton extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
 
 
 <joiner-diglot-post-a id="separatedivider"></joiner-diglot-post-a>
@@ -692,25 +662,10 @@ class DiglotPostButton extends HTMLElement {
 
 
 `;
-	}
+   }
 }
 
 customElements.define('diglot-post-button', DiglotPostButton);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /////////////////////////
@@ -720,18 +675,10 @@ customElements.define('diglot-post-button', DiglotPostButton);
 /////////////////////////
 
 
-
-
-
-
-
-
-
-
 class DiglotMenuFocused extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
       
 
 
@@ -888,54 +835,41 @@ class DiglotMenuFocused extends HTMLElement {
 </div>
 
         `;
-		setTimeout(() => {
-			// 1. Collect style tags and find the dynamic class
-			const styles = document.head.querySelectorAll('style');
-			let activeClass = null;
+      setTimeout(() => {
+         // 1. Collect style tags and find the dynamic class
+         const styles = document.head.querySelectorAll('style');
+         let activeClass = null;
 
-			for (const style of styles) {
-				const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
-				if (match) {
-					activeClass = match[0].substring(1);
-					break; // Optimization: stop searching once found
-				}
-			}
+         for (const style of styles) {
+            const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
+            if (match) {
+               activeClass = match[0].substring(1);
+               break; // Optimization: stop searching once found
+            }
+         }
 
-			if (!activeClass) return;
+         if (!activeClass) return;
 
-			// 2. Find and scroll the element
-			const activeBook = this.querySelector(`.${activeClass}`);
+         // 2. Find and scroll the element
+         const activeBook = this.querySelector(`.${activeClass}`);
 
-			if (activeBook) {
-				activeBook.scrollIntoView({
-					block: 'center',
-					behavior: 'auto'
-				});
-			}
-		}, 1000);
-	}
+         if (activeBook) {
+            activeBook.scrollIntoView({
+               block: 'center',
+               behavior: 'auto'
+            });
+         }
+      }, 1000);
+   }
 }
 
 customElements.define('diglot-menu-focused', DiglotMenuFocused);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class DiglotMenu extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
       
 
 
@@ -1074,52 +1008,41 @@ class DiglotMenu extends HTMLElement {
 </div>
 
         `;
-		setTimeout(() => {
-			// 1. Collect style tags and find the dynamic class
-			const styles = document.head.querySelectorAll('style');
-			let activeClass = null;
+      setTimeout(() => {
+         // 1. Collect style tags and find the dynamic class
+         const styles = document.head.querySelectorAll('style');
+         let activeClass = null;
 
-			for (const style of styles) {
-				const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
-				if (match) {
-					activeClass = match[0].substring(1);
-					break; // Optimization: stop searching once found
-				}
-			}
+         for (const style of styles) {
+            const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
+            if (match) {
+               activeClass = match[0].substring(1);
+               break; // Optimization: stop searching once found
+            }
+         }
 
-			if (!activeClass) return;
+         if (!activeClass) return;
 
-			// 2. Find and scroll the element
-			const activeBook = this.querySelector(`.${activeClass}`);
+         // 2. Find and scroll the element
+         const activeBook = this.querySelector(`.${activeClass}`);
 
-			if (activeBook) {
-				activeBook.scrollIntoView({
-					block: 'center',
-					behavior: 'smooth'
-				});
-			}
-		}, 50);
-	}
+         if (activeBook) {
+            activeBook.scrollIntoView({
+               block: 'center',
+               behavior: 'smooth'
+            });
+         }
+      }, 50);
+   }
 }
 
 customElements.define('diglot-menu', DiglotMenu);
 
 
-
-
-
-
-
-
-
-
-
-
-
 class DiglotMenuIndex extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
 
 
 
@@ -1254,57 +1177,41 @@ class DiglotMenuIndex extends HTMLElement {
 </div>
 
   `;
-		setTimeout(() => {
-			// 1. Collect style tags and find the dynamic class
-			const styles = document.head.querySelectorAll('style');
-			let activeClass = null;
+      setTimeout(() => {
+         // 1. Collect style tags and find the dynamic class
+         const styles = document.head.querySelectorAll('style');
+         let activeClass = null;
 
-			for (const style of styles) {
-				const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
-				if (match) {
-					activeClass = match[0].substring(1);
-					break; // Optimization: stop searching once found
-				}
-			}
+         for (const style of styles) {
+            const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
+            if (match) {
+               activeClass = match[0].substring(1);
+               break; // Optimization: stop searching once found
+            }
+         }
 
-			if (!activeClass) return;
+         if (!activeClass) return;
 
-			// 2. Find and scroll the element
-			const activeBook = this.querySelector(`.${activeClass}`);
+         // 2. Find and scroll the element
+         const activeBook = this.querySelector(`.${activeClass}`);
 
-			if (activeBook) {
-				activeBook.scrollIntoView({
-					block: 'center',
-					behavior: 'smooth'
-				});
-			}
-		}, 50);
-	}
+         if (activeBook) {
+            activeBook.scrollIntoView({
+               block: 'center',
+               behavior: 'smooth'
+            });
+         }
+      }, 50);
+   }
 }
 
 customElements.define('diglot-menu-index', DiglotMenuIndex);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class JoinerDiglotPostAIndex extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
 
 
 
@@ -1430,20 +1337,16 @@ class JoinerDiglotPostAIndex extends HTMLElement {
 </div>
 
 `;
-	}
+   }
 }
 
 customElements.define('joiner-diglot-post-a-index', JoinerDiglotPostAIndex);
 
 
-
-
-
-
 class JoinerDiglotPostBIndex extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
 
 
 
@@ -1559,19 +1462,16 @@ class JoinerDiglotPostBIndex extends HTMLElement {
 </div>
 
 `;
-	}
+   }
 }
 
 customElements.define('joiner-diglot-post-b-index', JoinerDiglotPostBIndex);
 
 
-
-
-
 class DiglotPostButtonIndex extends HTMLElement {
-	connectedCallback() {
-		// 1. Set the HTML structure
-		this.innerHTML = `
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
 
 
 <joiner-diglot-post-a-index id="separatedivider"></joiner-diglot-post-a-index>
@@ -1581,107 +1481,94 @@ class DiglotPostButtonIndex extends HTMLElement {
 
 
 `;
-	}
+   }
 }
 
 customElements.define('diglot-post-button-index', DiglotPostButtonIndex);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class DiglotThumbMenu extends HTMLElement {
-	connectedCallback() {
+   connectedCallback() {
 
-		this.innerHTML = `
+      this.innerHTML = `
 		<div id="biblemenuanimation">HELLO ONE<br/>HELLO TWO<br/>HELLO THREE<br/>HELLO FOUR<br/>HELLO FIVE<br/>HELLO SIZ<br/>HELLO SEVEN<br/></div>
 
 		<div id="thumbmenuholder">    
 			<div class="bibleversesthumb" id="menuanimation">
 				<span id="openbiblemenu">BIBLE MENU ☰</span>
-        <span id="closebiblemenu">BIBLE MENU &#10006;</span>
+        <span id="closebiblemenu">BIBLE MENU ✖</span>
 			</div>
 
-			<div class="goupthumb" id="goUpScroll"><div>GO</div>&nbsp;<div>▲</div>
-        
-      &nbsp;<div>UP</div>  </div>
+			<div class="goupthumb" id="goUpScroll">
+            <div>GO            </div> 
+            <div>▲</div>
+            
+           
+          <div>UP</div>
+    </div>
 
 			<div class="biblecontrollthumb">
         				<span id="openmenu">☰ OTHER MENU</span>
-        <span id="closemenu">&#10006; OTHER MENU</span>
+        <span id="closemenu">✖ OTHER MENU</span>
       </div>
 
 
 		</div>
-                <ul id="upnimation" class="animate">
-      <li>▲</li>
-      <li>▲</li>
-      <li>▲</li>
-      <li>▲</li>
-      <li>▲</li>
-      <li>▲</li>
-      <li>▲</li>
-  </ul>
+    <ul id="upnimation" class="animate">
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+    </ul>
 		`;
-    
-    // GO UP
 
-		// GO UP
-		const backUp = this.querySelector('.goupthumb');
+      // GO UP
 
-		backUp.onclick = function () {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			});
-		};
+      // GO UP
+      const backUp = this.querySelector('.goupthumb');
 
-		// MENU TOGGLE
-		const menuButton = this.querySelector('#menuanimation');
-    const menuDiv = this.querySelector('#biblemenuanimation');
-const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
-const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
+      backUp.onclick = function () {
+         window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+      };
+
+      // MENU TOGGLE
+      const menuButton = this.querySelector('#menuanimation');
+      const menuDiv = this.querySelector('#biblemenuanimation');
+      const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
+      const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
 
 
-    
-    menuButton.onclick = function () {
-      const isHidden = window.getComputedStyle(menuDiv).display === "none";
-      // toggle menu
-  menuDiv.style.display = isHidden ? "block" : "none";  // toggle spans
-  spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
-      spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
-      
-};    
-    const goUpBtn = this.querySelector("#goUpScroll");
+      menuButton.onclick = function () {
+         const isHidden = window.getComputedStyle(menuDiv).display === "none";
+         // toggle menu
+         menuDiv.style.display = isHidden ? "block" : "none"; // toggle spans
+         spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
+         spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
 
-    goUpBtn.addEventListener("click", goUpAnimation);
-function goUpAnimation() {
-  const arrows = document.querySelectorAll('#upnimation li');
-  arrows.forEach((li, index) => {
-    li.style.animation = "none";   // reset
-    li.offsetHeight;               // force reflow    // calculate stagger delay based on index
-    const delay = 0.2 * index;     // 0.2s apart
-    const opacity = 1 - (index * 0.15); // fade each arrow more    li.style.opacity = opacity > 0 ? opacity : 0.1;
-    li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
-  });
-}
-    
-      
-	}
+      };
+      const goUpBtn = this.querySelector("#goUpScroll");
+
+      goUpBtn.addEventListener("click", goUpAnimation);
+
+      function goUpAnimation() {
+         const arrows = document.querySelectorAll('#upnimation li');
+         arrows.forEach((li, index) => {
+            li.style.animation = "none"; // reset
+            li.offsetHeight; // force reflow    // calculate stagger delay based on index
+            const delay = 0.2 * index; // 0.2s apart
+            const opacity = 1 - (index * 0.15); // fade each arrow more    li.style.opacity = opacity > 0 ? opacity : 0.1;
+            li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
+         });
+      }
+
+
+   }
 }
 
 customElements.define('diglot-thumb-menu', DiglotThumbMenu);

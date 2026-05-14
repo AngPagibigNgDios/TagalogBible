@@ -1319,6 +1319,25 @@ a.clink:visited {
 }
 
 
+.closesearch,
+.gobacktosearch {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 1% 1%;
+  width: 20%;
+  height: 2%;
+  align-content: center;
+  justify-items: center;
+  cursor: pointer;
+  font-size: .8em;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+}
+
 
 
 
@@ -1384,23 +1403,6 @@ a.clink:visited {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .marginbot {
   margin-bottom: 5% !important;
 }
@@ -1440,4 +1442,6 @@ a.clink:visited {
 
 
 
-#onlymobilenarrow{display:none;}
+#onlymobilenarrow {
+  display: none;
+}
