@@ -715,17 +715,6 @@ div.indent {
   color: white;
 }
 
-#hrdivider {
-  width: 1.5%;
-  margin-left: 1%;
-  margin-right: 1%;
-  display: flex;
-  align-items: center;
-
-  hr {
-    width: 100%;
-  }
-}
 
 #headerLink {
   display: flex;
