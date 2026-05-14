@@ -1,42 +1,10 @@
 /* 1. Apply background to HTML first to stop the flash */
-
-
-
-
-
-
-
-
-/*PERMANENT ABOVE*/
-
-
-
-/* Pang 1080P */
-
-
-
-
-
-
-
-
-.biblechaptersindex {
-
-    margin: 0 auto;
-
-    hr {
+/*PERMANENT ABOVE*//* Pang 1080P */
+.biblechaptersindex {    margin: 0 auto;    hr {
         width: 50%;
     }
 }
-
-
-
-
-
-
-/* BROWSER RESIZE ITO NG 125% OR SCALE SA WINDOW NG 125% */
-
-@media (max-width: 1100px) {
+/* BROWSER RESIZE ITO NG 125% OR SCALE SA WINDOW NG 125% */@media (max-width: 1100px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -49,9 +17,7 @@
         margin-right: 150px;
         margin-bottom: 300px !important;
     }
-}
-
-@media (max-width: 1030px) {
+}@media (max-width: 1030px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -62,9 +28,7 @@
         box-sizing: border-box;
         margin-left: 15px;
     }
-}
-
-@media (max-width: 900px) {
+}@media (max-width: 900px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -77,11 +41,7 @@
         margin-right: 100px;
         margin-bottom: 400px !important;
     }
-}
-
-@media (max-width: 899px) {
-
-    #display-title,
+}@media (max-width: 899px) {    #display-title,
     display-title2 {
         text-align: left;
         font-size: 1.2em;
@@ -92,16 +52,12 @@
         color: white;
         left: 10%;
     }
-}
-
-@media (max-width: 800px) {
+}@media (max-width: 800px) {
     img.shadowed {
         width: 90%;
         height: auto;
     }
-}
-
-@media (max-width: 770px) {
+}@media (max-width: 770px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -112,9 +68,7 @@
         box-sizing: border-box;
         margin-left: 15px;
         margin-bottom: 70px;
-    }
-
-    a.vlink,
+    }    a.vlink,
     a.vlink:link,
     a.vlink:visited,
     a.clink,
@@ -134,30 +88,18 @@
         background-color: white;
         font-size: 0.9em;
     }
-}
-
-@media (max-width: 768px) {
-
-    .tdenglishbible,
+}@media (max-width: 768px) {    .tdenglishbible,
     .tdtagalogbible {
         display: table-cell;
         vertical-align: top;
-    }
-
-    .tdenglishbible {
+    }    .tdenglishbible {
         width: 50%;
-    }
-
-    .tdtagalogbible {
+    }    .tdtagalogbible {
         width: 50%;
-    }
-
-    #contentcolumn {
+    }    #contentcolumn {
         margin-left: 130px;
     }
-}
-
-@media (max-width: 750px) {
+}@media (max-width: 750px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -170,9 +112,7 @@
         margin-right: 100px;
         margin-bottom: 500px !important;
     }
-}
-
-@media (max-width: 700px) {
+}@media (max-width: 700px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -184,9 +124,7 @@
         margin-left: 80px;
         margin-right: 50px;
         margin-bottom: 300px !important;
-    }
-
-    #display-title,
+    }    #display-title,
     display-title2 {
         text-align: left;
         font-size: 1em;
@@ -197,43 +135,29 @@
         color: white;
         left: 5%;
     }
-}
-
-@media (max-width: 600px) {
-
-    #display-title,
+}@media (max-width: 600px) {    #display-title,
     display-title2 {
         text-align: left;
         font-size: 1em;
         margin: 1% 2%;
-    }
-
-    #contentcolumn .innertube {
+    }    #contentcolumn .innertube {
         margin-left: -16px !important;
         padding-left: 5px !important;
         padding-right: 5px !important;
         width: 100% !important;
-    }
-
-    hr {
+    }    hr {
         margin-top: 1px;
         margin-bottom: 1px;
         padding: 0px;
-    }
-
-    h2 {
+    }    h2 {
         font-size: 1em;
         text-transform: uppercase;
-    }
-
-    h3 {
+    }    h3 {
         font-size: 1em;
         padding: 1px;
         margin: 1px;
         line-height: 0.9em;
-    }
-
-    #display-title,
+    }    #display-title,
     display-title2 {
         text-align: left;
         font-size: 0.9em;
@@ -244,9 +168,7 @@
         color: white;
         left: 1%;
     }
-}
-
-@media (max-width: 520px) {
+}@media (max-width: 520px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -257,9 +179,7 @@
         box-sizing: border-box;
         margin-left: 15px;
         margin-bottom: 70px;
-    }
-
-    .leftcolumn a.vlink,
+    }    .leftcolumn a.vlink,
     a.vlink:link,
     a.vlink:visited,
     a.clink,
@@ -279,9 +199,7 @@
         background-color: white;
         font-size: 0.7em;
     }
-}
-
-@media (min-width: 200px) and (max-width: 700px) {
+}@media (min-width: 200px) and (max-width: 700px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -294,9 +212,7 @@
         margin-bottom: 150px !important;
         margin-top: 50px;
     }
-}
-
-@media (min-width: 200px) and (max-width: 600px) {
+}@media (min-width: 200px) and (max-width: 600px) {
     #contentcolumn .innertube {
         margin-left: -8px !important;
         padding-left: 5px !important;
@@ -304,9 +220,7 @@
         width: 98% !important;
         margin-top: 40px !important;
     }
-}
-
-@media (min-width: 701px) and (max-width: 1220px) {
+}@media (min-width: 701px) and (max-width: 1220px) {
     #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
@@ -317,35 +231,23 @@
         box-sizing: border-box;
         margin-left: 110px;
         margin-bottom: 100px;
-    }
-
-    #contentcolumn {
+    }    #contentcolumn {
         margin: 0 0px 0 100px;
         margin-top: 50px;
         margin-bottom: 100px !important;
     }
-}
-
-@media (min-width: 768px) {
+}@media (min-width: 768px) {
     #contentcolumn {
         margin-bottom: 100px !important;
     }
-}
-
-@media (min-width: 900px) {
+}@media (min-width: 900px) {
     .verticalchapter {
         margin-top: 80px;
-    }
-
-    .verticalchapter2 {
+    }    .verticalchapter2 {
         margin-top: 100px;
-    }
-
-    .verticalchapter3 {
+    }    .verticalchapter3 {
         margin-top: 150px;
-    }
-
-    #display-title,
+    }    #display-title,
     display-title2 {
         text-align: left;
         font-size: 1.2em;
@@ -355,14 +257,10 @@
         z-index: 10;
         color: white;
     }
-}
-
-@media (min-width: 1221px) and (max-width: 1349px) {
+}@media (min-width: 1221px) and (max-width: 1349px) {
     #contentcolumn {
         margin: 0 0px 0 150px;
-    }
-
-    #contentcolumn .innertube {
+    }    #contentcolumn .innertube {
         padding-left: 15px;
         padding-right: 15px;
         width: 90%;
@@ -375,67 +273,17 @@
         margin-top: 40px !important;
         margin-bottom: 100px !important;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* PERMANENT BELOW */
-
-
-
-
-
-
-
-.biblechaptersindex {
-
-    hr {
+}/* PERMANENT BELOW */.biblechaptersindex {    hr {
         width: 100%;
     }
-}
-
-
-
-/* 2. Clean up the Body */
-
-
-
-
-
-
-
-
-
-/* TITLE TR ROW, BORROWED FROM NRVUE EBOOK, MAY BE DELETED  For Copyright*/
-
-
+}/* 2. Clean up the Body *//* TITLE TR ROW, BORROWED FROM NRVUE EBOOK, MAY BE DELETED  For Copyright*/
 .TITLETR {
     background-color: #b8ecfa;
     font-weight: bold;
     text-align: center !important;
     /* Horizontal centering */
     vertical-align: middle;
-    text-align: center !important;
-
-    td {
+    text-align: center !important;    td {
         position: relative;
         width: 100%;
         text-align: center !important;
@@ -443,13 +291,7 @@
         /* Horizontal centering */
         vertical-align: middle;
     }
-}
-
-
-
-
-
-a:hover,
+}a:hover,
 a:focus,
 a.active:hover,
 a.active:focus,
@@ -459,44 +301,20 @@ li a.active:focus {
     background-color: rgb(255, 255, 142) !important;
     z-index: 10;
 }
-
-
-
-
 #topsection h1 {
     margin: 0;
-}
-
-h1 {
+}h1 {
     font-size: 1.5em;
-}
-
-#contentwrapper {
+}#contentwrapper {
     float: left;
     width: 100%;
-}
-
-
-
-
-
-
-
-a.nav navchapter {
+}a.nav navchapter {
     color: silver;
-}
-
-div.search {
+}div.search {
     text-align: right;
-    float: left;
-
-}
-
-.intro-note {
+    float: left;}.intro-note {
     color: gray;
-}
-
-fieldset {
+}fieldset {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     -khtml-border-radius: 3px;
@@ -506,9 +324,7 @@ fieldset {
     border: 1px solid #e1e1e2;
     margin: 15px 15px 20px 15px;
     padding: 10px 20px 0px 20px;
-}
-
-legend {
+}legend {
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     -khtml-border-radius: 4px;
@@ -518,85 +334,35 @@ legend {
     color: #ffffff;
     margin-left: -8px;
     padding: 1px 8px 1px 9px;
-}
-
-span.Chapter {
+}span.Chapter {
     font-weight: bold;
     font-size: 150%;
-}
-
-.chapter-1 {
+}.chapter-1 {
     text-align: right;
-}
-
-.bold {
+}.bold {
     font-weight: bold;
-}
-
-.orange {
+}.orange {
     color: #e25401;
 }
-
-
 img.left {
     float: left;
 }
-
-
 #sponsor {
     text-align: center;
     padding: 10px;
 }
-
-
-
-
 #main-wrapper {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-}
-
-hr {
+}hr {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0px;
 }
-
-
-
-
-
-
-.homepageh1 {
-
-    margin-top: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-height:1300px) and (min-width:200px) and (max-width:2560px) {
-
-
+.homepageh1 {    margin-top: 20px;
+}@media (max-height:1300px) and (min-width:200px) and (max-width:2560px) {
     .bible-container  {
         position: absolute;
         width: 100%;
@@ -605,54 +371,20 @@ hr {
         height: auto;
         margin-bottom: 200px;
     }
-
-
     #more-link, #hrdivider,
     .HomeURLheader,
     #headerLink, .display-title2 {
         font-size: 1.3em;
     }
-
-
     .BibleChaptersMenu {
     height: 580px;
     font-size:1.2em;
-}
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* NONE EXISTING IN Html  */
-
-
-
-.chapterliner {
+}}/* NONE EXISTING IN Html  */.chapterliner {
     line-height: .1;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 0px;
-}
-
-.display-home {
+}.display-home {
     text-align: right;
     font-size: 1em;
     margin: 1% 2%;

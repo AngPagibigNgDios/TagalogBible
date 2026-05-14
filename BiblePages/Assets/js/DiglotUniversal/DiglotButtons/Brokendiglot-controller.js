@@ -31,10 +31,6 @@ class DiglotController extends HTMLElement {
         <div class="control-btn" onclick="copyTagalog()"> Copy Tagalog </div>
         <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
     </div>
-</div>
-
-        `;
+</div>        `;
   }
-}
-
-customElements.define ('diglot-button', DiglotController);
+}customElements.define ('diglot-button', DiglotController);

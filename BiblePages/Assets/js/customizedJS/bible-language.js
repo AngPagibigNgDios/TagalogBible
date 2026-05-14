@@ -65,47 +65,27 @@ const bibleBooksTL = {
   '3 John': '3 Juan',
   Jude: 'Judas',
   Revelation: 'Pahayag',
-};
-
-// 1. Function to clean the title and update the header div instantly
+};// 1. Function to clean the title and update the header div instantly
 function refreshHeaderDisplay () {
   const inputField = document.getElementById ('verseInput');
   const displayDiv = document.getElementById ('display-title2');
-  if (!inputField || !displayDiv) return;
-
-  let rawInput = inputField.value.trim ();
-
-  // Update the URL hash
+  if (!inputField || !displayDiv) return;  let rawInput = inputField.value.trim ();  // Update the URL hash
   if (rawInput) {
     window.location.hash = 'verse-' + rawInput;
   } else {
     history.replaceState (null, null, ' ');
-  }
-
-  // Get the base title from the document (removing any old verse string)
-  let baseTitle = document.title.split (' :')[0].trim ();
-
-  // Format the verse string for display
+  }  // Get the base title from the document (removing any old verse string)
+  let baseTitle = document.title.split (' :')[0].trim ();  // Format the verse string for display
   let cleanInput = decodeURIComponent (rawInput)
     .replace (/[,\s]+/g, ',\u00A0')
-    .replace (/-/g, '\u00A0\u2014\u00A0');
-
-  let verseDisplay = rawInput ? `\u00A0\u00A0:\u00A0\u00A0${cleanInput}` : '';
-
-  // Update Browser Tab
-  document.title = baseTitle + (rawInput ? ' : ' + rawInput : '');
-
-  // Update the Div
+    .replace (/-/g, '\u00A0\u2014\u00A0');  let verseDisplay = rawInput ? `\u00A0\u00A0:\u00A0\u00A0${cleanInput}` : '';  // Update Browser Tab
+  document.title = baseTitle + (rawInput ? ' : ' + rawInput : '');  // Update the Div
   displayDiv.innerHTML = `${baseTitle}${verseDisplay}`;
-}
-
-// 2. Click Listener for verse links (vlink) AND clicking the rows
+}// 2. Click Listener for verse links (vlink) AND clicking the rows
 document.addEventListener ('click', function (e) {
   const vlink = e.target.closest ('.vlink');
   const row = e.target.closest ("tr[id^='verse-']");
-  const inputField = document.getElementById ('verseInput');
-
-  if (vlink && inputField) {
+  const inputField = document.getElementById ('verseInput');  if (vlink && inputField) {
     const verseNum = vlink.getAttribute ('href').split ('#verse-')[1];
     inputField.value = decodeURIComponent (verseNum);
     applyVerseHighlight ();
@@ -116,19 +96,13 @@ document.addEventListener ('click', function (e) {
     applyVerseHighlight ();
     refreshHeaderDisplay ();
   }
-});
-
-// 3. Combined Load logic
+});// 3. Combined Load logic
 window.onload = function () {
   const input = document.getElementById ('verseInput');
-  const hash = window.location.hash;
-
-  if (input && hash.includes ('#verse-')) {
+  const hash = window.location.hash;  if (input && hash.includes ('#verse-')) {
     input.value = decodeURIComponent (hash.replace ('#verse-', ''));
     applyVerseHighlight ();
-  }
-
-  if (input) {
+  }  if (input) {
     input.addEventListener ('keydown', function (e) {
       if (e.key === 'Enter') {
         e.preventDefault ();
@@ -136,11 +110,7 @@ window.onload = function () {
         refreshHeaderDisplay ();
       }
     });
-  }
-
-  refreshHeaderDisplay (); // Initial draw
-
-  if (typeof updateSidebarLanguage === 'function') {
+  }  refreshHeaderDisplay (); // Initial draw  if (typeof updateSidebarLanguage === 'function') {
     updateSidebarLanguage ('both');
   }
 };

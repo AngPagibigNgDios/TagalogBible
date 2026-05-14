@@ -1,11 +1,7 @@
 class DiglotMenu extends HTMLElement {
 connectedCallback () {
 // 1. Set the HTML structure
-this.innerHTML = `
-
-        <div id="MenuContainer">
-
-          <div class="BibleChaptersMenu" id="book-links">
+this.innerHTML = `        <div id="MenuContainer">          <div class="BibleChaptersMenu" id="book-links">
             <div class="remainhere">
               <hr class="lefthrliner" />
               <span class="diglotnav">
@@ -16,9 +12,7 @@ this.innerHTML = `
                 KJV - Ang Biblia
               </span>
               <hr />
-            </div>
-
-            <hr class="lefthrliner" />
+            </div>            <hr class="lefthrliner" />
             <span class="diglotnav">
               DIGLOT
             </span>
@@ -26,17 +20,13 @@ this.innerHTML = `
             <span class="bibleduo">
               KJV - Ang Biblia
             </span>
-            <hr />
-
-            <div id="OLDTB"><br />
+            <hr />            <div id="OLDTB"><br />
               <span class="LCOldTestament">
                 <sub>OLD TESTAMENT</sub>
                 <br />
                 <b>LUMANG TIPAN</b><br /><br />
               </span>
-            </div>
-
-            <div class="books" id="divOLDbg">
+            </div>            <div class="books" id="divOLDbg">
               <a href="BiblePages/OldTestament/01-genesis.html">
                 <div class="BMONTgenesis divgenesis"><span class="english englishLabel">Genesis</span><br /><span class="tagalogleft tagalogLabel">Genesis</span></div>
               </a>
@@ -153,15 +143,11 @@ this.innerHTML = `
               </a>
               <a href="BiblePages/OldTestament/39-malachi.html">
                 <div class="BMONTmalachi divmalachi"><span class="english englishLabel">Malachi</span><br /><span class="tagalogleft tagalogLabel">Malakias</span></div>
-              </a>
-
-            </div>
+              </a>            </div>
             <div id="NEWTB">
               <br />
               <span class="LCNewTestament"><sub>NEW TESTAMENT</sub><br><b>BAGONG TIPAN</b><br /><br /></span>
-            </div>
-
-            <div class="books" id="divNEWbg">
+            </div>            <div class="books" id="divNEWbg">
               <a href="BiblePages/NewTestament/40-matthew.html">
                 <div class="BMONTmatthew divmatthew"><span class="english englishLabel">Matthew</span><br /><span class="tagalogleft tagalogLabel">Mateo</span></div>
               </a>
@@ -245,32 +231,20 @@ this.innerHTML = `
               </a>
               <br>
             </div>
-            <hr class="lefthrLiner" />
-
-            </br>
-          </div>
-
-        </div>
+            <hr class="lefthrLiner" />            </br>
+          </div>        </div>
 `;
 setTimeout(() => {
 // 1. Collect style tags and find the dynamic class
 const styles = document.head.querySelectorAll('style');
-let activeClass = null;
-
-for (const style of styles) {
+let activeClass = null;for (const style of styles) {
 const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
 if (match) {
 activeClass = match[0].substring(1);
 break; // Optimization: stop searching once found
 }
-}
-
-if (!activeClass) return;
-
-// 2. Find and scroll the element
-const activeBook = this.querySelector(`.${activeClass}`);
-
-if (activeBook) {
+}if (!activeClass) return;// 2. Find and scroll the element
+const activeBook = this.querySelector(`.${activeClass}`);if (activeBook) {
 activeBook.scrollIntoView({
 block: 'center',
 behavior: 'smooth'
@@ -278,6 +252,4 @@ behavior: 'smooth'
 }
 }, 50);
 }
-}
-
-customElements.define('diglot-menu', DiglotMenu);
+}customElements.define('diglot-menu', DiglotMenu);

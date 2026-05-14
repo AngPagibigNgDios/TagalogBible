@@ -3,14 +3,8 @@ class DiglotPostButton extends HTMLElement {
     // 1. Set the HTML structure
     this.innerHTML = `
       
-
-
 <div id="MenuContainerMirrored">
-
-
-    <div id="biblejournalpostsholder">
-
-    <div class="remainhere"><hr class="lefthrliner"/>
+    <div id="biblejournalpostsholder">    <div class="remainhere"><hr class="lefthrliner"/>
     <span class="diglotnav">
     BIBLE JOURNALS
     </span>
@@ -19,9 +13,7 @@ class DiglotPostButton extends HTMLElement {
     Bible and Life Lessons
     </span>
     <hr/>
-    </div>
-
-    <hr class="lefthrliner"/>
+    </div>    <hr class="lefthrliner"/>
     <span class="diglotnav">
     BIBLE JOURNALS
     </span>
@@ -30,8 +22,6 @@ class DiglotPostButton extends HTMLElement {
     Bible and Life Lessons
     </span>
     <hr/>
-
-
                 <div class="books" id="divOLDbg">
                         <a href="../OldTestament/01-genesis.html">
                             <div class="biblejournalposts">
@@ -86,14 +76,8 @@ class DiglotPostButton extends HTMLElement {
                                 </span>
                             </div>
                         </a>                 
-                </div>
-
-    </div>
-
-
+                </div>    </div>
         <div id="combinedcontrols">
-
-
                                 
                     <div id="controls displaynoneMenu">
                         <div class="controls-row">
@@ -109,9 +93,7 @@ class DiglotPostButton extends HTMLElement {
                         </div>
                        
                         <div class="search controls-row">
-                            <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">
-
-                            </form>
+                            <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">                            </form>
               
                         </div>
                         <div class="controls-row input-row">
@@ -123,17 +105,9 @@ class DiglotPostButton extends HTMLElement {
                             <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
                         </div>
                     </div>
-
-
             </div>
-
-
                         <combinedpostbutton></combindedpostbutton>
-
-
   </div>
         `;
   }
-}
-
-customElements.define ('diglot-post-button', DiglotPostButton);
+}customElements.define ('diglot-post-button', DiglotPostButton);

@@ -4,22 +4,16 @@
   width: 35px;
   /* Fixed width so all boxes are equal */
   /* Fixed height */
-}
-
-.IndexChapterParent,
+}.IndexChapterParent,
 .IndexChapterParent,
 .PageVerseParent {
   align-items: center;
   display: flex;
   justify-content: flex-start;
-}
-
-#DisplayFlexOfBigFive,
+}#DisplayFlexOfBigFive,
 #DisplayFlexBigThree {
   padding-bottom: 200px;
-}
-
-a.vlink,
+}a.vlink,
 a.vlink:link,
 a.vlink:visited a.clink,
 a.clink:link,
@@ -32,17 +26,13 @@ a.clink:visited {
   height: 30px;
   justify-content: center;
   width: 30px;
-}
-
-.verseLinks,
+}.verseLinks,
 .chapterLinks {
   flex-wrap: wrap;
   gap: 20px;
   margin: 0 auto;
   padding: 1em 1em;
-}
-
-.bible-container {
+}.bible-container {
   height: auto;
   margin-bottom: 200px;
   max-width: 1000px;
@@ -50,111 +40,73 @@ a.clink:visited {
   position: absolute;
   width: 100%;
 }
-
-
 .indeximage {
   height: auto;
   width: 100%;
-}
-
-.verticalimageindex {
+}.verticalimageindex {
   height: auto;
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 15px;
   margin-top: 10px;
   width: 24%;
-}
-
-.horizontalimageindex {
+}.horizontalimageindex {
   height: auto;
   margin: 20px;
   width: 40%;
-}
-
-.horizontalbiggerimageindex {
+}.horizontalbiggerimageindex {
   height: auto;
   margin: 20px;
   width: 42%;
-}
-
-.pinoybiblegmail {
+}.pinoybiblegmail {
   margin-bottom: -5px;
-}
-
-.homepageh1 {
+}.homepageh1 {
   font-size: 2em;
-}
-
-.spanenglishbible,
+}.spanenglishbible,
 .spantagalogbible {
   font-size: 1em;
   line-height: 1.2em;
-}
-
-.tdenglishbible {
+}.tdenglishbible {
   padding: 10px 20px 10px 10px;
-}
-
-.tdtagalogbible {
+}.tdtagalogbible {
   padding: 10px 10px 10px 20px;
-}
-
-.biblepassages {
+}.biblepassages {
   padding-left: 10% !important;
   padding-right: 10% !important;
-}
-
-.OtherLinks {
+}.OtherLinks {
   border-color: #bbbbbb;
   border-style: solid;
   border-width: 1px 0;
   overflow: auto;
   padding: 5px 10px;
-}
-
-.OtherLinks {
+}.OtherLinks {
   text-align: center;
   transition: padding 0.3s ease;
-}
-
-.OtherLinks:hover {
+}.OtherLinks:hover {
   background-color: #f1ffc3;
-  padding: 20px 0px;
-
-  .OtherMenu {
+  padding: 20px 0px;  .OtherMenu {
     height: auto;
   }
-}
-
-.clinkColumn {
+}.clinkColumn {
   display: flex;
-}
-
-#image1080,
+}#image1080,
 #image4k {
   float: left;
   height: auto;
   max-width: 180px;
   min-width: 50px;
   width: 100%;
-}
-
-#DisplayFlexOfBigFive {
+}#DisplayFlexOfBigFive {
   display: flex;
   flex-direction: column;
   gap: 50px;
-}
-
-#DisplayFlexBigThree {
+}#DisplayFlexBigThree {
   display: flex;
   height: 100%;
   margin: 0 auto;
   position: absolute;
   width: 100%;
-}
-
-#MenuContainer {
+}#MenuContainer {
   display: flex;
   flex: 1;
   flex: 1 0 5%;
@@ -165,17 +117,11 @@ a.clink:visited {
   margin-left: 0;
   order: 2;
   position: fixed;
-}
-
-.BibleChaptersMenu {
+}.BibleChaptersMenu {
   height: 650px;
   overflow: auto;
   padding-left: 20px;
-}
-
-@media (min-width:701px) {
-
-  .bible-container {
+}@media (min-width:701px) {  .bible-container {
     height: auto;
     margin-bottom: 200px;
     max-width: 750px;
@@ -184,138 +130,84 @@ a.clink:visited {
     width: 100%;
     right: 1%;
   }
-}
-
-.bible-container {
-  order: 1;
-
-}
-
-#DisplayFlexOfBigFive {
+}.bible-container {
+  order: 1;}#DisplayFlexOfBigFive {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 50px;
   justify-content: flex-start;
-}
-
-#DisplayFlexBigThree {
+}#DisplayFlexBigThree {
   justify-content: center;
   margin-top: 50px;
   position: absolute;
-}
-
-.BibleChaptersMenu {
+}.BibleChaptersMenu {
   height: 580px;
   overflow: auto;
   padding-left: 5px;
   width: 70%;
-}
-
-.OtherMenu {
+}.OtherMenu {
   width: 62%;
   overflow: auto;
   font-size: .9em;
-}
-
-.OtherMenu {
+}.OtherMenu {
   height: 100%;
   height: 320px;
   max-height: 500px;
   padding: 10px;
-}
-
-.indentHolder {
+}.indentHolder {
   margin-left: 15px;
   margin-right: 15px;
-}
-
-.homepageh1 {
+}.homepageh1 {
   margin: 1px;
-}
-
-#DisplayFlexOfBigFive {
+}#DisplayFlexOfBigFive {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 50px;
   justify-content: flex-start;
-}
-
-.diglotfullwidth {
+}.diglotfullwidth {
   width: 100%;
-}
-
-.diglotcutwidth {
+}.diglotcutwidth {
   margin: 0 auto;
   width: 75% !important;
-}
-
-.previouschapter,
+}.previouschapter,
 .npspacer,
 .nextchapter {
   font-size: 1.2em;
-}
-
-.BookIndexTitle {
+}.BookIndexTitle {
   font-size: 2.2em;
-}
-
-.OtherLinks:hover {
+}.OtherLinks:hover {
   transition: ease .3s padding;
-}
-
-.OtherLinks:hover {
+}.OtherLinks:hover {
   background-color: #f1ffc3;
-  padding: 10px 0px;
-
-  .OtherMenu {
+  padding: 10px 0px;  .OtherMenu {
     height: auto;
   }
-}
-
-.BookIndexChapter {
+}.BookIndexChapter {
   font-size: 1.5em;
 }
-
-
 .ChapterHomeText {
   text-align: justify !important;
   margin: 20px 40px 0px 20px;
 }
-
-
 .ChapterP, .ChapterPNI,  .ChapterPCenter {
   font-size: 1.2em;
-}
-
-.english {
+}.english {
   font-size: 0.9em;
-}
-
-.tagalogleft,
+}.tagalogleft,
 .diglotboth {
   font-size: 1em;
-}
-
-.diglotnav {
+}.diglotnav {
   font-size: 1.2em;
-}
-
-.bibleduo {
+}.bibleduo {
   font-size: 0.9em;
-}
-
-.LCOldTestament,
+}.LCOldTestament,
 .LCNewTestament {
   font-size: 1em;
-}
-
-#bgUpload {
+}#bgUpload {
   font-size: 1.2em;
-}
-
-.BMONTgenesis,
+}.BMONTgenesis,
 .BMONTexodus,
 .BMONTleviticus,
 .BMONTnumbers,
@@ -382,22 +274,14 @@ a.clink:visited {
 .BMONTjude,
 .BMONTrevelation {
   padding-left: 10px;
-}
-
-#labelTitle {
+}#labelTitle {
   font-size: 1.2em;
   font-weight: bold;
-}
-
-#bgUpload {
+}#bgUpload {
   font-size: 1em;
-}
-
-#bgStyle {
+}#bgStyle {
   font-size: 1em;
-}
-
-#buttonclick {
+}#buttonclick {
   background-color: maroon;
   border: none;
   color: white;
@@ -409,183 +293,107 @@ a.clink:visited {
   text-align: center;
   text-decoration: none;
   transition: padding 0.2s ease;
-}
-
-#bgColor {
+}#bgColor {
   height: 100px;
   width: 100px;
-}
-
-#buttonclick:hover {
+}#buttonclick:hover {
   background-color: rgb(217, 255, 0);
   border: none;
   color: rgb(0, 0, 0);
   font-size: 1em;
   padding: 20px 37px;
-}
-
-.CustomizerFlex {
+}.CustomizerFlex {
   display: flex;
   flex-direction: column;
   justify-items: center;
-}
-
-.BackgroundImageFlex {
+}.BackgroundImageFlex {
   display: flex;
   flex-direction: row;
-}
-
-#labelTitleFlex {
+}#labelTitleFlex {
   display: flex;
-}
-
-#bgUploadFlex {
+}#bgUploadFlex {
   display: flex;
-}
-
-#labelTitleFlex {
+}#labelTitleFlex {
   display: flex;
-}
-
-#bgStyleFlex {
+}#bgStyleFlex {
   display: flex;
-}
-
-#applyImageThemeFlex {
+}#applyImageThemeFlex {
   display: flex;
-}
-
-#lesserhrnaFlex {
+}#lesserhrnaFlex {
   display: flex;
-}
-
-.BackgroundColorFlex {
+}.BackgroundColorFlex {
   display: flex;
   flex-direction: row;
-}
-
-#chooseplainFlex {
+}#chooseplainFlex {
   display: flex;
-}
-
-#labelTitleFlex2 {
+}#labelTitleFlex2 {
   display: flex;
-}
-
-#applyColorFlex {
+}#applyColorFlex {
   display: flex;
-}
-
-.BackgroundImageFlex {
+}.BackgroundImageFlex {
   height: auto;
   width: 100px;
-}
-
-#labelTitleFlex {
+}#labelTitleFlex {
   height: auto;
   width: 100px;
-}
-
-#bgUploadFlex {
+}#bgUploadFlex {
   height: auto;
   width: 100px;
-}
-
-#labelTitleFlex {
+}#labelTitleFlex {
   height: auto;
   width: 100px;
-}
-
-#bgStyleFlex {
+}#bgStyleFlex {
   height: auto;
   width: 100px;
-}
-
-#applyImageThemeFlex {
+}#applyImageThemeFlex {
   height: auto;
   width: 100px;
-}
-
-#lesserhrnaFlex {
+}#lesserhrnaFlex {
   height: auto;
   width: 100px;
-}
-
-.BackgroundColorFlex {
+}.BackgroundColorFlex {
   height: auto;
   width: 100px;
-}
-
-#chooseplainFlex {
+}#chooseplainFlex {
   height: auto;
   width: 100px;
-}
-
-#labelTitleFlex2 {
+}#labelTitleFlex2 {
   height: auto;
   width: 100px;
-}
-
-#applyColorFlex {
+}#applyColorFlex {
   height: auto;
   width: 100px;
-}
-
-
-
-
-
-
-
-.bible-container,
+}.bible-container,
 .previousspacernextFlexParent,
 .UpperPageParentFlexBox {
   display: flex;
-}
-
-.bible-container,
+}.bible-container,
 .UpperPageParentFlexBox {
   flex-direction: column;
-}
-
-.previousspacernextFlexPare {
+}.previousspacernextFlexPare {
   flex-direction: row;
-}
-
-.verseLinks,
+}.verseLinks,
 .chapterLinks {
   display: flex;
   justify-content: flex-start;
   width:100%;
-}
-
-
-
-.ChapterPageTitle,
+}.ChapterPageTitle,
 .BookIndexTitle {
   align-items: center;
   justify-content: center;
-}
-
-.chapterLinks {
+}.chapterLinks {
   flex-direction: column;
-}
-
-.clinkColumn {
+}.clinkColumn {
   border-bottom: 0px solid gray;
  gap: 20px;
  justify-content: flex-start;
 }
-
-
 .nothinglastsBUTTHEWORDOFGOD {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
-}
-
-.LoveOfGodFlex {
+}.LoveOfGodFlex {
   display: flex;
   width: 100%;
   height: auto;
@@ -594,59 +402,31 @@ a.clink:visited {
   flex-direction: column;
   align-content: center;
   align-items: center;
-}
-
-.ChapterN1 {
+}.ChapterN1 {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.ChapterN2 {
+}.ChapterN2 {
   text-align: center;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.N1 {
+}.N1 {
   font-size: 1.7em;
-}
-
-.N2 {
+}.N2 {
   font-size: 1.3em;
-}
-
-.N3 {
+}.N3 {
   font-size: 1.1em;
-}
-
-.N4 {
+}.N4 {
   font-size: 1em;
 }
-
-
-
-
 .bcbgPages {
   padding: 0px 20px 20px 20px;
-}
-
-.bible-container-bg {
+}.bible-container-bg {
   padding-bottom: 20px;
 }
-
-
-
-
-@media (max-width:970px) {}
-
-
-
-@media (max-width:700px) {
-
-  .bible-container {
+@media (max-width:970px) {}@media (max-width:700px) {  .bible-container {
     height: auto;
     margin-bottom: 200px;
     width: 100%;
@@ -654,63 +434,35 @@ a.clink:visited {
     width: 100%;
     right: 0% !important;
     padding-left: 1%;
-
-
-  }
-
-  .bible-container-bg {
+  }  .bible-container-bg {
     padding-bottom: 200px;
     padding-left: 3%;
     padding-right: 3%;
-  }
-
-  .bcbgPages {
+  }  .bcbgPages {
     padding: 0px 20px 10px 20px;
-  }
-
-  .bcbgPages {
+  }  .bcbgPages {
     padding-bottom: 20px;
-  }
-
-  .horizontalimageindex {
+  }  .horizontalimageindex {
     height: auto;
     margin: 0 auto;
     width: 100%;
-  }
-
-  .displaynoneMenu {
+  }  .displaynoneMenu {
     display: none !important;
-  }
-
-  #MenuContainer,
+  }  #MenuContainer,
   .BibleChaptersMenu,
   .OtherMenu {
     display: none !important;
     visibility: hidden;
   }
 }
-
-
-
-
-
-
 @media (max-width:960px) {
-
-
   .bible-container {
     height: auto;
-    margin-bottom: 200px;
-
-    position: absolute;
+    margin-bottom: 200px;    position: absolute;
     width: 75%;
     right: 0;
     margin-left: 180px;
-    flex-grow: 3;
-
-  }
-
-
+    flex-grow: 3;  }
   #MenuContainer {
     display: flex;
     flex: 1;
@@ -719,15 +471,7 @@ a.clink:visited {
     margin-left: 0%;
     height: 80%;
     left: 0%;
-  }
-
-
-
-}
-
-@media (max-width:700px) {
-
-  .bible-container {
+  }}@media (max-width:700px) {  .bible-container {
     height: auto;
     margin-bottom: 200px;
     width: 100%;
@@ -735,136 +479,72 @@ a.clink:visited {
     width: 100%;
     right: 0% !important;
     padding-left: 1%;
-
-
-  }
-
-  .bible-container-bg {
+  }  .bible-container-bg {
     padding-bottom: 20px;
     padding-left: 3%;
     padding-right: 3%;
-  }
-
-  .bcbgPages {
+  }  .bcbgPages {
     padding: 0px 20px 10px 20px;
-  }
-
-  .bcbgPages {
+  }  .bcbgPages {
     padding-bottom: 20px;
     height: 100%;
-  }
-
-  .horizontalimageindex {
+  }  .horizontalimageindex {
     height: auto;
     margin: 0 auto;
     width: 100%;
-  }
-
-  .displaynoneMenu {
+  }  .displaynoneMenu {
     display: none !important;
-  }
-
-  #MenuContainer,
+  }  #MenuContainer,
   .BibleChaptersMenu,
   .OtherMenu {
     display: none !important;
     visibility: hidden;
   }
-}
-
-.previousspacernextFlexParent {
+}.previousspacernextFlexParent {
   display: flex;
   justify-content: space-between;
   gap: 0%;
-}
-
-.previouschapter {
+}.previouschapter {
   display: flex;
   justify-content: center;
-}
-
-.nextchapter {
+}.nextchapter {
   display: flex !important;
-  justify-content: center;
-
-  a {
+  justify-content: center;  a {
     display: flex !important;
   }
-}
-
-.nextswitcher1 {
+}.nextswitcher1 {
   display: flex;
-}
-
-.nextswitcher {
+}.nextswitcher {
   display: flex;
-}
-
-
-
-#bigthreeIndexFlexHolder {
+}#bigthreeIndexFlexHolder {
   display: flex;
   flex-direction: column;
-}
-
-.flexIndexStart {
+}.flexIndexStart {
   order: 2;
-}
-
-.flexIndexChapterNumber {
+}.flexIndexChapterNumber {
   order: 1;
-}
-
-.flexIndexEnd {
+}.flexIndexEnd {
   order: 3;
-}
-
-
-
-
-
-@media (max-width: 960px) {
-  /* ... your existing mobile code ... */
-
-  a.vlink.clink {
+}@media (max-width: 960px) {
+  /* ... your existing mobile code ... */  a.vlink.clink {
     /* calc(20% - margin/gap) ensures exactly 5 fit */
     flex: 0 0 calc(10% - 10px); 
     box-sizing: border-box;
     margin-bottom: 10px;
     height:35px;
     width:35px;
-  }
-
-
-
-  .clinkColumn {
+  }  .clinkColumn {
   display: flex;
   flex-wrap: wrap; /* Allows items to move to the next line */
   gap: 10px;      /* Adjust spacing between the boxes */
   width: 100%;    /* Ensure it spans the whole width */
-  justify-content: flex-start;
-
-}
-
-.verseLinks {justify-content: center; align-items: center;}
-
-}
-
-
-
-@media (max-width: 700px) {
-  /* ... your existing mobile code ... */
-
-  a.vlink.clink {
+  justify-content: flex-start;}.verseLinks {justify-content: center; align-items: center;}}@media (max-width: 700px) {
+  /* ... your existing mobile code ... */  a.vlink.clink {
     /* calc(20% - margin/gap) ensures exactly 5 fit */
     flex: 0 0 calc(20% - 10px); 
     box-sizing: border-box;
     margin-bottom: 10px;
-  }
-
-
-
-  .clinkColumn {
+  }  .clinkColumn {
   display: flex;
   flex-wrap: wrap; /* Allows items to move to the next line */
   gap: 10px;      /* Adjust spacing between the boxes */

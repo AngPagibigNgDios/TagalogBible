@@ -3,11 +3,7 @@ class DiglotMenu extends HTMLElement {
     // 1. Set the HTML structure
     this.innerHTML = `
       
-
-
-<div id="MenuContainer">
-
-<div class="BibleChaptersMenu" id="book-links">
+<div id="MenuContainer"><div class="BibleChaptersMenu" id="book-links">
 <div class="remainhere"><hr class="lefthrliner"/>
 <span class="diglotnav">
    DIGLOT
@@ -17,9 +13,7 @@ class DiglotMenu extends HTMLElement {
  KJV - Ang Biblia
   </span>
   <hr/>
-  </div>
-
-<hr class="lefthrliner"/>
+  </div><hr class="lefthrliner"/>
 <span class="diglotnav">
    DIGLOT
   </span>
@@ -27,16 +21,12 @@ class DiglotMenu extends HTMLElement {
 <span class="bibleduo">
  KJV - Ang Biblia
   </span>
-<hr/>
-
-<div id="OLDTB"><br/>
+<hr/><div id="OLDTB"><br/>
 <span class="LCOldTestament">
 <sub>OLD TESTAMENT</sub>
 <br/>
 <b>LUMANG TIPAN</b><br/><br/>
-  </span></div>
-
-<div class="books" id="divOLDbg">
+  </span></div><div class="books" id="divOLDbg">
             <a href="../OldTestament/01-genesis.html"><div class="BMONTgenesis divgenesis"><span class="english englishLabel">Genesis</span><br/><span class="tagalogleft tagalogLabel">Genesis</span></div></a>
             <a href="../OldTestament/02-exodus.html"><div class="BMONTexodus divexodus"><span class="english englishLabel">Exodus</span><br/><span class="tagalogleft tagalogLabel">Exodo</span></div></a>
             <a href="../OldTestament/03-leviticus.html"><div class="BMONTleviticus divleviticus"><span class="english englishLabel">Leviticus</span><br/><span class="tagalogleft tagalogLabel">Levitico</span></div></a>
@@ -80,9 +70,7 @@ class DiglotMenu extends HTMLElement {
 </div>
 <div id="NEWTB">
 <br/>
-<span class="LCNewTestament"><sub>NEW TESTAMENT</sub><br><b>BAGONG TIPAN</b><br/><br/></span></div>
-
-<div class="books" id="divNEWbg">
+<span class="LCNewTestament"><sub>NEW TESTAMENT</sub><br><b>BAGONG TIPAN</b><br/><br/></span></div><div class="books" id="divNEWbg">
               <a href="../NewTestament/40-matthew.html"><div class="BMONTmatthew divmatthew"><span class="english englishLabel">Matthew</span><br/><span class="tagalogleft tagalogLabel">Mateo</span></div></a>
             <a href="../NewTestament/41-mark.html"><div class="BMONTmark divmark"><span class="english englishLabel">Mark</span><br/><span class="tagalogleft tagalogLabel">Marcos</span></div></a>
             <a href="../NewTestament/42-luke.html"><div class="BMONTluke divluke"><span class="english englishLabel">Luke</span><br/><span class="tagalogleft tagalogLabel">Lucas</span></div></a>
@@ -113,18 +101,8 @@ class DiglotMenu extends HTMLElement {
       
 </div>
 <br>
-<hr class="lefthrLiner"/>
-
-</br>
-</div>
-
-<div class="OtherMenu" id="more-links">
-
-
-
-
-
-                                
+<hr class="lefthrLiner"/></br>
+</div><div class="OtherMenu" id="more-links">                                
                  
                         <div class="controls-row">
                             <div class="control-btn" onclick="showEnglishOnly()"> English </div>
@@ -139,11 +117,7 @@ class DiglotMenu extends HTMLElement {
                         </div>
                        
                         <div class="search controls-row">
-                            <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">
-
-                            </form>
-
-                        </div>
+                            <form id="searchPassage" method="get" action="http://englishtagalogbible.com/search.php">                            </form>                        </div>
                         <div class="controls-row input-row">
                             <input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
                         </div>
@@ -153,37 +127,19 @@ class DiglotMenu extends HTMLElement {
                             <div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
                         </div>
              
-
-
-         
-
-                      
-
-               
-
-
-</div>
-
-        `;
+                                              
+</div>        `;
 setTimeout(() => {
   // 1. Collect style tags and find the dynamic class
   const styles = document.head.querySelectorAll('style');
-  let activeClass = null;
-
-  for (const style of styles) {
+  let activeClass = null;  for (const style of styles) {
     const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
     if (match) {
       activeClass = match[0].substring(1); 
       break; // Optimization: stop searching once found
     }
-  }
-
-  if (!activeClass) return;
-
-  // 2. Find and scroll the element
-  const activeBook = this.querySelector(`.${activeClass}`);
-
-  if (activeBook) {
+  }  if (!activeClass) return;  // 2. Find and scroll the element
+  const activeBook = this.querySelector(`.${activeClass}`);  if (activeBook) {
     activeBook.scrollIntoView({ 
       block: 'center', 
       behavior: 'smooth' 
@@ -191,6 +147,4 @@ setTimeout(() => {
   }
 }, 1000);
   }
-}
-
-customElements.define('diglot-menu', DiglotMenu);
+}customElements.define('diglot-menu', DiglotMenu);

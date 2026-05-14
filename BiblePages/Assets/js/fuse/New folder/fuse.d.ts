@@ -171,9 +171,7 @@ type Expression = string | {
     $and?: Expression[];
 } | {
     $or?: Expression[];
-};
-
-declare class FuseIndex<T = any> {
+};declare class FuseIndex<T = any> {
     norm: NormInterface;
     getFn: GetFunction;
     isCreated: boolean;
@@ -202,18 +200,14 @@ declare function createIndex<T>(keys: FuseOptionKey<T>[], docs: ReadonlyArray<T>
 declare function parseIndex<T>(data: {
     keys: ReadonlyArray<KeyObject>;
     records: IndexRecord[];
-}, { getFn, fieldNormWeight }?: FuseIndexOptions<T>): FuseIndex<T>;
-
-declare class KeyStore {
+}, { getFn, fieldNormWeight }?: FuseIndexOptions<T>): FuseIndex<T>;declare class KeyStore {
     _keys: KeyObject[];
     _keyMap: Record<string, KeyObject>;
     constructor(keys: FuseOptionKey<any>[]);
     get(keyId: string): KeyObject;
     keys(): KeyObject[];
     toJSON(): string;
-}
-
-interface ParsedLeaf {
+}interface ParsedLeaf {
     keyId: string | null;
     pattern: string;
     searcher?: Searcher;
@@ -225,11 +219,7 @@ interface ParsedOperator {
 type ParsedNode = ParsedLeaf | ParsedOperator;
 declare function parse(query: Expression, options: any, { auto }?: {
     auto?: boolean | undefined;
-}): ParsedNode;
-
-declare const Config: Required<IFuseOptions<any>>;
-
-declare class MaxHeap {
+}): ParsedNode;declare const Config: Required<IFuseOptions<any>>;declare class MaxHeap {
     limit: number;
     heap: InternalResult[];
     constructor(limit: number);
@@ -239,9 +229,7 @@ declare class MaxHeap {
     extractSorted(sortFn: (a: InternalResult, b: InternalResult) => number): InternalResult[];
     _bubbleUp(i: number): void;
     _sinkDown(i: number): void;
-}
-
-interface Posting {
+}interface Posting {
     docIdx: number;
     keyIdx: number;
     subIdx: number;
@@ -251,9 +239,7 @@ interface InvertedIndexData {
     terms: Map<string, Posting[]>;
     fieldCount: number;
     df: Map<string, number>;
-}
-
-interface HeapSearchOptions {
+}interface HeapSearchOptions {
     heap?: MaxHeap;
     ignoreFieldNorm?: boolean;
 }
@@ -288,7 +274,5 @@ declare class Fuse<T> {
         value: SubRecord | SubRecord[] | undefined;
         searcher: Searcher;
     }): MatchScore[];
-}
-
-export { FuseIndex, Fuse as default };
+}export { FuseIndex, Fuse as default };
 export type { Expression, FuseGetFunction, FuseIndexObjectRecord, FuseIndexOptions, FuseIndexRecords, FuseIndexStringRecord, FuseOptionKey, FuseOptionKeyObject, FuseResult, FuseResultMatch, FuseSearchOptions, FuseSortFunction, FuseSortFunctionArg, FuseSortFunctionItem, FuseSortFunctionMatch, FuseSortFunctionMatchList, IFuseOptions, RangeTuple, RecordEntry, RecordEntryArrayItem, RecordEntryObject, SearchResult };

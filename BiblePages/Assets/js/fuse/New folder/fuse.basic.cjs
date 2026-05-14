@@ -5,11 +5,7 @@
  * All Rights Reserved. Apache Software License 2.0
  *
  * http://www.apache.org/licenses/LICENSE-2.0
- */
-
-'use strict';
-
-function isArray(value) {
+ */'use strict';function isArray(value) {
   return !Array.isArray ? getTag(value) === '[object Array]' : Array.isArray(value);
 }
 function baseToString(value) {
@@ -31,17 +27,13 @@ function isString(value) {
 }
 function isNumber(value) {
   return typeof value === 'number';
-}
-
-// Adapted from: https://github.com/lodash/lodash/blob/master/isBoolean.js
+}// Adapted from: https://github.com/lodash/lodash/blob/master/isBoolean.js
 function isBoolean(value) {
   return value === true || value === false || isObjectLike(value) && getTag(value) == '[object Boolean]';
 }
 function isObject(value) {
   return typeof value === 'object';
-}
-
-// Checks if `value` is object-like.
+}// Checks if `value` is object-like.
 function isObjectLike(value) {
   return isObject(value) && value !== null;
 }
@@ -50,24 +42,18 @@ function isDefined(value) {
 }
 function isBlank(value) {
   return !value.trim().length;
-}
-
-// Gets the `toStringTag` of `value`.
+}// Gets the `toStringTag` of `value`.
 // Adapted from: https://github.com/lodash/lodash/blob/master/.internal/getTag.js
 function getTag(value) {
   return value == null ? value === undefined ? '[object Undefined]' : '[object Null]' : Object.prototype.toString.call(value);
-}
-
-const EXTENDED_SEARCH_UNAVAILABLE = 'Extended search is not available';
+}const EXTENDED_SEARCH_UNAVAILABLE = 'Extended search is not available';
 const LOGICAL_SEARCH_UNAVAILABLE = 'Logical search is not available';
 const TOKEN_SEARCH_UNAVAILABLE = 'Token search is not available';
 const INCORRECT_INDEX_TYPE = "Incorrect 'index' type";
 const LOGICAL_SEARCH_INVALID_QUERY_FOR_KEY = key => `Invalid value for key ${key}`;
 const PATTERN_LENGTH_TOO_LARGE = max => `Pattern length exceeds max of ${max}.`;
 const MISSING_KEY_PROPERTY = name => `Missing ${name} property in key`;
-const INVALID_KEY_WEIGHT_VALUE = key => `Property 'weight' in key '${key}' must be a positive integer`;
-
-const hasOwn = Object.prototype.hasOwnProperty;
+const INVALID_KEY_WEIGHT_VALUE = key => `Property 'weight' in key '${key}' must be a positive integer`;const hasOwn = Object.prototype.hasOwnProperty;
 class KeyStore {
   constructor(keys) {
     this._keys = [];
@@ -78,9 +64,7 @@ class KeyStore {
       this._keys.push(obj);
       this._keyMap[obj.id] = obj;
       totalWeight += obj.weight;
-    });
-
-    // Normalize weights so that their sum is equal to 1
+    });    // Normalize weights so that their sum is equal to 1
     this._keys.forEach(key => {
       key.weight /= totalWeight;
     });
@@ -134,9 +118,7 @@ function createKeyPath(key) {
 }
 function createKeyId(key) {
   return isArray(key) ? key.join('.') : key;
-}
-
-function get(obj, path) {
+}function get(obj, path) {
   const list = [];
   let arr = false;
   const deepGet = (obj, path, index, arrayIndex) => {
@@ -154,9 +136,7 @@ function get(obj, path) {
       const value = obj[key];
       if (!isDefined(value)) {
         return;
-      }
-
-      // If we're at the last value in the path, and if it's a string/number/bool,
+      }      // If we're at the last value in the path, and if it's a string/number/bool,
       // add it to the list
       if (index === path.length - 1 && (isString(value) || isNumber(value) || isBoolean(value) || typeof value === 'bigint')) {
         list.push(arrayIndex !== undefined ? {
@@ -174,14 +154,10 @@ function get(obj, path) {
         deepGet(value, path, index + 1, arrayIndex);
       }
     }
-  };
-
-  // Backwards compatibility (since path used to be a string)
+  };  // Backwards compatibility (since path used to be a string)
   deepGet(obj, isString(path) ? path.split('.') : path, 0);
   return arr ? list : list[0];
-}
-
-const MatchOptions = {
+}const MatchOptions = {
   includeMatches: false,
   findAllMatches: false,
   minMatchCharLength: 1
@@ -212,11 +188,7 @@ const Config = Object.freeze({
   ...MatchOptions,
   ...FuzzyOptions,
   ...AdvancedOptions
-});
-
-const SPACE = /[^ ]+/g;
-
-// Field-length norm: the shorter the field, the higher the weight.
+});const SPACE = /[^ ]+/g;// Field-length norm: the shorter the field, the higher the weight.
 // Set to 3 decimals to reduce index size.
 function norm(weight = 1, mantissa = 3) {
   const cache = new Map();
@@ -226,12 +198,8 @@ function norm(weight = 1, mantissa = 3) {
       const numTokens = value.match(SPACE).length;
       if (cache.has(numTokens)) {
         return cache.get(numTokens);
-      }
-
-      // Default function is 1/sqrt(x), weight makes that variable
-      const norm = 1 / Math.pow(numTokens, 0.5 * weight);
-
-      // In place of `toFixed(mantissa)`, for faster computation
+      }      // Default function is 1/sqrt(x), weight makes that variable
+      const norm = 1 / Math.pow(numTokens, 0.5 * weight);      // In place of `toFixed(mantissa)`, for faster computation
       const n = parseFloat(Math.round(norm * m) / m);
       cache.set(numTokens, n);
       return n;
@@ -240,9 +208,7 @@ function norm(weight = 1, mantissa = 3) {
       cache.clear();
     }
   };
-}
-
-class FuseIndex {
+}class FuseIndex {
   constructor({
     getFn = Config.getFn,
     fieldNormWeight = Config.fieldNormWeight
@@ -272,9 +238,7 @@ class FuseIndex {
     if (this.isCreated || !this.docs.length) {
       return;
     }
-    this.isCreated = true;
-
-    // List is Array<String>
+    this.isCreated = true;    // List is Array<String>
     if (isString(this.docs[0])) {
       this.docs.forEach((doc, docIndex) => {
         this._addString(doc, docIndex);
@@ -298,9 +262,7 @@ class FuseIndex {
   }
   // Removes the doc at the specified index of the index
   removeAt(idx) {
-    this.records.splice(idx, 1);
-
-    // Change ref index of every subsquent doc
+    this.records.splice(idx, 1);    // Change ref index of every subsquent doc
     for (let i = idx, len = this.size(); i < len; i += 1) {
       this.records[i].i -= 1;
     }
@@ -337,9 +299,7 @@ class FuseIndex {
     const record = {
       i: docIndex,
       $: {}
-    };
-
-    // Iterate over every key (i.e, path), and fetch the value at that key
+    };    // Iterate over every key (i.e, path), and fetch the value at that key
     this.keys.forEach((key, keyIndex) => {
       const value = key.getFn ? key.getFn(doc) : this.getFn(doc, key.path);
       if (!isDefined(value)) {
@@ -425,9 +385,7 @@ function parseIndex(data, {
   myIndex.setKeys(keys);
   myIndex.setIndexRecords(records);
   return myIndex;
-}
-
-function convertMaskToIndices(matchmask = [], minMatchCharLength = Config.minMatchCharLength) {
+}function convertMaskToIndices(matchmask = [], minMatchCharLength = Config.minMatchCharLength) {
   const indices = [];
   let start = -1;
   let end = -1;
@@ -443,19 +401,13 @@ function convertMaskToIndices(matchmask = [], minMatchCharLength = Config.minMat
       }
       start = -1;
     }
-  }
-
-  // (i-1 - start) + 1 => i - start
+  }  // (i-1 - start) + 1 => i - start
   if (matchmask[i - 1] && i - start >= minMatchCharLength) {
     indices.push([start, i - 1]);
   }
   return indices;
-}
-
-// Machine word size
-const MAX_BITS = 32;
-
-function search(text, pattern, patternAlphabet, {
+}// Machine word size
+const MAX_BITS = 32;function search(text, pattern, patternAlphabet, {
   location = Config.location,
   distance = Config.distance,
   threshold = Config.threshold,
@@ -475,9 +427,7 @@ function search(text, pattern, patternAlphabet, {
   // Highest score beyond which we give up.
   let currentThreshold = threshold;
   // Is there a nearby exact match? (speedup)
-  let bestLocation = expectedLocation;
-
-  // Inlined score computation — avoids object allocation per call in hot loops.
+  let bestLocation = expectedLocation;  // Inlined score computation — avoids object allocation per call in hot loops.
   // See ./computeScore.ts for the documented version of this formula.
   const calcScore = (errors, currentLocation) => {
     const accuracy = errors / patternLen;
@@ -485,16 +435,12 @@ function search(text, pattern, patternAlphabet, {
     const proximity = Math.abs(expectedLocation - currentLocation);
     if (!distance) return proximity ? 1.0 : accuracy;
     return accuracy + proximity / distance;
-  };
-
-  // Performance: only computer matches when the minMatchCharLength > 1
+  };  // Performance: only computer matches when the minMatchCharLength > 1
   // OR if `includeMatches` is true.
   const computeMatches = minMatchCharLength > 1 || includeMatches;
   // A mask of the matches, used for building the indices
   const matchMask = computeMatches ? Array(textLen) : [];
-  let index;
-
-  // Get all exact matches, here for speed up
+  let index;  // Get all exact matches, here for speed up
   while ((index = text.indexOf(pattern, bestLocation)) > -1) {
     const score = calcScore(0, index);
     currentThreshold = Math.min(score, currentThreshold);
@@ -506,9 +452,7 @@ function search(text, pattern, patternAlphabet, {
         i += 1;
       }
     }
-  }
-
-  // Reset the best location
+  }  // Reset the best location
   bestLocation = -1;
   let lastBitArr = [];
   let finalScore = 1;
@@ -528,14 +472,10 @@ function search(text, pattern, patternAlphabet, {
         binMax = binMid;
       }
       binMid = Math.floor((binMax - binMin) / 2 + binMin);
-    }
-
-    // Use the result from this iteration as the maximum for the next.
+    }    // Use the result from this iteration as the maximum for the next.
     binMax = binMid;
     let start = Math.max(1, expectedLocation - binMid + 1);
-    const finish = findAllMatches ? textLen : Math.min(expectedLocation + binMid, textLen) + patternLen;
-
-    // Initialize the bit array
+    const finish = findAllMatches ? textLen : Math.min(expectedLocation + binMid, textLen) + patternLen;    // Initialize the bit array
     const bitArr = Array(finish + 2);
     bitArr[finish + 1] = (1 << i) - 1;
     for (let j = finish; j >= start; j -= 1) {
@@ -544,37 +484,25 @@ function search(text, pattern, patternAlphabet, {
       if (computeMatches) {
         // Speed up: quick bool to int conversion (i.e, `charMatch ? 1 : 0`)
         matchMask[currentLocation] = +!!charMatch;
-      }
-
-      // First pass: exact match
-      bitArr[j] = (bitArr[j + 1] << 1 | 1) & charMatch;
-
-      // Subsequent passes: fuzzy match
+      }      // First pass: exact match
+      bitArr[j] = (bitArr[j + 1] << 1 | 1) & charMatch;      // Subsequent passes: fuzzy match
       if (i) {
         bitArr[j] |= (lastBitArr[j + 1] | lastBitArr[j]) << 1 | 1 | lastBitArr[j + 1];
       }
       if (bitArr[j] & mask) {
-        finalScore = calcScore(i, currentLocation);
-
-        // This match will almost certainly be better than any existing match.
+        finalScore = calcScore(i, currentLocation);        // This match will almost certainly be better than any existing match.
         // But check anyway.
         if (finalScore <= currentThreshold) {
           // Indeed it is
           currentThreshold = finalScore;
-          bestLocation = currentLocation;
-
-          // Already passed `loc`, downhill from here on in.
+          bestLocation = currentLocation;          // Already passed `loc`, downhill from here on in.
           if (bestLocation <= expectedLocation) {
             break;
-          }
-
-          // When passing `bestLocation`, don't exceed our current distance from `expectedLocation`.
+          }          // When passing `bestLocation`, don't exceed our current distance from `expectedLocation`.
           start = Math.max(1, 2 * expectedLocation - bestLocation);
         }
       }
-    }
-
-    // No hope for a (better) match at greater error levels.
+    }    // No hope for a (better) match at greater error levels.
     const score = calcScore(i + 1, expectedLocation);
     if (score > currentThreshold) {
       break;
@@ -595,18 +523,14 @@ function search(text, pattern, patternAlphabet, {
     }
   }
   return result;
-}
-
-function createPatternAlphabet(pattern) {
+}function createPatternAlphabet(pattern) {
   const mask = {};
   for (let i = 0, len = pattern.length; i < len; i += 1) {
     const char = pattern.charAt(i);
     mask[char] = (mask[char] || 0) | 1 << len - i - 1;
   }
   return mask;
-}
-
-function mergeIndices(indices) {
+}function mergeIndices(indices) {
   if (indices.length <= 1) return indices;
   indices.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
   const merged = [indices[0]];
@@ -620,9 +544,7 @@ function mergeIndices(indices) {
     }
   }
   return merged;
-}
-
-// Characters that survive NFD normalization unchanged and need explicit mapping
+}// Characters that survive NFD normalization unchanged and need explicit mapping
 const NON_DECOMPOSABLE_MAP = {
   '\u0142': 'l',
   // ł
@@ -649,9 +571,7 @@ const NON_DECOMPOSABLE_MAP = {
   '\u00DF': 'ss' // ß
 };
 const NON_DECOMPOSABLE_RE = new RegExp('[' + Object.keys(NON_DECOMPOSABLE_MAP).join('') + ']', 'g');
-const stripDiacritics = String.prototype.normalize ? str => str.normalize('NFD').replace(/[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED\u0711\u0730-\u074A\u07A6-\u07B0\u07EB-\u07F3\u07FD\u0816-\u0819\u081B-\u0823\u0825-\u0827\u0829-\u082D\u0859-\u085B\u08D3-\u08E1\u08E3-\u0903\u093A-\u093C\u093E-\u094F\u0951-\u0957\u0962\u0963\u0981-\u0983\u09BC\u09BE-\u09C4\u09C7\u09C8\u09CB-\u09CD\u09D7\u09E2\u09E3\u09FE\u0A01-\u0A03\u0A3C\u0A3E-\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A70\u0A71\u0A75\u0A81-\u0A83\u0ABC\u0ABE-\u0AC5\u0AC7-\u0AC9\u0ACB-\u0ACD\u0AE2\u0AE3\u0AFA-\u0AFF\u0B01-\u0B03\u0B3C\u0B3E-\u0B44\u0B47\u0B48\u0B4B-\u0B4D\u0B56\u0B57\u0B62\u0B63\u0B82\u0BBE-\u0BC2\u0BC6-\u0BC8\u0BCA-\u0BCD\u0BD7\u0C00-\u0C04\u0C3E-\u0C44\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C62\u0C63\u0C81-\u0C83\u0CBC\u0CBE-\u0CC4\u0CC6-\u0CC8\u0CCA-\u0CCD\u0CD5\u0CD6\u0CE2\u0CE3\u0D00-\u0D03\u0D3B\u0D3C\u0D3E-\u0D44\u0D46-\u0D48\u0D4A-\u0D4D\u0D57\u0D62\u0D63\u0D82\u0D83\u0DCA\u0DCF-\u0DD4\u0DD6\u0DD8-\u0DDF\u0DF2\u0DF3\u0E31\u0E34-\u0E3A\u0E47-\u0E4E\u0EB1\u0EB4-\u0EB9\u0EBB\u0EBC\u0EC8-\u0ECD\u0F18\u0F19\u0F35\u0F37\u0F39\u0F3E\u0F3F\u0F71-\u0F84\u0F86\u0F87\u0F8D-\u0F97\u0F99-\u0FBC\u0FC6\u102B-\u103E\u1056-\u1059\u105E-\u1060\u1062-\u1064\u1067-\u106D\u1071-\u1074\u1082-\u108D\u108F\u109A-\u109D\u135D-\u135F\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17B4-\u17D3\u17DD\u180B-\u180D\u1885\u1886\u18A9\u1920-\u192B\u1930-\u193B\u1A17-\u1A1B\u1A55-\u1A5E\u1A60-\u1A7C\u1A7F\u1AB0-\u1ABE\u1B00-\u1B04\u1B34-\u1B44\u1B6B-\u1B73\u1B80-\u1B82\u1BA1-\u1BAD\u1BE6-\u1BF3\u1C24-\u1C37\u1CD0-\u1CD2\u1CD4-\u1CE8\u1CED\u1CF2-\u1CF4\u1CF7-\u1CF9\u1DC0-\u1DF9\u1DFB-\u1DFF\u20D0-\u20F0\u2CEF-\u2CF1\u2D7F\u2DE0-\u2DFF\u302A-\u302F\u3099\u309A\uA66F-\uA672\uA674-\uA67D\uA69E\uA69F\uA6F0\uA6F1\uA802\uA806\uA80B\uA823-\uA827\uA880\uA881\uA8B4-\uA8C5\uA8E0-\uA8F1\uA8FF\uA926-\uA92D\uA947-\uA953\uA980-\uA983\uA9B3-\uA9C0\uA9E5\uAA29-\uAA36\uAA43\uAA4C\uAA4D\uAA7B-\uAA7D\uAAB0\uAAB2-\uAAB4\uAAB7\uAAB8\uAABE\uAABF\uAAC1\uAAEB-\uAAEF\uAAF5\uAAF6\uABE3-\uABEA\uABEC\uABED\uFB1E\uFE00-\uFE0F\uFE20-\uFE2F]/g, '').replace(NON_DECOMPOSABLE_RE, ch => NON_DECOMPOSABLE_MAP[ch]) : str => str;
-
-class BitapSearch {
+const stripDiacritics = String.prototype.normalize ? str => str.normalize('NFD').replace(/[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED\u0711\u0730-\u074A\u07A6-\u07B0\u07EB-\u07F3\u07FD\u0816-\u0819\u081B-\u0823\u0825-\u0827\u0829-\u082D\u0859-\u085B\u08D3-\u08E1\u08E3-\u0903\u093A-\u093C\u093E-\u094F\u0951-\u0957\u0962\u0963\u0981-\u0983\u09BC\u09BE-\u09C4\u09C7\u09C8\u09CB-\u09CD\u09D7\u09E2\u09E3\u09FE\u0A01-\u0A03\u0A3C\u0A3E-\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A70\u0A71\u0A75\u0A81-\u0A83\u0ABC\u0ABE-\u0AC5\u0AC7-\u0AC9\u0ACB-\u0ACD\u0AE2\u0AE3\u0AFA-\u0AFF\u0B01-\u0B03\u0B3C\u0B3E-\u0B44\u0B47\u0B48\u0B4B-\u0B4D\u0B56\u0B57\u0B62\u0B63\u0B82\u0BBE-\u0BC2\u0BC6-\u0BC8\u0BCA-\u0BCD\u0BD7\u0C00-\u0C04\u0C3E-\u0C44\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C62\u0C63\u0C81-\u0C83\u0CBC\u0CBE-\u0CC4\u0CC6-\u0CC8\u0CCA-\u0CCD\u0CD5\u0CD6\u0CE2\u0CE3\u0D00-\u0D03\u0D3B\u0D3C\u0D3E-\u0D44\u0D46-\u0D48\u0D4A-\u0D4D\u0D57\u0D62\u0D63\u0D82\u0D83\u0DCA\u0DCF-\u0DD4\u0DD6\u0DD8-\u0DDF\u0DF2\u0DF3\u0E31\u0E34-\u0E3A\u0E47-\u0E4E\u0EB1\u0EB4-\u0EB9\u0EBB\u0EBC\u0EC8-\u0ECD\u0F18\u0F19\u0F35\u0F37\u0F39\u0F3E\u0F3F\u0F71-\u0F84\u0F86\u0F87\u0F8D-\u0F97\u0F99-\u0FBC\u0FC6\u102B-\u103E\u1056-\u1059\u105E-\u1060\u1062-\u1064\u1067-\u106D\u1071-\u1074\u1082-\u108D\u108F\u109A-\u109D\u135D-\u135F\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17B4-\u17D3\u17DD\u180B-\u180D\u1885\u1886\u18A9\u1920-\u192B\u1930-\u193B\u1A17-\u1A1B\u1A55-\u1A5E\u1A60-\u1A7C\u1A7F\u1AB0-\u1ABE\u1B00-\u1B04\u1B34-\u1B44\u1B6B-\u1B73\u1B80-\u1B82\u1BA1-\u1BAD\u1BE6-\u1BF3\u1C24-\u1C37\u1CD0-\u1CD2\u1CD4-\u1CE8\u1CED\u1CF2-\u1CF4\u1CF7-\u1CF9\u1DC0-\u1DF9\u1DFB-\u1DFF\u20D0-\u20F0\u2CEF-\u2CF1\u2D7F\u2DE0-\u2DFF\u302A-\u302F\u3099\u309A\uA66F-\uA672\uA674-\uA67D\uA69E\uA69F\uA6F0\uA6F1\uA802\uA806\uA80B\uA823-\uA827\uA880\uA881\uA8B4-\uA8C5\uA8E0-\uA8F1\uA8FF\uA926-\uA92D\uA947-\uA953\uA980-\uA983\uA9B3-\uA9C0\uA9E5\uAA29-\uAA36\uAA43\uAA4C\uAA4D\uAA7B-\uAA7D\uAAB0\uAAB2-\uAAB4\uAAB7\uAAB8\uAABE\uAABF\uAAC1\uAAEB-\uAAEF\uAAF5\uAAF6\uABE3-\uABEA\uABEC\uABED\uFB1E\uFE00-\uFE0F\uFE20-\uFE2F]/g, '').replace(NON_DECOMPOSABLE_RE, ch => NON_DECOMPOSABLE_MAP[ch]) : str => str;class BitapSearch {
   constructor(pattern, {
     location = Config.location,
     threshold = Config.threshold,
@@ -712,9 +632,7 @@ class BitapSearch {
       includeMatches
     } = this.options;
     text = isCaseSensitive ? text : text.toLowerCase();
-    text = ignoreDiacritics ? stripDiacritics(text) : text;
-
-    // Exact match
+    text = ignoreDiacritics ? stripDiacritics(text) : text;    // Exact match
     if (this.pattern === text) {
       const result = {
         isMatch: true,
@@ -724,9 +642,7 @@ class BitapSearch {
         result.indices = [[0, text.length - 1]];
       }
       return result;
-    }
-
-    // Otherwise, use Bitap algorithm
+    }    // Otherwise, use Bitap algorithm
     const {
       location,
       distance,
@@ -773,9 +689,7 @@ class BitapSearch {
     }
     return result;
   }
-}
-
-const registeredSearchers = [];
+}const registeredSearchers = [];
 function register(...args) {
   registeredSearchers.push(...args);
 }
@@ -787,9 +701,7 @@ function createSearcher(pattern, options) {
     }
   }
   return new BitapSearch(pattern, options);
-}
-
-const LogicalOperator = {
+}const LogicalOperator = {
   AND: '$and',
   OR: '$or'
 };
@@ -804,9 +716,7 @@ const convertToExplicit = query => ({
   [LogicalOperator.AND]: Object.keys(query).map(key => ({
     [key]: query[key]
   }))
-});
-
-// When `auto` is `true`, the parse function will infer and initialize and add
+});// When `auto` is `true`, the parse function will infer and initialize and add
 // the appropriate `Searcher` instance
 function parse(query, options, {
   auto = true
@@ -861,9 +771,7 @@ function parse(query, options, {
     query = convertToExplicit(query);
   }
   return next(query);
-}
-
-function computeScoreSingle(matches, {
+}function computeScoreSingle(matches, {
   ignoreFieldNorm = Config.ignoreFieldNorm
 }) {
   let totalScore = 1;
@@ -885,9 +793,7 @@ function computeScore(results, {
       ignoreFieldNorm
     });
   });
-}
-
-// Max-heap by score: keeps the worst (highest) score at the top
+}// Max-heap by score: keeps the worst (highest) score at the top
 // so we can efficiently evict it when a better result arrives.
 class MaxHeap {
   constructor(limit) {
@@ -944,9 +850,7 @@ class MaxHeap {
       }
     } while (largest !== i);
   }
-}
-
-function transformMatches(result, data) {
+}function transformMatches(result, data) {
   const matches = result.matches;
   data.matches = [];
   if (!isDefined(matches)) {
@@ -972,13 +876,9 @@ function transformMatches(result, data) {
     }
     data.matches.push(obj);
   });
-}
-
-function transformScore(result, data) {
+}function transformScore(result, data) {
   data.score = result.score;
-}
-
-function format(results, docs, {
+}function format(results, docs, {
   includeMatches = Config.includeMatches,
   includeScore = Config.includeScore
 } = {}) {
@@ -1000,9 +900,7 @@ function format(results, docs, {
     }
     return data;
   });
-}
-
-const WORD = /\b\w+\b/g;
+}const WORD = /\b\w+\b/g;
 function createAnalyzer({
   isCaseSensitive = false,
   ignoreDiacritics = false
@@ -1018,24 +916,18 @@ function createAnalyzer({
       return text.match(WORD) || [];
     }
   };
-}
-
-function buildInvertedIndex(records, keyCount, analyzer) {
+}function buildInvertedIndex(records, keyCount, analyzer) {
   const terms = new Map();
   const df = new Map();
   let fieldCount = 0;
   function addField(text, docIdx, keyIdx, subIdx) {
     const tokens = analyzer.tokenize(text);
     if (!tokens.length) return;
-    fieldCount++;
-
-    // Count term frequencies in this field
+    fieldCount++;    // Count term frequencies in this field
     const termFreqs = new Map();
     for (const token of tokens) {
       termFreqs.set(token, (termFreqs.get(token) || 0) + 1);
-    }
-
-    // Track which terms we've already counted for df in this field
+    }    // Track which terms we've already counted for df in this field
     for (const [term, tf] of termFreqs) {
       const posting = {
         docIdx,
@@ -1057,15 +949,11 @@ function buildInvertedIndex(records, keyCount, analyzer) {
       i: docIdx,
       v,
       $: fields
-    } = record;
-
-    // String list
+    } = record;    // String list
     if (v !== undefined) {
       addField(v, docIdx, -1, -1);
       continue;
-    }
-
-    // Object list
+    }    // Object list
     if (fields) {
       for (let keyIdx = 0; keyIdx < keyCount; keyIdx++) {
         const value = fields[keyIdx];
@@ -1149,12 +1037,8 @@ function removeFromInvertedIndex(index, docIdx) {
       }
     }
   }
-}
-
-class Fuse {
-  // Statics are assigned in entry.ts
-
-  constructor(docs, options, index) {
+}class Fuse {
+  // Statics are assigned in entry.ts  constructor(docs, options, index) {
     this.options = {
       ...Config,
       ...options
@@ -1232,9 +1116,7 @@ class Fuse {
         for (const idx of indicesToRemove) {
           removeFromInvertedIndex(this._invertedIndex, idx);
         }
-      }
-
-      // Remove from docs in reverse to preserve indices
+      }      // Remove from docs in reverse to preserve indices
       for (let i = indicesToRemove.length - 1; i >= 0; i -= 1) {
         this._docs.splice(indicesToRemove[i], 1);
       }
@@ -1263,9 +1145,7 @@ class Fuse {
       shouldSort,
       sortFn,
       ignoreFieldNorm
-    } = this.options;
-
-    // Empty string query returns all docs (useful for search UIs)
+    } = this.options;    // Empty string query returns all docs (useful for search UIs)
     if (isString(query) && !query.trim()) {
       let docs = this._docs.map((item, idx) => ({
         item,
@@ -1317,9 +1197,7 @@ class Fuse {
     const {
       records
     } = this._myIndex;
-    const results = heap ? null : [];
-
-    // Iterate over every string in the index
+    const results = heap ? null : [];    // Iterate over every string in the index
     records.forEach(({
       v: text,
       i: idx,
@@ -1362,9 +1240,7 @@ class Fuse {
     {
       throw new Error(LOGICAL_SEARCH_UNAVAILABLE);
     }
-  }
-
-  // When a search involves inverse patterns (e.g. !Syrup), the aggregation
+  }  // When a search involves inverse patterns (e.g. !Syrup), the aggregation
   // across keys switches from "ANY key matches" to "ALL keys must match."
   // This is signaled by hasInverse on the SearchResult from ExtendedSearch.
   //
@@ -1381,9 +1257,7 @@ class Fuse {
       keys,
       records
     } = this._myIndex;
-    const results = heap ? null : [];
-
-    // List is Array<Object>
+    const results = heap ? null : [];    // List is Array<Object>
     records.forEach(({
       $: item,
       i: idx
@@ -1393,9 +1267,7 @@ class Fuse {
       }
       const matches = [];
       let anyKeyFailed = false;
-      let hasInverse = false;
-
-      // Iterate over every key (i.e, path), and fetch the value at that key
+      let hasInverse = false;      // Iterate over every key (i.e, path), and fetch the value at that key
       keys.forEach((key, keyIndex) => {
         const keyMatches = this._findMatches({
           key,
@@ -1410,9 +1282,7 @@ class Fuse {
         } else {
           anyKeyFailed = true;
         }
-      });
-
-      // If the search involves inverse patterns, ALL keys must match
+      });      // If the search involves inverse patterns, ALL keys must match
       if (hasInverse && anyKeyFailed) {
         return;
       }
@@ -1496,9 +1366,7 @@ class Fuse {
     }
     return matches;
   }
-}
-
-Fuse.version = '7.3.0';
+}Fuse.version = '7.3.0';
 Fuse.createIndex = createIndex;
 Fuse.parseIndex = parseIndex;
 Fuse.config = Config;
@@ -1514,8 +1382,4 @@ Fuse.match = function (pattern, text, options) {
 }
 Fuse.use = function (...plugins) {
   plugins.forEach(plugin => register(plugin));
-};
-
-// Re-export public types
-
-module.exports = Fuse;
+};// Re-export public typesmodule.exports = Fuse;

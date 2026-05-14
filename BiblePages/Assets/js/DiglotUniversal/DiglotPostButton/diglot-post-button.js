@@ -1,13 +1,7 @@
 class DiglotPostButton extends HTMLElement {
 connectedCallback () {
 // 1. Set the HTML structure
-this.innerHTML = `
-
-<div id="MenuContainerMirrored">
-
-  <div id="biblejournalpostsholder">
-
-    <div class="remainhere">
+this.innerHTML = `<div id="MenuContainerMirrored">  <div id="biblejournalpostsholder">    <div class="remainhere">
       <hr class="lefthrliner" />
       <span class="diglotnav">
         BIBLE JOURNALS
@@ -17,9 +11,7 @@ this.innerHTML = `
         Bible and Life Lessons
       </span>
       <hr />
-    </div>
-
-    <hr class="lefthrliner" />
+    </div>    <hr class="lefthrliner" />
     <span class="diglotnav">
       BIBLE JOURNALS
     </span>
@@ -27,9 +19,7 @@ this.innerHTML = `
     <span class="bibleduo">
       Bible and Life Lessons
     </span>
-    <hr />
-
-    <div class="books" id="divOLDbg">
+    <hr />    <div class="books" id="divOLDbg">
       <a href="BiblePages/OldTestament/01-genesis.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 1</span>
@@ -72,52 +62,30 @@ this.innerHTML = `
           </span>
         </div>
       </a>
-    </div>
-
-  </div>
-
-  <div class="OtherMenu" id="more-links">
-
-    <a href="BiblePages/BridgePassages/bible-passages.html">
+    </div>  </div>  <div class="OtherMenu" id="more-links">    <a href="BiblePages/BridgePassages/bible-passages.html">
       <div class="OtherLinks">
         Popular Passages
       </div>
-    </a>
-
-    <a href="BiblePages/DailyDevotion/index.html">
+    </a>    <a href="BiblePages/DailyDevotion/index.html">
       <div class="OtherLinks tr2">
         <span class="tr2">Daily Devotion</span>
       </div>
-    </a>
-
-    <a href="BiblePages/BridgePassages/bridge-to-life.html">
+    </a>    <a href="BiblePages/BridgePassages/bridge-to-life.html">
       <div class="OtherLinks">
         <span class="tr3"></span>
         The Bridge to Life
       </div>
-    </a>
-
-    <a href="http://facebook.com/authorizedbible">
+    </a>    <a href="http://facebook.com/authorizedbible">
       <div class="OtherLinks">
         <span class="tr5">
           Facebook Page of<br />
           EnglishTagalogBible.Com</span>
       </div>
-    </a>
-
-    <a href="http://philnavs.org">
+    </a>    <a href="http://philnavs.org">
       <div class="OtherLinks">
         <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
         <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
-    </a>
-
-  </div>
-
-</div>
-
-`;
+    </a>  </div></div>`;
 }
-}
-
-customElements.define ('diglot-post-button', DiglotPostButton);
+}customElements.define ('diglot-post-button', DiglotPostButton);

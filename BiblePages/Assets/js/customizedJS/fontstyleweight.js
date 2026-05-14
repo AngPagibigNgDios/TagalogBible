@@ -1,26 +1,18 @@
 // ===============================
 // HIDE SHOW BIBLE, DIGLOT TAGALOG ENGLISH DITO.
-// ===============================
-
-function applyFont (mode) {
+// ===============================function applyFont (mode) {
   // SAVE MODE FOR ALL PAGES
-  localStorage.setItem ('fantfamilyS', mode);
-
-  // TEXT VISIBILITY CONTROL
+  localStorage.setItem ('fantfamilyS', mode);  // TEXT VISIBILITY CONTROL
   document.querySelectorAll ('#FontChanger').forEach (div => {
     div.style.display = mode === 'ArimoFont' ? 'none' : '';
-  });
-
-  const LITF = document.querySelectorAll('.litF');
+  });  const LITF = document.querySelectorAll('.litF');
   const LORF = document.querySelectorAll('.lorF');
   const ELAF = document.querySelectorAll('.elaF');
   const OPSF = document.querySelectorAll('.opsF');
   const INDF = document.querySelectorAll('.indF');
   const LEXF = document.querySelectorAll('.lexF');
   const PBSF = document.querySelectorAll('.pbsF');
-  const ARIF = document.querySelectorAll('.ariF');  
-
-  if (mode === 'LiterataFont') {
+  const ARIF = document.querySelectorAll('.ariF');    if (mode === 'LiterataFont') {
     // REVERSE
     LITF.forEach (el => {
 el.classList.add('litF');
@@ -32,9 +24,7 @@ el.classList.remove('lexF');
 el.classList.remove('pbsF');
 el.classList.remove('ariF');
     });
-  
-
-      LORF.forEach (el => {
+        LORF.forEach (el => {
 el.classList.remove('litF');
 el.classList.add('lorF');
 el.classList.remove('elaF');
@@ -118,80 +108,40 @@ el.classList.add('ariF');
     
     
   }
-
-
   // SIDEBAR UPDATE
  applyFont (mode); 
-}
-
-// BUTTON FUNCTIONS
+}// BUTTON FUNCTIONS
 function LiterataSF () {
   applyFont ('LiterataFont');
-}
-
-function LoraSF () {
+}function LoraSF () {
   applyFont ('LoraFont');
-}
-
-function GelasioSF () {
+}function GelasioSF () {
   applyFont ('GelasioFont');
 }
-
-
 function GelasioSF () {
   applyFont ('GelasioFont');
-}
-
-function OpenSS () {
+}function OpenSS () {
   applyFont ('OpenFont');
-}
-
-function InterSS () {
+}function InterSS () {
   applyFont ('InterFont');
-}
-
-function LexendSS () {
+}function LexendSS () {
   applyFont ('LexendFont');
 }
-
-
 function PublicSS () {
   applyFont ('PublicFont');
-}
-
-function ArimoSS () {
+}function ArimoSS () {
   applyFont ('ArimoFont');
-}
-
-
-
-// ===============================
+}// ===============================
 // AUTO RESTORE ON EVERY PAGE
 // ===============================
 document.addEventListener ('DOMContentLoaded', function () {
   let savedMode = localStorage.getItem ('fantfamilyS') || 'ArimoFont';
   applyFont (savedMode);
-});
-
-
-
-
-
-
-
-// ===============================
+});// ===============================
 // FONT SWITCHER
-// ===============================
-
-function applyFont(fontClass) {
-
-  // SAVE
-  localStorage.setItem('fontFamilyS', fontClass);
-
-  // MAIN CONTAINER
-  const container = document.getElementById('FontChanger');
-
-  // REMOVE ALL FONT CLASSES
+// ===============================function applyFont(fontClass) {  // SAVE
+  localStorage.setItem('fontFamilyS', fontClass);  // MAIN CONTAINER
+  const container = document.getElementById('FontChanger');  // REMOVE ALL FONT CLASSES
   container.classList.remove(
     'litF',
     'lorF',
@@ -201,82 +151,34 @@ function applyFont(fontClass) {
     'lexF',
     'pbsF',
     'ariF'
-  );
-
-  // ADD SELECTED FONT
+  );  // ADD SELECTED FONT
   container.classList.add(fontClass);
 }
-
-
 // ===============================
 // BUTTON FUNCTIONS
-// ===============================
-
-function LiterataSF() {
+// ===============================function LiterataSF() {
   applyFont('litF');
-}
-
-function LoraSF() {
+}function LoraSF() {
   applyFont('lorF');
-}
-
-function GelasioSF() {
+}function GelasioSF() {
   applyFont('elaF');
-}
-
-function OpenSS() {
+}function OpenSS() {
   applyFont('opsF');
-}
-
-function InterSS() {
+}function InterSS() {
   applyFont('indF');
-}
-
-function LexendSS() {
+}function LexendSS() {
   applyFont('lexF');
-}
-
-function PublicSS() {
+}function PublicSS() {
   applyFont('pbsF');
-}
-
-function ArimoSS() {
+}function ArimoSS() {
   applyFont('ariF');
 }
-
-
 // ===============================
 // AUTO RESTORE
-// ===============================
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  const saved =
-    localStorage.getItem('fontFamilyS') || 'ariF';
-
-  applyFont(saved);
-
-});
-
-
-
-
-
-
-
-
-
-
-
-function applyFontWeight(fontWeight) {
-
-  // SAVE
-  localStorage.setItem('fontFamilyWeight', fontWeight);
-
-  // MAIN CONTAINER
-  const container = document.getElementById('FontWeightChanger');
-
-  // REMOVE ALL FONT CLASSES
+// ===============================document.addEventListener('DOMContentLoaded', function () {  const saved =
+    localStorage.getItem('fontFamilyS') || 'ariF';  applyFont(saved);});function applyFontWeight(fontWeight) {  // SAVE
+  localStorage.setItem('fontFamilyWeight', fontWeight);  // MAIN CONTAINER
+  const container = document.getElementById('FontWeightChanger');  // REMOVE ALL FONT CLASSES
   container.classList.remove(
     'FW350',
     'FW400',
@@ -284,48 +186,26 @@ function applyFontWeight(fontWeight) {
     'FW500',
     'FW550',
     'FW600'
-  );
-
-  // ADD SELECTED FONT
+  );  // ADD SELECTED FONT
   container.classList.add(fontClass);
 }
-
-
 // ===============================
 // BUTTON FUNCTIONS
 // ===============================
 function FW600FF() {
   applyFont('FW600');
-}
-
-function FW550FF() {
+}function FW550FF() {
   applyFont('FW550');
-}
-
-function FW500FF() {
+}function FW500FF() {
   applyFont('FW500');
-}
-
-function FW450FF() {
+}function FW450FF() {
   applyFont('FW450');
-}
-
-function FW400FF() {
+}function FW400FF() {
   applyFont('FW400');
-}
-
-function FW350FF() {
+}function FW350FF() {
   applyFont('FW350');
 }
 // ===============================
 // AUTO RESTORE
-// ===============================
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  const saved =
-    localStorage.getItem('fontFamilyWeight') || 'FW300';
-
-  applyFontWeight(saved);
-
-});
+// ===============================document.addEventListener('DOMContentLoaded', function () {  const saved =
+    localStorage.getItem('fontFamilyWeight') || 'FW300';  applyFontWeight(saved);});

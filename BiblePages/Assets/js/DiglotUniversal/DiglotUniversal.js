@@ -1603,6 +1603,7 @@ customElements.define('diglot-post-button-index', DiglotPostButtonIndex);
 
 
 
+
 class DiglotThumbMenu extends HTMLElement {
 	connectedCallback() {
 
@@ -1636,6 +1637,8 @@ class DiglotThumbMenu extends HTMLElement {
       <li>▲</li>
   </ul>
 		`;
+    
+    // GO UP
 
 		// GO UP
 		const backUp = this.querySelector('.goupthumb');
@@ -1655,47 +1658,29 @@ const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
 
 
     
-		menuButton.onclick = function () {
-
-		  const isHidden = window.getComputedStyle(menuDiv).display === "none";
-
-  // toggle menu
-  menuDiv.style.display = isHidden ? "block" : "none";
-
-  // toggle spans
+    menuButton.onclick = function () {
+      const isHidden = window.getComputedStyle(menuDiv).display === "none";
+      // toggle menu
+  menuDiv.style.display = isHidden ? "block" : "none";  // toggle spans
   spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
-  spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
-};
+      spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
+      
+};    
+    const goUpBtn = this.querySelector("#goUpScroll");
 
-
-
-    
-const goUpBtn = this.querySelector("#goUpScroll");
-
-goUpBtn.addEventListener("click", goUpAnimation);
+    goUpBtn.addEventListener("click", goUpAnimation);
 function goUpAnimation() {
   const arrows = document.querySelectorAll('#upnimation li');
-
   arrows.forEach((li, index) => {
     li.style.animation = "none";   // reset
-    li.offsetHeight;               // force reflow
-
-    // calculate stagger delay based on index
+    li.offsetHeight;               // force reflow    // calculate stagger delay based on index
     const delay = 0.2 * index;     // 0.2s apart
-    const opacity = 1 - (index * 0.15); // fade each arrow more
-
-    li.style.opacity = opacity > 0 ? opacity : 0.1;
+    const opacity = 1 - (index * 0.15); // fade each arrow more    li.style.opacity = opacity > 0 ? opacity : 0.1;
     li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
   });
 }
-
-
-
-
     
       
-
-
 	}
 }
 

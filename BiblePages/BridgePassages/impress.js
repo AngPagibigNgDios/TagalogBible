@@ -7,40 +7,22 @@
  * MIT Licensed.
  *
  * Copyright 2011 Bartek Szopka (@bartaz)
- */
-
-(function ( document, window ) {
-
-    // HELPER FUNCTIONS
+ */(function ( document, window ) {    // HELPER FUNCTIONS
     
-    var pfx = (function () {
-
-        var style = document.createElement('dummy').style,
+    var pfx = (function () {        var style = document.createElement('dummy').style,
             prefixes = 'Webkit Moz O ms Khtml'.split(' '),
             memory = {};
             
         return function ( prop ) {
-            if ( typeof memory[ prop ] === "undefined" ) {
-
-                var ucProp  = prop.charAt(0).toUpperCase() + prop.substr(1),
-                    props   = (prop + ' ' + prefixes.join(ucProp + ' ') + ucProp).split(' ');
-
-                memory[ prop ] = null;
+            if ( typeof memory[ prop ] === "undefined" ) {                var ucProp  = prop.charAt(0).toUpperCase() + prop.substr(1),
+                    props   = (prop + ' ' + prefixes.join(ucProp + ' ') + ucProp).split(' ');                memory[ prop ] = null;
                 for ( var i in props ) {
                     if ( style[ props[i] ] !== undefined ) {
                         memory[ prop ] = props[i];
                         break;
                     }
-                }
-
-            }
-
-            return memory[ prop ];
-        }
-
-    })();
-
-    var arrayify = function ( a ) {
+                }            }            return memory[ prop ];
+        }    })();    var arrayify = function ( a ) {
         return [].slice.call( a );
     };
     
@@ -122,9 +104,7 @@
     css(document.body, {
         height: "100%",
         overflow: "hidden"
-    });
-
-    var props = {
+    });    var props = {
         position: "absolute",
         transformOrigin: "top left",
         transition: "all 1s ease-in-out",
@@ -143,9 +123,7 @@
         translate: { x: 0, y: 0, z: 0 },
         rotate:    { x: 0, y: 0, z: 0 },
         scale:     { x: 1, y: 1, z: 1 }
-    };
-
-    steps.forEach(function ( el, idx ) {
+    };    steps.forEach(function ( el, idx ) {
         var data = el.dataset,
             step = {
                 translate: {
@@ -180,11 +158,7 @@
             transformStyle: "preserve-3d"
         });
         
-    });
-
-    // making given step active
-
-    var active = null;
+    });    // making given step active    var active = null;
     
     var select = function ( el ) {
         if ( !el || !el.stepData ) {
@@ -280,9 +254,7 @@
             
             event.preventDefault();
         }
-    }, false);
-
-    document.addEventListener("click", function ( event ) {
+    }, false);    document.addEventListener("click", function ( event ) {
         // event delegation with "bubbling"
         // check if event target (or any of its parents is a link or a step)
         var target = event.target;
@@ -318,7 +290,4 @@
     
     // START 
     // by selecting step defined in url or first step of the presentation
-    select(getElementFromUrl() || steps[0]);
-
-})(document, window);
-
+    select(getElementFromUrl() || steps[0]);})(document, window);

@@ -1,9 +1,7 @@
 class SampleBible extends HTMLElement {
   connectedCallback() {
      this.innerHTML = `
-    
-
-                  <div class="FontChanger ariF">
+                      <div class="FontChanger ariF">
                      <div class="FontWeightChanger FW500">
                         <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
                            <tr class="TITLETR">
@@ -55,14 +53,6 @@ class SampleBible extends HTMLElement {
                         </table>
                      </div>
                   </div>
-
-
-
-
     `;
   }
-}
-
-customElements.define('sample-bible', SampleBible);
-
-
+}customElements.define('sample-bible', SampleBible);

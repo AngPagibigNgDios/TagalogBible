@@ -1,7 +1,5 @@
 let fuse;
-let searchReady = false;
-
-/* -------------------------------------------------
+let searchReady = false;/* -------------------------------------------------
 HELPER: FLATTEN JSON
 -------------------------------------------------- */
 function flattenBible(rawData) {
@@ -28,9 +26,7 @@ function flattenBible(rawData) {
     });
   });
   return result;
-}
-
-/* -------------------------------------------------
+}/* -------------------------------------------------
 FUSE OPTIONS
 -------------------------------------------------- */
 const fuseOptions = {
@@ -41,31 +37,23 @@ const fuseOptions = {
   ignoreLocation: true,
   includeMatches: true,
   minMatchCharLength: 3,
-};
-
-/* -------------------------------------------------
+};/* -------------------------------------------------
 LOAD BIBLE (with IndexedDB cache via localForage)
 -------------------------------------------------- */
 async function loadBible() {
   const searchResultsDiv = document.getElementById('searchResults');
   if (searchResultsDiv) {
     searchResultsDiv.innerHTML = '<p style="text-align:center;">Preparing Bible for offline search...</p>';
-  }
-
-  try {
+  }  try {
     console.log('Checking IndexedDB...');
-    const savedData = await localforage.getItem('fuseData');
-
-    if (savedData && savedData.length) {
+    const savedData = await localforage.getItem('fuseData');    if (savedData && savedData.length) {
       console.log('Restoring Bible from IndexedDB...');
       fuse = new Fuse(savedData, fuseOptions);
       searchReady = true;
       if (searchResultsDiv) searchResultsDiv.innerHTML = '';
       console.log('Search ready from IndexedDB');
       return;
-    }
-
-    console.log('IndexedDB empty. Fetching JSON...');
+    }    console.log('IndexedDB empty. Fetching JSON...');
     const files = [
       'BiblePages/Assets/js/fuse/NT01M.json',
       'BiblePages/Assets/js/fuse/NT02M.json',
@@ -74,31 +62,21 @@ async function loadBible() {
       'BiblePages/Assets/js/fuse/OT03M.json',
       'BiblePages/Assets/js/fuse/OT04M.json',
       'BiblePages/Assets/js/fuse/OT05M.json'
-    ];
-
-    const responses = await Promise.all(
+    ];    const responses = await Promise.all(
       files.map(url =>
         fetch(url).then(r => {
           if (!r.ok) throw new Error(`HTTP error! status: ${r.status} for file: ${url}`);
           return r.json();
         })
       )
-    );
-
-    console.log('JSON fetched');
+    );    console.log('JSON fetched');
     const rawData = Object.assign({}, ...responses);
-    const flat = flattenBible(rawData);
-
-    fuse = new Fuse(flat, fuseOptions);
+    const flat = flattenBible(rawData);    fuse = new Fuse(flat, fuseOptions);
     searchReady = true;
     if (searchResultsDiv) searchResultsDiv.innerHTML = '';
-    console.log('Search ready');
-
-    localforage.setItem('fuseData', flat)
+    console.log('Search ready');    localforage.setItem('fuseData', flat)
       .then(() => console.log('IndexedDB saved'))
-      .catch(err => console.error('IndexedDB save failed:', err));
-
-  } catch (err) {
+      .catch(err => console.error('IndexedDB save failed:', err));  } catch (err) {
     console.error('Bible loading error:', err);
     if (searchResultsDiv) {
       searchResultsDiv.innerHTML = `
@@ -108,49 +86,33 @@ async function loadBible() {
         </div>`;
     }
   }
-}
-
-/* -------------------------------------------------
+}/* -------------------------------------------------
 SEARCH BOX LISTENER
 -------------------------------------------------- */
 function setupSearchBox() {
   const searchBox = document.getElementById('searchBox');
-  if (!searchBox) return;
-
-  searchBox.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter') return;
-
-    const searchResultsDiv = document.getElementById('searchResults');
+  if (!searchBox) return;  searchBox.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;    const searchResultsDiv = document.getElementById('searchResults');
     if (!searchReady) {
       if (searchResultsDiv) {
         searchResultsDiv.innerHTML = '<p>Loading search index...</p>';
       }
       return;
-    }
-
-    const results = fuse.search(this.value);
-    let html = '';
-
-    if (results.length > 0) {
+    }    const results = fuse.search(this.value);
+    let html = '';    if (results.length > 0) {
       html += `<div class="searchHeader">SEARCH RESULTS</div><br/>
       <div class="resultdiglot"><div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
 <div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
 <div class="controldiglot" onclick="showAll()"> DIGLOT </div></div>`;
-    }
-
-    results.forEach((r, index) => {
+    }    results.forEach((r, index) => {
       const item = r.item;
       let displayEng = item.eng;
-      let displayTag = item.tag;
-
-      if (r.matches) {
+      let displayTag = item.tag;      if (r.matches) {
         r.matches.forEach(match => {
           if (match.key === 'eng') displayEng = highlightMatches(match.value, match.indices);
           if (match.key === 'tag') displayTag = highlightMatches(match.value, match.indices);
         });
-      }
-
-      html += `
+      }      html += `
         <div class="FontChanger">
           <div class="FontWeightChanger">
             <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
@@ -188,8 +150,6 @@ function setupSearchBox() {
           </div>
         </div>
       `;
-
-
 // Check for 10 first! 
 if ((index + 1) % 10 === 0) {
     html += `<div class="closesearch" onclick="closeSearch()">Close Search Result</div>`;
@@ -197,57 +157,35 @@ if ((index + 1) % 10 === 0) {
 // If it wasn't the 10th, check if it's the 5th
 else if ((index + 1) % 5 === 0) {
     html += `<div class="gobacktosearch" onclick="gobackToSearchBar()">Go Back &#8607; To Search</div>`;
-}
-
-      
-    });
-
-    if (results.length > 0) {
+}      
+    });    if (results.length > 0) {
       html += `
         <div class="searchFooter">
           <button onclick="closeSearch()">Close All Results</button>
         </div>`;
-    }
-
-    if (searchResultsDiv) {
+    }    if (searchResultsDiv) {
       searchResultsDiv.innerHTML = html || '<p>No results found.</p>';
-    }
-
-
-
-    restoreSettings();
+    }    restoreSettings();
   });
-}
-
-/* -------------------------------------------------
+}/* -------------------------------------------------
 RESTORE SETTINGS & HIGHLIGHTER
 -------------------------------------------------- */
 function restoreSettings() {
   const savedMode = localStorage.getItem('bibleMode') || 'both';
-  if (typeof applyMode === 'function') applyMode(savedMode);
-
-  const savedFont = localStorage.getItem('fontFamilyS') || 'ariF';
-  if (typeof applyFont === 'function') applyFont(savedFont);
-
-  const savedWeight = localStorage.getItem('fontFamilyWeight') || 'FW500';
-  if (typeof applyFontWeight === 'function') applyFontWeight(savedWeight);
-
-  const savedSize = localStorage.getItem('bibleFontSize');
+  if (typeof applyMode === 'function') applyMode(savedMode);  const savedFont = localStorage.getItem('fontFamilyS') || 'ariF';
+  if (typeof applyFont === 'function') applyFont(savedFont);  const savedWeight = localStorage.getItem('fontFamilyWeight') || 'FW500';
+  if (typeof applyFontWeight === 'function') applyFontWeight(savedWeight);  const savedSize = localStorage.getItem('bibleFontSize');
   if (savedSize) {
     const size = parseFloat(savedSize);
     document.querySelectorAll('.spanenglishbible, .spantagalogbible').forEach(el => {
       el.style.fontSize = size + 'em';
     });
   }
-}
-
-function highlightMatches(text, indices) {
+}function highlightMatches(text, indices) {
   if (!indices || !indices.length) return text;
   const sortedIndices = [...indices].sort((a, b) => a[0] - b[0]);
   let result = '';
-  let lastIndex = 0;
-
-  sortedIndices.forEach(([start, end]) => {
+  let lastIndex = 0;  sortedIndices.forEach(([start, end]) => {
     const matchText = text.slice(start, end + 1);
     const beforeChar = start === 0 ? ' ' : text[start - 1];
     const afterChar = end === text.length - 1 ? ' ' : text[end + 1];
@@ -259,9 +197,7 @@ function highlightMatches(text, indices) {
   });
   result += text.slice(lastIndex);
   return result;
-}
-
-/* -------------------------------------------------
+}/* -------------------------------------------------
 INIT
 -------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {

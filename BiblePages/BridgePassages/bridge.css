@@ -10,26 +10,16 @@
     font-family: 'PT Serif', georgia, serif;
     font-size: 48px;
     line-height: 1.5;
-}
-
-/* fade out inactive slides */
+}/* fade out inactive slides */
 .step {
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
     -ms-transition:     opacity 1s;
     -o-transition:      opacity 1s;
     transition:         opacity 1s;
-}
-
-.step:not(.active) {
+}.step:not(.active) {
     opacity: 0.3;
-}
-
-/* STEP SPECIFIC STYLES */
-
-/* hint on the first slide */
-
-.hint {
+}/* STEP SPECIFIC STYLES *//* hint on the first slide */.hint {
     position: fixed;
     left: 0;
     right: 0;
@@ -51,9 +41,7 @@
     -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
     -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
     transition:         opacity 1s,         transform 0.5s 1s;
-}
-
-.step-start + .hint {
+}.step-start + .hint {
     opacity: 1;
     -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s;
     -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s;
@@ -65,86 +53,58 @@
     -ms-transform:     translateY(0px);
     -o-transform:      translateY(0px);
     transform:         translateY(0px);
-}
-
-#separation {
+}#separation {
     padding: 0;
-}
-
-.footnote {
+}.footnote {
     font-size: 32px;
-}
-
-.footnote2 {
+}.footnote2 {
     font-size: 20px;
-}
-
-#punishment {
+}#punishment {
     width: 600px;
     text-align: center;
     line-height: 1;
     font-size: 40px;
-}
-
-#solution {
+}#solution {
     width: 700px;
     text-align: center;
-}
-
-#sacrifice {
+}#sacrifice {
     width: 800px;
     font-size: 2.5em;
-}
-
-#sacrifice b {
+}#sacrifice b {
     display: inline-block;
     -webkit-transition: 0.5s;
     -moz-transition:    0.5s;
     -ms-transition:     0.5s;
     -o-transition:      0.5s;
     transition:         0.5s;
-}
-
-#sacrifice.active .positioning, #sacrifice.active .positioning2 {
+}#sacrifice.active .positioning, #sacrifice.active .positioning2 {
     -webkit-transform: translateY(-5px);
     -moz-transform:    translateY(-5px);
     -ms-transform:     translateY(-5px);
     -o-transform:      translateY(-5px);
     transform:         translateY(-5px);
-}
-
-#sacrifice.active .positioning {
+}#sacrifice.active .positioning {
     -webkit-transition-delay: 1.5s;
     -moz-transition-delay:    1.5s;
     -ms-transition-delay:     1.5s;
     -o-transition-delay:      1.5s;
     transition-delay:         1.5s;
-}
-
-#sacrifice.active .positioning2 {
+}#sacrifice.active .positioning2 {
     -webkit-transition-delay: 2.0s;
     -moz-transition-delay:    2.0s;
     -ms-transition-delay:     2.0s;
     -o-transition-delay:      2.0s;
     transition-delay:         2.0s;
-}
-
-#receive {
+}#receive {
     width: 800px;
-}
-
-#receive p {
+}#receive p {
     font-size: 35px;
-}
-
-#children-of-god {
+}#children-of-god {
     width: 800px;
     padding-bottom: 100px;
     background-position: bottom right;
     background-repeat: no-repeat;
-}
-
-/* it's in 3D */
+}/* it's in 3D */
 #ask span,
 #ask b {
     display: inline-block;
@@ -159,57 +119,43 @@
     -ms-transition:     0.5s;
     -o-transition:      0.5s;
     transition:         0.5s;
-}
-
-#ask .have {
+}#ask .have {
     -webkit-transform: translateZ(-40px);
     -moz-transform:    translateZ(-40px);
     -ms-transform:     translateZ(-40px);
     -o-transform:      translateZ(-40px);
     transform:         translateZ(-40px);
-}
-
-#ask .you {
+}#ask .you {
     -webkit-transform: translateZ(20px);
     -moz-transform:    translateZ(20px);
     -ms-transform:     translateZ(20px);
     -o-transform:      translateZ(20px);
     transform:         translateZ(20px);
-}
-
-#ask .noticed {
+}#ask .noticed {
     -webkit-transform: translateZ(-40px);
     -moz-transform:    translateZ(-40px);
     -ms-transform:     translateZ(-40px);
     -o-transform:      translateZ(-40px);
     transform:         translateZ(-40px);
-}
-
-#ask .its {
+}#ask .its {
     -webkit-transform: translateZ(60px);
     -moz-transform:    translateZ(60px);
     -ms-transform:     translateZ(60px);
     -o-transform:      translateZ(60px);
     transform:         translateZ(60px);
-}
-
-#ask .in {
+}#ask .in {
     -webkit-transform: translateZ(-10px);
     -moz-transform:    translateZ(-10px);
     -ms-transform:     translateZ(-10px);
     -o-transform:      translateZ(-10px);
     transform:         translateZ(-10px);
-}
-
-#ask .footnote {
+}#ask .footnote {
     -webkit-transform: translateZ(-10px);
     -moz-transform:    translateZ(-10px);
     -ms-transform:     translateZ(-10px);
     -o-transform:      translateZ(-10px);
     transform:         translateZ(-10px);
-}
-
-#ask.active span,
+}#ask.active span,
 #ask.active b {
     -webkit-transform: translateZ(0px);
     -moz-transform:    translateZ(0px);
@@ -222,30 +168,20 @@
     -ms-transition-delay:     1s;
     -o-transition-delay:      1s;
     transition-delay:         1s;
-}
-
-/* overview step */
+}/* overview step */
 #overview {
     z-index: -1;
     padding: 0;
-}
-
-/* on overview step everything is visible */
-
-#impress.step-overview .step {
+}/* on overview step everything is visible */#impress.step-overview .step {
     opacity: 1;
     cursor: pointer;
-}
-
-/*
+}/*
  * SLIDE STEP STYLES
  *
  * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
  *
  * ;)
- */
-
-.slide {
+ */.slide {
 	margin-top: 5px;
     display: block;
     width: 700px;
@@ -265,30 +201,20 @@
 	-khtml-border-radius:6px;
 	-moz-border-radius:6px;
 	border-radius:6px;
-}
-
-.center {text-align: center;}
-
-.slide p.large {
+}.center {text-align: center;}.slide p.large {
     display: block;
     font-size: 1em;
     line-height: 1em;
     margin-top: .5em;
 }
-
-
 .slide p.large2 {
     display: block;
     font-size: .8em;
     line-height: 1em;
     margin-top: .5em;
-}
-
-#decide {
+}#decide {
 	font-size: 2.5em;
-}
-
-/* IMPRESS NOT SUPPORTED STYLES */
+}/* IMPRESS NOT SUPPORTED STYLES */
 .fallback-message {
     font-family: sans-serif;
     line-height: 1.3;
@@ -296,45 +222,25 @@
     display: none;
     width: 780px;
     padding: 10px 10px 0;
-    margin: 20px auto;
-
-    border-radius: 10px;
+    margin: 20px auto;    border-radius: 10px;
     border: 1px solid #E4C652;
     background: #EEDC94;
-}
-
-.fallback-message p {
+}.fallback-message p {
     margin-bottom: 10px;
-}
-
-.impress-not-supported .step {
+}.impress-not-supported .step {
     position: relative;
     opacity: 1;
     margin: 20px auto;
-}
-
-.impress-not-supported .fallback-message {
+}.impress-not-supported .fallback-message {
     display: block;
-}
-
-p {
+}p {
 	margin: 1em 0;
-}
-
-.center {
+}.center {
 text-align:center;
-}
-
-.justify {
+}.justify {
 text-align:justify;
-}
-
-.ref {
+}.ref {
 	color: gray;
-}
-
-.ref2 {
-	color: silver;
-
-    font-size:.9em;
+}.ref2 {
+	color: silver;    font-size:.9em;
 }

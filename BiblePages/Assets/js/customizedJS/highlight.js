@@ -1,7 +1,5 @@
 let verseLanguageMode = 'both'; // display mode
-let copyMode = 'both'; // copy mode
-
-// ---------------------------
+let copyMode = 'both'; // copy mode// ---------------------------
 // HELPER: Get Title
 // ---------------------------
 function getCleanCitation () {
@@ -10,22 +8,16 @@ function getCleanCitation () {
     .replace (/EnglishTagalogBible\.Com\s*—\s*/gi, '')
     .trim ();
   return cleanTitle;
-}
-
-// ---------------------------
+}// ---------------------------
 // HELPER: Sort & Format Range (e.g., 1, 5, 9-11)
 // ---------------------------
 function getSortedRangeString (highlightedRows) {
   const nums = highlightedRows.map (row =>
     parseInt (row.id.replace ('verse-', ''), 10)
   );
-  if (nums.length === 0) return '';
-
-  let result = [];
+  if (nums.length === 0) return '';  let result = [];
   let start = nums[0];
-  let end = nums[0];
-
-  for (let i = 1; i <= nums.length; i++) {
+  let end = nums[0];  for (let i = 1; i <= nums.length; i++) {
     if (i < nums.length && nums[i] === end + 1) {
       end = nums[i];
     } else {
@@ -37,32 +29,22 @@ function getSortedRangeString (highlightedRows) {
     }
   }
   return result.join (', ');
-}
-
-// ---------------------------
+}// ---------------------------
 // HELPER: Parse Title into components
 // ---------------------------
 function getParsedTitle () {
-  let fullTitle = getCleanCitation ().trim ();
-
-  let data = {
+  let fullTitle = getCleanCitation ().trim ();  let data = {
     engBook: '',
     tlBook: '',
     chapter: ''
-  };
-
-  // Matches:
+  };  // Matches:
   // (Mateo) Matthew 1
   // (Exodo) Exodus 4
-  const match = fullTitle.match (/^\((.*?)\)\s*(.*?)\s+(\d+)$/);
-
-  if (match) {
+  const match = fullTitle.match (/^\((.*?)\)\s*(.*?)\s+(\d+)$/);  if (match) {
     data.tlBook = match[1].trim ();
     data.engBook = match[2].trim ();
     data.chapter = match[3].trim ();
-  }
-
-  return data;
+  }  return data;
 }
 // ---------------------------
 // CORE FUNCTIONS: Highlight & Clear
@@ -75,19 +57,13 @@ function clearHighlights () {
     if (eng) eng.style.display = '';
     if (tl) tl.style.display = '';
   });
-}
-
-function applyVerseHighlight () {
+}function applyVerseHighlight () {
   clearHighlights ();
   const inputField = document.getElementById ('verseInput');
   if (!inputField) return;
   const input = inputField.value.trim ();
-  if (!input) return;
-
-  let targets = [];
-  let parts = input.split (/[,\s]+/);
-
-  parts.forEach (part => {
+  if (!input) return;  let targets = [];
+  let parts = input.split (/[,\s]+/);  parts.forEach (part => {
     part = part.trim ();
     if (!part) return;
     if (part.includes ('-')) {
@@ -102,12 +78,8 @@ function applyVerseHighlight () {
       let num = parseInt (part, 10);
       if (!isNaN (num)) targets.push (num);
     }
-  });
-
-  targets = [...new Set (targets)];
-  let firstMatch = null;
-
-  targets.forEach (num => {
+  });  targets = [...new Set (targets)];
+  let firstMatch = null;  targets.forEach (num => {
     const row = document.getElementById ('verse-' + num);
     if (row) {
       row.classList.add ('highlight-verse');
@@ -117,13 +89,9 @@ function applyVerseHighlight () {
       if (verseLanguageMode === 'tagalog' && eng) eng.style.display = 'none';
       if (!firstMatch) firstMatch = row;
     }
-  });
-
-  if (firstMatch)
+  });  if (firstMatch)
     firstMatch.scrollIntoView ({behavior: 'smooth', block: 'center'});
-}
-
-// ---------------------------
+}// ---------------------------
 // COPY FUNCTIONS
 // ---------------------------
 async function performCopy (text, label) {
@@ -133,25 +101,17 @@ async function performCopy (text, label) {
   } catch (err) {
     console.error ('Copy failed', err);
   }
-}
-
-function copyEnglish () {
+}function copyEnglish () {
   const highlightedRows = Array.from (
     document.querySelectorAll ('tr.highlight-verse')
   );
-  if (highlightedRows.length === 0) return alert ('No verses highlighted!');
-
-  highlightedRows.sort (
+  if (highlightedRows.length === 0) return alert ('No verses highlighted!');  highlightedRows.sort (
     (a, b) =>
       parseInt (a.id.replace ('verse-', ''), 10) -
       parseInt (b.id.replace ('verse-', ''), 10)
-  );
-
-  const info = getParsedTitle ();
+  );  const info = getParsedTitle ();
   const sortedRanges = getSortedRangeString (highlightedRows);
-  const cleanTitle = `${info.engBook} ${info.chapter} : ${sortedRanges}`;
-
-  let output = [cleanTitle];
+  const cleanTitle = `${info.engBook} ${info.chapter} : ${sortedRanges}`;  let output = [cleanTitle];
   highlightedRows.forEach (row => {
     const verseNo = row.id.replace ('verse-', '');
     let text = row
@@ -159,28 +119,18 @@ function copyEnglish () {
       .innerText.trim ()
       .replace (/^\d+\s*/, '');
     output.push (`${verseNo} ${text}`);
-  });
-
-  performCopy (output.join ('\n\n'), 'ENGLISH');
-}
-
-function copyTagalog () {
+  });  performCopy (output.join ('\n\n'), 'ENGLISH');
+}function copyTagalog () {
   const highlightedRows = Array.from (
     document.querySelectorAll ('tr.highlight-verse')
   );
-  if (highlightedRows.length === 0) return alert ('No verses highlighted!');
-
-  highlightedRows.sort (
+  if (highlightedRows.length === 0) return alert ('No verses highlighted!');  highlightedRows.sort (
     (a, b) =>
       parseInt (a.id.replace ('verse-', ''), 10) -
       parseInt (b.id.replace ('verse-', ''), 10)
-  );
-
-  const info = getParsedTitle ();
+  );  const info = getParsedTitle ();
   const sortedRanges = getSortedRangeString (highlightedRows);
-  const cleanTitle = `${info.tlBook} ${info.chapter} : ${sortedRanges}`;
-
-  let output = [cleanTitle];
+  const cleanTitle = `${info.tlBook} ${info.chapter} : ${sortedRanges}`;  let output = [cleanTitle];
   highlightedRows.forEach (row => {
     const verseNo = row.id.replace ('verse-', '');
     let text = row
@@ -188,30 +138,18 @@ function copyTagalog () {
       .innerText.trim ()
       .replace (/^\d+\s*/, '');
     output.push (`${verseNo} ${text}`);
-  });
-
-  performCopy (output.join ('\n\n'), 'TAGALOG');
-}
-
-function copyBoth () {
+  });  performCopy (output.join ('\n\n'), 'TAGALOG');
+}function copyBoth () {
   const highlightedRows = Array.from (
     document.querySelectorAll ('tr.highlight-verse')
   );
-  if (highlightedRows.length === 0) return alert ('No verses highlighted!');
-
-  highlightedRows.sort (
+  if (highlightedRows.length === 0) return alert ('No verses highlighted!');  highlightedRows.sort (
     (a, b) =>
       parseInt (a.id.replace ('verse-', ''), 10) -
       parseInt (b.id.replace ('verse-', ''), 10)
-  );
-
-  const info = getParsedTitle ();
-  const sortedRanges = getSortedRangeString (highlightedRows);
-
-  let tagalogLines = [`${info.tlBook} ${info.chapter} : ${sortedRanges}`];
-  let englishLines = [`${info.engBook} ${info.chapter} : ${sortedRanges}`];
-
-  highlightedRows.forEach (row => {
+  );  const info = getParsedTitle ();
+  const sortedRanges = getSortedRangeString (highlightedRows);  let tagalogLines = [`${info.tlBook} ${info.chapter} : ${sortedRanges}`];
+  let englishLines = [`${info.engBook} ${info.chapter} : ${sortedRanges}`];  highlightedRows.forEach (row => {
     const verseNo = row.id.replace ('verse-', '');
     let engText = row
       .querySelector ('.tdenglishbible')
@@ -223,71 +161,43 @@ function copyBoth () {
       .replace (/^\d+\s*/, '');
     englishLines.push (`${verseNo} ${engText}`);
     tagalogLines.push (`${verseNo} ${tlText}`);
-  });
-
-  const finalOutput = [
+  });  const finalOutput = [
     tagalogLines.join ('\n'),
     '',
     englishLines.join ('\n'),
   ].join ('\n');
   performCopy (finalOutput, 'TAGALOG & ENGLISH');
-}
-
-// ---------------------------
+}// ---------------------------
 // LISTENERS & INITIALIZE
 // ---------------------------
 document.addEventListener ('click', function (e) {
   const vlink = e.target.closest ('.vlink');
   const row = e.target.closest ("tr[id^='verse-']");
-  const inputField = document.getElementById ('verseInput');
-
-  if ((vlink || row) && inputField) {
+  const inputField = document.getElementById ('verseInput');  if ((vlink || row) && inputField) {
     if (vlink) e.preventDefault ();
     const verseNum = vlink
       ? vlink.getAttribute ('href').split ('#verse-')[1]
-      : row.id.replace ('verse-', '');
-
-    inputField.value = decodeURIComponent (verseNum);
-    history.replaceState (null, null, '#verse-' + verseNum);
-
-    // ADD THIS LINE to ensure the highlights trigger correctly
+      : row.id.replace ('verse-', '');    inputField.value = decodeURIComponent (verseNum);
+    history.replaceState (null, null, '#verse-' + verseNum);    // ADD THIS LINE to ensure the highlights trigger correctly
     applyVerseHighlight ();
   }
-});
-
-function syncFromHash () {
+});function syncFromHash () {
   const input = document.getElementById('verseInput');
-  if (!input) return;
-
-  const hash = decodeURIComponent(window.location.hash);
-
-  if (hash.startsWith('#verse-')) {
-    const value = hash.replace('#verse-', '');
-
-    // avoid unnecessary re-run
+  if (!input) return;  const hash = decodeURIComponent(window.location.hash);  if (hash.startsWith('#verse-')) {
+    const value = hash.replace('#verse-', '');    // avoid unnecessary re-run
     if (input.value !== value) {
       input.value = value;
       applyVerseHighlight();
     }
   }
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-  const input = document.getElementById('verseInput');
-
-  if (input) {
+}window.addEventListener('DOMContentLoaded', function () {
+  const input = document.getElementById('verseInput');  if (input) {
     input.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
-        e.preventDefault();
-
-        // keep URL in sync
-        history.replaceState(null, null, '#verse-' + input.value.trim());
-
-        applyVerseHighlight();
+        e.preventDefault();        // keep URL in sync
+        history.replaceState(null, null, '#verse-' + input.value.trim());        applyVerseHighlight();
       }
     });
-  }
-
-  // ✅ use shared function
+  }  // ✅ use shared function
   syncFromHash();
 });

@@ -1,25 +1,13 @@
 /* START LOADING IMMEDIATELY */
-loadBible();
-
-document.getElementById('searchBox').addEventListener('keydown', function (e) {
-  if (e.key !== 'Enter') return;
-
-  if (!fuse) {
+loadBible();document.getElementById('searchBox').addEventListener('keydown', function (e) {
+  if (e.key !== 'Enter') return;  if (!fuse) {
     console.log('Search not ready yet...');
     return;
-  }
-
-  const results = fuse.search(this.value);
-  let html = '';
-
-  results.forEach(r => {
-    const item = r.item;
-
-    // 1. DEFAULT STRINGS
+  }  const results = fuse.search(this.value);
+  let html = '';  results.forEach(r => {
+    const item = r.item;    // 1. DEFAULT STRINGS
     let displayEng = item.eng;
-    let displayTag = item.tag;
-
-    // 2. APPLY HIGHLIGHTS IF MATCHES EXIST
+    let displayTag = item.tag;    // 2. APPLY HIGHLIGHTS IF MATCHES EXIST
     if (r.matches) {
       r.matches.forEach(match => {
         if (match.key === 'eng') {
@@ -29,9 +17,7 @@ document.getElementById('searchBox').addEventListener('keydown', function (e) {
           displayTag = highlightMatches(match.value, match.indices);
         }
       });
-    }
-
-    // 3. BUILD HTML (Cleaned: No internal scripts)
+    }    // 3. BUILD HTML (Cleaned: No internal scripts)
     html += `
     <div class="FontChanger">
       <div class="FontWeightChanger">
@@ -68,32 +54,20 @@ document.getElementById('searchBox').addEventListener('keydown', function (e) {
         </table>
       </div>
     </div>`;
-  });
-
-  // Inject the HTML
-  document.getElementById('searchResults').innerHTML = html || '<p>No results found.</p>';
-
-  // 4. RE-APPLY CUSTOMIZATIONS (This makes the table "remember" your settings)
+  });  // Inject the HTML
+  document.getElementById('searchResults').innerHTML = html || '<p>No results found.</p>';  // 4. RE-APPLY CUSTOMIZATIONS (This makes the table "remember" your settings)
   restoreSettings();
-});
-
-/* -------------------------------------------------
+});/* -------------------------------------------------
 RESTORE SETTINGS FUNCTION
 -------------------------------------------------- */
 function restoreSettings() {
   // Restore Language Mode (English/Tagalog/Both)
   const savedMode = localStorage.getItem('bibleMode') || 'both';
-  if (typeof applyMode === 'function') applyMode(savedMode);
-
-  // Restore Font Family
+  if (typeof applyMode === 'function') applyMode(savedMode);  // Restore Font Family
   const savedFont = localStorage.getItem('fontFamilyS') || 'ariF';
-  if (typeof applyFont === 'function') applyFont(savedFont);
-
-  // Restore Font Weight
+  if (typeof applyFont === 'function') applyFont(savedFont);  // Restore Font Weight
   const savedWeight = localStorage.getItem('fontFamilyWeight') || 'FW500';
-  if (typeof applyFontWeight === 'function') applyFontWeight(savedWeight);
-
-  // Restore Font Size
+  if (typeof applyFontWeight === 'function') applyFontWeight(savedWeight);  // Restore Font Size
   const savedSize = localStorage.getItem('bibleFontSize');
   if (savedSize) {
     const size = parseFloat(savedSize);
