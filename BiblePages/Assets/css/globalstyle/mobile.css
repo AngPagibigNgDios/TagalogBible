@@ -1558,8 +1558,8 @@ justify-content: center;
 
 
 
-.oldrow {display:flex; background-color:#e8f7fa; flex-direction: column; width: 50%;}
-.newrow {display:flex; background-color:#ededff; flex-direction: column; width: 50%; text-align: right;}
+.oldrow {display:flex; background-color:#e8f7fa; flex-direction: column; width: 100%;}
+.newrow {display:flex; background-color:#ededff; flex-direction: column; width: 100%; text-align: right;}
 
 #biblemenuanimation {
   z-index: 15;
@@ -1701,7 +1701,7 @@ justify-content: center;
 #bkerevelationverseResult,
 #bkeromansverseResult,
 #bketitusverseResult
-{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray; position: relative}
+{position: relative}
 
 
 #bke1st-chronicles,

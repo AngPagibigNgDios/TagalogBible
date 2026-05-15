@@ -311,11 +311,7 @@ class DiglotThumbMenu extends HTMLElement {
 
 
 
-
-              </div>
-
-              <div id="newrowINNER" class="newrow">
-                
+             
               
 
 <div id="bkematthew" class="NewTestamentbke">
@@ -553,14 +549,8 @@ class DiglotThumbMenu extends HTMLElement {
 		// GO UP
 
 		// GO UP
-		const backUp = this.querySelector('.goupthumb');
 
-		backUp.onclick = function() {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			});
-		};
+
 
 		// MENU TOGGLE
 		const menuButton = this.querySelector('#menuanimation');
@@ -1178,6 +1168,27 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
   }
 }
 
+
+    
+    const backUp = this.querySelector('.goupthumb');
+const backUpMenu= this.querySelector('.newoldholder'); // your scrollable div
+
+          backUp.onclick = function() {
+            // Scroll the whole page
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+
+            // Scroll the menu div
+            backUpMenu.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          };
+
+    
+    
 
       // Run once DOM is ready
       document.addEventListener("DOMContentLoaded", initBible);

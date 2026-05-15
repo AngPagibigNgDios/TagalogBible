@@ -840,47 +840,82 @@ class DiglotMenuFocused extends HTMLElement {
 
 </br>
 </div>
-
 <div class="OtherMenu" id="more-links">
+   <div class="controlheader">CONTROL PANEL</div>
+   <div class="versehighlight">
+      Type Range or Random or Both. Press Enter<br/>
+      <hr style="width:100%;">
+      <strong>VERSE HIGHLIGHT</strong>
+   </div>
+   <div class="controls-row input-row">
+      <input id="verseInput" placeholder="1-10, 2,5,9, Press Enter" type="text"/>
+   </div>
+   <div class="copybuttons">
+      <div class="dualplacement">
+         <div class="controldiglot diglot2" onclick="copyEnglish()">COPY ENGLISH</div>
+         <div class="controldiglot diglot2" onclick="copyTagalog()">COPY TAGALOG</div>
+      </div>
+      <div class="soloplacement">
+         <div class="controldiglot diglot2" onclick="copyBoth()">COPY DIGLOT</div>
+      </div>
+   </div>
+   <div class="controlheader marginhere">TEXT SIZE</div>
+   <div class="copybuttons marginhere">
+      <div class="dualplacement">
+         <div class="textresizerButton resizebutton" onclick="decreaseFont()"> SMALLER TEXT </div>
+         <div class="textresizerButton resizebutton" onclick="increaseFont()"> BIGGER TEXT </div>
+      </div>
+      <div class="soloplacement">
+         <div class="textresizerButton resizebutton2" onclick="resetFont()"> RESET SIZE</div>
+      </div>
+   </div>
+   <div class="controlheader marginhere">SHOW / HIDE BIBLE</div>
+   <div class="copybuttons marginhere">
+      <div class="dualplacement">
+         <div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
+         <div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
+      </div>
+      <div class="soloplacement">
+         <div class="controldiglot" onclick="showAll()"> DIGLOT </div>
+      </div>
+   </div>
+   <div class="controlheader marginhere">CHOOSE FONT</div>
+   <div class="dualplacement">
+      <div class="fontchoiceButton litF changedcolor" onclick="LiterataSF()">LITERATA<br />Serif</div>
+      <div class="fontchoiceButton lorF changedcolor" onclick="LoraSF()">LORA <br />Serif </div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontchoiceButton  elaF changedcolor" onclick="GelasioSF()"> GELASIO <br /> Serif </div>
+      <div class="fontchoiceButton  opsF changedcolor" onclick="OpenSS()"> OPEN <br /> Sans-Serif </div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontchoiceButton  indF changedcolor" onclick="InterSS()"> INTER <br /> Sans-Serif </div>
+      <div class="fontchoiceButton lexF changedcolor" onclick="LexendSS()"> LEXEND <br /> Sans-Serif </div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontchoiceButton  pbsF changedcolor" onclick="PublicSS()"> PUBLIC <br /> Sans-Serif </div>
+      <div class="fontchoiceButton  ariF changedcolor" onclick="ArimoSS()"> ARIMO <br /> Sans-Serif </div>
+   </div>
+
+    <div class="controlheader marginhere">FONT THICKNESS</div>
+
+   <div class="dualplacement">
+      <div class="fontweightButton FW350" onclick="FW350FF()">Weight <br />350</div>
+      <div class="fontweightButton FW400" onclick="FW400FF()">Weight <br />400</div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontweightButton FW500" onclick="FW500FF()">Weight <br />500</div>
+      <div class="fontweightButton FW600" onclick="FW600FF()">Weight <br />600</div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontweightButton FW700" onclick="FW700FF()">Weight <br />700</div>
+      <div class="fontweightButton FW800" onclick="FW800FF()">Weight <br />800</div>
+   </div>
 
 
-
-<div class="controlheader">CONTROL PANEL</div>
-<div class="versehighlight">Type Number Range or Random or Both.<br/><hr style="width:100%;"><strong>VERSE HIGHLIGHT</strong></div>
-
-<div class="controls-row input-row">
-<input id="verseInput" placeholder="1-10, 2,5,9, Press Enter" type="text"/>
 </div>
 
-<div class="controls-row">
-<div class="controldiglot" onclick="copyEnglish()"> Copy English </div>
-<div class="controldiglot" onclick="copyTagalog()"> Copy Tagalog </div>
-<div class="controldiglot" onclick="copyBoth()"> Copy Diglot </div>
-</div>
-           
-                   
-<div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
-<div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
-<div class="controldiglot" onclick="showAll()"> DIGLOT </div>
 
-<div class="textresizerButton" onclick="decreaseFont()"> SMALLER TEXT </div>
-<div class="textresizerButton" onclick="resetFont()"> RESET SIZE</div>
-<div class="textresizerButton" onclick="increaseFont()"> BIGGER TEXT </div>
-
-
-
-
-
-
-
-         
-
-                      
-
-               
-
-
-</div>
 
         `;
       setTimeout(() => {

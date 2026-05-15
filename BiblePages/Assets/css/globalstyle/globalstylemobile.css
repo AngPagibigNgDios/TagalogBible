@@ -3,6 +3,7 @@ html {
   height: auto;
   width: 100%;
   font-family: "Arimo", Arial, FreeSans, Helvetica, sans-serif;
+  background-color: #122051;
 }
 
 body {
@@ -702,7 +703,7 @@ div.indent {
 
 .headermaroon {
 
-  background-color: maroon;
+  background-color: #122051;
 }
 
 .headerblue {

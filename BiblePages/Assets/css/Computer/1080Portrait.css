@@ -1362,6 +1362,7 @@ a.clink:visited {
   left: 0;
   bottom: 0;
   max-width: 250px;
+  overflow:auto;
 }
 
 
@@ -1455,3 +1456,52 @@ a.clink:visited {
   justify-content: center;
   gap: 5%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.diglotfooterdiv {position:relative; bottom:0px; width: 100%; height: 10%; background-color: white; height:100px}
+
+
+
+
+
+
+
+
+
+
+.OtherMenu {overflow-y: auto; overflow-x: hidden;}
+
+
+
+.controlheader{font-weight: bold; text-align: center; border-top: 2px solid #0f0f46;padding:3px; border-bottom:2px solid #0f0f46;} 
+
+.versehighlight {text-align: center;}
+
+
+.copybuttons{display:flex; flex-direction: column; gap:5%; }
+.dualplacement{display:flex; flex-direction: row; justify-content: center; align-items: center; align-content: center; gap:5%; text-align: center;}
+.soloplacement{display: flex; width:100%; margin-top: 3%; height: auto; justify-content: center; align-items: center; align-content: center; margin-bottom:3%;}
+
+
+.marginhere {margin-top: 5%; margin-bottom: 5%;}
+
+
+
+.resizebutton {width: 100% !important; display:flex; display: flex;}
+
+.resizebutton2 {width: 50% !important; display:flex; display: flex;}
+
+.diglot2 {padding-top:5% !important; padding-bottom:5% !important;}
+
+.changedcolor {background-color: #ffffff; border: 1px solid #0f0f46; color:rgb(0, 0, 0); padding-bottom: 5%; padding-top:5%;}
