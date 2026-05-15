@@ -1,0 +1,825 @@
+class DiglotThumbMenu extends HTMLElement {
+	connectedCallback() {
+
+		this.innerHTML = `
+        <div id="biblemenuanimation">
+
+
+
+          <div class="testamentsholderthumb">
+            <div class="topspacer">
+
+            </div>
+            <div class="menuheader">
+              TESTAMENTS
+            </div>
+            <div class="newoldholder">
+
+              <div id="oldrowINNER" class="oldrow">
+
+              
+                        <div id="bkeGenesis"class="OldTestamentbke"><span class="oldlanguage">Genesis</span><span class="oldsublanguage">(Genesis)</span> </div>
+                        <div id="bkeGenesischaptersResult"class="chapterResult"></div>
+                        <div id="bkeGenesisverseResult"class="verseResult"></div>
+
+                        <div id="bkeExodus"class="OldTestamentbke"><span class="oldlanguage">Exodus</span><span class="oldsublanguage">(Exodo)</span> </div>
+                        <div id="bkeExoduschaptersResult"class="chapterResult"></div>
+                        <div id="bkeExodusverseResult"class="verseResult"></div>
+
+                        <div id="bkeLeviticus"class="OldTestamentbke"><span class="oldlanguage">Leviticus</span><span class="oldsublanguage">(Levitico)</span> </div>
+                        <div id="bkeLeviticuschaptersResult"class="chapterResult"></div>
+                        <div id="bkeLeviticusverseResult"class="verseResult"></div>
+
+                        <div id="bkeNumbers"class="OldTestamentbke"><span class="oldlanguage">Numbers</span><span class="oldsublanguage">(Mga Bilang)</span> </div>
+                        <div id="bkeNumberschaptersResult"class="chapterResult"></div>
+                        <div id="bkeNumbersverseResult"class="verseResult"></div>
+
+                        <div id="bkeDeuteronomy"class="OldTestamentbke"><span class="oldlanguage">Deuteronomy</span><span class="oldsublanguage">(Deuteronomio)</span> </div>
+                        <div id="bkeDeuteronomychaptersResult"class="chapterResult"></div>
+                        <div id="bkeDeuteronomyverseResult"class="verseResult"></div>
+
+                        <div id="bkeJosue"class="OldTestamentbke"><span class="oldlanguage">Josue</span><span class="oldsublanguage">(Deuteronomio)</span> </div>
+                        <div id="bkeJosuechaptersResult"class="chapterResult"></div>
+                        <div id="bkeJosueverseResult"class="verseResult"></div>
+
+                        <div id="bkeJudges"class="OldTestamentbke"><span class="oldlanguage">Judges</span><span class="oldsublanguage">(Mga Hukom)</span> </div>
+                        <div id="bkeJudgeschaptersResult"class="chapterResult"></div>
+                        <div id="bkeJudgesverseResult"class="verseResult"></div>
+
+                        <div id="bkeRuth"class="OldTestamentbke"><span class="oldlanguage">Ruth</span><span class="oldsublanguage">(Ruth)</span> </div>
+                        <div id="bkeRuthchaptersResult"class="chapterResult"></div>
+                        <div id="bkeRuthverseResult"class="verseResult"></div>
+
+                        <div id="bke1Samuel" class="OldTestamentbke"><span class="oldlanguage">1 Samuel</span><span class="oldsublanguage">(1 Samuel)</span> </div>
+                        <div id="bke1SamuelchaptersResult" class="chapterResult"></div>
+                        <div id="bke1SamuelverseResult" class="verseResult"></div>
+
+                        <div id="bke2Samuel" class="OldTestamentbke"><span class="oldlanguage">2 Samuel</span><span class="oldsublanguage">(2 Samuel)</span> </div>
+                        <div id="bke2SamuelchaptersResult" class="chapterResult"></div>
+                        <div id="bke2SamuelverseResult" class="verseResult"></div>
+
+                        <div id="bke1Kings" class="OldTestamentbke"><span class="oldlanguage">1 Kings</span><span class="oldsublanguage">(1 Mga Hari)</span> </div>
+                        <div id="bke1KingschaptersResult" class="chapterResult"></div>
+                        <div id="bke1KingsverseResult" class="verseResult"></div>
+
+                        <div id="bke2Kings" class="OldTestamentbke"><span class="oldlanguage">2 Kings</span><span class="oldsublanguage">(2 Mga Hari)</span> </div>
+                        <div id="bke2KingschaptersResult" class="chapterResult"></div>
+                        <div id="bke2KingsverseResult" class="verseResult"></div>
+
+                        <div id="bke1Chronicles" class="OldTestamentbke"><span class="oldlanguage">1 Chronicles</span><span class="oldsublanguage">(1 Mga Cronica)</span> </div>
+                        <div id="bke1ChronicleschaptersResult" class="chapterResult"></div>
+                        <div id="bke1ChroniclesverseResult" class="verseResult"></div>
+
+                        <div id="bke2Chronicles" class="OldTestamentbke"><span class="oldlanguage">2 Chronicles</span><span class="oldsublanguage">(2 Mga Cronica)</span> </div>
+                        <div id="bke2ChronicleschaptersResult" class="chapterResult"></div>
+                        <div id="bke2ChroniclesverseResult" class="verseResult"></div>
+
+                        <div id="bkeEzra"class="OldTestamentbke"><span class="oldlanguage">Ezra</span><span class="oldsublanguage">(Ezra)</span> </div>
+                        <div id="bkeEzrachaptersResult"class="chapterResult"></div>
+                        <div id="bkeEzraverseResult"class="verseResult"></div>
+
+                        <div id="bkeNehemiah"class="OldTestamentbke"><span class="oldlanguage">Nehemiah</span><span class="oldsublanguage">(Nehemias)</span> </div>
+                        <div id="bkeNehemiahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeNehemiahverseResult"class="verseResult"></div>
+
+                        <div id="bkeEsther"class="OldTestamentbke"><span class="oldlanguage">Esther</span><span class="oldsublanguage">(Ester)</span> </div>
+                        <div id="bkeEstherchaptersResult"class="chapterResult"></div>
+                        <div id="bkeEstherverseResult"class="verseResult"></div>
+
+                        <div id="bkeJob"class="OldTestamentbke"><span class="oldlanguage">Job</span><span class="oldsublanguage">(Job)</span> </div>
+                        <div id="bkeJobchaptersResult"class="chapterResult"></div>
+                        <div id="bkeJobverseResult"class="verseResult"></div>
+
+                        <div id="bkePsalms"class="OldTestamentbke"><span class="oldlanguage">Psalms</span><span class="oldsublanguage">(Mga Awit)</span> </div>
+                        <div id="bkePsalmschaptersResult"class="chapterResult"></div>
+                        <div id="bkePsalmsverseResult"class="verseResult"></div>
+
+                        <div id="bkeProverbs"class="OldTestamentbke"><span class="oldlanguage">Proverbs</span><span class="oldsublanguage">(Kawikaan)</span> </div>
+                        <div id="bkeProverbschaptersResult"class="chapterResult"></div>
+                        <div id="bkeProverbsverseResult"class="verseResult"></div>
+
+                        <div id="bkeEcclesiastes"class="OldTestamentbke"><span class="oldlanguage">Ecclesiastes</span><span class="oldsublanguage">(Eclesiastes)</span> </div>
+                        <div id="bkeEcclesiasteschaptersResult"class="chapterResult"></div>
+                        <div id="bkeEcclesiastesverseResult"class="verseResult"></div>
+
+                        <div id="bkeSongof Solomon" class="OldTestamentbke"><span class="oldlanguage">Song of Solomon</span><span class="oldsublanguage">(Awit ng Mga Awit)</span> </div>
+                        <div id="bkeSongof SolomonchaptersResult" class="chapterResult"></div>
+                        <div id="bkeSongof SolomonverseResult" class="verseResult"></div>
+
+                        <div id="bkeIsaiah"class="OldTestamentbke"><span class="oldlanguage">Isaiah</span><span class="oldsublanguage">(Isaias)</span> </div>
+                        <div id="bkeIsaiahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeIsaiahverseResult"class="verseResult"></div>
+
+                        <div id="bkeJeremiah"class="OldTestamentbke"><span class="oldlanguage">Jeremiah</span><span class="oldsublanguage">(Jeremias)</span> </div>
+                        <div id="bkeJeremiahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeJeremiahverseResult"class="verseResult"></div>
+
+                        <div id="bkeLamentations"class="OldTestamentbke"><span class="oldlanguage">Lamentations</span><span class="oldsublanguage">(Mga Panaghoy)</span> </div>
+                        <div id="bkeLamentationschaptersResult"class="chapterResult"></div>
+                        <div id="bkeLamentationsverseResult"class="verseResult"></div>
+
+                        <div id="bkeEzekiel"class="OldTestamentbke"><span class="oldlanguage">Ezekiel</span><span class="oldsublanguage">(Ezekiel)</span> </div>
+                        <div id="bkeEzekielchaptersResult"class="chapterResult"></div>
+                        <div id="bkeEzekielverseResult"class="verseResult"></div>
+
+                        <div id="bkeDaniel"class="OldTestamentbke"><span class="oldlanguage">Daniel</span><span class="oldsublanguage">(Daniel)</span> </div>
+                        <div id="bkeDanielchaptersResult"class="chapterResult"></div>
+                        <div id="bkeDanielverseResult"class="verseResult"></div>
+
+                        <div id="bkeHosea"class="OldTestamentbke"><span class="oldlanguage">Hosea</span><span class="oldsublanguage">(Oseas)</span> </div>
+                        <div id="bkeHoseachaptersResult"class="chapterResult"></div>
+                        <div id="bkeHoseaverseResult"class="verseResult"></div>
+
+                        <div id="bkeJoel"class="OldTestamentbke"><span class="oldlanguage">Joel</span><span class="oldsublanguage">(Joel)</span> </div>
+                        <div id="bkeJoelchaptersResult"class="chapterResult"></div>
+                        <div id="bkeJoelverseResult"class="verseResult"></div>
+
+                        <div id="bkeAmos"class="OldTestamentbke"><span class="oldlanguage">Amos</span><span class="oldsublanguage">(Amos)</span> </div>
+                        <div id="bkeAmoschaptersResult"class="chapterResult"></div>
+                        <div id="bkeAmosverseResult"class="verseResult"></div>
+
+                        <div id="bkeObadiah"class="OldTestamentbke"><span class="oldlanguage">Obadiah</span><span class="oldsublanguage">(Obadias)</span> </div>
+                        <div id="bkeObadiahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeObadiahverseResult"class="verseResult"></div>
+
+                        <div id="bkeJonah"class="OldTestamentbke"><span class="oldlanguage">Jonah</span><span class="oldsublanguage">(Jonas)</span> </div>
+                        <div id="bkeJonahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeJonahverseResult"class="verseResult"></div>
+
+                        <div id="bkeMicah"class="OldTestamentbke"><span class="oldlanguage">Micah</span><span class="oldsublanguage">(Mikas)</span> </div>
+                        <div id="bkeMicahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeMicahverseResult"class="verseResult"></div>
+
+                        <div id="bkeNahum"class="OldTestamentbke"><span class="oldlanguage">Nahum</span><span class="oldsublanguage">(Naum)</span> </div>
+                        <div id="bkeNahumchaptersResult"class="chapterResult"></div>
+                        <div id="bkeNahumverseResult"class="verseResult"></div>
+
+                        <div id="bkeHabakkuk"class="OldTestamentbke"><span class="oldlanguage">Habakkuk</span><span class="oldsublanguage">(Habacuc)</span> </div>
+                        <div id="bkeHabakkukchaptersResult"class="chapterResult"></div>
+                        <div id="bkeHabakkukverseResult"class="verseResult"></div>
+
+                        <div id="bkeZephaniah"class="OldTestamentbke"><span class="oldlanguage">Zephaniah</span><span class="oldsublanguage">(Sofonias)</span> </div>
+                        <div id="bkeZephaniahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeZephaniahverseResult"class="verseResult"></div>
+
+                        <div id="bkeHaggai"class="OldTestamentbke"><span class="oldlanguage">Haggai</span><span class="oldsublanguage">(Ageo)</span> </div>
+                        <div id="bkeHaggaichaptersResult"class="chapterResult"></div>
+                        <div id="bkeHaggaiverseResult"class="verseResult"></div>
+
+                        <div id="bkeZechariah"class="OldTestamentbke"><span class="oldlanguage">Zechariah</span><span class="oldsublanguage">(Zacarias)</span> </div>
+                        <div id="bkeZechariahchaptersResult"class="chapterResult"></div>
+                        <div id="bkeZechariahverseResult"class="verseResult"></div>
+
+                        <div id="bkeMalachi"class="OldTestamentbke"><span class="oldlanguage">Malachi</span><span class="oldsublanguage">(Malakias)</span> </div>
+                        <div id="bkeMalachichaptersResult"class="chapterResult"></div>
+                        <div id="bkeMalachiverseResult"class="verseResult"></div>
+
+
+              </div>
+
+              <div id="newrowINNER" class="newrow">
+                
+              
+
+                        <div id="bkeMatthew"class="NewTestamentbke"><span class="newlanguage">Matthew</span><span class="newsublanguage">(Mateo)</span> </div>
+                        <div id="bkeMatthewchaptersResult"class="chapterResult"></div>
+                        <div id="bkeMatthewverseResult"class="verseResult"></div>
+
+                        <div id="bkeMark"class="NewTestamentbke"><span class="newlanguage">Mark</span><span class="newsublanguage">(Marcos)</span> </div>
+                        <div id="bkeMarkchaptersResult"class="chapterResult"></div>
+                        <div id="bkeMarkverseResult"class="verseResult"></div>
+
+                        <div id="bkeLuke"class="NewTestamentbke"><span class="newlanguage">Luke</span><span class="newsublanguage">(Lucas)</span> </div>
+                        <div id="bkeLukechaptersResult"class="chapterResult"></div>
+                        <div id="bkeLukeverseResult"class="verseResult"></div>
+
+                        <div id="bkeJohn"class="NewTestamentbke"><span class="newlanguage">John</span><span class="newsublanguage">(Juan)</span> </div>
+                        <div id="bkeJohnchaptersResult"class="chapterResult"></div>
+                        <div id="bkeJohnverseResult"class="verseResult"></div>
+
+                        <div id="bkeActs"class="NewTestamentbke"><span class="newlanguage">Acts</span><span class="newsublanguage">(Mga Gawa)</span> </div>
+                        <div id="bkeActschaptersResult"class="chapterResult"></div>
+                        <div id="bkeActsverseResult"class="verseResult"></div>
+                          
+
+                        <div id="bkeRomans"class="NewTestamentbke"><span class="newlanguage">Romans</span><span class="newsublanguage">(Mga Taga Roma)</span> </div>
+                        <div id="bkeRomanschaptersResult"class="chapterResult"></div>
+                        <div id="bkeRomansverseResult"class="verseResult"></div>
+
+                        <div id="bke1stCorinthians" class="NewTestamentbke"><span class="newlanguage">1st Corinthians</span><span class="newsublanguage">(1 Mga Taga Corinto)</span> </div>
+                        <div id="bke1stCorinthianschaptersResult" class="chapterResult"></div>
+                        <div id="bke1stCorinthiansverseResult" class="verseResult"></div>
+
+                        <div id="bke2ndCorinthians" class="NewTestamentbke"><span class="newlanguage">2nd Corinthians</span><span class="newsublanguage">(2 Mga Taga Corinto)</span> </div>
+                        <div id="bke2ndCorinthianschaptersResult" class="chapterResult"></div>
+                        <div id="bke2ndCorinthiansverseResult" class="verseResult"></div>
+
+                        <div id="bkeGalatians"class="NewTestamentbke"><span class="newlanguage">Galatians</span><span class="newsublanguage">(2 Mga Taga Galacia)</span> </div>
+                        <div id="bkeGalatianschaptersResult"class="chapterResult"></div>
+                        <div id="bkeGalatiansverseResult"class="verseResult"></div>
+
+                        <div id="bkeEphesians"class="NewTestamentbke"><span class="newlanguage">Ephesians</span><span class="newsublanguage">(Mga Taga Efeso)</span> </div>
+                        <div id="bkeEphesianschaptersResult"class="chapterResult"></div>
+                        <div id="bkeEphesiansverseResult"class="verseResult"></div>
+
+                        <div id="bkePhilippians"class="NewTestamentbke"><span class="newlanguage">Philippians</span><span class="newsublanguage">(Mga Taga Filipos)</span> </div>
+                        <div id="bkePhilippianschaptersResult"class="chapterResult"></div>
+                        <div id="bkePhilippiansverseResult"class="verseResult"></div>
+
+                        <div id="bkeColossians"class="NewTestamentbke"><span class="newlanguage">Colossians</span><span class="newsublanguage">(Mga Taga Colosas)</span> </div>
+                        <div id="bkeColossianschaptersResult"class="chapterResult"></div>
+                        <div id="bkeColossiansverseResult"class="verseResult"></div>
+
+                        <div id="bke1stThessalonians" class="NewTestamentbke"><span class="newlanguage">1st Thessalonians</span><span class="newsublanguage">(1 Mga Taga Tesalonica)</span> </div>
+                        <div id="bke1stThessalonianschaptersResult" class="chapterResult"></div>
+                        <div id="bke1stThessaloniansverseResult" class="verseResult"></div>
+
+                        <div id="bke2ndThessalonians" class="NewTestamentbke"><span class="newlanguage">2nd Thessalonians</span><span class="newsublanguage">(2 Mga Taga Tesalonica)</span> </div>
+                        <div id="bke2ndThessalonianschaptersResult" class="chapterResult"></div>
+                        <div id="bke2ndThessaloniansverseResult" class="verseResult"></div>
+
+                        <div id="bke1stTimothy" class="NewTestamentbke"><span class="newlanguage">1st Timothy</span><span class="newsublanguage">(1 Kay Timoteo)</span> </div>
+                        <div id="bke1stTimothychaptersResult" class="chapterResult"></div>
+                        <div id="bke1stTimothyverseResult" class="verseResult"></div>
+
+                        <div id="bke2ndTimothy" class="NewTestamentbke"><span class="newlanguage">2nd Timothy</span><span class="newsublanguage">(2 Kay Timoteo)</span> </div>
+                        <div id="bke2ndTimothychaptersResult" class="chapterResult"></div>
+                        <div id="bke2ndTimothyverseResult" class="verseResult"></div>
+
+                        <div id="bkeTitus"class="NewTestamentbke"><span class="newlanguage">Titus</span><span class="newsublanguage">(Kay Tito)</span> </div>
+                        <div id="bkeTituschaptersResult"class="chapterResult"></div>
+                        <div id="bkeTitusverseResult"class="verseResult"></div>
+
+                        <div id="bkePhilemon"class="NewTestamentbke"><span class="newlanguage">Philemon</span><span class="newsublanguage">(Filemon)</span> </div>
+                        <div id="bkePhilemonchaptersResult"class="chapterResult"></div>
+                        <div id="bkePhilemonverseResult"class="verseResult"></div>
+
+                        <div id="bkeHebrews"class="NewTestamentbke"><span class="newlanguage">Hebrews</span><span class="newsublanguage">(Mga Hebreo)</span> </div>
+                        <div id="bkeHebrewschaptersResult"class="chapterResult"></div>
+                        <div id="bkeHebrewsverseResult"class="verseResult"></div>
+
+                        <div id="bkeJames"class="NewTestamentbke"><span class="newlanguage">James</span><span class="newsublanguage">(Santiago)</span> </div>
+                        <div id="bkeJameschaptersResult"class="chapterResult"></div>
+                        <div id="bkeJamesverseResult"class="verseResult"></div>
+
+                        <div id="bke1Peter" class="NewTestamentbke"><span class="newlanguage">1 Peter</span><span class="newsublanguage">(1 Pedro)</span> </div>
+                        <div id="bke1PeterchaptersResult" class="chapterResult"></div>
+                        <div id="bke1PeterverseResult" class="verseResult"></div>
+
+                        <div id="bke2Peter" class="NewTestamentbke"><span class="newlanguage">2 Peter</span><span class="newsublanguage">(2 Pedro)</span> </div>
+                        <div id="bke2PeterchaptersResult" class="chapterResult"></div>
+                        <div id="bke2PeterverseResult" class="verseResult"></div>
+
+                        <div id="bke1John" class="NewTestamentbke"><span class="newlanguage">1 John</span><span class="newsublanguage">(1 Juan)</span> </div>
+                        <div id="bke1JohnchaptersResult" class="chapterResult"></div>
+                        <div id="bke1JohnverseResult" class="verseResult"></div>
+
+                        <div id="bke2John" class="NewTestamentbke"><span class="newlanguage">2 John</span><span class="newsublanguage">(2 Juan)</span> </div>
+                        <div id="bke2JohnchaptersResult" class="chapterResult"></div>
+                        <div id="bke2JohnverseResult" class="verseResult"></div>
+
+                        <div id="bke3John" class="NewTestamentbke"><span class="newlanguage">3 John</span><span class="newsublanguage">(3 Juan)</span> </div>
+                        <div id="bke3JohnchaptersResult" class="chapterResult"></div>
+                        <div id="bke3JohnverseResult" class="verseResult"></div>
+
+                        <div id="bkeJude"class="NewTestamentbke"><span class="newlanguage">Jude</span><span class="newsublanguage">(Judas)</span> </div>
+                        <div id="bkeJudechaptersResult"class="chapterResult"></div>
+                        <div id="bkeJudeverseResult"class="verseResult"></div>
+
+                        <div id="bkeRevelation"class="NewTestamentbke"><span class="newlanguage">Revelation</span><span class="newsublanguage">(Pahayag)</span> </div>
+                        <div id="bkeRevelationchaptersResult"class="chapterResult"></div>
+                        <div id="bkeRevelationverseResult"class="verseResult"></div>
+
+
+
+
+
+
+              </div>
+
+            </div>
+
+
+        </div>
+
+
+   </div>
+
+
+
+
+
+        <div id="thumbmenuholder">
+          <div class="bibleversesthumb" id="menuanimation">
+              <span id="openbiblemenu">BIBLE MENU ☰</span>
+              <span id="closebiblemenu">BIBLE MENU ✖</span>
+          </div>
+          <div class="goupthumb" id="goUpScroll">
+              <div>GO            </div>
+              <div>&nbsp;▲&nbsp;</div>
+              <div>UP</div>
+          </div>
+          <div class="biblecontrollthumb">
+              <span id="openmenu">☰ OTHER MENU</span>
+              <span id="closemenu">✖ OTHER MENU</span>
+          </div>
+        </div>
+        <ul id="upnimation" class="animate">
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+          <li>▲</li>
+        </ul>
+		`;
+
+		// GO UP
+
+		// GO UP
+		const backUp = this.querySelector('.goupthumb');
+
+		backUp.onclick = function() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		};
+
+		// MENU TOGGLE
+		const menuButton = this.querySelector('#menuanimation');
+		const menuDiv = this.querySelector('#biblemenuanimation');
+		const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
+		const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
+
+		menuButton.onclick = function() {
+			const isHidden = window.getComputedStyle(menuDiv).display === "none";
+
+			// toggle menu visibility
+			menuDiv.style.display = isHidden ? "block" : "none";
+
+			// toggle spans
+			spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
+			spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
+
+			// control body and html scrollbars
+			if (isHidden) {
+				document.body.style.overflow = "hidden";
+				document.documentElement.style.overflow = "hidden";
+				// allow scrolling inside the menu itself
+				menuDiv.style.overflowY = "auto";
+				menuDiv.style.overflowX = "hidden"; // optional, if you only want vertical scroll
+			} else {
+				document.body.style.overflow = "";
+				document.documentElement.style.overflow = "";
+				menuDiv.style.overflow = "";
+			}
+
+
+		};
+
+
+		const goUpBtn = this.querySelector("#goUpScroll");
+
+		goUpBtn.addEventListener("click", goUpAnimation);
+
+		function goUpAnimation() {
+			const arrows = document.querySelectorAll('#upnimation li');
+			arrows.forEach((li, index) => {
+				li.style.animation = "none"; // reset
+				li.offsetHeight; // force reflow    // calculate stagger delay based on index
+				const delay = 0.2 * index; // 0.2s apart
+				const opacity = 1 - (index * 0.15); // fade each arrow more    li.style.opacity = opacity > 0 ? opacity : 0.1;
+				li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
+			});
+		}
+
+
+
+		async function loadBibleData() {
+			const response = await fetch("../Assets/js/fuse/testamentsindex.json");
+			const data = await response.json();
+			return data;
+		}
+
+
+
+		const bibleBooks = {
+			Genesis: {
+				book: document.getElementById("bkeGenesis"),
+				chapters: document.getElementById("bkeGenesischaptersResult"),
+				verses: document.getElementById("bkeGenesisverseResult")
+			},
+			Exodus: {
+				book: document.getElementById("bkeExodus"),
+				chapters: document.getElementById("bkeExoduschaptersResult"),
+				verses: document.getElementById("bkeExodusverseResult")
+			},
+			Leviticus: {
+				book: document.getElementById("bkeLeviticus"),
+				chapters: document.getElementById("bkeLeviticuschaptersResult"),
+				verses: document.getElementById("bkeLeviticusverseResult")
+			},
+			Numbers: {
+				book: document.getElementById("bkeNumbers"),
+				chapters: document.getElementById("bkeNumberschaptersResult"),
+				verses: document.getElementById("bkeNumbersverseResult")
+			},
+			Deuteronomy: {
+				book: document.getElementById("bkeDeuteronomy"),
+				chapters: document.getElementById("bkeDeuteronomychaptersResult"),
+				verses: document.getElementById("bkeDeuteronomyverseResult")
+			},
+			Josue: {
+				book: document.getElementById("bkeJosue"),
+				chapters: document.getElementById("bkeJosuechaptersResult"),
+				verses: document.getElementById("bkeJosueverseResult")
+			},
+			Judges: {
+				book: document.getElementById("bkeJudges"),
+				chapters: document.getElementById("bkeJudgeschaptersResult"),
+				verses: document.getElementById("bkeJudgesverseResult")
+			},
+			Ruth: {
+				book: document.getElementById("bkeRuth"),
+				chapters: document.getElementById("bkeRuthchaptersResult"),
+				verses: document.getElementById("bkeRuthverseResult")
+			},
+			"1-Samuel": {
+				book: document.getElementById("bke1-Samuel"),
+				chapters: document.getElementById("bke1-SamuelchaptersResult"),
+				verses: document.getElementById("bke1-SamuelverseResult")
+			},
+			"2Samuel": {
+				book: document.getElementById("bke2Samuel"),
+				chapters: document.getElementById("bke2SamuelchaptersResult"),
+				verses: document.getElementById("bke2SamuelverseResult")
+			},
+			"1-Kings": {
+				book: document.getElementById("bke1-Kings"),
+				chapters: document.getElementById("bke1-KingschaptersResult"),
+				verses: document.getElementById("bke1-KingsverseResult")
+			},
+			"2Kings": {
+				book: document.getElementById("bke2Kings"),
+				chapters: document.getElementById("bke2KingschaptersResult"),
+				verses: document.getElementById("bke2KingsverseResult")
+			},
+			"1-Chronicles": {
+				book: document.getElementById("bke1-Chronicles"),
+				chapters: document.getElementById("bke1-ChronicleschaptersResult"),
+				verses: document.getElementById("bke1-ChroniclesverseResult")
+			},
+			"2Chronicles": {
+				book: document.getElementById("bke2Chronicles"),
+				chapters: document.getElementById("bke2ChronicleschaptersResult"),
+				verses: document.getElementById("bke2ChroniclesverseResult")
+			},
+			Ezra: {
+				book: document.getElementById("bkeEzra"),
+				chapters: document.getElementById("bkeEzrachaptersResult"),
+				verses: document.getElementById("bkeEzraverseResult")
+			},
+			Nehemiah: {
+				book: document.getElementById("bkeNehemiah"),
+				chapters: document.getElementById("bkeNehemiahchaptersResult"),
+				verses: document.getElementById("bkeNehemiahverseResult")
+			},
+			Esther: {
+				book: document.getElementById("bkeEsther"),
+				chapters: document.getElementById("bkeEstherchaptersResult"),
+				verses: document.getElementById("bkeEstherverseResult")
+			},
+			Job: {
+				book: document.getElementById("bkeJob"),
+				chapters: document.getElementById("bkeJobchaptersResult"),
+				verses: document.getElementById("bkeJobverseResult")
+			},
+			Psalms: {
+				book: document.getElementById("bkePsalms"),
+				chapters: document.getElementById("bkePsalmschaptersResult"),
+				verses: document.getElementById("bkePsalmsverseResult")
+			},
+			Proverbs: {
+				book: document.getElementById("bkeProverbs"),
+				chapters: document.getElementById("bkeProverbschaptersResult"),
+				verses: document.getElementById("bkeProverbsverseResult")
+			},
+			Ecclesiastes: {
+				book: document.getElementById("bkeEcclesiastes"),
+				chapters: document.getElementById("bkeEcclesiasteschaptersResult"),
+				verses: document.getElementById("bkeEcclesiastesverseResult")
+			},
+			SongofSolomon: {
+				book: document.getElementById("bkeSongofSolomon"),
+				chapters: document.getElementById("bkeSongofSolomonchaptersResult"),
+				verses: document.getElementById("bkeSongofSolomonverseResult")
+			},
+			Isaiah: {
+				book: document.getElementById("bkeIsaiah"),
+				chapters: document.getElementById("bkeIsaiahchaptersResult"),
+				verses: document.getElementById("bkeIsaiahverseResult")
+			},
+			Jeremiah: {
+				book: document.getElementById("bkeJeremiah"),
+				chapters: document.getElementById("bkeJeremiahchaptersResult"),
+				verses: document.getElementById("bkeJeremiahverseResult")
+			},
+			Lamentations: {
+				book: document.getElementById("bkeLamentations"),
+				chapters: document.getElementById("bkeLamentationschaptersResult"),
+				verses: document.getElementById("bkeLamentationsverseResult")
+			},
+			Ezekiel: {
+				book: document.getElementById("bkeEzekiel"),
+				chapters: document.getElementById("bkeEzekielchaptersResult"),
+				verses: document.getElementById("bkeEzekielverseResult")
+			},
+			Daniel: {
+				book: document.getElementById("bkeDaniel"),
+				chapters: document.getElementById("bkeDanielchaptersResult"),
+				verses: document.getElementById("bkeDanielverseResult")
+			},
+			Hosea: {
+				book: document.getElementById("bkeHosea"),
+				chapters: document.getElementById("bkeHoseachaptersResult"),
+				verses: document.getElementById("bkeHoseaverseResult")
+			},
+			Joel: {
+				book: document.getElementById("bkeJoel"),
+				chapters: document.getElementById("bkeJoelchaptersResult"),
+				verses: document.getElementById("bkeJoelverseResult")
+			},
+			Amos: {
+				book: document.getElementById("bkeAmos"),
+				chapters: document.getElementById("bkeAmoschaptersResult"),
+				verses: document.getElementById("bkeAmosverseResult")
+			},
+			Obadiah: {
+				book: document.getElementById("bkeObadiah"),
+				chapters: document.getElementById("bkeObadiahchaptersResult"),
+				verses: document.getElementById("bkeObadiahverseResult")
+			},
+			Jonah: {
+				book: document.getElementById("bkeJonah"),
+				chapters: document.getElementById("bkeJonahchaptersResult"),
+				verses: document.getElementById("bkeJonahverseResult")
+			},
+			Micah: {
+				book: document.getElementById("bkeMicah"),
+				chapters: document.getElementById("bkeMicahchaptersResult"),
+				verses: document.getElementById("bkeMicahverseResult")
+			},
+			Nahum: {
+				book: document.getElementById("bkeNahum"),
+				chapters: document.getElementById("bkeNahumchaptersResult"),
+				verses: document.getElementById("bkeNahumverseResult")
+			},
+			Habakkuk: {
+				book: document.getElementById("bkeHabakkuk"),
+				chapters: document.getElementById("bkeHabakkukchaptersResult"),
+				verses: document.getElementById("bkeHabakkukverseResult")
+			},
+			Zephaniah: {
+				book: document.getElementById("bkeZephaniah"),
+				chapters: document.getElementById("bkeZephaniahchaptersResult"),
+				verses: document.getElementById("bkeZephaniahverseResult")
+			},
+			Haggai: {
+				book: document.getElementById("bkeHaggai"),
+				chapters: document.getElementById("bkeHaggaichaptersResult"),
+				verses: document.getElementById("bkeHaggaiverseResult")
+			},
+			Zechariah: {
+				book: document.getElementById("bkeZechariah"),
+				chapters: document.getElementById("bkeZechariahchaptersResult"),
+				verses: document.getElementById("bkeZechariahverseResult")
+			},
+			Malachi: {
+				book: document.getElementById("bkeMalachi"),
+				chapters: document.getElementById("bkeMalachichaptersResult"),
+				verses: document.getElementById("bkeMalachiverseResult")
+			},
+			Matthew: {
+				book: document.getElementById("bkeMatthew"),
+				chapters: document.getElementById("bkeMatthewchaptersResult"),
+				verses: document.getElementById("bkeMatthewverseResult")
+			},
+			Mark: {
+				book: document.getElementById("bkeMark"),
+				chapters: document.getElementById("bkeMarkchaptersResult"),
+				verses: document.getElementById("bkeMarkverseResult")
+			},
+			Luke: {
+				book: document.getElementById("bkeLuke"),
+				chapters: document.getElementById("bkeLukechaptersResult"),
+				verses: document.getElementById("bkeLukeverseResult")
+			},
+			John: {
+				book: document.getElementById("bkeJohn"),
+				chapters: document.getElementById("bkeJohnchaptersResult"),
+				verses: document.getElementById("bkeJohnverseResult")
+			},
+			Acts: {
+				book: document.getElementById("bkeActs"),
+				chapters: document.getElementById("bkeActschaptersResult"),
+				verses: document.getElementById("bkeActsverseResult")
+			},
+			Romans: {
+				book: document.getElementById("bkeRomans"),
+				chapters: document.getElementById("bkeRomanschaptersResult"),
+				verses: document.getElementById("bkeRomansverseResult")
+			},
+			"1stCorinthians": {
+				book: document.getElementById("bke1stCorinthians"),
+				chapters: document.getElementById("bke1stCorinthianschaptersResult"),
+				verses: document.getElementById("bke1stCorinthiansverseResult")
+			},
+			"2ndCorinthians": {
+				book: document.getElementById("bke2ndCorinthians"),
+				chapters: document.getElementById("bke2ndCorinthianschaptersResult"),
+				verses: document.getElementById("bke2ndCorinthiansverseResult")
+			},
+			Galatians: {
+				book: document.getElementById("bkeGalatians"),
+				chapters: document.getElementById("bkeGalatianschaptersResult"),
+				verses: document.getElementById("bkeGalatiansverseResult")
+			},
+			Ephesians: {
+				book: document.getElementById("bkeEphesians"),
+				chapters: document.getElementById("bkeEphesianschaptersResult"),
+				verses: document.getElementById("bkeEphesiansverseResult")
+			},
+			Philippians: {
+				book: document.getElementById("bkePhilippians"),
+				chapters: document.getElementById("bkePhilippianschaptersResult"),
+				verses: document.getElementById("bkePhilippiansverseResult")
+			},
+			Colossians: {
+				book: document.getElementById("bkeColossians"),
+				chapters: document.getElementById("bkeColossianschaptersResult"),
+				verses: document.getElementById("bkeColossiansverseResult")
+			},
+			"1stThessalonians": {
+				book: document.getElementById("bke1stThessalonians"),
+				chapters: document.getElementById("bke1stThessalonianschaptersResult"),
+				verses: document.getElementById("bke1stThessaloniansverseResult")
+			},
+			"2ndThessalonians": {
+				book: document.getElementById("bke2ndThessalonians"),
+				chapters: document.getElementById("bke2ndThessalonianschaptersResult"),
+				verses: document.getElementById("bke2ndThessaloniansverseResult")
+			},
+			"1stTimothy": {
+				book: document.getElementById("bke1stTimothy"),
+				chapters: document.getElementById("bke1stTimothychaptersResult"),
+				verses: document.getElementById("bke1stTimothyverseResult")
+			},
+			"2ndTimothy": {
+				book: document.getElementById("bke2ndTimothy"),
+				chapters: document.getElementById("bke2ndTimothychaptersResult"),
+				verses: document.getElementById("bke2ndTimothyverseResult")
+			},
+			Titus: {
+				book: document.getElementById("bkeTitus"),
+				chapters: document.getElementById("bkeTituschaptersResult"),
+				verses: document.getElementById("bkeTitusverseResult")
+			},
+			Philemon: {
+				book: document.getElementById("bkePhilemon"),
+				chapters: document.getElementById("bkePhilemonchaptersResult"),
+				verses: document.getElementById("bkePhilemonverseResult")
+			},
+			Hebrews: {
+				book: document.getElementById("bkeHebrews"),
+				chapters: document.getElementById("bkeHebrewschaptersResult"),
+				verses: document.getElementById("bkeHebrewsverseResult")
+			},
+			James: {
+				book: document.getElementById("bkeJames"),
+				chapters: document.getElementById("bkeJameschaptersResult"),
+				verses: document.getElementById("bkeJamesverseResult")
+			},
+			"1-Peter": {
+				book: document.getElementById("bke1-Peter"),
+				chapters: document.getElementById("bke1-PeterchaptersResult"),
+				verses: document.getElementById("bke1-PeterverseResult")
+			},
+			"2Peter": {
+				book: document.getElementById("bke2Peter"),
+				chapters: document.getElementById("bke2PeterchaptersResult"),
+				verses: document.getElementById("bke2PeterverseResult")
+			},
+			"1-John": {
+				book: document.getElementById("bke1-John"),
+				chapters: document.getElementById("bke1-JohnchaptersResult"),
+				verses: document.getElementById("bke1-JohnverseResult")
+			},
+			"2John": {
+				book: document.getElementById("bke2John"),
+				chapters: document.getElementById("bke2JohnchaptersResult"),
+				verses: document.getElementById("bke2JohnverseResult")
+			},
+			"3John": {
+				book: document.getElementById("bke3John"),
+				chapters: document.getElementById("bke3JohnchaptersResult"),
+				verses: document.getElementById("bke3JohnverseResult")
+			},
+			Jude: {
+				book: document.getElementById("bkeJude"),
+				chapters: document.getElementById("bkeJudechaptersResult"),
+				verses: document.getElementById("bkeJudeverseResult")
+			},
+			Revelation: {
+				book: document.getElementById("bkeRevelation"),
+				chapters: document.getElementById("bkeRevelationchaptersResult"),
+				verses: document.getElementById("bkeRevelationverseResult")
+			}
+		};
+
+
+      async function loadBibleData() {
+        const response = await fetch("../Assets/js/fuse/testamentsindex.json");
+        const data = await response.json();
+        return data;
+      }
+
+      // Example list of book names (must match your IDs and JSON "bke" values)
+      const bookNames = [
+        "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy",
+        "Revelation" // add all others here
+      ];
+
+      const bibleBooksDynamic = {};
+      bookNames.forEach(name => {
+        bibleBooksDynamic[name] = {
+          book: document.getElementById(`bke${name}`),
+          chapters: document.getElementById(`bke${name}chaptersResult`),
+          verses: document.getElementById(`bke${name}verseResult`)
+        };
+      });
+
+      async function initBible() {
+        const bibleData = await loadBibleData();
+
+        for (const [bookName, refs] of Object.entries(bibleBooksDynamic)) {
+          if (refs.book) {
+            refs.book.addEventListener("click", () => {
+              const bookNum = findBookNum(bibleData, bookName);
+              if (!bookNum) return;
+              const book = bibleData[bookNum];
+              showChapters(bookNum, book, refs.chapters, refs.verses);
+            });
+          }
+        }
+      }
+
+      function findBookNum(bibleData, bookName) {
+        for (const [num, book] of Object.entries(bibleData)) {
+          if (book.bke === bookName) return num;
+        }
+        return null;
+      }
+
+      function showChapters(bookNum, book, chaptersDiv, versesDiv) {
+        chaptersDiv.innerHTML = "";
+
+        for (const [chapter, verseCount] of Object.entries(book.chapters)) {
+          const chapterLink = document.createElement("a");
+          chapterLink.href = `#${bookNum}-${chapter}`;
+          chapterLink.textContent = `Chapter ${chapter}`;
+          chapterLink.addEventListener("click", () =>
+            showVerses(bookNum, chapter, verseCount, versesDiv)
+          );
+          chaptersDiv.appendChild(chapterLink);
+          chaptersDiv.appendChild(document.createElement("br"));
+        }
+      }
+
+      function showVerses(bookNum, chapter, verseCount, versesDiv) {
+        versesDiv.innerHTML = "";
+
+        for (let v = 1; v <= verseCount; v++) {
+          const verseLink = document.createElement("a");
+          verseLink.href = `#${bookNum}-${chapter}-${v}`;
+          verseLink.textContent = `Verse ${v}`;
+          versesDiv.appendChild(verseLink);
+          versesDiv.appendChild(document.createElement("br"));
+        }
+      }
+
+      // Run once DOM is ready
+      document.addEventListener("DOMContentLoaded", initBible);
+
+
+
+
+
+
+	}
+
+
+}
+
+customElements.define('diglot-thumb-menu', DiglotThumbMenu);
