@@ -410,10 +410,14 @@ class DiglotThumbMenu extends HTMLElement {
                                 
                                 
                                 
-                                <div id="GodYouReign" class="NewTestamentbke">
-                                GOD YOU REIGN FOREVER MORE! <br/>ADONAI REIGN! <br/>YESHUA REIGN!<br/><br/><br/><br/>
+                                 <div id="GodYouReign" class="NewTestamentbke">
+                                GOD YOU REIGN FOREVER MORE! <br/>ADONAI REIGN! YESHUA REIGN!<br/>
+                                <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="BiblePages/Assets/images//PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
                                 </div>
-
+                              </div>
+                            </div>
+                        </div>
+                      </div>
 
 
                             </div>
@@ -1043,7 +1047,7 @@ function showChapters(bookNum, book, chaptersDiv, versesDiv) {
       // 👇 Scroll versesDiv into view after rendering
       versesDiv.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
       });
     });
 
@@ -1077,7 +1081,7 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
   // 👇 Ensure versesDiv is visible even if called directly - OKAY COPILOT, I GOT IT THANK YOU.
   versesDiv.scrollIntoView({
     behavior: "smooth",
-    block: "start"
+    block: "center"
   });
 }
 
