@@ -20,7 +20,7 @@ const bibleBooksTL = {
   Psalms: 'Mga Awit',
   Proverbs: 'Kawikaan',
   Ecclesiastes: 'Eclesiastes',
-  'Song of Solomon': 'Awit ni Solomon',
+  'Song of Solomon': 'Awit ng Mga Awit',
   Isaiah: 'Isaias',
   Jeremiah: 'Jeremias',
   Lamentations: 'Mga Panaghoy',

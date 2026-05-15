@@ -97,31 +97,35 @@ html {
 }
 
 @media (orientation: portrait) {
-a.vlink,
-a.vlink:link,
-a.vlink:visited a.clink,
-a.clink:link,
-a.clink:visited {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 17%;
-  height: 50px;
-  font-weight: bold;
-}
+
+  a.vlink,
+  a.vlink:link,
+  a.vlink:visited a.clink,
+  a.clink:link,
+  a.clink:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 17%;
+    height: 50px;
+    font-weight: bold;
+  }
 
 }
 
 @media (orientation: landscape) {
-    a.vlink, a.vlink:link, a.vlink:visited a.clink, a.clink:link, a.clink:visited
 
- {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 7%;
-        height: 50px;
-        font-weight: bold;
+  a.vlink,
+  a.vlink:link,
+  a.vlink:visited a.clink,
+  a.clink:link,
+  a.clink:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 7%;
+    height: 50px;
+    font-weight: bold;
   }
 
 }
@@ -224,34 +228,37 @@ a.clink:visited {
   }
 }
 
-  
+
 @media (orientation: portrait) {
 
 
 
 
-.clinkColumn, #clinkColumn {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2%;
-  justify-content: flex-start;
-  width: 100%;
-}
+  .clinkColumn,
+  #clinkColumn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: flex-start;
+    width: 100%;
+  }
 
 }
 
 
 @media (orientation: landscape) {
-    .clinkColumn, #clinkColumn {
-        display: flex;
-        gap: 2%;
-        width: 80%;
-        align-content: center;
-        align-self: center;
-        align-items: center;
-        justify-content: flex-start;
-    }
+
+  .clinkColumn,
+  #clinkColumn {
+    display: flex;
+    gap: 2%;
+    width: 80%;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-start;
   }
+}
 
 
 
@@ -1404,26 +1411,39 @@ a.clink:visited {
   margin-bottom: 5% !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* DIGLOT THUMB MENU UNIVERSAL    */
 
-@media (orientation: portrait) {
-  #thumbmenuholder {
-    position: fixed;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    z-index: 7777777;
-    flex-direction: row;
-    bottom: 0;
-  }
-
+#thumbmenuholder {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  z-index: 7777777;
+  flex-direction: row;
+  bottom: 0;
 }
+
 
 .bibleversesthumb {
   width: 35%;
   background-color: #16166b;
   color: white;
-  font-size: .8em;
+  font-size: 1.2em;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -1440,11 +1460,12 @@ a.clink:visited {
   display: none;
 }
 
+
 .goupthumb {
   width: 30%;
   background-color: #0f0f46;
   color: white;
-  font-size: .8em;
+  font-size: 1.2em;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -1454,13 +1475,14 @@ a.clink:visited {
   max-height: 50px;
   cursor: pointer;
   display: flex;
+
 }
 
 .biblecontrollthumb {
   width: 35%;
   background-color: #16166b;
   color: white;
-  font-size: .8em;
+  font-size: 1.2em;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -1472,9 +1494,10 @@ a.clink:visited {
   display: flex;
 }
 
+
 #biblemenuanimation {
   width: 100%;
-  height: 92%;
+  height: 100%;
   position: fixed;
   overflow: auto;
   background-color: white;
@@ -1482,29 +1505,72 @@ a.clink:visited {
   bottom: 0;
   left: 0;
   color: black;
+  margin-top: 60px;
 }
+
+
+
 
 .bibleversesthumb,
 .goupthumb,
 .biblecontrollthumb {
   transition: background-color 0.3s ease;
+
 }
 
-.bibleversesthumb:active,
-.goupthumb:active,
-.biblecontrollthumb:active {
+
+
+.bibleversesthumb:hover,
+.goupthumb:hover,
+.biblecontrollthumb:hover {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
+
 }
 
+
+
+.testamentsholderthumb {
+
+  display: flex;
+  flex-direction: column;
+  height:100vh; width:100vw;
+
+}
+
+.topspacer {display: flex;
+  margin-top: 15%;
+
+}
+
+.menuheader {width:100%; border-bottom: 2px solid gray; border-top: 2px solid gray;  height:1.5em; justify-content:center; align-content: center; text-align: center; font-size:1.2em; font-weight: bold;}
+
+.newoldholder {
+display: flex; flex-direction: row; height:100%; width:  100%;
+left:0;
+bottom: 0;
+justify-content: center;
+}
+
+
+
+
+
+
+.oldrow {display:flex; background-color:#e8f7fa; flex-direction: column; width: 50%;}
+.newrow {display:flex; background-color:#ededff; flex-direction: column; width: 50%; text-align: right;}
+
 #biblemenuanimation {
-  z-index: 5;
+  z-index: 15;
 }
 
 #header {
   z-index: 20;
 }
+
+
+
 
 #upnimation {
   position: fixed;
@@ -1539,30 +1605,252 @@ a.clink:visited {
   }
 }
 
-#DesktopMenuOnly {
-  display: none;
+
+
+
+
+
+
+#bke1st-corinthians,
+#bke1st-john,
+#bke1st-peter,
+#bke1st-thessalonians,
+#bke1st-timothy,
+#bke2nd-corinthians,
+#bke2nd-john,
+#bke2nd-peter,
+#bke2nd-thessalonians,
+#bke2nd-timothy,
+#bke3rd-john,
+#bkeacts,
+#bkecolossians,
+#bkeephesians,
+#bkegalatians,
+#bkehebrews,
+#bkejames,
+#bkejohn,
+#bkejude,
+#bkeluke,
+#bkemark,
+#bkematthew,
+#bkephilemon,
+#bkephilippians,
+#bkerevelation,
+#bkeromans,
+#bketitus
+
+{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray;}
+
+
+
+#bke1st-corinthianschaptersResult,
+#bke1st-johnchaptersResult,
+#bke1st-peterchaptersResult,
+#bke1st-thessalonianschaptersResult,
+#bke1st-timothychaptersResult,
+#bke2nd-corinthianschaptersResult,
+#bke2nd-johnchaptersResult,
+#bke2nd-peterchaptersResult,
+#bke2nd-thessalonianschaptersResult,
+#bke2nd-timothychaptersResult,
+#bke3rd-johnchaptersResult,
+#bkeactschaptersResult,
+#bkecolossianschaptersResult,
+#bkeephesianschaptersResult,
+#bkegalatianschaptersResult,
+#bkehebrewschaptersResult,
+#bkejameschaptersResult,
+#bkejohnchaptersResult,
+#bkejudechaptersResult,
+#bkelukechaptersResult,
+#bkemarkchaptersResult,
+#bkematthewchaptersResult,
+#bkephilemonchaptersResult,
+#bkephilippianschaptersResult,
+#bkerevelationchaptersResult,
+#bkeromanschaptersResult,
+#bketituschaptersResult
+{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray; position: relative;}
+
+
+
+#bke1st-corinthiansverseResult,
+#bke1st-johnverseResult,
+#bke1st-peterverseResult,
+#bke1st-thessaloniansverseResult,
+#bke1st-timothyverseResult,
+#bke2nd-corinthiansverseResult,
+#bke2nd-johnverseResult,
+#bke2nd-peterverseResult,
+#bke2nd-thessaloniansverseResult,
+#bke2nd-timothyverseResult,
+#bke3rd-johnverseResult,
+#bkeactsverseResult,
+#bkecolossiansverseResult,
+#bkeephesiansverseResult,
+#bkegalatiansverseResult,
+#bkehebrewsverseResult,
+#bkejamesverseResult,
+#bkejohnverseResult,
+#bkejudeverseResult,
+#bkelukeverseResult,
+#bkemarkverseResult,
+#bkematthewverseResult,
+#bkephilemonverseResult,
+#bkephilippiansverseResult,
+#bkerevelationverseResult,
+#bkeromansverseResult,
+#bketitusverseResult
+{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray; position: relative}
+
+
+#bke1st-chronicles,
+#bke1st-kings,
+#bke1st-samuel,
+#bke2nd-chronicles,
+#bke2nd-kings,
+#bke2nd-samuel,
+#bkeamos,
+#bkedaniel,
+#bkedeuteronomy,
+#bkeecclesiastes,
+#bkeesther,
+#bkeexodus,
+#bkeezekiel,
+#bkeezra,
+#bkegenesis,
+#bkehabakkuk,
+#bkeHaggai,
+#bkehosea,
+#bkeisaiah,
+#bkejeremiah,
+#bkejob,
+#bkejoel,
+#bkejonah,
+#bkejoshua,
+#bkejudges,
+#bkelamentations,
+#bkeleviticus,
+#bkemalachi,
+#bkemicah,
+#bkenahum,
+#bkenehemiah,
+#bkenumbers,
+#bkeobadiah,
+#bkeproverbs,
+#bkepsalms,
+#bkeruth,
+#bkesong-of-solomon,
+#bkezechariah,
+#bkezephaniah
+{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray;}
+
+
+
+
+#bke1st-chronicleschaptersResult,
+#bke1st-kingschaptersResult,
+#bke1st-samuelchaptersResult,
+#bke2nd-chronicleschaptersResult,
+#bke2nd-kingschaptersResult,
+#bke2nd-samuelchaptersResult,
+#bkeamoschaptersResult,
+#bkedanielchaptersResult,
+#bkedeuteronomychaptersResult,
+#bkeecclesiasteschaptersResult,
+#bkeestherchaptersResult,
+#bkeexoduschaptersResult,
+#bkeezekielchaptersResult,
+#bkeezrachaptersResult,
+#bkegenesischaptersResult,
+#bkehabakkukchaptersResult,
+#bkeHaggaichaptersResult,
+#bkehoseachaptersResult,
+#bkeisaiahchaptersResult,
+#bkejeremiahchaptersResult,
+#bkejobchaptersResult,
+#bkejoelchaptersResult,
+#bkejonahchaptersResult,
+#bkejoshuachaptersResult,
+#bkejudgeschaptersResult,
+#bkelamentationschaptersResult,
+#bkeleviticuschaptersResult,
+#bkemalachichaptersResult,
+#bkemicahchaptersResult,
+#bkenahumchaptersResult,
+#bkenehemiahchaptersResult,
+#bkenumberschaptersResult,
+#bkeobadiahchaptersResult,
+#bkeproverbschaptersResult,
+#bkepsalmschaptersResult,
+#bkeruthchaptersResult,
+#bkesong-of-solomonchaptersResult,
+#bkezechariahchaptersResult,
+#bkezephaniahchaptersResult{position: relative;}
+
+
+
+
+#bke1st-chroniclesverseResult,
+#bke1st-kingsverseResult,
+#bke1st-samuelverseResult,
+#bke2nd-chroniclesverseResult,
+#bke2nd-kingsverseResult,
+#bke2nd-samuelverseResult,
+#bkeamosverseResult,
+#bkedanielverseResult,
+#bkedeuteronomyverseResult,
+#bkeecclesiastesverseResult,
+#bkeestherverseResult,
+#bkeexodusverseResult,
+#bkeezekielverseResult,
+#bkeezraverseResult,
+#bkegenesisverseResult,
+#bkehabakkukverseResult,
+#bkeHaggaiverseResult,
+#bkehoseaverseResult,
+#bkeisaiahverseResult,
+#bkejeremiahverseResult,
+#bkejobverseResult,
+#bkejoelverseResult,
+#bkejonahverseResult,
+#bkejoshuaverseResult,
+#bkejudgesverseResult,
+#bkelamentationsverseResult,
+#bkeleviticusverseResult,
+#bkemalachiverseResult,
+#bkemicahverseResult,
+#bkenahumverseResult,
+#bkenehemiahverseResult,
+#bkenumbersverseResult,
+#bkeobadiahverseResult,
+#bkeproverbsverseResult,
+#bkepsalmsverseResult,
+#bkeruthverseResult,
+#bkesong-of-solomonverseResult,
+#bkezechariahverseResult,
+#bkezephaniahverseResult {position: relative;}
+
+
+
+.chapter-heading, .verse-heading {
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-
-
-
-
-
-#header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.chapter-number, .verse-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
   text-align: center;
-  width: 100%;
-  height: auto;
-  /* padding-top: 5px; */
-  /* padding-bottom: 5px; */
-  font-size: 1.2em;
+  line-height: 40px;
+  border: 1px solid #333;
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }
 
-
-
-#display-title2 {
-  font-size: 1em;
+.chapter-number:hover, .verse-number:hover {
+  background-color: #ddd;
+  cursor: pointer;
 }

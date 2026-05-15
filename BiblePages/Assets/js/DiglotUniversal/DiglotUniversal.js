@@ -781,7 +781,7 @@ class DiglotMenuFocused extends HTMLElement {
             <a href="../OldTestament/19-psalms.html"><div class="BMONTpsalms divpsalms"><span class="english englishLabel">Psalms</span><br/><span class="tagalogleft tagalogLabel">Mga Awit</span></div></a>
             <a href="../OldTestament/20-proverbs.html"><div class="BMONTproverbs divproverbs"><span class="english englishLabel">Proverbs</span><br/><span class="tagalogleft tagalogLabel">Kawikaan</span></div></a>
             <a href="../OldTestament/21-ecclesiastes.html"><div class="BMONTecclesiastes divecclesiastes"><span class="english englishLabel">Ecclesiastes</span><br/><span class="tagalogleft tagalogLabel">Eclesiastes</span></div></a>
-            <a href="../OldTestament/22-song-solomon.html"><div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br/><span class="tagalogleft tagalogLabel">Awit ni Solomon</span></div></a>
+            <a href="../OldTestament/22-song-of-solomon.html"><div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br/><span class="tagalogleft tagalogLabel">Awit ng Mga Awit</span></div></a>
             <a href="../OldTestament/23-isaiah.html"><div class="BMONTisaiah divisaiah"><span class="english englishLabel">Isaiah</span><br/><span class="tagalogleft tagalogLabel">Isaias</span></div></a>
             <a href="../OldTestament/24-jeremiah.html"><div class="BMONTjeremiah divjeremiah"><span class="english englishLabel">Jeremiah</span><br/><span class="tagalogleft tagalogLabel">Jeremias</span></div></a>
             <a href="../OldTestament/25-lamentations.html"><div class="BMONTlamentations divlamentations"><span class="english englishLabel">Lamentations</span><br/><span class="tagalogleft tagalogLabel">Mga Panaghoy</span></div></a>
@@ -845,15 +845,17 @@ class DiglotMenuFocused extends HTMLElement {
 
 
 
-
+<div class="controlheader">CONTROL PANEL</div>
+<div class="versehighlight">Type Number Range or Random or Both.<br/><hr style="width:100%;"><strong>VERSE HIGHLIGHT</strong></div>
 
 <div class="controls-row input-row">
-<input id="verseInput" placeholder="Enter Verse Highlight, like 1-10, 2,5,6, 5-8,Press Enter" type="text"/>
+<input id="verseInput" placeholder="1-10, 2,5,9, Press Enter" type="text"/>
 </div>
+
 <div class="controls-row">
-<div class="control-btn" onclick="copyEnglish()"> Copy English </div>
-<div class="control-btn" onclick="copyTagalog()"> Copy Tagalog </div>
-<div class="control-btn" onclick="copyBoth()"> Copy Diglot </div>
+<div class="controldiglot" onclick="copyEnglish()"> Copy English </div>
+<div class="controldiglot" onclick="copyTagalog()"> Copy Tagalog </div>
+<div class="controldiglot" onclick="copyBoth()"> Copy Diglot </div>
 </div>
            
                    
@@ -972,7 +974,7 @@ class DiglotMenu extends HTMLElement {
             <a href="../OldTestament/19-psalms.html"><div class="BMONTpsalms divpsalms"><span class="english englishLabel">Psalms</span><br/><span class="tagalogleft tagalogLabel">Mga Awit</span></div></a>
             <a href="../OldTestament/20-proverbs.html"><div class="BMONTproverbs divproverbs"><span class="english englishLabel">Proverbs</span><br/><span class="tagalogleft tagalogLabel">Kawikaan</span></div></a>
             <a href="../OldTestament/21-ecclesiastes.html"><div class="BMONTecclesiastes divecclesiastes"><span class="english englishLabel">Ecclesiastes</span><br/><span class="tagalogleft tagalogLabel">Eclesiastes</span></div></a>
-            <a href="../OldTestament/22-song-solomon.html"><div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br/><span class="tagalogleft tagalogLabel">Awit ni Solomon</span></div></a>
+            <a href="../OldTestament/22-song-of-solomon.html"><div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br/><span class="tagalogleft tagalogLabel">Awit ng Mga Awit</span></div></a>
             <a href="../OldTestament/23-isaiah.html"><div class="BMONTisaiah divisaiah"><span class="english englishLabel">Isaiah</span><br/><span class="tagalogleft tagalogLabel">Isaias</span></div></a>
             <a href="../OldTestament/24-jeremiah.html"><div class="BMONTjeremiah divjeremiah"><span class="english englishLabel">Jeremiah</span><br/><span class="tagalogleft tagalogLabel">Jeremias</span></div></a>
             <a href="../OldTestament/25-lamentations.html"><div class="BMONTlamentations divlamentations"><span class="english englishLabel">Lamentations</span><br/><span class="tagalogleft tagalogLabel">Mga Panaghoy</span></div></a>
@@ -1145,7 +1147,7 @@ class DiglotMenuIndex extends HTMLElement {
             <a href="BiblePages/OldTestament/19-psalms.html"><div class="BMONTpsalms divpsalms"><span class="english englishLabel">Psalms</span><br/><span class="tagalogleft tagalogLabel">Mga Awit</span></div></a>
             <a href="BiblePages/OldTestament/20-proverbs.html"><div class="BMONTproverbs divproverbs"><span class="english englishLabel">Proverbs</span><br/><span class="tagalogleft tagalogLabel">Kawikaan</span></div></a>
             <a href="BiblePages/OldTestament/21-ecclesiastes.html"><div class="BMONTecclesiastes divecclesiastes"><span class="english englishLabel">Ecclesiastes</span><br/><span class="tagalogleft tagalogLabel">Eclesiastes</span></div></a>
-            <a href="BiblePages/OldTestament/22-song-solomon.html"><div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br/><span class="tagalogleft tagalogLabel">Awit ni Solomon</span></div></a>
+            <a href="BiblePages/OldTestament/22-song-of-solomon.html"><div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br/><span class="tagalogleft tagalogLabel">Awit ng Mga Awit</span></div></a>
             <a href="BiblePages/OldTestament/23-isaiah.html"><div class="BMONTisaiah divisaiah"><span class="english englishLabel">Isaiah</span><br/><span class="tagalogleft tagalogLabel">Isaias</span></div></a>
             <a href="BiblePages/OldTestament/24-jeremiah.html"><div class="BMONTjeremiah divjeremiah"><span class="english englishLabel">Jeremiah</span><br/><span class="tagalogleft tagalogLabel">Jeremias</span></div></a>
             <a href="BiblePages/OldTestament/25-lamentations.html"><div class="BMONTlamentations divlamentations"><span class="english englishLabel">Lamentations</span><br/><span class="tagalogleft tagalogLabel">Mga Panaghoy</span></div></a>
@@ -1533,88 +1535,26 @@ class DiglotPostButtonIndex extends HTMLElement {
 customElements.define('diglot-post-button-index', DiglotPostButtonIndex);
 
 
-class DiglotThumbMenu extends HTMLElement {
+
+
+
+
+
+
+
+
+class DiglotFooter extends HTMLElement {
    connectedCallback() {
-
+      // 1. Set the HTML structure
       this.innerHTML = `
-		<div id="biblemenuanimation">HELLO ONE<br/>HELLO TWO<br/>HELLO THREE<br/>HELLO FOUR<br/>HELLO FIVE<br/>HELLO SIZ<br/>HELLO SEVEN<br/></div>
+      
 
-		<div id="thumbmenuholder">    
-			<div class="bibleversesthumb" id="menuanimation">
-				<span id="openbiblemenu">BIBLE MENU ☰</span>
-        <span id="closebiblemenu">BIBLE MENU ✖</span>
-			</div>
+<div class="diglotfooterdiv">Site Map Contact Us</div>
 
-			<div class="goupthumb" id="goUpScroll">
-            <div>GO            </div> 
-            <div>▲</div>
-            
-           
-          <div>UP</div>
-    </div>
-
-			<div class="biblecontrollthumb">
-        				<span id="openmenu">☰ OTHER MENU</span>
-        <span id="closemenu">✖ OTHER MENU</span>
-      </div>
-
-
-		</div>
-    <ul id="upnimation" class="animate">
-          <li>▲</li>
-          <li>▲</li>
-          <li>▲</li>
-          <li>▲</li>
-          <li>▲</li>
-          <li>▲</li>
-          <li>▲</li>
-    </ul>
-		`;
-
-      // GO UP
-
-      // GO UP
-      const backUp = this.querySelector('.goupthumb');
-
-      backUp.onclick = function () {
-         window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-         });
-      };
-
-      // MENU TOGGLE
-      const menuButton = this.querySelector('#menuanimation');
-      const menuDiv = this.querySelector('#biblemenuanimation');
-      const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
-      const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
-
-
-      menuButton.onclick = function () {
-         const isHidden = window.getComputedStyle(menuDiv).display === "none";
-         // toggle menu
-         menuDiv.style.display = isHidden ? "block" : "none"; // toggle spans
-         spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
-         spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
-
-      };
-      const goUpBtn = this.querySelector("#goUpScroll");
-
-      goUpBtn.addEventListener("click", goUpAnimation);
-
-      function goUpAnimation() {
-         const arrows = document.querySelectorAll('#upnimation li');
-         arrows.forEach((li, index) => {
-            li.style.animation = "none"; // reset
-            li.offsetHeight; // force reflow    // calculate stagger delay based on index
-            const delay = 0.2 * index; // 0.2s apart
-            const opacity = 1 - (index * 0.15); // fade each arrow more    li.style.opacity = opacity > 0 ? opacity : 0.1;
-            li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
-         });
-      }
-
+  `;
 
    }
 }
 
-customElements.define('diglot-thumb-menu', DiglotThumbMenu);
+
+customElements.define('diglot-footer', DiglotFooter);

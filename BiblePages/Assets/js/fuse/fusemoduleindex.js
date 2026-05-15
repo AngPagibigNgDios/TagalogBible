@@ -33,7 +33,7 @@ const fuseOptions = {
   keys: ['bke', 'eng', 'tag'],
   threshold: 0.2,
   distance: 100,
-  findAllMatches: false,
+  findAllMatches: true,
   ignoreLocation: true,
   includeMatches: true,
   minMatchCharLength: 3,

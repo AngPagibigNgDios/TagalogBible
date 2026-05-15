@@ -1,0 +1,279 @@
+
+<div id="bkeMatthew" class="NewTestamentbke"><span class="newlanguage">Matthew</span><span class="newsublanguage">(Mateo)</span> </div>
+<div id="bkeMatthewchaptersResult" class="chapterResult"></div>
+<div id="bkeMatthewverseResult" class="verseResult"></div>
+
+<div id="bkeMark" class="NewTestamentbke"><span class="newlanguage">Mark</span><span class="newsublanguage">(Marcos)</span> </div>
+<div id="bkeMarkchaptersResult" class="chapterResult"></div>
+<div id="bkeMarkverseResult" class="verseResult"></div>
+
+<div id="bkeLuke" class="NewTestamentbke"><span class="newlanguage">Luke</span><span class="newsublanguage">(Lucas)</span> </div>
+<div id="bkeLukechaptersResult" class="chapterResult"></div>
+<div id="bkeLukeverseResult" class="verseResult"></div>
+
+<div id="bkeJohn" class="NewTestamentbke"><span class="newlanguage">John</span><span class="newsublanguage">(Juan)</span> </div>
+<div id="bkeJohnchaptersResult" class="chapterResult"></div>
+<div id="bkeJohnverseResult" class="verseResult"></div>
+
+<div id="bkeActs" class="NewTestamentbke"><span class="newlanguage">Acts</span><span class="newsublanguage">(Mga Gawa)</span> </div>
+<div id="bkeActschaptersResult" class="chapterResult"></div>
+<div id="bkeActsverseResult" class="verseResult"></div>
+  
+
+<div id="bkeRomans" class="NewTestamentbke"><span class="newlanguage">Romans</span><span class="newsublanguage">(Mga Taga Roma)</span> </div>
+<div id="bkeRomanschaptersResult" class="chapterResult"></div>
+<div id="bkeRomansverseResult" class="verseResult"></div>
+
+<div id="bke1st Corinthians" class="NewTestamentbke"><span class="newlanguage">1st Corinthians</span><span class="newsublanguage">(1 Mga Taga Corinto)</span> </div>
+<div id="bke1st CorinthianschaptersResult" class="chapterResult"></div>
+<div id="bke1st CorinthiansverseResult" class="verseResult"></div>
+
+<div id="bke2nd Corinthians" class="NewTestamentbke"><span class="newlanguage">2nd Corinthians</span><span class="newsublanguage">(2 Mga Taga Corinto)</span> </div>
+<div id="bke2nd CorinthianschaptersResult" class="chapterResult"></div>
+<div id="bke2nd CorinthiansverseResult" class="verseResult"></div>
+
+<div id="bkeGalatians" class="NewTestamentbke"><span class="newlanguage">Galatians</span><span class="newsublanguage">(2 Mga Taga Galacia)</span> </div>
+<div id="bkeGalatianschaptersResult" class="chapterResult"></div>
+<div id="bkeGalatiansverseResult" class="verseResult"></div>
+
+<div id="bkeEphesians" class="NewTestamentbke"><span class="newlanguage">Ephesians</span><span class="newsublanguage">(Mga Taga Efeso)</span> </div>
+<div id="bkeEphesianschaptersResult" class="chapterResult"></div>
+<div id="bkeEphesiansverseResult" class="verseResult"></div>
+
+<div id="bkePhilippians" class="NewTestamentbke"><span class="newlanguage">Philippians</span><span class="newsublanguage">(Mga Taga Filipos)</span> </div>
+<div id="bkePhilippianschaptersResult" class="chapterResult"></div>
+<div id="bkePhilippiansverseResult" class="verseResult"></div>
+
+<div id="bkeColossians" class="NewTestamentbke"><span class="newlanguage">Colossians</span><span class="newsublanguage">(Mga Taga Colosas)</span> </div>
+<div id="bkeColossianschaptersResult" class="chapterResult"></div>
+<div id="bkeColossiansverseResult" class="verseResult"></div>
+
+<div id="bke1st Thessalonians" class="NewTestamentbke"><span class="newlanguage">1st Thessalonians</span><span class="newsublanguage">(1 Mga Taga Tesalonica)</span> </div>
+<div id="bke1st ThessalonianschaptersResult" class="chapterResult"></div>
+<div id="bke1st ThessaloniansverseResult" class="verseResult"></div>
+
+<div id="bke2nd Thessalonians" class="NewTestamentbke"><span class="newlanguage">2nd Thessalonians</span><span class="newsublanguage">(2 Mga Taga Tesalonica)</span> </div>
+<div id="bke2nd ThessalonianschaptersResult" class="chapterResult"></div>
+<div id="bke2nd ThessaloniansverseResult" class="verseResult"></div>
+
+<div id="bke1st Timothy" class="NewTestamentbke"><span class="newlanguage">1st Timothy</span><span class="newsublanguage">(1 Kay Timoteo)</span> </div>
+<div id="bke1st TimothychaptersResult" class="chapterResult"></div>
+<div id="bke1st TimothyverseResult" class="verseResult"></div>
+
+<div id="bke2nd Timothy" class="NewTestamentbke"><span class="newlanguage">2nd Timothy</span><span class="newsublanguage">(2 Kay Timoteo)</span> </div>
+<div id="bke2nd TimothychaptersResult" class="chapterResult"></div>
+<div id="bke2nd TimothyverseResult" class="verseResult"></div>
+
+<div id="bkeTitus" class="NewTestamentbke"><span class="newlanguage">Titus</span><span class="newsublanguage">(Kay Tito)</span> </div>
+<div id="bkeTituschaptersResult" class="chapterResult"></div>
+<div id="bkeTitusverseResult" class="verseResult"></div>
+
+<div id="bkePhilemon" class="NewTestamentbke"><span class="newlanguage">Philemon</span><span class="newsublanguage">(Filemon)</span> </div>
+<div id="bkePhilemonchaptersResult" class="chapterResult"></div>
+<div id="bkePhilemonverseResult" class="verseResult"></div>
+
+<div id="bkeHebrews" class="NewTestamentbke"><span class="newlanguage">Hebrews</span><span class="newsublanguage">(Mga Hebreo)</span> </div>
+<div id="bkeHebrewschaptersResult" class="chapterResult"></div>
+<div id="bkeHebrewsverseResult" class="verseResult"></div>
+
+<div id="bkeJames" class="NewTestamentbke"><span class="newlanguage">James</span><span class="newsublanguage">(Santiago)</span> </div>
+<div id="bkeJameschaptersResult" class="chapterResult"></div>
+<div id="bkeJamesverseResult" class="verseResult"></div>
+
+<div id="bke1 Peter" class="NewTestamentbke"><span class="newlanguage">1 Peter</span><span class="newsublanguage">(1 Pedro)</span> </div>
+<div id="bke1 PeterchaptersResult" class="chapterResult"></div>
+<div id="bke1 PeterverseResult" class="verseResult"></div>
+
+<div id="bke2 Peter" class="NewTestamentbke"><span class="newlanguage">2 Peter</span><span class="newsublanguage">(2 Pedro)</span> </div>
+<div id="bke2 PeterchaptersResult" class="chapterResult"></div>
+<div id="bke2 PeterverseResult" class="verseResult"></div>
+
+<div id="bke1 John" class="NewTestamentbke"><span class="newlanguage">1 John</span><span class="newsublanguage">(1 Juan)</span> </div>
+<div id="bke1 JohnchaptersResult" class="chapterResult"></div>
+<div id="bke1 JohnverseResult" class="verseResult"></div>
+
+<div id="bke2 John" class="NewTestamentbke"><span class="newlanguage">2 John</span><span class="newsublanguage">(2 Juan)</span> </div>
+<div id="bke2 JohnchaptersResult" class="chapterResult"></div>
+<div id="bke2 JohnverseResult" class="verseResult"></div>
+
+<div id="bke3 John" class="NewTestamentbke"><span class="newlanguage">3 John</span><span class="newsublanguage">(3 Juan)</span> </div>
+<div id="bke3 JohnchaptersResult" class="chapterResult"></div>
+<div id="bke3 JohnverseResult" class="verseResult"></div>
+
+<div id="bkeJude" class="NewTestamentbke"><span class="newlanguage">Jude</span><span class="newsublanguage">(Judas)</span> </div>
+<div id="bkeJudechaptersResult" class="chapterResult"></div>
+<div id="bkeJudeverseResult" class="verseResult"></div>
+
+<div id="bkeRevelation" class="NewTestamentbke"><span class="newlanguage">Revelation</span><span class="newsublanguage">(Pahayag)</span> </div>
+<div id="bkeRevelationchaptersResult" class="chapterResult"></div>
+<div id="bkeRevelationverseResult" class="verseResult"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="bkeGenesis" class="OldTestamentbke"><span class="oldlanguage">Genesis</span><span class="oldsublanguage">(Genesis)</span> </div>
+<div id="bkeGenesischaptersResult" class="chapterResult"></div>
+<div id="bkeGenesisverseResult" class="verseResult"></div>
+
+<div id="bkeExodus" class="OldTestamentbke"><span class="oldlanguage">Exodus</span><span class="oldsublanguage">(Exodo)</span> </div>
+<div id="bkeExoduschaptersResult" class="chapterResult"></div>
+<div id="bkeExodusverseResult" class="verseResult"></div>
+
+<div id="bkeLeviticus" class="OldTestamentbke"><span class="oldlanguage">Leviticus</span><span class="oldsublanguage">(Levitico)</span> </div>
+<div id="bkeLeviticuschaptersResult" class="chapterResult"></div>
+<div id="bkeLeviticusverseResult" class="verseResult"></div>
+
+<div id="bkeNumbers" class="OldTestamentbke"><span class="oldlanguage">Numbers</span><span class="oldsublanguage">(Mga Bilang)</span> </div>
+<div id="bkeNumberschaptersResult" class="chapterResult"></div>
+<div id="bkeNumbersverseResult" class="verseResult"></div>
+
+<div id="bkeDeuteronomy" class="OldTestamentbke"><span class="oldlanguage">Deuteronomy</span><span class="oldsublanguage">(Deuteronomio)</span> </div>
+<div id="bkeDeuteronomychaptersResult" class="chapterResult"></div>
+<div id="bkeDeuteronomyverseResult" class="verseResult"></div>
+
+<div id="bkeJosue" class="OldTestamentbke"><span class="oldlanguage">Josue</span><span class="oldsublanguage">(Deuteronomio)</span> </div>
+<div id="bkeJosuechaptersResult" class="chapterResult"></div>
+<div id="bkeJosueverseResult" class="verseResult"></div>
+
+<div id="bkeJudges" class="OldTestamentbke"><span class="oldlanguage">Judges</span><span class="oldsublanguage">(Mga Hukom)</span> </div>
+<div id="bkeJudgeschaptersResult" class="chapterResult"></div>
+<div id="bkeJudgesverseResult" class="verseResult"></div>
+
+<div id="bkeRuth" class="OldTestamentbke"><span class="oldlanguage">Ruth</span><span class="oldsublanguage">(Ruth)</span> </div>
+<div id="bkeRuthchaptersResult" class="chapterResult"></div>
+<div id="bkeRuthverseResult" class="verseResult"></div>
+
+<div id="bke1 Samuel" class="OldTestamentbke"><span class="oldlanguage">1 Samuel</span><span class="oldsublanguage">(1 Samuel)</span> </div>
+<div id="bke1 SamuelchaptersResult" class="chapterResult"></div>
+<div id="bke1 SamuelverseResult" class="verseResult"></div>
+
+<div id="bke2 Samuel" class="OldTestamentbke"><span class="oldlanguage">2 Samuel</span><span class="oldsublanguage">(2 Samuel)</span> </div>
+<div id="bke2 SamuelchaptersResult" class="chapterResult"></div>
+<div id="bke2 SamuelverseResult" class="verseResult"></div>
+
+<div id="bke1 Kings" class="OldTestamentbke"><span class="oldlanguage">1 Kings</span><span class="oldsublanguage">(1 Mga Hari)</span> </div>
+<div id="bke1 KingschaptersResult" class="chapterResult"></div>
+<div id="bke1 KingsverseResult" class="verseResult"></div>
+
+<div id="bke2 Kings" class="OldTestamentbke"><span class="oldlanguage">2 Kings</span><span class="oldsublanguage">(2 Mga Hari)</span> </div>
+<div id="bke2 KingschaptersResult" class="chapterResult"></div>
+<div id="bke2 KingsverseResult" class="verseResult"></div>
+
+<div id="bke1 Chronicles" class="OldTestamentbke"><span class="oldlanguage">1 Chronicles</span><span class="oldsublanguage">(1 Mga Cronica)</span> </div>
+<div id="bke1 ChronicleschaptersResult" class="chapterResult"></div>
+<div id="bke1 ChroniclesverseResult" class="verseResult"></div>
+
+<div id="bke2 Chronicles" class="OldTestamentbke"><span class="oldlanguage">2 Chronicles</span><span class="oldsublanguage">(2 Mga Cronica)</span> </div>
+<div id="bke2 ChronicleschaptersResult" class="chapterResult"></div>
+<div id="bke2 ChroniclesverseResult" class="verseResult"></div>
+
+<div id="bkeEzra" class="OldTestamentbke"><span class="oldlanguage">Ezra</span><span class="oldsublanguage">(Ezra)</span> </div>
+<div id="bkeEzrachaptersResult" class="chapterResult"></div>
+<div id="bkeEzraverseResult" class="verseResult"></div>
+
+<div id="bkeNehemiah" class="OldTestamentbke"><span class="oldlanguage">Nehemiah</span><span class="oldsublanguage">(Nehemias)</span> </div>
+<div id="bkeNehemiahchaptersResult" class="chapterResult"></div>
+<div id="bkeNehemiahverseResult" class="verseResult"></div>
+
+<div id="bkeEsther" class="OldTestamentbke"><span class="oldlanguage">Esther</span><span class="oldsublanguage">(Ester)</span> </div>
+<div id="bkeEstherchaptersResult" class="chapterResult"></div>
+<div id="bkeEstherverseResult" class="verseResult"></div>
+
+<div id="bkeJob" class="OldTestamentbke"><span class="oldlanguage">Job</span><span class="oldsublanguage">(Job)</span> </div>
+<div id="bkeJobchaptersResult" class="chapterResult"></div>
+<div id="bkeJobverseResult" class="verseResult"></div>
+
+<div id="bkePsalms" class="OldTestamentbke"><span class="oldlanguage">Psalms</span><span class="oldsublanguage">(Mga Awit)</span> </div>
+<div id="bkePsalmschaptersResult" class="chapterResult"></div>
+<div id="bkePsalmsverseResult" class="verseResult"></div>
+
+<div id="bkeProverbs" class="OldTestamentbke"><span class="oldlanguage">Proverbs</span><span class="oldsublanguage">(Kawikaan)</span> </div>
+<div id="bkeProverbschaptersResult" class="chapterResult"></div>
+<div id="bkeProverbsverseResult" class="verseResult"></div>
+
+<div id="bkeEcclesiastes" class="OldTestamentbke"><span class="oldlanguage">Ecclesiastes</span><span class="oldsublanguage">(Eclesiastes)</span> </div>
+<div id="bkeEcclesiasteschaptersResult" class="chapterResult"></div>
+<div id="bkeEcclesiastesverseResult" class="verseResult"></div>
+
+<div id="bkeSong of Solomon" class="OldTestamentbke"><span class="oldlanguage">Song of Solomon</span><span class="oldsublanguage">(Awit ng Mga Awit)</span> </div>
+<div id="bkeSong of SolomonchaptersResult" class="chapterResult"></div>
+<div id="bkeSong of SolomonverseResult" class="verseResult"></div>
+
+<div id="bkeIsaiah" class="OldTestamentbke"><span class="oldlanguage">Isaiah</span><span class="oldsublanguage">(Isaias)</span> </div>
+<div id="bkeIsaiahchaptersResult" class="chapterResult"></div>
+<div id="bkeIsaiahverseResult" class="verseResult"></div>
+
+<div id="bkeJeremiah" class="OldTestamentbke"><span class="oldlanguage">Jeremiah</span><span class="oldsublanguage">(Jeremias)</span> </div>
+<div id="bkeJeremiahchaptersResult" class="chapterResult"></div>
+<div id="bkeJeremiahverseResult" class="verseResult"></div>
+
+<div id="bkeLamentations" class="OldTestamentbke"><span class="oldlanguage">Lamentations</span><span class="oldsublanguage">(Mga Panaghoy)</span> </div>
+<div id="bkeLamentationschaptersResult" class="chapterResult"></div>
+<div id="bkeLamentationsverseResult" class="verseResult"></div>
+
+<div id="bkeEzekiel" class="OldTestamentbke"><span class="oldlanguage">Ezekiel</span><span class="oldsublanguage">(Ezekiel)</span> </div>
+<div id="bkeEzekielchaptersResult" class="chapterResult"></div>
+<div id="bkeEzekielverseResult" class="verseResult"></div>
+
+<div id="bkeDaniel" class="OldTestamentbke"><span class="oldlanguage">Daniel</span><span class="oldsublanguage">(Daniel)</span> </div>
+<div id="bkeDanielchaptersResult" class="chapterResult"></div>
+<div id="bkeDanielverseResult" class="verseResult"></div>
+
+<div id="bkeHosea" class="OldTestamentbke"><span class="oldlanguage">Hosea</span><span class="oldsublanguage">(Oseas)</span> </div>
+<div id="bkeHoseachaptersResult" class="chapterResult"></div>
+<div id="bkeHoseaverseResult" class="verseResult"></div>
+
+<div id="bkeJoel" class="OldTestamentbke"><span class="oldlanguage">Joel</span><span class="oldsublanguage">(Joel)</span> </div>
+<div id="bkeJoelchaptersResult" class="chapterResult"></div>
+<div id="bkeJoelverseResult" class="verseResult"></div>
+
+<div id="bkeAmos" class="OldTestamentbke"><span class="oldlanguage">Amos</span><span class="oldsublanguage">(Amos)</span> </div>
+<div id="bkeAmoschaptersResult" class="chapterResult"></div>
+<div id="bkeAmosverseResult" class="verseResult"></div>
+
+<div id="bkeObadiah" class="OldTestamentbke"><span class="oldlanguage">Obadiah</span><span class="oldsublanguage">(Obadias)</span> </div>
+<div id="bkeObadiahchaptersResult" class="chapterResult"></div>
+<div id="bkeObadiahverseResult" class="verseResult"></div>
+
+<div id="bkeJonah" class="OldTestamentbke"><span class="oldlanguage">Jonah</span><span class="oldsublanguage">(Jonas)</span> </div>
+<div id="bkeJonahchaptersResult" class="chapterResult"></div>
+<div id="bkeJonahverseResult" class="verseResult"></div>
+
+<div id="bkeMicah" class="OldTestamentbke"><span class="oldlanguage">Micah</span><span class="oldsublanguage">(Mikas)</span> </div>
+<div id="bkeMicahchaptersResult" class="chapterResult"></div>
+<div id="bkeMicahverseResult" class="verseResult"></div>
+
+<div id="bkeNahum" class="OldTestamentbke"><span class="oldlanguage">Nahum</span><span class="oldsublanguage">(Naum)</span> </div>
+<div id="bkeNahumchaptersResult" class="chapterResult"></div>
+<div id="bkeNahumverseResult" class="verseResult"></div>
+
+<div id="bkeHabakkuk" class="OldTestamentbke"><span class="oldlanguage">Habakkuk</span><span class="oldsublanguage">(Habacuc)</span> </div>
+<div id="bkeHabakkukchaptersResult" class="chapterResult"></div>
+<div id="bkeHabakkukverseResult" class="verseResult"></div>
+
+<div id="bkeZephaniah" class="OldTestamentbke"><span class="oldlanguage">Zephaniah</span><span class="oldsublanguage">(Sofonias)</span> </div>
+<div id="bkeZephaniahchaptersResult" class="chapterResult"></div>
+<div id="bkeZephaniahverseResult" class="verseResult"></div>
+
+<div id="bkeHaggai" class="OldTestamentbke"><span class="oldlanguage">Haggai</span><span class="oldsublanguage">(Ageo)</span> </div>
+<div id="bkeHaggaichaptersResult" class="chapterResult"></div>
+<div id="bkeHaggaiverseResult" class="verseResult"></div>
+
+<div id="bkeZechariah" class="OldTestamentbke"><span class="oldlanguage">Zechariah</span><span class="oldsublanguage">(Zacarias)</span> </div>
+<div id="bkeZechariahchaptersResult" class="chapterResult"></div>
+<div id="bkeZechariahverseResult" class="verseResult"></div>
+
+<div id="bkeMalachi" class="OldTestamentbke"><span class="oldlanguage">Malachi</span><span class="oldsublanguage">(Malakias)</span> </div>
+<div id="bkeMalachichaptersResult" class="chapterResult"></div>
+<div id="bkeMalachiverseResult" class="verseResult"></div>

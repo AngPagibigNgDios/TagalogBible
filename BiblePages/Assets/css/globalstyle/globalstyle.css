@@ -5,6 +5,7 @@ html {
   font-family: "Arimo", Arial, FreeSans, Helvetica, sans-serif;
 }
 
+
 body {
   color: #000;
   margin: 0;
@@ -887,14 +888,6 @@ div.search {
   overflow-x: auto;
 }
 
-#verseInput,
-form#searchPassage>input#qry {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
 
 .search.controls-row {
   display: flex;

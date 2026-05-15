@@ -90,8 +90,8 @@ this.innerHTML = `<div id="MenuContainer">  <div class="BibleChaptersMenu" id="b
       <a href="../OldTestament/21-ecclesiastes.html">
         <div class="BMONTecclesiastes divecclesiastes"><span class="english englishLabel">Ecclesiastes</span><br /><span class="tagalogleft tagalogLabel">Eclesiastes</span></div>
       </a>
-      <a href="../OldTestament/22-song-solomon.html">
-        <div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br /><span class="tagalogleft tagalogLabel">Awit ni Solomon</span></div>
+      <a href="../OldTestament/22-song-of-solomon.html">
+        <div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br /><span class="tagalogleft tagalogLabel">Awit ng Mga Awit</span></div>
       </a>
       <a href="../OldTestament/23-isaiah.html">
         <div class="BMONTisaiah divisaiah"><span class="english englishLabel">Isaiah</span><br /><span class="tagalogleft tagalogLabel">Isaias</span></div>

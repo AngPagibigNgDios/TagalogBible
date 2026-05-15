@@ -55,13 +55,13 @@ async function loadBible() {
       return;
     }    console.log('IndexedDB empty. Fetching JSON...');
     const files = [
-      'BiblePages/Assets/js/fuse/NT01M.json',
-      'BiblePages/Assets/js/fuse/NT02M.json',
-      'BiblePages/Assets/js/fuse/OT01M.json',
-      'BiblePages/Assets/js/fuse/OT02M.json',
-      'BiblePages/Assets/js/fuse/OT03M.json',
-      'BiblePages/Assets/js/fuse/OT04M.json',
-      'BiblePages/Assets/js/fuse/OT05M.json'
+      '../Assets/js/fuse/NT01M.json',
+      '../Assets/js/fuse/NT02M.json',
+      '../Assets/js/fuse/OT01M.json',
+      '../Assets/js/fuse/OT02M.json',
+      '../Assets/js/fuse/OT03M.json',
+      '../Assets/js/fuse/OT04M.json',
+      '../Assets/js/fuse/OT05M.json'
     ];    const responses = await Promise.all(
       files.map(url =>
         fetch(url).then(r => {
