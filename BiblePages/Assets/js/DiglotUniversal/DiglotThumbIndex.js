@@ -603,7 +603,7 @@ class DiglotThumbMenu extends HTMLElement {
 
 
 		async function loadBibleData() {
-			const response = await fetch("../Assets/js/fuse/testamentsindex.json");
+			const response = await fetch("BiblePages/Assets/js/fuse/testamentsindex.json");
 			const data = await response.json();
 			return data;
 		}
