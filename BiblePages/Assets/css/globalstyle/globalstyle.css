@@ -13,6 +13,9 @@ body {
   padding: 0;
 }
 
+.tddisplaynone {display:none !important;}
+.tddisplayblock {display: block !important;}
+
 #indeximage1080,
 #indeximage4k,
 #image4k,

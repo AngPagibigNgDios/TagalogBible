@@ -1724,6 +1724,10 @@ a.clink:visited {
 
 }
 
+
+#GodYouReign {display: block; height:100px; font-size: 1.2em; padding-bottom: 15%; text-align: center; font-weight: bold;}
+
+
 .menuheader {width:100%; border-bottom: 2px solid gray; border-top: 2px solid gray;  height:1.5em; justify-content:center; align-content: center; text-align: center; font-size:1.2em; font-weight: bold;}
 
 .newoldholder {
@@ -1789,6 +1793,7 @@ justify-content: center;
 
 
 
+                                    
 
 
 #bke1st-corinthians,
@@ -1848,7 +1853,7 @@ justify-content: center;
 #bkerevelationchaptersResult,
 #bkeromanschaptersResult,
 #bketituschaptersResult
-{width:100%; height:40px; font-size: 1em; margin:0; border-bottom: 1px solid gray; position: relative; padding:4% 0;}
+{position: relative; background-color: #e5f7ff;}
 
 
 
@@ -1879,7 +1884,7 @@ justify-content: center;
 #bkerevelationverseResult,
 #bkeromansverseResult,
 #bketitusverseResult
-{position: relative}
+{position: relative; background-color: #cbd9df;}
 
 
 #bke1st-chronicles,
@@ -1964,7 +1969,7 @@ justify-content: center;
 #bkeruthchaptersResult,
 #bkesong-of-solomonchaptersResult,
 #bkezechariahchaptersResult,
-#bkezephaniahchaptersResult{position: relative;}
+#bkezephaniahchaptersResult{position: relative; background-color: #e5f7ff;}
 
 
 
@@ -2007,7 +2012,7 @@ justify-content: center;
 #bkeruthverseResult,
 #bkesong-of-solomonverseResult,
 #bkezechariahverseResult,
-#bkezephaniahverseResult {position: relative;}
+#bkezephaniahverseResult {position: relative; background-color: #cbd9df;}
 
 
 #bke1st-corinthiansverseResult,
@@ -2037,7 +2042,7 @@ justify-content: center;
 #bkerevelationverseResult,
 #bkeromansverseResult,
 #bketitusverseResult
-{position: relative;}
+{position: relative;background-color: #cbd9df;}
 
 
 
@@ -2061,7 +2066,7 @@ justify-content: center;
 }
 
 
-.newlanguage{font-size: 1.2em;}
+.newlanguage{font-size: 1.2em; text-transform: uppercase; font-weight: bold;}
 .newsublanguage{font-size:1em;}
 
 

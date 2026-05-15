@@ -385,15 +385,18 @@ tr {
   width: 100%;
 }
 
-.tdenglishbible {
-  width: 50%;
-}
+
+.tddisplaynone {display:none !important;}
+.tddisplayblock {display: block !important;}
+.tddiglot {width:50%;}
+.tdfullsolo {width:100%}
 
 .tdtagalogbible {
   background-color: rgba(154, 226, 255, 0.07);
   height: 100%;
-  width: 50%;
+
 }
+
 
 span.verseNo,
 .sup {

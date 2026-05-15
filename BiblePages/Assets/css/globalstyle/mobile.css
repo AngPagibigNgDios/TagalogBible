@@ -63,7 +63,7 @@ html {
 }
 
 #display-title2 {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 
@@ -750,7 +750,10 @@ html {
 .devotionalindex {
   font-size: 1.2em;
 }
-
+    #headerLink
+ {
+        font-size: 1.4em;
+    }
 #customizationheader {
   font-size: 1.2em;
   display: flex;
@@ -1523,7 +1526,7 @@ html {
 .bibleversesthumb:hover,
 .goupthumb:hover,
 .biblecontrollthumb:hover {
-  background-color: #daff06;
+  background-color: #ebff7a;
   color: rgb(0, 0, 0);
   cursor: pointer;
 
@@ -1543,6 +1546,8 @@ html {
   margin-top: 15%;
 
 }
+
+#GodYouReign {display: block; height:100px; font-size: 1.2em; padding-bottom: 15%; text-align: center; font-weight: bold;}
 
 .menuheader {width:100%; border-bottom: 2px solid gray; border-top: 2px solid gray;  height:1.5em; justify-content:center; align-content: center; text-align: center; font-size:1.2em; font-weight: bold;}
 
@@ -1610,7 +1615,6 @@ justify-content: center;
 
 
 
-
 #bke1st-corinthians,
 #bke1st-john,
 #bke1st-peter,
@@ -1668,7 +1672,7 @@ justify-content: center;
 #bkerevelationchaptersResult,
 #bkeromanschaptersResult,
 #bketituschaptersResult
-{position: relative;}
+{position: relative; background-color: #e5f7ff;}
 
 
 
@@ -1699,7 +1703,7 @@ justify-content: center;
 #bkerevelationverseResult,
 #bkeromansverseResult,
 #bketitusverseResult
-{position: relative}
+{position: relative; background-color: #cbd9df;}
 
 
 #bke1st-chronicles,
@@ -1784,7 +1788,7 @@ justify-content: center;
 #bkeruthchaptersResult,
 #bkesong-of-solomonchaptersResult,
 #bkezechariahchaptersResult,
-#bkezephaniahchaptersResult{position: relative;}
+#bkezephaniahchaptersResult{position: relative; background-color: #e5f7ff;}
 
 
 
@@ -1827,7 +1831,7 @@ justify-content: center;
 #bkeruthverseResult,
 #bkesong-of-solomonverseResult,
 #bkezechariahverseResult,
-#bkezephaniahverseResult {position: relative;}
+#bkezephaniahverseResult {position: relative; background-color: #cbd9df;}
 
 
 
@@ -1856,7 +1860,7 @@ justify-content: center;
   color: black;
   position:relative
 }
-.newlanguage{font-size: 1.5em;}
+.newlanguage{font-size: 1.5em; text-transform: uppercase; font-weight: bold;}
 .newsublanguage{font-size:1.2em;}
 
 

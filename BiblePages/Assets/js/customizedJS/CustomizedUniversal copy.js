@@ -596,72 +596,118 @@ function applyMode(mode) {
 	// SAVE MODE FOR ALL PAGES
 	localStorage.setItem('bibleMode', mode);
 
-   document.querySelectorAll ('.tdenglishbible').forEach (td => {
-    td.style.display = mode === 'tagalog' ? 'none' : '';
-  });
+	// TEXT VISIBILITY CONTROL
+	document.querySelectorAll('.tdenglishbible').forEach(td => {
+		td.style.display = mode === 'tagalog' ? 'none' : '';
+	});
 
-  document.querySelectorAll ('.tdtagalogbible').forEach (td => {
-    td.style.display = mode === 'english' ? 'none' : '';
-  });
+	document.querySelectorAll('.tdtagalogbible').forEach(td => {
+		td.style.display = mode === 'english' ? 'none' : '';
+	});
 
-  const engList = document.querySelectorAll ('.englishLabel');
-  const tagList = document.querySelectorAll ('.tagalogLabel');
-  const nonDiglot = document.querySelectorAll ('.nondiglotLabel');
+	const tdEbible = document.querySelectorAll('tdenglishbible');
+	const tdTbible = document.querySelectorAll('tdtagalogbible');
+	const engList = document.querySelectorAll('.englishLabel');
+	const tagList = document.querySelectorAll('.tagalogLabel');
+	const nonDiglot = document.querySelectorAll('.nondiglotLabel');
+	const newLang = document.querySelectorAll('.newlanguage');
+	const subLang = document.querySelectorAll('.newsublanguage');
 
-  if (mode === 'both') {
-    // REVERSE
-    engList.forEach (el => {
-      el.classList.add ('diglotboth');
-      el.classList.remove ('tagalogleft');
-    });
+	if (mode === 'both') {
+		// REVERSE
 
-    tagList.forEach (el => {
-      el.classList.remove ('english');
-      el.classList.add ('tagalogleft');
-    });
+		tdEbible.forEach(el => {
+			el.classList.add('tdenglishbible');
+			el.classList.remove('tagalogleft');
+				});
+		
+		engList.forEach(el => {
+			el.classList.add('diglotboth');
+			el.classList.remove('tagalogleft');
+		});
 
-    nonDiglot.forEach (el => {
-      el.classList.remove ('diglotcutwidth');
-      el.classList.add ('diglotfullwidth');
-    });
-  }
+		tagList.forEach(el => {
+			el.classList.remove('english');
+			el.classList.add('tagalogleft');
+		});
 
-  if (mode === 'english') {
-    // REVERSE
-    engList.forEach (el => {
-      el.classList.remove ('english');
-      el.classList.remove ('diglotboth');
-      el.classList.add ('tagalogleft');
-    });
+		nonDiglot.forEach(el => {
+			el.classList.add('diglotfullwidth');
+			el.classList.remove('diglotcutwidth');
 
-    tagList.forEach (el => {
-      el.classList.remove ('tagalogleft');
-      el.classList.add ('english');
-    });
+		});
 
-    nonDiglot.forEach (el => {
-      el.classList.remove ('diglotfullwidth');
-      el.classList.add ('diglotcutwidth');
-    });
-  }
+		newLang.forEach(el => {
+			el.classList.remove('newsublanguage');
+			el.classList.add('newlanguage');
+		});
 
-  if (mode === 'tagalog') {
-    // NORMAL (DIGLOT + TAGALOG ONLY)
-    engList.forEach (el => {
-      el.classList.remove ('tagalogleft');
-      el.classList.remove ('diglotboth');
-      el.classList.add ('english');
-    });
+		subLang.forEach(el => {
+			el.classList.remove('newsublanguage');
+			el.classList.add('newlanguage');
+		});
+	}
 
-    tagList.forEach (el => {
-      el.classList.remove ('english');
-      el.classList.add ('tagalogleft');
-    });
-    nonDiglot.forEach (el => {
-      el.classList.remove ('diglotfullwidth');
-      el.classList.add ('diglotcutwidth');
-    });
-  }
+	if (mode === 'english') {
+		// REVERSE
+		engList.forEach(el => {
+			el.classList.remove('english');
+			el.classList.remove('diglotboth');
+			el.classList.add('tagalogleft');
+		});
+
+		tagList.forEach(el => {
+			el.classList.remove('tagalogleft');
+			el.classList.add('english');
+		});
+
+		nonDiglot.forEach(el => {
+			el.classList.add('diglotcutwidth');
+			el.classList.remove('diglotfullwidth');
+
+		});
+		
+		newLang.forEach(el => {
+			el.classList.add('newlanguage');
+			el.classList.remove('newsublanguage');
+	
+		});
+
+				subLang.forEach(el => {
+			el.classList.add('newsublanguage');
+			el.classList.remove('newlanguage');
+		});
+	}
+
+	if (mode === 'tagalog') {
+		// NORMAL (DIGLOT + TAGALOG ONLY)
+		engList.forEach(el => {
+			el.classList.remove('tagalogleft');
+			el.classList.remove('diglotboth');
+			el.classList.add('english');
+		});
+
+		tagList.forEach(el => {
+			el.classList.remove('english');
+			el.classList.add('tagalogleft');
+		});
+		nonDiglot.forEach(el => {
+			el.classList.add('diglotcutwidth');
+			el.classList.remove('diglotfullwidth');
+
+		});
+		
+		newLang.forEach(el => {
+			el.classList.add('newsublanguage');
+			el.classList.remove('newlanguage');
+		});
+
+		subLang.forEach(el => {
+			el.classList.add('newlanguage');
+			el.classList.remove('newsublanguage');
+
+		});
+	}
 
 }
 

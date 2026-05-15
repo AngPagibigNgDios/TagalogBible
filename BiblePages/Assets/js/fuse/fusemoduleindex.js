@@ -1,7 +1,8 @@
 let fuse;
-let searchReady = false;/* -------------------------------------------------
-HELPER: FLATTEN JSON
--------------------------------------------------- */
+let searchReady = false;
+
+
+
 function flattenBible(rawData) {
   const result = [];
   Object.keys(rawData).forEach(bookId => {
@@ -26,9 +27,9 @@ function flattenBible(rawData) {
     });
   });
   return result;
-}/* -------------------------------------------------
-FUSE OPTIONS
--------------------------------------------------- */
+}
+
+
 const fuseOptions = {
   keys: ['bke', 'eng', 'tag'],
   threshold: 0.2,
