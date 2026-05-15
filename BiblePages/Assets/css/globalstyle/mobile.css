@@ -1559,7 +1559,7 @@ justify-content: center;
 
 
 .oldrow {display:flex; background-color:#e8f7fa; flex-direction: column; width: 100%;}
-.newrow {display:flex; background-color:#ededff; flex-direction: column; width: 100%; text-align: right;}
+.newrow {display:flex; background-color:#ededff; flex-direction: column; width: 100%; }
 
 #biblemenuanimation {
   z-index: 15;
@@ -1638,9 +1638,7 @@ justify-content: center;
 #bkerevelation,
 #bkeromans,
 #bketitus
-
-{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray;}
-
+{width:100%; height:auto; font-size: 1em; margin:0; border-bottom: 1px solid gray;display:flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; padding:4% 0;}
 
 
 #bke1st-corinthianschaptersResult,
@@ -1670,7 +1668,7 @@ justify-content: center;
 #bkerevelationchaptersResult,
 #bkeromanschaptersResult,
 #bketituschaptersResult
-{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray; position: relative;}
+{position: relative;}
 
 
 
@@ -1743,7 +1741,7 @@ justify-content: center;
 #bkesong-of-solomon,
 #bkezechariah,
 #bkezephaniah
-{width:100%; height:40px; font-size: 1em; margin:2%; border-bottom: 1px solid gray;}
+{width:100%; height:auto; font-size: 1em; margin:0; border-top: 1px solid gray; border-bottom: 1px solid gray;display:flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; padding:4% 0;}
 
 
 
@@ -1836,21 +1834,246 @@ justify-content: center;
 .chapter-heading, .verse-heading {
   font-weight: bold;
   margin-bottom: 8px;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .chapter-number, .verse-number {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin: 4px;
+  width: 15%;
+  height: auto;
+  margin: 2%;
   text-align: center;
-  line-height: 40px;
+
   border: 1px solid #333;
   background-color: #f0f0f0;
   border-radius: 4px;
+  justify-content: center;
+  vertical-align: center;
+  align-items: center;
+  padding: 4% 0;
+  font-size: 1.5em;
+  color: black;
+  position:relative
 }
+.newlanguage{font-size: 1.5em;}
+.newsublanguage{font-size:1.2em;}
 
-.chapter-number:hover, .verse-number:hover {
-  background-color: #ddd;
+
+
+
+
+#bke1st-corinthians:hover,
+#bke1st-john:hover,
+#bke1st-peter:hover,
+#bke1st-thessalonians:hover,
+#bke1st-timothy:hover,
+#bke2nd-corinthians:hover,
+#bke2nd-john:hover,
+#bke2nd-peter:hover,
+#bke2nd-thessalonians:hover,
+#bke2nd-timothy:hover,
+#bke3rd-john:hover,
+#bkeacts:hover,
+#bkecolossians:hover,
+#bkeephesians:hover,
+#bkegalatians:hover,
+#bkehebrews:hover,
+#bkejames:hover,
+#bkejohn:hover,
+#bkejude:hover,
+#bkeluke:hover,
+#bkemark:hover,
+#bkematthew:hover,
+#bkephilemon:hover,
+#bkephilippians:hover,
+#bkerevelation:hover,
+#bkeromans:hover,
+#bketitus:hover,
+#bke1st-chronicles:hover,
+#bke1st-kings:hover,
+#bke1st-samuel:hover,
+#bke2nd-chronicles:hover,
+#bke2nd-kings:hover,
+#bke2nd-samuel:hover,
+#bkeamos:hover,
+#bkedaniel:hover,
+#bkedeuteronomy:hover,
+#bkeecclesiastes:hover,
+#bkeesther:hover,
+#bkeexodus:hover,
+#bkeezekiel:hover,
+#bkeezra:hover,
+#bkegenesis:hover,
+#bkehabakkuk:hover,
+#bkeHaggai:hover,
+#bkehosea:hover,
+#bkeisaiah:hover,
+#bkejeremiah:hover,
+#bkejob:hover,
+#bkejoel:hover,
+#bkejonah:hover,
+#bkejoshua:hover,
+#bkejudges:hover,
+#bkelamentations:hover,
+#bkeleviticus:hover,
+#bkemalachi:hover,
+#bkemicah:hover,
+#bkenahum:hover,
+#bkenehemiah:hover,
+#bkenumbers:hover,
+#bkeobadiah:hover,
+#bkeproverbs:hover,
+#bkepsalms:hover,
+#bkeruth:hover,
+#bkesong-of-solomon:hover,
+#bkezechariah:hover,
+#bkezephaniah:hover, .chapter-number:hover, .verse-number:hover {
+  background-color: #eeff00;
   cursor: pointer;
 }
+
+
+
+#bke1st-corinthians:active,
+#bke1st-john:active,
+#bke1st-peter:active,
+#bke1st-thessalonians:active,
+#bke1st-timothy:active,
+#bke2nd-corinthians:active,
+#bke2nd-john:active,
+#bke2nd-peter:active,
+#bke2nd-thessalonians:active,
+#bke2nd-timothy:active,
+#bke3rd-john:active,
+#bkeacts:active,
+#bkecolossians:active,
+#bkeephesians:active,
+#bkegalatians:active,
+#bkehebrews:active,
+#bkejames:active,
+#bkejohn:active,
+#bkejude:active,
+#bkeluke:active,
+#bkemark:active,
+#bkematthew:active,
+#bkephilemon:active,
+#bkephilippians:active,
+#bkerevelation:active,
+#bkeromans:active,
+#bketitus:active,
+#bke1st-chronicles:active,
+#bke1st-kings:active,
+#bke1st-samuel:active,
+#bke2nd-chronicles:active,
+#bke2nd-kings:active,
+#bke2nd-samuel:active,
+#bkeamos:active,
+#bkedaniel:active,
+#bkedeuteronomy:active,
+#bkeecclesiastes:active,
+#bkeesther:active,
+#bkeexodus:active,
+#bkeezekiel:active,
+#bkeezra:active,
+#bkegenesis:active,
+#bkehabakkuk:active,
+#bkeHaggai:active,
+#bkehosea:active,
+#bkeisaiah:active,
+#bkejeremiah:active,
+#bkejob:active,
+#bkejoel:active,
+#bkejonah:active,
+#bkejoshua:active,
+#bkejudges:active,
+#bkelamentations:active,
+#bkeleviticus:active,
+#bkemalachi:active,
+#bkemicah:active,
+#bkenahum:active,
+#bkenehemiah:active,
+#bkenumbers:active,
+#bkeobadiah:active,
+#bkeproverbs:active,
+#bkepsalms:active,
+#bkeruth:active,
+#bkesong-of-solomon:active,
+#bkezechariah:active,
+#bkezephaniah:active, .chapter-number:active, .verse-number:active {
+  background-color: #eeff00;
+  cursor: pointer;
+}
+
+
+
+#bke1st-corinthians:target,
+#bke1st-john:target,
+#bke1st-peter:target,
+#bke1st-thessalonians:target,
+#bke1st-timothy:target,
+#bke2nd-corinthians:target,
+#bke2nd-john:target,
+#bke2nd-peter:target,
+#bke2nd-thessalonians:target,
+#bke2nd-timothy:target,
+#bke3rd-john:target,
+#bkeacts:target,
+#bkecolossians:target,
+#bkeephesians:target,
+#bkegalatians:target,
+#bkehebrews:target,
+#bkejames:target,
+#bkejohn:target,
+#bkejude:target,
+#bkeluke:target,
+#bkemark:target,
+#bkematthew:target,
+#bkephilemon:target,
+#bkephilippians:target,
+#bkerevelation:target,
+#bkeromans:target,
+#bketitus:target,
+#bke1st-chronicles:target,
+#bke1st-kings:target,
+#bke1st-samuel:target,
+#bke2nd-chronicles:target,
+#bke2nd-kings:target,
+#bke2nd-samuel:target,
+#bkeamos:target,
+#bkedaniel:target,
+#bkedeuteronomy:target,
+#bkeecclesiastes:target,
+#bkeesther:target,
+#bkeexodus:target,
+#bkeezekiel:target,
+#bkeezra:target,
+#bkegenesis:target,
+#bkehabakkuk:target,
+#bkeHaggai:target,
+#bkehosea:target,
+#bkeisaiah:target,
+#bkejeremiah:target,
+#bkejob:target,
+#bkejoel:target,
+#bkejonah:target,
+#bkejoshua:target,
+#bkejudges:target,
+#bkelamentations:target,
+#bkeleviticus:target,
+#bkemalachi:target,
+#bkemicah:target,
+#bkenahum:target,
+#bkenehemiah:target,
+#bkenumbers:target,
+#bkeobadiah:target,
+#bkeproverbs:target,
+#bkepsalms:target,
+#bkeruth:target,
+#bkesong-of-solomon:target,
+#bkezechariah:target,
+#bkezephaniah:target, .chapter-number:target, .verse-number:target {
+  background-color: #eeff00;
+  cursor: pointer;
+}
+
