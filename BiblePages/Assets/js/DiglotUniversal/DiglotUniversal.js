@@ -1584,7 +1584,10 @@ class DiglotFooter extends HTMLElement {
       this.innerHTML = `
       
 
-<div class="diglotfooterdiv">Site Map Contact Us</div>
+      <div class="diglotfooterdiv">   <br/><input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
+        
+      <br/><br/>Site Map Contact Us</div>
+
 
   `;
 
@@ -1593,3 +1596,24 @@ class DiglotFooter extends HTMLElement {
 
 
 customElements.define('diglot-footer', DiglotFooter);
+
+
+
+
+class DiglotSearchBar extends HTMLElement {
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
+      <div id="modulesearch">
+   <input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
+   </div>
+
+      `;
+
+   }
+}
+
+
+customElements.define('diglot-search-bar', DiglotSearchBar);
+
+

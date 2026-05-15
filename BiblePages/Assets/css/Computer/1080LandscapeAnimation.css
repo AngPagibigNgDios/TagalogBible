@@ -54,7 +54,7 @@ display: flex;
     height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: maroon !important;
+    background-color: #122051 !important;
 
 
 
@@ -64,7 +64,7 @@ display: flex;
 }
 
 @keyframes Reveal {
-  from { top: -150px;     background-color: maroon !important; }
+  from { top: -150px;     background-color: #122051 !important; }
   to   { top: 0px; position: fixed; 
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@ display: flex;
     height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
-       background-color: maroon !important;}
+       background-color: #122051 !important;}
 }
 
 

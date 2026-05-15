@@ -1597,3 +1597,8 @@ form#searchPassage>input#qry {
 .diglot2 {padding-top:5% !important; padding-bottom:5% !important;}
 
 .changedcolor {background-color: #ffffff; border: 1px solid #0f0f46; color:rgb(0, 0, 0); padding-bottom: 5%; padding-top:5%;}
+
+
+#modulesearch {position: fixed !important; bottom:0; background-color:#090947; width: 50%; height: 10%; opacity: 0; transition: opacity 1s ease; display:flex; justify-content: center; align-items:center; align-content: center; }
+
+#modulesearch:hover {opacity: 1;}

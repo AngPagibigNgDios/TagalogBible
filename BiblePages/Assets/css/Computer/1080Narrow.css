@@ -1582,7 +1582,9 @@ a.clink:visited {
 }
 
 
+#modulesearch {position: fixed !important; bottom:0; background-color:#090947; width: 100%; height: 10%; opacity: 0; transition: opacity 1s ease; display:flex; justify-content: center; align-items:center; align-content: center; }
 
+#modulesearch:hover {opacity: 1;}
 
 
 

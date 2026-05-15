@@ -121,7 +121,7 @@
   height: auto;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: maroon !important;
+  background-color: #122051 !important;
 
 
 
@@ -133,7 +133,7 @@
 @keyframes Reveal {
   from {
     top: -150px;
-    background-color: maroon !important;
+    background-color: #122051 !important;
   }
 
   to {
@@ -148,7 +148,7 @@
     height: auto;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: maroon !important;
+    background-color: #122051 !important;
   }
 }
 

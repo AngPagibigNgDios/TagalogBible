@@ -1039,11 +1039,18 @@ function showChapters(bookNum, book, chaptersDiv, versesDiv) {
     chapterLink.addEventListener("click", (e) => {
       e.preventDefault();
       showVerses(bookNum, chapter, verseCount, versesDiv, book);
+
+      // 👇 Scroll versesDiv into view after rendering
+      versesDiv.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     });
 
     chaptersDiv.appendChild(chapterLink);
   }
 }
+
 
     
 function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
@@ -1066,7 +1073,14 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
 
     versesDiv.appendChild(verseLink);
   }
+
+  // 👇 Ensure versesDiv is visible even if called directly - OKAY COPILOT, I GOT IT THANK YOU.
+  versesDiv.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 }
+
 
 
     
