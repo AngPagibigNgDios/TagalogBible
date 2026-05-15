@@ -1599,6 +1599,23 @@ customElements.define('diglot-footer', DiglotFooter);
 
 
 
+class DiglotFooterIndex extends HTMLElement {
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
+      
+
+      <div class="diglotfooterdiv" style="text-align:center;">  
+      <br/><br/>Site Map Contact Us</div>
+
+
+  `;
+
+   }
+}
+
+
+customElements.define('diglot-footer-index', DiglotFooterIndex);
 
 class DiglotSearchBar extends HTMLElement {
    connectedCallback() {

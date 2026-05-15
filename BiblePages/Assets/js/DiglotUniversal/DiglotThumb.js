@@ -1030,7 +1030,7 @@ function showChapters(bookNum, book, chaptersDiv, versesDiv) {
     const chapterLink = document.createElement("a");
 
     // Build the actual file path
-    chapterLink.href = `BiblePages/${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html`;
+    chapterLink.href = `../${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html`;
 
     // Inner HTML is just the number, wrapped in a span for styling
     chapterLink.innerHTML = `<span class="chapter-number">${chapter}</span>`;
@@ -1065,7 +1065,7 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
     const verseLink = document.createElement("a");
 
     // Build the file path + verse anchor
-    verseLink.href = `BiblePages/${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html#verse-${v}`;
+    verseLink.href = `../${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html#verse-${v}`;
 
     // Inner HTML is just the number, wrapped in a span for styling
     verseLink.innerHTML = `<span class="verse-number">${v}</span>`;
