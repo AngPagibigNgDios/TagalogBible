@@ -963,7 +963,7 @@ a.clink:visited {
   cursor:pointer;
   display:flex;
 }
-#biblemenuanimation {width:100%; height:92%; position: fixed; overflow:auto; background-color: white; display: none; bottom:0; left:0; color: black;}
+#biblemenuanimation, #bibleanimationright {width:100%; height:92%; position: fixed; overflow:auto; background-color: white; display: none; bottom:0; left:0; color: black; z-index: 33333;}
 .bibleversesthumb, .goupthumb, .biblecontrollthumb 
 {
     transition: background-color 0.3s ease;}.bibleversesthumb:hover, .goupthumb:hover, .biblecontrollthumb:hover 
@@ -971,7 +971,7 @@ a.clink:visited {
     background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;}
-#biblemenuanimation{z-index: 5;}
+
 #header {z-index: 20;}
 #upnimation {
   position: fixed;

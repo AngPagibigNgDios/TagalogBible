@@ -48,7 +48,7 @@
   flex-direction: column;
 
 
-  height: 30%;
+  height: 28%;
   position: fixed;
   width: 25%;
 
@@ -73,7 +73,7 @@
     left: -30%;
     margin-left: -1%;
 
-    height: 30%;
+    height: 28%;
     position: fixed;
     width: 25%;
 
@@ -86,7 +86,7 @@
     flex: 1;
     flex-direction: column;
 
-    height: 30%;
+    height: 28%;
     position: fixed;
     width: 25%;
     left: 0;

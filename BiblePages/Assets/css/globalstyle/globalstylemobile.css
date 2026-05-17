@@ -6,6 +6,12 @@ html {
   background-color: #122051;
 }
 
+#biblemenuanimation, #biblemenuanimationright {z-index: 33333 !important;}
+
+#header {
+  z-index: 333333 !important;
+}
+
 body {
   color: #000;
   margin: 0;
@@ -780,9 +786,6 @@ display-title2 {
   z-index: 30 !important;
 }
 
-div#header {
-  z-index: 20 !important;
-}
 
 #header-content {
   margin: 0px auto;

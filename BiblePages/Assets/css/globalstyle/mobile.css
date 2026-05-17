@@ -14,6 +14,10 @@ html {
   /* Fixed height */
 }
 
+#searchere {
+  width: 100%;
+  height: auto;
+}
 
 #header {
   flex-direction: column;
@@ -1545,21 +1549,9 @@ html {
 }
 
 
+
+#biblemenuanimationright,
 #biblemenuanimation {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  overflow: auto;
-  background-color: white;
-  display: none;
-  bottom: 0;
-  left: 0;
-  color: black;
-  margin-top: 60px;
-}
-
-
-#biblemenuanimationright {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -1573,7 +1565,7 @@ html {
   background-image: url('../../images/journal/colorbookmark.webp');
   background-attachment: fixed;
   background-repeat: repeat;
-  
+
 }
 
 
@@ -1647,7 +1639,9 @@ html {
 
 
 
-
+#searchhere{display:flex; flex-direction: row; gap:5%; justify-content: space-evenly; align-items: center; align-self: center;}
+.searchside {display: flex; justify-content: center; align-items: center; align-content: center; font-size: 1.2em; font-weight: bold;}
+.searchright {display:flex; margin-right:3%}
 
 .oldrow {
   display: flex;
@@ -1663,13 +1657,6 @@ html {
   width: 100%;
 }
 
-#biblemenuanimation {
-  z-index: 15;
-}
-
-#header {
-  z-index: 20;
-}
 
 
 
@@ -2225,4 +2212,57 @@ html {
 .verse-number:target {
   background-color: #eeff00;
   cursor: pointer;
+}
+
+
+#verseInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  height: 50px;
+  margin-bottom: 5%;
+}
+
+
+.controlheader {
+  font-weight: bold;
+  text-align: center;
+  border-top: 2px solid #0f0f46;
+  padding: 3px;
+  border-bottom: 2px solid #b8b8cd;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+.versehighlight {
+  text-align: center;
+}
+
+
+.copybuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.dualplacement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5%;
+  text-align: center;
+}
+
+.soloplacement {
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 3%;
 }

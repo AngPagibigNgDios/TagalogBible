@@ -6,6 +6,10 @@ class DiglotThumbMenu extends HTMLElement {
                         <div class="testamentsholderthumb">
                             <div class="topspacer">
                             </div>
+
+                      
+                            <a href="../../searchbible.html"><div id="searchhere"><span class="searchside">CLICK HERE TO OPEN SEARCH PAGE TO TYPE ANY BIBLE WORDS OR PEOPLE TO SEARCH THE ENTIRE BIBLE</span><img src="../Assets/images/journal/search.svg" class="searchright" style="min-width: 20px; max-width:200px; min-height: 20px; max-height:200px; height:auto; width:70%;"></div></a>
+
                             <div class="menuheader">
                               TESTAMENTS
                             </div>
@@ -410,7 +414,7 @@ class DiglotThumbMenu extends HTMLElement {
 
                                                                   <div id="GodYouReign" class="NewTestamentbke"><br/>
                                 GOD YOU REIGN FOREVER MORE! <br/>ADONAI REIGN! YESHUA REIGN!<br/>
-                                <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="../Assets/images//PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
+                                <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="../Assets/images/PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
                                 </div>
                               </div>
                             </div>
@@ -420,6 +424,204 @@ class DiglotThumbMenu extends HTMLElement {
 
 
                        <div id="biblemenuanimationright">
+
+                        <div class="topspacer">
+                            </div>
+                            <div class="menuheader">
+                              CONTROL PANEL
+                            </div>
+
+
+   <div class="versehighlight">
+      Type Range or Random or Both. Press Enter<br/>
+      <hr style="width:100%;">
+      <strong>VERSE HIGHLIGHT</strong>
+   </div>
+   <div class="controls-row input-row">
+      <input id="verseInput" placeholder="1-10, 2,5,9, Press Enter" type="text"/>
+   </div>
+   <div class="copybuttons">
+      <div class="dualplacement">
+         <div class="controldiglot diglot2" onclick="copyEnglish()">COPY ENGLISH</div>
+         <div class="controldiglot diglot2" onclick="copyTagalog()">COPY TAGALOG</div>
+    
+         <div class="controldiglot diglot2" onclick="copyBoth()">COPY DIGLOT</div>
+      </div>
+
+   </div>
+   <div class="controlheader marginhere">TEXT SIZE</div>
+   <div class="copybuttons marginhere">
+      <div class="dualplacement">
+         <div class="textresizerButton resizebutton" onclick="decreaseFont()"> SMALLER TEXT </div>
+         <div class="textresizerButton resizebutton" onclick="increaseFont()"> BIGGER TEXT </div>
+         <div class="textresizerButton resizebutton2" onclick="resetFont()"> RESET SIZE</div>
+      </div>
+   </div>
+
+   <div class="bcbpages">
+   <div class="FontChanger ariF">
+<div class="FontWeightChanger FW500">
+<table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
+<tr class="TITLETR">
+<td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
+<td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
+</tr>
+<tr class="verse" id="verse-16">
+<td class="tdenglishbible">
+<span class="verse spanenglishbible">
+<span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
+</span>
+</td>
+<td class="tdtagalogbible">
+<div class="bgseparatortagalog">
+<span class="verse spantagalogbible" lang="tl">
+<span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
+</span>
+</div>
+</td>
+</tr>
+
+</table>
+</div>
+</div>
+  </div>
+
+
+   <div class="controlheader marginhere">SHOW / HIDE BIBLE</div>
+   <div class="copybuttons marginhere">
+      <div class="dualplacement">
+         <div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
+         <div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
+         <div class="controldiglot" onclick="showAll()"> DIGLOT </div>
+      </div>
+   </div>
+
+   <div class="bcbpages">
+   <div class="FontChanger ariF">
+<div class="FontWeightChanger FW500">
+<table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
+<tr class="TITLETR">
+<td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
+<td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
+</tr>
+<tr class="verse" id="verse-16">
+<td class="tdenglishbible">
+<span class="verse spanenglishbible">
+<span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
+</span>
+</td>
+<td class="tdtagalogbible">
+<div class="bgseparatortagalog">
+<span class="verse spantagalogbible" lang="tl">
+<span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
+</span>
+</div>
+</td>
+</tr>
+
+</table>
+</div>
+</div>
+  </div>
+
+   <div class="controlheader marginhere">CHOOSE FONT</div>
+   <div class="dualplacement">
+      <div class="fontchoiceButton litF changedcolor" onclick="LiterataSF()">LITERATA<br />Serif</div>
+      <div class="fontchoiceButton lorF changedcolor" onclick="LoraSF()">LORA <br />Serif </div>
+
+      <div class="fontchoiceButton  elaF changedcolor" onclick="GelasioSF()"> GELASIO <br /> Serif </div>
+
+         </div>
+   <div class="dualplacement">
+      <div class="fontchoiceButton  opsF changedcolor" onclick="OpenSS()"> OPEN <br /> Sans-Serif </div>
+
+      <div class="fontchoiceButton  indF changedcolor" onclick="InterSS()"> INTER <br /> Sans-Serif </div>
+      <div class="fontchoiceButton lexF changedcolor" onclick="LexendSS()"> LEXEND <br /> Sans-Serif </div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontchoiceButton  pbsF changedcolor" onclick="PublicSS()"> PUBLIC <br /> Sans-Serif </div>
+      <div class="fontchoiceButton  ariF changedcolor" onclick="ArimoSS()"> ARIMO <br /> Sans-Serif </div>
+   </div>
+
+    <div class="controlheader marginhere">FONT THICKNESS</div>
+
+   <div class="dualplacement">
+      <div class="fontweightButton FW350" onclick="FW350FF()">Weight <br />350</div>
+      <div class="fontweightButton FW400" onclick="FW400FF()">Weight <br />400</div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontweightButton FW500" onclick="FW500FF()">Weight <br />500</div>
+      <div class="fontweightButton FW600" onclick="FW600FF()">Weight <br />600</div>
+   </div>
+   <div class="dualplacement">
+      <div class="fontweightButton FW700" onclick="FW700FF()">Weight <br />700</div>
+      <div class="fontweightButton FW800" onclick="FW800FF()">Weight <br />800</div>
+   </div>
+
+   
+<div class="bcbpages">
+   <div class="FontChanger ariF">
+<div class="FontWeightChanger FW500">
+<table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
+<tr class="TITLETR">
+<td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
+<td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
+</tr>
+<tr class="verse" id="verse-16">
+<td class="tdenglishbible">
+<span class="verse spanenglishbible">
+<span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
+</span>
+</td>
+<td class="tdtagalogbible">
+<div class="bgseparatortagalog">
+<span class="verse spantagalogbible" lang="tl">
+<span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
+</span>
+</div>
+</td>
+</tr>
+
+</table>
+</div>
+</div>
+  </div>
+
+    <div class="controlheader marginhere">BIBLE PAGE COLOR</div>
+
+   <div class="dualplacement" style="margin-bottom:5%;">
+      <div class="bcbggray colorpage" onclick="bcbggrayB()">Gray</div>
+      
+
+      <div class="bcbgblue colorpage" onclick="bcbgblueB()">Blue</div>
+      
+
+      <div class="bcbgbrown colorpage" onclick="bcbgbrownB()">Brown</div>
+      
+   </div>
+
+     <div class="dualplacement">
+      <div class="bcbgsepia colorpage" onclick="bcbgsepiaB()">Sepia</div>
+      
+
+      <div class="bcbgbrownish colorpage" onclick="bcbgbrownishB()">Brownish</div>
+      
+
+      <div class="bcbgvisionimpaired colorpage" onclick="bcbgvisionimpairedB()">Dark Mode</div>
+      
+   </div>   <div class="soloplacement">
+      <div class="bcbgreset colorpage" onclick="bcbgresetB()">Default</div>
+
+   </div>  
+
+       <div class="controlheader marginhere"> </div>
+
+      <div id="GodYouReign" class="NewTestamentbke"><br/>
+                                GOD YOU REIGN FOREVER MORE! <br/>ADONAI REIGN! YESHUA REIGN!<br/>
+                                <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="../Assets/images/PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
+                                </div>
+
+
 
   </div>
 
@@ -457,37 +659,64 @@ class DiglotThumbMenu extends HTMLElement {
 
 
 		// MENU TOGGLE
-		const menuButton = this.querySelector('#menuanimation');
-		const menuDiv = this.querySelector('#biblemenuanimation');
-		const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
-		const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
+// --- BIBLE MENU ---
+const menuButton = this.querySelector('#menuanimation');
+const menuDiv = this.querySelector('#biblemenuanimation');
+const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
+const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
 
-		menuButton.onclick = function() {
-			const isHidden = window.getComputedStyle(menuDiv).display === "none";
+menuButton.onclick = function() {
+    const isHidden = window.getComputedStyle(menuDiv).display === "none";
 
-			// toggle menu visibility
-			menuDiv.style.display = isHidden ? "block" : "none";
+    // Toggle visibility
+    menuDiv.style.display = isHidden ? "block" : "none";
+    // Ensure the OTHER menu is closed to prevent overlap
+    othermenupage.style.display = "none"; 
 
-			// toggle spans
-			spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
-			spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
+    // Toggle spans
+    spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
+    spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
 
-			// control body and html scrollbars
-			if (isHidden) {
-				document.body.style.overflow = "hidden";
-				document.documentElement.style.overflow = "hidden";
-				// allow scrolling inside the menu itself
-				menuDiv.style.overflowY = "auto";
-				menuDiv.style.overflowX = "hidden"; // optional, if you only want vertical scroll
-			} else {
-				document.body.style.overflow = "";
-				document.documentElement.style.overflow = "";
-				menuDiv.style.overflow = "";
-			}
+    if (isHidden) {
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+        menuDiv.style.overflowY = "auto";
+    } else {
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
+    }
+};
+
+// --- OTHER MENU ---
+const othermenu = this.querySelector('#menuanimationright');
+const othermenupage = this.querySelector('#biblemenuanimationright');
+const openmenuright = this.querySelector('#openmenu');
+const closemenuright = this.querySelector('#closemenu');
+
+othermenu.onclick = function() {
+    // FIX: Use hiderightmenu consistently
+    const hiderightmenu = window.getComputedStyle(othermenupage).display === "none";
+
+    // Toggle visibility
+    othermenupage.style.display = hiderightmenu ? "block" : "none";
+    // Ensure the BIBLE menu is closed
+    menuDiv.style.display = "none"; 
+
+    // Toggle spans
+    openmenuright.style.display = hiderightmenu ? "none" : "inline";
+    closemenuright.style.display = hiderightmenu ? "inline" : "none";
+
+    if (hiderightmenu) {
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+        othermenupage.style.overflowY = "auto";
+    } else {
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
+    }
+};
 
 
-    };
-    
 
 		const goUpBtn = this.querySelector("#goUpScroll");
 
@@ -1117,38 +1346,6 @@ const backUpMenu= this.querySelector('.newoldholder'); // your scrollable div
 
 
 
-    
-    const othermenu = this.querySelector('#menuanimationright');
-		const othermenupage = this.querySelector('#biblemenuanimationright');
-		const openmenuright = this.querySelector('#openmenu');
-		const closemenuright = this.querySelector('#closemenu');
-
-		othermenu.onclick = function() {
-			const hiderightmenu = window.getComputedStyle(othermenupage).display === "none";
-
-			// toggle menu visibility
-			othermenupage.style.display = isHidden ? "block" : "none";
-
-			// toggle spans
-			openmenuright.style.display = isHidden ? "none" : "inline";
-			closemenuright.style.display = isHidden ? "inline" : "none";
-
-			// control body and html scrollbars
-			if (hiderightmenu) {
-				document.body.style.overflow = "hidden";
-				document.documentElement.style.overflow = "hidden";
-				// allow scrolling inside the menu itself
-				othermenupage.style.overflowY = "auto";
-				othermenupage.style.overflowX = "hidden"; // optional, if you only want vertical scroll
-			} else {
-				document.body.style.overflow = "";
-				document.documentElement.style.overflow = "";
-				othermenupage.style.overflow = "";
-			}
-
-
-    };
-
 
 
 	}
@@ -1157,3 +1354,5 @@ const backUpMenu= this.querySelector('.newoldholder'); // your scrollable div
 }
 
 customElements.define('diglot-thumb-menu', DiglotThumbMenu);
+
+

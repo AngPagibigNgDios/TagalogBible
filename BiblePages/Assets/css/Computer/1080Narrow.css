@@ -10,6 +10,11 @@ html {
 
 
 
+#searchere {
+  width: 100%;
+  height: auto;
+}
+
 
 #display-title2 {
   font-size: 1.4em;
@@ -900,7 +905,8 @@ a.clink:visited {
 
 .textresizerButton,
 .controldiglot,
-.fontchoiceButton, .colorpage2  {
+.fontchoiceButton,
+.colorpage2 {
   display: flex;
 
 }
@@ -943,7 +949,8 @@ a.clink:visited {
 .textresizerButton:hover,
 .fontchoiceButton:hover,
 #buttonclick:hover,
-.fontweightButton:hover, .colorpage2:hover  {
+.fontweightButton:hover,
+.colorpage2:hover {
   background-color: #daff06 !important;
   color: rgb(0, 0, 0) !important;
   cursor: pointer;
@@ -984,7 +991,7 @@ a.clink:visited {
 
 
 
-.colorpage2{
+.colorpage2 {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1336,7 +1343,15 @@ a.clink:visited {
   align-items: center;
 }
 
-.colorpage{width:90%; height:50px; cursor: pointer; justify-content: center; text-align: center; align-items: center; align-content: center;}
+.colorpage {
+  width: 90%;
+  height: 50px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
 
 
 #buttonclick {
@@ -1608,11 +1623,29 @@ a.clink:visited {
 }
 
 
-#modulesearch {position: fixed !important; bottom:0; background-color:#090947; width: 50%; height: 5%; opacity: 0; transition: opacity 1s ease; display:flex; justify-content: center; align-items:center; align-content: center; z-index:77777;}
+#modulesearch {
+  position: fixed !important;
+  bottom: 0;
+  background-color: #090947;
+  width: 50%;
+  height: 5%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 77777;
+}
 
-#searchResults {z-index: 333;}
+#searchResults {
+  z-index: 333;
+}
 
-#modulesearch:hover {opacity: 1; z-index:77777;}
+#modulesearch:hover {
+  opacity: 1;
+  z-index: 77777;
+}
 
 
 
@@ -1704,24 +1737,7 @@ a.clink:visited {
 }
 
 
-#biblemenuanimation {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  overflow: auto;
-  background-color: white;
-  display: none;
-  bottom: 0;
-  left: 0;
-  color: black;
-  margin-top: 60px;
-  background-image: url('../../images/journal/colorbookmark.webp');
-  background-attachment: fixed;
-  background-repeat: repeat;
-  
-}
-
-
+#biblemenuanimation,
 #biblemenuanimationright {
   width: 100%;
   height: 100%;
@@ -1736,8 +1752,11 @@ a.clink:visited {
   background-image: url('../../images/journal/colorbookmark.webp');
   background-attachment: fixed;
   background-repeat: repeat;
-  
+
+
 }
+
+
 
 
 
@@ -1765,26 +1784,48 @@ a.clink:visited {
 
   display: flex;
   flex-direction: column;
-  height:100vh; width:100vw;
+  height: 100vh;
+  width: 100vw;
 
 }
 
-.topspacer {display: flex;
+.topspacer {
+  display: flex;
   margin-top: 15%;
 
 }
 
 
-#GodYouReign {display: block; height:100px; font-size: 1.2em; padding-bottom: 15%; text-align: center; font-weight: bold;}
+#GodYouReign {
+  display: block;
+  height: 100px;
+  font-size: 1.2em;
+  padding-bottom: 15%;
+  text-align: center;
+  font-weight: bold;
+}
 
 
-.menuheader {width:100%; border-bottom: 2px solid gray; border-top: 2px solid gray;  height:1.5em; justify-content:center; align-content: center; text-align: center; font-size:1.2em; font-weight: bold;}
+.menuheader {
+  width: 100%;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  height: 1.5em;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
 .newoldholder {
-display: flex; flex-direction: row; height:100%; width:  100%;
-left:0;
-bottom: 0;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
 }
 
 
@@ -1792,16 +1833,21 @@ justify-content: center;
 
 
 
-.oldrow {display:flex; background-color:#e8f7fa; flex-direction: column; width: 100%;}
-.newrow {display:flex; background-color:#ededff; flex-direction: column; width: 100%; text-align: right;}
-
-#biblemenuanimation {
-  z-index: 15;
+.oldrow {
+  display: flex;
+  background-color: #e8f7fa;
+  flex-direction: column;
+  width: 100%;
 }
 
-#header {
-  z-index: 20;
+.newrow {
+  display: flex;
+  background-color: #ededff;
+  flex-direction: column;
+  width: 100%;
+  text-align: right;
 }
+
 
 
 
@@ -1843,7 +1889,7 @@ justify-content: center;
 
 
 
-                                    
+
 
 
 #bke1st-corinthians,
@@ -1872,8 +1918,19 @@ justify-content: center;
 #bkephilippians,
 #bkerevelation,
 #bkeromans,
-#bketitus
-{width:100%; height:auto; font-size: 1em; margin:0; border-bottom: 1px solid gray; display:flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; padding: 4% 0;}
+#bketitus {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+  margin: 0;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 4% 0;
+}
 
 
 #bke1st-corinthianschaptersResult,
@@ -1902,8 +1959,10 @@ justify-content: center;
 #bkephilippianschaptersResult,
 #bkerevelationchaptersResult,
 #bkeromanschaptersResult,
-#bketituschaptersResult
-{position: relative; background-color: #e5f7ff;}
+#bketituschaptersResult {
+  position: relative;
+  background-color: #e5f7ff;
+}
 
 
 
@@ -1933,8 +1992,10 @@ justify-content: center;
 #bkephilippiansverseResult,
 #bkerevelationverseResult,
 #bkeromansverseResult,
-#bketitusverseResult
-{position: relative; background-color: #cbd9df;}
+#bketitusverseResult {
+  position: relative;
+  background-color: #cbd9df;
+}
 
 
 #bke1st-chronicles,
@@ -1975,8 +2036,19 @@ justify-content: center;
 #bkeruth,
 #bkesong-of-solomon,
 #bkezechariah,
-#bkezephaniah
-{width:100%; height:auto; font-size: 1em; margin: 0; border-bottom: 1px solid gray; display:flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; padding: 4% 0;}
+#bkezephaniah {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+  margin: 0;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 4% 0;
+}
 
 
 
@@ -2019,7 +2091,10 @@ justify-content: center;
 #bkeruthchaptersResult,
 #bkesong-of-solomonchaptersResult,
 #bkezechariahchaptersResult,
-#bkezephaniahchaptersResult{position: relative; background-color: #e5f7ff;}
+#bkezephaniahchaptersResult {
+  position: relative;
+  background-color: #e5f7ff;
+}
 
 
 
@@ -2062,7 +2137,10 @@ justify-content: center;
 #bkeruthverseResult,
 #bkesong-of-solomonverseResult,
 #bkezechariahverseResult,
-#bkezephaniahverseResult {position: relative; background-color: #cbd9df;}
+#bkezephaniahverseResult {
+  position: relative;
+  background-color: #cbd9df;
+}
 
 
 #bke1st-corinthiansverseResult,
@@ -2091,18 +2169,22 @@ justify-content: center;
 #bkephilippiansverseResult,
 #bkerevelationverseResult,
 #bkeromansverseResult,
-#bketitusverseResult
-{position: relative;background-color: #cbd9df;}
+#bketitusverseResult {
+  position: relative;
+  background-color: #cbd9df;
+}
 
 
 
-.chapter-heading, .verse-heading {
+.chapter-heading,
+.verse-heading {
   font-weight: bold;
   margin-bottom: 8px;
   text-align: center;
 }
 
-.chapter-number, .verse-number {
+.chapter-number,
+.verse-number {
   display: inline-block;
   width: 37px;
   height: 37px;
@@ -2111,13 +2193,20 @@ justify-content: center;
   line-height: 40px;
   border: 1px solid #333;
   background-color: #f0f0f0;
-  color:black;
+  color: black;
   border-radius: 4px;
 }
 
 
-.newlanguage{font-size: 1.2em; text-transform: uppercase; font-weight: bold;}
-.newsublanguage{font-size:1em;}
+.newlanguage {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.newsublanguage {
+  font-size: 1em;
+}
 
 
 #bke1st-corinthians:hover,
@@ -2185,7 +2274,9 @@ justify-content: center;
 #bkeruth:hover,
 #bkesong-of-solomon:hover,
 #bkezechariah:hover,
-#bkezephaniah:hover, .chapter-number:hover, .verse-number:hover {
+#bkezephaniah:hover,
+.chapter-number:hover,
+.verse-number:hover {
   background-color: #eeff00;
   cursor: pointer;
 }
@@ -2257,7 +2348,9 @@ justify-content: center;
 #bkeruth:active,
 #bkesong-of-solomon:active,
 #bkezechariah:active,
-#bkezephaniah:active, .chapter-number:active, .verse-number:active {
+#bkezephaniah:active,
+.chapter-number:active,
+.verse-number:active {
   background-color: #eeff00;
   cursor: pointer;
 }
@@ -2329,7 +2422,9 @@ justify-content: center;
 #bkeruth:target,
 #bkesong-of-solomon:target,
 #bkezechariah:target,
-#bkezephaniah:target, .chapter-number:target, .verse-number:target {
+#bkezephaniah:target,
+.chapter-number:target,
+.verse-number:target {
   background-color: #eeff00;
   cursor: pointer;
 }
@@ -2344,13 +2439,92 @@ justify-content: center;
 /* BIBLE JOURNAL */
 /*               */
 
-#journalheaderholder{display:flex; flex-direction: column; justify-content: center; align-items: center;}
+#journalheaderholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.journaltitle, .journalnumber, .journalcategory {display:flex;}
+.journaltitle,
+.journalnumber,
+.journalcategory {
+  display: flex;
+}
 
-  .journalposttitle {
-    font-size: 1.7em;
-    color: #0f0f46;
-    font-weight: 700;
-    text-align: center;
-  }
+.journalposttitle {
+  font-size: 1.7em;
+  color: #0f0f46;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+
+
+#searchhere{display:flex; flex-direction: row; gap:5%; justify-content: space-evenly; align-items: center; align-self: center;}
+.searchside {display: flex; justify-content: center; align-items: center; align-content: center; font-size: 1.2em; font-weight: bold;}
+.searchright {display:flex; margin-right:5%}
+
+
+
+#verseInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+  height: 50px;
+  margin-bottom: 5%;
+}
+
+
+.controlheader {
+  font-weight: bold;
+  text-align: center;
+  border-top: 2px solid #0f0f46;
+  padding: 3px;
+  border-bottom: 2px solid #b8b8cd;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.versehighlight {
+  text-align: center;
+}
+
+
+.copybuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.dualplacement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5%;
+  text-align: center;
+}
+
+.soloplacement {
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 3%;
+}
+
+.controldiglot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f46;
+  color: white;
+  padding: 2% 5%;
+  height: 30px;
+}
