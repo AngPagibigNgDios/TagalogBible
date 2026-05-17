@@ -466,7 +466,7 @@ table.searchResult td {
 }
 
 tr:target td {
-  background-color: #fff9d5 !important;
+  background-color: #fff9d5;
 }
 
 .em {
@@ -1381,6 +1381,13 @@ mark {
   color: black;
 }
 
+
+.bcbgblue tr:target td  {
+        background-color: #123761 !important;
+    }
+
+
+
 .bcbgblue {
   color: #d7d7d7;
   background-color: #416e97;
@@ -1392,10 +1399,7 @@ mark {
     }
 
     
-      tr:target td  {
-        background-color: #123761 !important;
-    }
-
+      
 
 
   span.verseNo,
@@ -1442,13 +1446,14 @@ mark {
   
 }
 
+.bcbgsepia tr:target td  {
+        background-color: #615d56 !important;
+    }
+
 .bcbgsepia {
   background-color: #b8a88a;
   color: #ffffff;
 
-      tr:target td  {
-        background-color: #615d56 !important;
-    }
 
        .highlight-verse td  {
         background-color: #615d56 !important;
@@ -1475,14 +1480,18 @@ mark {
 
 }
 
+
+.bcbgbrownish tr:target td  {
+        background-color: #615d56 !important;
+    }
+
+
 .bcbgbrownish {
   background-color: #897560;
   color: #ffffff;
 
 
-         tr:target td  {
-        background-color: #615d56 !important;
-    }
+       
 
        .highlight-verse td  {
         background-color: #615d56 !important;
@@ -1513,9 +1522,7 @@ mark {
   color: #ffffff;
 
 
-         tr:target td  {
-        background-color: #363636 !important;
-    }
+        
 
        .highlight-verse td  {
         background-color: #363636 !important;
@@ -1540,6 +1547,10 @@ mark {
 
 
 }
+
+.bcbgvisionimpaired tr:target td  {
+        background-color: #363636 !important;
+    }
 
 .bcbgreset {
   background-color: #ffffff !important;
