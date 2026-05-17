@@ -1385,6 +1385,19 @@ mark {
   color: #d7d7d7;
   background-color: #416e97;
 
+        .highlight-verse td
+
+ {
+        background-color: #123761 !important;
+    }
+
+    
+      tr:target td  {
+        background-color: #123761 !important;
+    }
+
+
+
   span.verseNo,
   .sup {
     color: #ffffff;
@@ -1433,6 +1446,16 @@ mark {
   background-color: #b8a88a;
   color: #ffffff;
 
+      tr:target td  {
+        background-color: #615d56 !important;
+    }
+
+       .highlight-verse td  {
+        background-color: #615d56 !important;
+    }
+
+
+
     span.verseNo,
   .sup {
     color: #ffffff;
@@ -1456,6 +1479,17 @@ mark {
   background-color: #897560;
   color: #ffffff;
 
+
+         tr:target td  {
+        background-color: #615d56 !important;
+    }
+
+       .highlight-verse td  {
+        background-color: #615d56 !important;
+    }
+
+
+
       span.verseNo,
   .sup {
     color: #ffffff;
@@ -1477,6 +1511,17 @@ mark {
 .bcbgvisionimpaired {
   background-color: #000000 !important;
   color: #ffffff;
+
+
+         tr:target td  {
+        background-color: #363636 !important;
+    }
+
+       .highlight-verse td  {
+        background-color: #363636 !important;
+    }
+
+
 
         span.verseNo,
   .sup {
