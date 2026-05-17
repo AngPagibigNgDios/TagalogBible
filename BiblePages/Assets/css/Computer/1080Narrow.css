@@ -900,7 +900,7 @@ a.clink:visited {
 
 .textresizerButton,
 .controldiglot,
-.fontchoiceButton {
+.fontchoiceButton, .colorpage2  {
   display: flex;
 
 }
@@ -943,9 +943,9 @@ a.clink:visited {
 .textresizerButton:hover,
 .fontchoiceButton:hover,
 #buttonclick:hover,
-.fontweightButton:hover {
-  background-color: #daff06;
-  color: rgb(0, 0, 0);
+.fontweightButton:hover, .colorpage2:hover  {
+  background-color: #daff06 !important;
+  color: rgb(0, 0, 0) !important;
   cursor: pointer;
 }
 
@@ -979,7 +979,32 @@ a.clink:visited {
   margin-bottom: 3%;
 
 
+
 }
+
+
+
+.colorpage2{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1% 1%;
+  width: 150px;
+  height: 70px;
+  align-content: center;
+  justify-items: center;
+  flex: 1 0 15%;
+  gap: 5%;
+  margin-bottom: 3%;
+
+
+}
+
+
+
+
 
 .fontchoicesHolder {
   display: flex;
@@ -1311,6 +1336,7 @@ a.clink:visited {
   align-items: center;
 }
 
+.colorpage{width:90%; height:50px; cursor: pointer; justify-content: center; text-align: center; align-items: center; align-content: center;}
 
 
 #buttonclick {
@@ -1582,10 +1608,11 @@ a.clink:visited {
 }
 
 
-#modulesearch {position: fixed !important; bottom:0; background-color:#090947; width: 100%; height: 10%; opacity: 0; transition: opacity 1s ease; display:flex; justify-content: center; align-items:center; align-content: center; }
+#modulesearch {position: fixed !important; bottom:0; background-color:#090947; width: 50%; height: 5%; opacity: 0; transition: opacity 1s ease; display:flex; justify-content: center; align-items:center; align-content: center; z-index:77777;}
 
-#modulesearch:hover {opacity: 1;}
+#searchResults {z-index: 333;}
 
+#modulesearch:hover {opacity: 1; z-index:77777;}
 
 
 
@@ -1694,6 +1721,23 @@ a.clink:visited {
   
 }
 
+
+#biblemenuanimationright {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  background-color: white;
+  display: none;
+  bottom: 0;
+  left: 0;
+  color: black;
+  margin-top: 60px;
+  background-image: url('../../images/journal/colorbookmark.webp');
+  background-attachment: fixed;
+  background-repeat: repeat;
+  
+}
 
 
 
@@ -2060,8 +2104,8 @@ justify-content: center;
 
 .chapter-number, .verse-number {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
   margin: 4px;
   text-align: center;
   line-height: 40px;
@@ -2290,3 +2334,23 @@ justify-content: center;
   cursor: pointer;
 }
 
+
+
+
+
+
+
+
+/* BIBLE JOURNAL */
+/*               */
+
+#journalheaderholder{display:flex; flex-direction: column; justify-content: center; align-items: center;}
+
+.journaltitle, .journalnumber, .journalcategory {display:flex;}
+
+  .journalposttitle {
+    font-size: 1.7em;
+    color: #0f0f46;
+    font-weight: 700;
+    text-align: center;
+  }

@@ -419,6 +419,10 @@ class DiglotThumbMenu extends HTMLElement {
 
 
 
+                       <div id="biblemenuanimationright">
+
+  </div>
+
                       <div id="thumbmenuholder">
                         <div class="bibleversesthumb" id="menuanimation">
                             <span id="openbiblemenu">BIBLE MENU ☰</span>
@@ -429,7 +433,7 @@ class DiglotThumbMenu extends HTMLElement {
                             <div>&nbsp;▲&nbsp;</div>
                             <div>UP</div>
                         </div>
-                        <div class="biblecontrollthumb">
+                        <div class="biblecontrollthumb" id="menuanimationright">
                             <span id="openmenu">☰ OTHER MENU</span>
                             <span id="closemenu">✖ OTHER MENU</span>
                         </div>
@@ -482,8 +486,8 @@ class DiglotThumbMenu extends HTMLElement {
 			}
 
 
-		};
-
+    };
+    
 
 		const goUpBtn = this.querySelector("#goUpScroll");
 
@@ -984,6 +988,8 @@ verses: document.getElementById("bkerevelationverseResult")
 
 
     async function loadBibleData() {
+
+
   const response = await fetch("../Assets/js/fuse/testamentsindex.json");
   const data = await response.json();
   return data;
@@ -1024,7 +1030,7 @@ function showChapters(bookNum, book, chaptersDiv, versesDiv) {
   // Add a single "Chapter" heading
   const chapterHeading = document.createElement("div");
   chapterHeading.className = "chapter-heading";
-  chapterHeading.textContent = "Chapters";
+  chapterHeading.textContent = `${book.bkl} Chapters`;
   chaptersDiv.appendChild(chapterHeading);
 
   for (const [chapter, verseCount] of Object.entries(book.chapters)) {
@@ -1049,7 +1055,10 @@ function showChapters(bookNum, book, chaptersDiv, versesDiv) {
 
     chaptersDiv.appendChild(chapterLink);
   }
-}
+    }
+    
+
+
 
 
     
@@ -1059,7 +1068,7 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
   // Add a single "Verse" heading
   const verseHeading = document.createElement("div");
   verseHeading.className = "verse-heading";
-  verseHeading.textContent = "Verses";
+  verseHeading.textContent = `Chapter ${chapter} Verses`;
   versesDiv.appendChild(verseHeading);
 
   for (let v = 1; v <= verseCount; v++) {
@@ -1108,6 +1117,37 @@ const backUpMenu= this.querySelector('.newoldholder'); // your scrollable div
 
 
 
+    
+    const othermenu = this.querySelector('#menuanimationright');
+		const othermenupage = this.querySelector('#biblemenuanimationright');
+		const openmenuright = this.querySelector('#openmenu');
+		const closemenuright = this.querySelector('#closemenu');
+
+		othermenu.onclick = function() {
+			const hiderightmenu = window.getComputedStyle(othermenupage).display === "none";
+
+			// toggle menu visibility
+			othermenupage.style.display = isHidden ? "block" : "none";
+
+			// toggle spans
+			openmenuright.style.display = isHidden ? "none" : "inline";
+			closemenuright.style.display = isHidden ? "inline" : "none";
+
+			// control body and html scrollbars
+			if (hiderightmenu) {
+				document.body.style.overflow = "hidden";
+				document.documentElement.style.overflow = "hidden";
+				// allow scrolling inside the menu itself
+				othermenupage.style.overflowY = "auto";
+				othermenupage.style.overflowX = "hidden"; // optional, if you only want vertical scroll
+			} else {
+				document.body.style.overflow = "";
+				document.documentElement.style.overflow = "";
+				othermenupage.style.overflow = "";
+			}
+
+
+    };
 
 
 

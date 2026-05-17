@@ -176,7 +176,7 @@ a.clink:visited {
 #DisplayFlexBigThree {
   display: flex;
   justify-content: center;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 
@@ -209,6 +209,12 @@ a.clink:visited {
 .diglotfullwidth {
   width: 100%;
 }
+
+
+.HomeURLheader, #display-title, #display-title2 {
+       
+        font-size: 1em;
+    }
 
 
 
@@ -508,8 +514,10 @@ a.clink:visited {
   position: absolute;
   background-color: white;
   display: block;
-  width: 92%;
+  width: 90%;
 }
+
+
 
 /* DIGLOT POST BUTTON */
 
@@ -763,10 +771,32 @@ a.clink:visited {
 
 .textresizerButton,
 .controldiglot,
-.fontchoiceButton {
+.fontchoiceButton, .colorpage2 {
   display: flex;
 
 }
+
+
+    #header{
+    top: 0px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #122051 !important;
+    font-size: 1.3em;
+}
+
+
+
+.colorpage{width:90%; height:50px; cursor: pointer; justify-content: center; text-align: center; align-items: center; align-content: center;}
+
 
 .philnavsfloat {
   display: flex;
@@ -792,7 +822,7 @@ a.clink:visited {
 .textresizerButton:hover,
 .fontchoiceButton:hover,
 #buttonclick:hover,
-.fontweightButton:hover {
+.fontweightButton:hover, .colorpage2:hover {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -829,6 +859,25 @@ a.clink:visited {
 
 
 }
+
+.colorpage2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1% 1%;
+  width: 150px;
+  height: 40px;
+  align-content: center;
+  justify-items: center;
+  flex: 1 0 15%;
+  gap: 5%;
+  margin-bottom: 3%;
+
+
+}
+
 
 .fontchoicesHolder {
   display: flex;
@@ -1212,7 +1261,7 @@ a.clink:visited {
   flex: 1 0 10%;
   border: 2px solid rgb(10, 10, 14);
   width: 40%;
-  height: 250px;
+  height: 350px;
 }
 
 
@@ -1356,7 +1405,7 @@ a.clink:visited {
 
 #MenuContainerMirrored {
 
-  height: 30%;
+  height: 28%;
   position: fixed;
   width: 25%;
   left: 0;

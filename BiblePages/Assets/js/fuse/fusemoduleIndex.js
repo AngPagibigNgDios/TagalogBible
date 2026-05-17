@@ -32,7 +32,7 @@ function flattenBible(rawData) {
 
 const fuseOptions = {
   keys: ['bke', 'eng', 'tag'],
-  threshold: 0.2,
+  threshold: 0.4,
   distance: 100,
   findAllMatches: true,
   ignoreLocation: true,
@@ -116,7 +116,7 @@ function setupSearchBox() {
       }      html += `
         <div class="FontChanger">
           <div class="FontWeightChanger">
-            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
+            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG tablemarginremover chaptertable">
               <tr class="TITLETR">
                 <td class="tdenglishbible TITLETD TITLETDR">
                   <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
@@ -140,7 +140,7 @@ function setupSearchBox() {
                 </td>
                 <td class="tdtagalogbible">
                   <div class="bgseparatortagalog">
-                    <span class="verse spantagalogbible">
+                    <span class="verse spantagalogbible" lang="tl">
                       <span class="verseNo verseNoTagalog">${item.v}</span>
                       ${displayTag}
                     </span>

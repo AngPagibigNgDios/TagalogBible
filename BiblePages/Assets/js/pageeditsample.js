@@ -3,7 +3,7 @@ class SampleBible extends HTMLElement {
      this.innerHTML = `
                       <div class="FontChanger ariF">
                      <div class="FontWeightChanger FW500">
-                        <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
+                        <table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
                            <tr class="TITLETR">
                               <td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
                               <td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
@@ -16,7 +16,7 @@ class SampleBible extends HTMLElement {
                               </td>
                               <td class="tdtagalogbible">
                                  <div class="bgseparatortagalog">
-                                    <span class="verse spantagalogbible">
+                                    <span class="verse spantagalogbible" lang="tl">
                                        <span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
                                     </span>
                                  </div>
@@ -30,7 +30,7 @@ class SampleBible extends HTMLElement {
                               </td>
                               <td class="tdtagalogbible">
                                  <div class="bgseparatortagalog">
-                                    <span class="verse spantagalogbible">
+                                    <span class="verse spantagalogbible" lang="tl">
                                        <span class="verseNo verseNoTagalog"> 17 </span> Sapagka't hindi sinugo ng Dios ang Anak sa sanglibutan upang hatulan ang sanglibutan; kundi upang ang sanglibutan ay maligtas sa pamamagitan niya.
                                     </span>
                                  </div>
@@ -44,7 +44,7 @@ class SampleBible extends HTMLElement {
                               </td>
                               <td class="tdtagalogbible">
                                  <div class="bgseparatortagalog">
-                                    <span class="verse spantagalogbible">
+                                    <span class="verse spantagalogbible" lang="tl">
                                        <span class="verseNo verseNoTagalog"> 18 </span> Ang sumasampalataya sa kaniya ay hindi hinahatulan; ang hindi sumasampalataya ay hinatulan na, sapagka't hindi siya sumampalataya sa pangalan ng bugtong na Anak ng Dios.
                                     </span>
                                  </div>

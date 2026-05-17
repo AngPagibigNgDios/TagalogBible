@@ -468,55 +468,44 @@ class JoinerDiglotPostA extends HTMLElement {
     </span>
     <hr />
 
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+    <div class="books" id="journalholderstatic">
+      <a href="../BibleJournal/0001.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 1</span>
-          <br />
+         
           <span class="journaltitle">
             The Golden Gift of God is HIS LOVE.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 2</span>
-          <br />
-          <span class="journaltitle">
-            If angels and demons are afraid of God, then we humans should be too, in correct way.
-          </span>
-        </div>
-      </a>
+
+    
+
+
+    <div class="books" id="journalholder1">
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+
+
+    <div class="books" id="journalholderstatic">
+      <a href="../BibleJournal/0003.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 3</span>
-          <br />
-          <span class="journaltitle">
+                 <span class="journaltitle">
             SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 4</span>
-          <br />
-          <span class="journaltitle">
-            There's no real enemy, than satan and his fallen angels.
-          </span>
-        </div>
-      </a>
+
+
+    <div class="books" id="journalholder">
     </div>
 
 
 
 
- </div>
+   </div>
 
   <div class="OtherMenu" id="more-links">
 
@@ -603,50 +592,40 @@ class JoinerDiglotPostB extends HTMLElement {
     </span>
     <hr />
 
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+        <div class="books" id="journalholderstatic">
+      <a href="../BibleJournal/0001.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 1</span>
-          <br />
+         
           <span class="journaltitle">
             The Golden Gift of God is HIS LOVE.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 2</span>
-          <br />
-          <span class="journaltitle">
-            If angels and demons are afraid of God, then we humans should be too, in correct way.
-          </span>
-        </div>
-      </a>
+
+    
+
+
+    <div class="books" id="journalholder1">
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
+
+
+    <div class="books" id="journalholderstatic">
+      <a href="../BibleJournal/0003.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 3</span>
-          <br />
-          <span class="journaltitle">
+                 <span class="journaltitle">
             SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="../OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 4</span>
-          <br />
-          <span class="journaltitle">
-            There's no real enemy, than satan and his fallen angels.
-          </span>
-        </div>
-      </a>
+
+
+    <div class="books" id="journalholder">
     </div>
+
 
  
 
@@ -912,6 +891,85 @@ class DiglotMenuFocused extends HTMLElement {
       <div class="fontweightButton FW800" onclick="FW800FF()">Weight <br />800</div>
    </div>
 
+   
+
+   <div id="plaincoloronly" style="width: 100% !important; height:auto !important;">
+<div class="uploadholder3">
+<div class="BackgroundImageFlex">
+<h3>WEBSITE PLAIN BACKGROUND COLOR</h3>Click the square to drag and choose color. Click outside and apply.
+</div>
+<div id="labelTitleFlex">
+<div id="labelTitleFlex2">
+<label id="labelTitle">
+</label>
+<input type="color" id="bgColor" value="#ffffff">
+</div>
+</div>
+<div onclick="applyColorTheme()" id="buttonclick">Apply Color</div>
+</div>
+</div>
+
+<div id="plainimageonly" style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+<div class="BackgroundImageFlex">
+<h3>WEBSITE BACKGROUND IMAGE</h3>
+</div>
+<div class="uploadholder"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+<div id="labelTitleFlex"  style="width: 100% !important;">
+<label id="labelTitle">( 1 ) Upload Image:</label>
+</div>
+<div id="bgUploadFlex"  style="width: 100% !important;">
+<input type="file" id="bgUpload" accept="image/*">
+</div>
+</div>
+<br/><br/>
+<div class="uploadholder"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+<div id="labelTitleFlex"  style="width: 100% !important;">
+<label id="labelTitle">( 2 ) Layout Style:</label>
+</div>
+<div id="bgStyleFlex" style="width: 100% !important;">
+<select id="bgStyle">
+<option value="repeat">Repeat (Tiled)</option>
+<option value="cover">Cover (Fill Screen)</option>
+<option value="contain">Fit (Show Whole)</option>
+</select>
+</div>
+</div>
+<br/><br/>
+<div class="uploadholder2">
+<div id="applyImageThemFlex">
+<div class="overridebutton" onclick="applyImageTheme()" id="buttonclick">Apply Image</div>
+</div>
+</div>
+</div>
+
+
+    <div class="controlheader marginhere">BIBLE PAGE COLOR</div>
+
+   <div class="soloplacement">
+      <div class="bcbggray colorpage" onclick="bcbggrayB()">Gray</div>
+      
+   </div>   <div class="soloplacement">
+      <div class="bcbgblue colorpage" onclick="bcbgblueB()">Blue</div>
+      
+   </div>   <div class="soloplacement">
+      <div class="bcbgbrown colorpage" onclick="bcbgbrownB()">Brown</div>
+      
+   </div>   <div class="soloplacement">
+      <div class="bcbgsepia colorpage" onclick="bcbgsepiaB()">Sepia</div>
+      
+   </div>   <div class="soloplacement">
+      <div class="bcbgbrownish colorpage" onclick="bcbgbrownishB()">Brownish</div>
+      
+   </div>   <div class="soloplacement">
+      <div class="bcbgvisionimpaired colorpage" onclick="bcbgvisionimpairedB()">Dark Mode</div>
+      
+   </div>   <div class="soloplacement">
+      <div class="bcbgreset colorpage" onclick="bcbgresetB()">Default</div>
+
+   </div>  
+
+
+
 
 </div>
 
@@ -1070,17 +1128,16 @@ class DiglotMenu extends HTMLElement {
 </div>
 
 <div class="OtherMenu" id="more-links">
+     <div class="controlheader">NEXT-PREVIOUS CHAPTER AND BOOK</div>
+   <div class="controlheader marginhere">KEYBOARD</div>
+   <img src="../Assets/images/journal/Keyboard.svg" class="
+   nkeyboard">
+      <div class="controlheader marginhere">PHONE TABLET TOUCH SCREEN - SWIPE</div>
+   <img src="../Assets/images/journal/Swipe.svg" class="nswipe">
 
-
-
-
-
-                        <div class="openingpagesearch">
-                          
-                        <input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
+  
   </div>
-
-         
+   
 
                 
      
@@ -1324,50 +1381,44 @@ class JoinerDiglotPostAIndex extends HTMLElement {
     </span>
     <hr />
 
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
+
+
+
+
+    <div class="books" id="journalholderstatic">
+      <a href="BiblePages/BibleJournal/0001.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 1</span>
-          <br />
+         
           <span class="journaltitle">
             The Golden Gift of God is HIS LOVE.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 2</span>
-          <br />
-          <span class="journaltitle">
-            If angels and demons are afraid of God, then we humans should be too, in correct way.
-          </span>
-        </div>
-      </a>
+
+    
+
+
+    <div class="books" id="journalholder1">
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
+
+
+    <div class="books" id="journalholderstatic">
+      <a href="BiblePages/BibleJournal/0003.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 3</span>
-          <br />
-          <span class="journaltitle">
+                 <span class="journaltitle">
             SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 4</span>
-          <br />
-          <span class="journaltitle">
-            There's no real enemy, than satan and his fallen angels.
-          </span>
-        </div>
-      </a>
+
+
+    <div class="books" id="journalholder">
     </div>
+
 
 
 
@@ -1459,49 +1510,38 @@ class JoinerDiglotPostBIndex extends HTMLElement {
     </span>
     <hr />
 
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
+    <div class="books" id="journalholderstatic">
+      <a href="BiblePages/BibleJournal/0001.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 1</span>
-          <br />
+         
           <span class="journaltitle">
             The Golden Gift of God is HIS LOVE.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 2</span>
-          <br />
-          <span class="journaltitle">
-            If angels and demons are afraid of God, then we humans should be too, in correct way.
-          </span>
-        </div>
-      </a>
+
+    
+
+
+    <div class="books" id="journalholder1">
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
+
+
+    <div class="books" id="journalholderstatic">
+      <a href="BiblePages/BibleJournal/0003.html">
         <div class="biblejournalposts">
           <span class="journalnumber">Bible Journal - 3</span>
-          <br />
-          <span class="journaltitle">
+                 <span class="journaltitle">
             SHOCKING! God Adonai's Vineyard destroyed. And nothing left.
           </span>
         </div>
       </a>
     </div>
-    <div class="books" id="divOLDbg">
-      <a href="BiblePages/OldTestament/01-genesis.html">
-        <div class="biblejournalposts">
-          <span class="journalnumber">Bible Journal - 4</span>
-          <br />
-          <span class="journaltitle">
-            There's no real enemy, than satan and his fallen angels.
-          </span>
-        </div>
-      </a>
+
+
+    <div class="books" id="journalholder">
     </div>
 
  
@@ -1584,10 +1624,15 @@ class DiglotFooter extends HTMLElement {
       this.innerHTML = `
       
 
-      <div class="diglotfooterdiv">   <br/><input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
-        
-      <br/><br/>Site Map Contact Us</div>
-
+  <div class="diglotfooterdiv" style="text-align:center;">  
+      <div class="footerholder">
+            <div ="privacypolicy">Privacy Policy</div>
+            <div ="termsservice">Terms of Service</div>
+            <div ="termsservice">ShareButton</div>
+            <div ="termsservice">Contact Us</div>
+            <div ="termsservice">Site Map</div>
+      </div>
+  </div>
 
   `;
 
@@ -1605,8 +1650,15 @@ class DiglotFooterIndex extends HTMLElement {
       this.innerHTML = `
       
 
-      <div class="diglotfooterdiv" style="text-align:center;">  
-      <br/><br/>Site Map Contact Us</div>
+  <div class="diglotfooterdiv" style="text-align:center;">  
+      <div class="footerholder">
+            <div ="privacypolicy">Privacy Policy</div>
+            <div ="termsservice">Terms of Service</div>
+            <div ="termsservice">ShareButton</div>
+            <div ="termsservice">Contact Us</div>
+            <div ="termsservice">Site Map</div>
+      </div>
+  </div>
 
 
   `;
@@ -1617,20 +1669,61 @@ class DiglotFooterIndex extends HTMLElement {
 
 customElements.define('diglot-footer-index', DiglotFooterIndex);
 
+
 class DiglotSearchBar extends HTMLElement {
-   connectedCallback() {
-      // 1. Set the HTML structure
-      this.innerHTML = `
+  connectedCallback() {
+    // 1. Set the HTML structure
+    this.innerHTML = `
+  
       <div id="modulesearch">
-   <input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
-   </div>
+        <input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
+        <button id="searchButton" onclick="submitData()">CLICK HERE OR PRESS ENTER</button>
+        <div style="opacity:.1">PRAY.</div>
+      </div>
+    `;
 
-      `;
+    const inputSearchBox = this.querySelector("#searchBox");
+       const divSearchResults = document.getElementById("searchResults");
+    const searchButton = this.querySelector("#searchButton");
 
-   }
+    // Shared function for both Enter and button click
+   
+        searchButton.addEventListener("click", function() {
+  // Create a synthetic "Enter" keypress event
+  var enterEvent = new KeyboardEvent("keypress", {
+    key: "Enter",
+    code: "Enter",
+    keyCode: 13,
+    which: 13,
+    bubbles: true
+  });
+  inputSearchBox.dispatchEvent(enterEvent);
+        });
+
+    // Enter key triggers the same function
+    inputSearchBox.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+          submitData();
+      }
+    });
+
+    // Button click also triggers the same function
+    searchButton.addEventListener("click", submitData);
+
+
+    
+     function submitData() {
+      // Do your search logic here (AJAX, filtering, etc.)
+      // Then scroll results into view
+      divSearchResults.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+  }
 }
 
-
-customElements.define('diglot-search-bar', DiglotSearchBar);
+customElements.define("diglot-search-bar", DiglotSearchBar);
 
 

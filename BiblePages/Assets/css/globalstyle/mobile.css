@@ -750,10 +750,11 @@ html {
 .devotionalindex {
   font-size: 1.2em;
 }
-    #headerLink
- {
-        font-size: 1.4em;
-    }
+
+#headerLink {
+  font-size: 1.4em;
+}
+
 #customizationheader {
   font-size: 1.2em;
   display: flex;
@@ -875,7 +876,8 @@ html {
 
 .textresizerButton,
 .controldiglot,
-.fontchoiceButton {
+.fontchoiceButton,
+.colorpage2 {
   display: flex;
 }
 
@@ -942,6 +944,26 @@ html {
   gap: 5%;
   margin-bottom: 3%;
 }
+
+
+.colorpage2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1% 1%;
+  width: 150px;
+  height: 70px;
+  align-content: center;
+  justify-items: center;
+  flex: 1 0 15%;
+  gap: 5%;
+  margin-bottom: 3%;
+
+
+}
+
 
 .fontchoicesHolder {
   display: flex;
@@ -1273,6 +1295,10 @@ html {
   align-self: center;
 }
 
+
+
+
+
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -1295,6 +1321,7 @@ html {
     margin-bottom: 20px;
   }
 }
+
 
 .scrollup {
   width: 60px;
@@ -1416,10 +1443,30 @@ html {
 
 
 
+.diglotfooterdiv {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  max-height: 200px;
+  min-height: 150px;
+}
 
 
 
 
+
+
+.colorpage {
+  width: 90%;
+  height: 50px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
 
 
 
@@ -1512,6 +1559,23 @@ html {
 }
 
 
+#biblemenuanimationright {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  background-color: white;
+  display: none;
+  bottom: 0;
+  left: 0;
+  color: black;
+  margin-top: 60px;
+  background-image: url('../../images/journal/colorbookmark.webp');
+  background-attachment: fixed;
+  background-repeat: repeat;
+  
+}
+
 
 
 .bibleversesthumb,
@@ -1538,24 +1602,46 @@ html {
 
   display: flex;
   flex-direction: column;
-  height:100vh; width:100vw;
+  height: 100vh;
+  width: 100vw;
 
 }
 
-.topspacer {display: flex;
+.topspacer {
+  display: flex;
   margin-top: 15%;
 
 }
 
-#GodYouReign {display: block; height:100px; font-size: 1.2em; padding-bottom: 15%; text-align: center; font-weight: bold;}
+#GodYouReign {
+  display: block;
+  height: 100px;
+  font-size: 1.2em;
+  padding-bottom: 15%;
+  text-align: center;
+  font-weight: bold;
+}
 
-.menuheader {width:100%; border-bottom: 2px solid gray; border-top: 2px solid gray;  height:1.5em; justify-content:center; align-content: center; text-align: center; font-size:1.2em; font-weight: bold;}
+.menuheader {
+  width: 100%;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  height: 1.5em;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
 .newoldholder {
-display: flex; flex-direction: row; height:100%; width:  100%;
-left:0;
-bottom: 0;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
 }
 
 
@@ -1563,8 +1649,19 @@ justify-content: center;
 
 
 
-.oldrow {display:flex; background-color:#e8f7fa; flex-direction: column; width: 100%;}
-.newrow {display:flex; background-color:#ededff; flex-direction: column; width: 100%; }
+.oldrow {
+  display: flex;
+  background-color: #e8f7fa;
+  flex-direction: column;
+  width: 100%;
+}
+
+.newrow {
+  display: flex;
+  background-color: #ededff;
+  flex-direction: column;
+  width: 100%;
+}
 
 #biblemenuanimation {
   z-index: 15;
@@ -1641,8 +1738,19 @@ justify-content: center;
 #bkephilippians,
 #bkerevelation,
 #bkeromans,
-#bketitus
-{width:100%; height:auto; font-size: 1em; margin:0; border-bottom: 1px solid gray;display:flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; padding:4% 0;}
+#bketitus {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+  margin: 0;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 4% 0;
+}
 
 
 #bke1st-corinthianschaptersResult,
@@ -1671,8 +1779,10 @@ justify-content: center;
 #bkephilippianschaptersResult,
 #bkerevelationchaptersResult,
 #bkeromanschaptersResult,
-#bketituschaptersResult
-{position: relative; background-color: #e5f7ff;}
+#bketituschaptersResult {
+  position: relative;
+  background-color: #e5f7ff;
+}
 
 
 
@@ -1702,8 +1812,10 @@ justify-content: center;
 #bkephilippiansverseResult,
 #bkerevelationverseResult,
 #bkeromansverseResult,
-#bketitusverseResult
-{position: relative; background-color: #cbd9df;}
+#bketitusverseResult {
+  position: relative;
+  background-color: #cbd9df;
+}
 
 
 #bke1st-chronicles,
@@ -1744,8 +1856,20 @@ justify-content: center;
 #bkeruth,
 #bkesong-of-solomon,
 #bkezechariah,
-#bkezephaniah
-{width:100%; height:auto; font-size: 1em; margin:0; border-top: 1px solid gray; border-bottom: 1px solid gray;display:flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; padding:4% 0;}
+#bkezephaniah {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
+  margin: 0;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 4% 0;
+}
 
 
 
@@ -1788,7 +1912,10 @@ justify-content: center;
 #bkeruthchaptersResult,
 #bkesong-of-solomonchaptersResult,
 #bkezechariahchaptersResult,
-#bkezephaniahchaptersResult{position: relative; background-color: #e5f7ff;}
+#bkezephaniahchaptersResult {
+  position: relative;
+  background-color: #e5f7ff;
+}
 
 
 
@@ -1831,18 +1958,23 @@ justify-content: center;
 #bkeruthverseResult,
 #bkesong-of-solomonverseResult,
 #bkezechariahverseResult,
-#bkezephaniahverseResult {position: relative; background-color: #cbd9df;}
+#bkezephaniahverseResult {
+  position: relative;
+  background-color: #cbd9df;
+}
 
 
 
-.chapter-heading, .verse-heading {
+.chapter-heading,
+.verse-heading {
   font-weight: bold;
   margin-bottom: 8px;
   text-align: center;
   font-size: 1.5em;
 }
 
-.chapter-number, .verse-number {
+.chapter-number,
+.verse-number {
   display: inline-block;
   width: 15%;
   height: auto;
@@ -1858,10 +1990,18 @@ justify-content: center;
   padding: 4% 0;
   font-size: 1.5em;
   color: black;
-  position:relative
+  position: relative
 }
-.newlanguage{font-size: 1.5em; text-transform: uppercase; font-weight: bold;}
-.newsublanguage{font-size:1.2em;}
+
+.newlanguage {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.newsublanguage {
+  font-size: 1.2em;
+}
 
 
 
@@ -1932,7 +2072,9 @@ justify-content: center;
 #bkeruth:hover,
 #bkesong-of-solomon:hover,
 #bkezechariah:hover,
-#bkezephaniah:hover, .chapter-number:hover, .verse-number:hover {
+#bkezephaniah:hover,
+.chapter-number:hover,
+.verse-number:hover {
   background-color: #eeff00;
   cursor: pointer;
 }
@@ -2004,7 +2146,9 @@ justify-content: center;
 #bkeruth:active,
 #bkesong-of-solomon:active,
 #bkezechariah:active,
-#bkezephaniah:active, .chapter-number:active, .verse-number:active {
+#bkezephaniah:active,
+.chapter-number:active,
+.verse-number:active {
   background-color: #eeff00;
   cursor: pointer;
 }
@@ -2076,8 +2220,9 @@ justify-content: center;
 #bkeruth:target,
 #bkesong-of-solomon:target,
 #bkezechariah:target,
-#bkezephaniah:target, .chapter-number:target, .verse-number:target {
+#bkezephaniah:target,
+.chapter-number:target,
+.verse-number:target {
   background-color: #eeff00;
   cursor: pointer;
 }
-

@@ -115,7 +115,7 @@ function setupSearchBox() {
       }      html += `
         <div class="FontChanger">
           <div class="FontWeightChanger">
-            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
+            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
               <tr class="TITLETR">
                 <td class="tdenglishbible TITLETD TITLETDR">
                   <a href="../${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
@@ -139,7 +139,7 @@ function setupSearchBox() {
                 </td>
                 <td class="tdtagalogbible">
                   <div class="bgseparatortagalog">
-                    <span class="verse spantagalogbible">
+                    <span class="verse spantagalogbible" lang="tl">
                       <span class="verseNo verseNoTagalog">${item.v}</span>
                       ${displayTag}
                     </span>

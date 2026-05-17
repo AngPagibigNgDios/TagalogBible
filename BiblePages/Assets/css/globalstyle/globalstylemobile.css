@@ -13,6 +13,23 @@ body {
   padding: 0;
 }
 
+.chapter-heading {
+  text-transform: capitalize !important;
+}
+
+.tablemarginremover {
+  margin-bottom: .5em !important;
+  margin-top: 0px !important;
+}
+
+.journaltitle,
+.journalnumber {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #indeximage1080,
 #indeximage4k,
 #image4k,
@@ -386,10 +403,21 @@ tr {
 }
 
 
-.tddisplaynone {display:none !important;}
-.tddisplayblock {display: block !important;}
-.tddiglot {width:50%;}
-.tdfullsolo {width:100%}
+.tddisplaynone {
+  display: none !important;
+}
+
+.tddisplayblock {
+  display: block !important;
+}
+
+.tddiglot {
+  width: 50%;
+}
+
+.tdfullsolo {
+  width: 100%
+}
 
 .tdtagalogbible {
   background-color: rgba(154, 226, 255, 0.07);
@@ -406,13 +434,12 @@ span.verseNo,
   vertical-align: super;
 }
 
-table#chapter,
-table.searchResult {
+table.chapter {
   margin-bottom: 2em;
   margin-top: 1.5em;
 }
 
-table#chapter td,
+table.chaptertable td,
 table.searchResult td {
   border-bottom: dotted thin blue;
   text-align: justify;
@@ -505,7 +532,7 @@ div#quote>div {
   font-size: 85%;
 }
 
-table#chapter {
+table.chaptertable {
   table-layout: fixed;
 }
 
@@ -1213,7 +1240,8 @@ uniquifier Use a unique and descriptive class name
   background-size: cover;
 }
 
-#chapter {
+.chaptertable,
+#journaltext {
   font-size: 1.2em;
 }
 
@@ -1263,4 +1291,209 @@ mark {
   background-color: transparent !important;
   text-decoration: underline !important;
   color: cornflowerblue !important;
+}
+
+
+
+
+.booktop {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  max-width: 900px;
+  max-height: 217px;
+  min-width: 300px;
+  min-height: 72px;
+}
+
+.bookbottom {
+  width: 50%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  max-width: 900px;
+  max-height: 217px;
+  min-width: 300px;
+  min-height: 72px;
+}
+
+.jupperc {
+  text-transform: uppercase;
+}
+
+.extralineheight {
+  line-height: 1.2em !important;
+}
+
+.encompass {
+  border: 2px solid #090947;
+}
+
+.jli {
+  font-style: italic !important;
+}
+
+.jlu {
+  text-decoration: underline !important;
+}
+
+.jlb {
+  font-weight: bold !important;
+}
+
+.jlc {
+  text-align: center !important;
+}
+
+#journaltext {
+  line-height: 1.2em;
+}
+
+.left {
+  width: 80% !important;
+  margin-right: 20% !important;
+  height: auto;
+}
+
+.right {
+  width: 80% !important;
+  margin-left: 20% !important;
+  height: auto;
+}
+
+.jlj {
+  text-align: justify;
+}
+
+
+
+
+
+
+.bcbggray {
+  background-color: #adadad;
+  color: black;
+}
+
+.bcbgblue {
+  color: #d7d7d7;
+  background-color: #416e97;
+
+  span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: white;
+  }
+
+  a{  color: #d7d7d7;}
+
+}
+
+
+.bcbgbrown {
+  background-color: #bbb19c;
+  color: #33311e;
+
+
+  
+  span.verseNo,
+  .sup {
+    color: #33311e;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #33311e;
+  }
+
+  a{  color: #33311e;}
+
+
+
+  
+}
+
+.bcbgsepia {
+  background-color: #b8a88a;
+  color: #ffffff;
+
+    span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #ffffff;
+  }
+
+  a{  color: #ffffff;}
+
+
+
+}
+
+.bcbgbrownish {
+  background-color: #897560;
+  color: #ffffff;
+
+      span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #ffffff;
+  }
+
+  a{  color: #ffffff;}
+
+
+}
+
+.bcbgvisionimpaired {
+  background-color: #000000 !important;
+  color: #ffffff;
+
+        span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #ffffff;
+  }
+
+  a{  color: #ffffff;}
+
+
+}
+
+.bcbgreset {
+  background-color: #ffffff !important;
+  color: rgb(0, 0, 0);
 }

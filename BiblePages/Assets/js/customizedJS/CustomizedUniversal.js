@@ -999,3 +999,102 @@ function applyColorTheme() {
 	html.style.backgroundImage = 'none';
 	html.style.backgroundColor = color;
 }
+
+
+
+
+
+
+
+
+
+
+// BACKGROUND COLOR CHANGES
+
+
+
+
+
+
+function applyPages(colorPages) {
+
+	// SAVE
+	localStorage.setItem('pageColors', colorPages);
+
+	// GET ALL CONTAINERS
+	const containers =
+		document.querySelectorAll('.bcbpages');
+
+	// LOOP THROUGH ALL
+	containers.forEach(container => {
+
+		// REMOVE OLD
+		container.classList.remove(
+			'bcbggray',
+			'bcbgblue',
+			'bcbgbrown',
+			'bcbgsepia',
+			'bcbgbrownish',
+			'bcbgvisionimpaired',
+			'bcbgreset',
+
+		);
+
+		// ADD NEW
+		container.classList.add(colorPages);
+
+	});
+
+}
+
+
+// ===============================
+// BUTTONS
+// ===============================
+
+
+function bcbggrayB() {
+	applyPages('bcbggray');
+}
+
+function bcbgblueB() {
+	applyPages('bcbgblue');
+}
+
+function bcbgbrownB() {
+	applyPages('bcbgbrown');
+}
+
+
+function bcbgsepiaB() {
+	applyPages('bcbgsepia');
+}
+
+function bcbgbrownishB() {
+	applyPages('bcbgbrownish');
+}
+
+function bcbgvisionimpairedB() {
+	applyPages('bcbgvisionimpaired');
+}
+
+function bcbgresetB() {
+	applyPages('bcbgreset');
+}
+
+
+
+// ===============================
+// AUTO RESTORE
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function() {
+
+	const saved =
+		localStorage.getItem('pageColors') ||
+		'';
+
+	applyPages(saved);
+
+});
+

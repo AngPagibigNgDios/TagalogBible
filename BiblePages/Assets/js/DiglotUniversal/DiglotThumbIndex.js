@@ -1028,7 +1028,7 @@ function showChapters(bookNum, book, chaptersDiv, versesDiv) {
   // Add a single "Chapter" heading
   const chapterHeading = document.createElement("div");
   chapterHeading.className = "chapter-heading";
-  chapterHeading.textContent = "Chapters";
+  chapterHeading.textContent = `${book.bke} Chapters`;
   chaptersDiv.appendChild(chapterHeading);
 
   for (const [chapter, verseCount] of Object.entries(book.chapters)) {
@@ -1063,7 +1063,7 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
   // Add a single "Verse" heading
   const verseHeading = document.createElement("div");
   verseHeading.className = "verse-heading";
-  verseHeading.textContent = "Verses";
+  verseHeading.textContent = `(Chapter ${chapter}) Verses`;
   versesDiv.appendChild(verseHeading);
 
   for (let v = 1; v <= verseCount; v++) {

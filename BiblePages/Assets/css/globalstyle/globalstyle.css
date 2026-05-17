@@ -13,8 +13,25 @@ body {
   padding: 0;
 }
 
-.tddisplaynone {display:none !important;}
-.tddisplayblock {display: block !important;}
+.journaltitle,
+.journalnumber {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablemarginremover {
+  margin-bottom: .5em !important;
+  margin-top: 0px !important;
+}
+
+.tddisplaynone {
+  display: none !important;
+}
+
+.tddisplayblock {
+  display: block !important;
+}
 
 #indeximage1080,
 #indeximage4k,
@@ -55,7 +72,8 @@ a:hover {
 .indexshadow,
 .bible-container-bg,
 .OtherMenu,
-#combinedcontrols, .slide {
+#combinedcontrols,
+.slide {
   -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -368,6 +386,10 @@ a {
   font-size: 120%;
 }
 
+.chapter-heading {
+  text-transform: capitalize !important;
+}
+
 .ChapterP,
 .ChapterPNI {
   text-align: justify !important;
@@ -406,13 +428,16 @@ span.verseNo,
   vertical-align: super;
 }
 
-table#chapter,
-table.searchResult {
+.preparing {
+  display: none;
+}
+
+table.chaptertable {
   margin-bottom: 2em;
   margin-top: 1.5em;
 }
 
-table#chapter td,
+table.chaptertable td,
 table.searchResult td {
   border-bottom: dotted thin blue;
   text-align: justify;
@@ -505,7 +530,7 @@ div#quote>div {
   font-size: 85%;
 }
 
-table#chapter {
+table.chaptertable {
   table-layout: fixed;
 }
 
@@ -1297,6 +1322,8 @@ uniquifier Use a unique and descriptive class name
   background-size: auto;
 }
 
+
+
 .BibleChaptersMenu,
 #biblejournalpostsholder,
 .OtherMenu {
@@ -1315,7 +1342,8 @@ uniquifier Use a unique and descriptive class name
   background-size: cover;
 }
 
-#chapter {
+.chaptertable,
+#journaltext {
   font-size: 1.2em;
 }
 
@@ -1368,3 +1396,250 @@ mark {
 }
 
 
+
+
+.booktop {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  max-width: 900px;
+  max-height: 217px;
+  min-width: 300px;
+  min-height: 72px;
+}
+
+.bookbottom {
+  width: 50%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  max-width: 900px;
+  max-height: 217px;
+  min-width: 300px;
+  min-height: 72px;
+}
+
+.jupperc {
+  text-transform: uppercase;
+}
+
+.extralineheight {
+  line-height: 1em;
+}
+
+
+
+.booktop {
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  max-width: 900px;
+  max-height: 217px;
+  min-width: 300px;
+  min-height: 72px;
+}
+
+.bookbottom {
+  width: 50%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  max-width: 900px;
+  max-height: 217px;
+  min-width: 300px;
+  min-height: 72px;
+}
+
+.jupperc {
+  text-transform: uppercase;
+}
+
+.extralineheight {
+  line-height: 1.2em !important;
+}
+
+.encompass {
+  border: 2px solid #090947;
+}
+
+.jli {
+  font-style: italic !important;
+}
+
+.jlu {
+  text-decoration: underline !important;
+}
+
+.jlb {
+  font-weight: bold !important;
+}
+
+.jlc {
+  text-align: center !important;
+}
+
+#journaltext {
+  line-height: 1.2em;
+}
+
+.left {
+  width: 80% !important;
+  margin-right: 20% !important;
+  height: auto;
+}
+
+.right {
+  width: 80% !important;
+  margin-left: 20% !important;
+  height: auto;
+}
+
+.jlj {
+  text-align: justify;
+}
+
+.nkeyboard {
+  width: 100%;
+  height: auto;
+}
+
+.nswipe {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+.bcbggray {
+  background-color: #adadad;
+  color: black;
+}
+
+.bcbgblue {
+  color: #d7d7d7;
+  background-color: #416e97;
+
+  span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: white;
+  }
+
+  a{  color: #d7d7d7;}
+
+}
+
+
+.bcbgbrown {
+  background-color: #bbb19c;
+  color: #33311e;
+
+
+  
+  span.verseNo,
+  .sup {
+    color: #33311e;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #33311e;
+  }
+
+  a{  color: #33311e;}
+
+
+
+  
+}
+
+.bcbgsepia {
+  background-color: #b8a88a;
+  color: #ffffff;
+
+    span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #ffffff;
+  }
+
+  a{  color: #ffffff;}
+
+
+
+}
+
+.bcbgbrownish {
+  background-color: #897560;
+  color: #ffffff;
+
+      span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #ffffff;
+  }
+
+  a{  color: #ffffff;}
+
+
+}
+
+.bcbgvisionimpaired {
+  background-color: #000000 !important;
+  color: #ffffff;
+
+        span.verseNo,
+  .sup {
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: bold;
+    vertical-align: super;
+  }
+
+  .TITLETR {
+
+    color: #ffffff;
+  }
+
+  a{  color: #ffffff;}
+
+
+}
+
+.bcbgreset {
+  background-color: #ffffff !important;
+  color: rgb(0, 0, 0);
+}

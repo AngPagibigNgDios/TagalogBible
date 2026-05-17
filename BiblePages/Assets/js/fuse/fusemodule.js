@@ -31,7 +31,7 @@ FUSE OPTIONS
 -------------------------------------------------- */
 const fuseOptions = {
   keys: ['bke', 'eng', 'tag'],
-  threshold: 0.2,
+  threshold: 0.4,
   distance: 100,
   findAllMatches: true,
   ignoreLocation: true,
@@ -43,7 +43,7 @@ LOAD BIBLE (with IndexedDB cache via localForage)
 async function loadBible() {
   const searchResultsDiv = document.getElementById('searchResults');
   if (searchResultsDiv) {
-    searchResultsDiv.innerHTML = '<p style="text-align:center;">Preparing Bible for offline search...</p>';
+    searchResultsDiv.innerHTML = '<p style="text-align:center;" class="preparing">Preparing Bible for offline search...</p>';
   }  try {
     console.log('Checking IndexedDB...');
     const savedData = await localforage.getItem('fuseData');    if (savedData && savedData.length) {
@@ -115,7 +115,7 @@ function setupSearchBox() {
       }      html += `
         <div class="FontChanger">
           <div class="FontWeightChanger">
-            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
+            <table class="nondiglotresizer nondiglotLabel CustomizedTableBG tablemarginremover chaptertable">
               <tr class="TITLETR">
                 <td class="tdenglishbible TITLETD TITLETDR">
                   <a href="../${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
@@ -139,7 +139,7 @@ function setupSearchBox() {
                 </td>
                 <td class="tdtagalogbible">
                   <div class="bgseparatortagalog">
-                    <span class="verse spantagalogbible">
+                    <span class="verse spantagalogbible" lang="tl">
                       <span class="verseNo verseNoTagalog">${item.v}</span>
                       ${displayTag}
                     </span>
@@ -155,8 +155,8 @@ if ((index + 1) % 10 === 0) {
     html += `<div class="closesearch" onclick="closeSearch()">Close Search Result</div>`;
 } 
 // If it wasn't the 10th, check if it's the 5th
-else if ((index + 1) % 5 === 0) {
-    html += `<div class="gobacktosearch" onclick="gobackToSearchBar()">Go Back &#8607; To Search</div>`;
+else if ((index + 1) % 15 === 0) {
+    html += `<div class="gobacktosearch2">If you can't search again, refresh the page.</div>`;
 }      
     });    if (results.length > 0) {
       html += `

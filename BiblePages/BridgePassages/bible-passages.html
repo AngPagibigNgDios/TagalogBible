@@ -82,13 +82,16 @@
 a.topic {
 width: 100%;
 display: block;
+height: auto;
+padding-bottom:2%;
+padding-top:2%;
 }
 a.topic>span.ref {
 color: gray;
 float: right;
 margin-left: 20px;
 }
-a.topic:hover {
+xa.topic:hover {
 cursor: pointer;
 text-decoration: none;
 color: #086782;
@@ -96,10 +99,10 @@ background-color: snow;
 font-weight: bold;
 color: #e25401;
 }
-a.topic:hover>span.ref {
+xa.topic:hover>span.ref {
 font-weight: bold;
 }
-input#topicFilter {
+xinput#topicFilter {
 width: 400px;
 padding-left: 5px;
 }
@@ -157,6 +160,8 @@ padding-left: 5px;
 <hr class="lesserhrnav" />
 <input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
 <div id="searchResults"></div>
+<br/><br/>
+<hr class="hrbiblepassages" />
 <a class="topic" href="../OldTestament/01-genesis-chapter-22.html#verse-1-19"> Abraham Sacrifices Isaac <span class="ref"> Genesis 22:1-19 </span>
 </a>
 <hr class="hrbiblepassages" />
@@ -780,6 +785,7 @@ padding-left: 5px;
 <hr class="hrbiblepassages" />
 <a class="topic" href="../NewTestament/42-luke-chapter-19.html#verse-1-10"> Zacchaeus <span class="ref"> Luke 19:1-10 </span>
 </a>
+<hr class="hrbiblepassages" />
 </div>
 
 
@@ -797,7 +803,7 @@ padding-left: 5px;
 <diglot-search-bar id="DesktopMenuOnly"></diglot-search-bar>
 <!-- BD-15 -->
 <diglot-footer></diglot-footer>
-
+<diglot-search-bar id="DesktopMenuOnly"></diglot-search-bar>
 <!-- BD-14 -->
 </div><!-- bible-container -->
 <!-- BD-13 -->
@@ -829,6 +835,7 @@ padding-left: 5px;
 
 <!-- BD-02 -->
 
+<script src="../BibleJournal/journal.js"></script>
 <!-- BD-01 -->
 
 </body>

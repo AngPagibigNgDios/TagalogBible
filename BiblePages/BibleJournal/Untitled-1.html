@@ -1,0 +1,118 @@
+<div id="biblejournalbinder"></div>
+
+
+const posts = [
+  { title: "First Post", content: "Hello world!" },
+  { title: "Second Post", content: "Learning JavaScript!" }
+];
+
+const container = document.getElementById('biblejournalbinder');
+
+posts.forEach(post => {
+
+  const htmlTemplate = `
+    <li class="post">
+      <h2>${post.title}</h2>
+      <p>${post.content}</p>
+    </li>
+  `;
+  
+
+  container.insertAdjacentHTML('beforeend', htmlTemplate);
+});
+
+
+
+
+
+// URL of the API or local JSON file
+
+const jsonUrl = 'binderposts.json'; 
+// Replace with your actual URL or path to JSON file
+const container = document.getElementById('journalheaderholder');
+
+async function loadPosts() {
+  try {
+    // 1. Pull the data from the JSON source
+    const response = await fetch(jsonUrl);
+    const posts = await response.json();
+    
+    // Clear the loading message
+    container.innerHTML = '';
+    
+    // 2. Loop through the JSON array
+    posts.forEach(post => {
+      const htmlTemplate = `
+        <article class="post-card">
+          <h3>${post.title}</h3>
+          <p>${post.body}</p>
+        </article>
+
+<div class="journaltitle">
+</div>
+<div class="journalnumber"></div>
+<div class="journalcategory"></div>
+
+
+      `;
+      
+      // 3. Insert into the DOM
+      container.insertAdjacentHTML('beforeend', htmlTemplate);
+    });
+    
+  } catch (error) {
+    container.innerHTML = '<p>Error loading posts.</p>';
+    console.error('Fetch error:', error);
+  }
+}
+
+// Call the function to execute
+loadPosts();
+
+
+
+
+
+
+
+TITLE UPDATE
+
+// 1. DESIGNER CONFIGURATION: Just change this number
+const TARGET_BIBJN = "1"; 
+
+async function setPageTitleByBibjn() {
+  try {
+    const response = await fetch('./data.json');
+    const items = await response.json();
+    
+    // 2. Direct lookup: Stops instantly when it finds the matching bibjn
+    const match = items.find(item => item.bibjn === TARGET_BIBJN);
+    
+    if (match) {
+      // 3. Automatically sets the tab title to your bjblt property
+      document.title = match.bjblt;
+    } else {
+      console.warn(`bibjn "${TARGET_BIBJN}" not found in JSON.`);
+    }
+  } catch (error) {
+    console.error('Error loading JSON data:', error);
+  }
+}
+
+// Run automatically on page load
+setPageTitleByBibjn();
+
+
+
+
+
+
+      <a href="../OldTestament/01-genesis.html">
+        <div class="biblejournalposts">
+          <span class="journalnumber">Bible Journal - 4</span>
+          <br />
+          <span class="journaltitle">
+            There's no real enemy, than satan and his fallen angels.
+          </span>
+        </div>
+      </a>
