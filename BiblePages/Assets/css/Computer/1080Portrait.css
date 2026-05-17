@@ -511,14 +511,16 @@ a.clink:visited {
 
 
 .remainhere {
-  position: absolute;
+
   background-color: white;
-  display: block;
-  width: 90%;
+height:auto;
+
+    width: 100%;
+
 }
 
 
-
+  .smallfont{font-size:.9em;}
 /* DIGLOT POST BUTTON */
 
 
@@ -679,7 +681,7 @@ a.clink:visited {
   background-color: #0f0f46;
   color: white;
   padding: 1% 6%;
-  height: 30px;
+  height: 20px;
 }
 
 #holderdiglottext {

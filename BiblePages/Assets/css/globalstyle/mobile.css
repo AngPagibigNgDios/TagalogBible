@@ -654,10 +654,10 @@ html {
 }
 
 .remainhere {
-  position: absolute;
+  position: fixed;
   background-color: white;
   display: block;
-  width: 92%;
+
 }
 
 /* DIGLOT POST BUTTON */

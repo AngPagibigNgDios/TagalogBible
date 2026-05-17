@@ -646,10 +646,12 @@ a.clink:visited {
 
 
 .remainhere {
-  position: absolute;
+
   background-color: white;
-  display: block;
-  width: 92%;
+  height:auto;
+
+      width: 100%;
+
 }
 
 /* DIGLOT POST BUTTON */

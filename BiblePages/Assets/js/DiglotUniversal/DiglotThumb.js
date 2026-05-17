@@ -8,7 +8,7 @@ class DiglotThumbMenu extends HTMLElement {
                             </div>
 
                       
-                            <a href="../../searchbible.html"><div id="searchhere"><span class="searchside">CLICK HERE TO OPEN SEARCH PAGE TO TYPE ANY BIBLE WORDS OR PEOPLE TO SEARCH THE ENTIRE BIBLE</span><img src="../Assets/images/journal/search.svg" class="searchright" style="min-width: 20px; max-width:200px; min-height: 20px; max-height:200px; height:auto; width:70%;"></div></a>
+                            <a href="../../searchbible.html"><div id="searchhere"><span class="searchside">SEARCH THE ENTIRE BIBLE WITH SEARCH PAGE</span><img src="../Assets/images/journal/search.svg" class="searchright" style="min-width: 20px; max-width:200px; min-height: 20px; max-height:200px; height:auto; width:70%;"></div></a>
 
                             <div class="menuheader">
                               TESTAMENTS

@@ -57,7 +57,8 @@ function clearHighlights () {
     if (eng) eng.style.display = '';
     if (tl) tl.style.display = '';
   });
-}function applyVerseHighlight () {
+}
+function applyVerseHighlight() {
   clearHighlights ();
   const inputField = document.getElementById ('verseInput');
   if (!inputField) return;

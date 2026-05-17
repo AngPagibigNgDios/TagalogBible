@@ -1,0 +1,78 @@
+/* START LOADING IMMEDIATELY */
+loadBible();document.getElementById('searchBox').addEventListener('keydown', function (e) {
+  if (e.key !== 'Enter') return;  if (!fuse) {
+    console.log('Search not ready yet...');
+    return;
+  }  const results = fuse.search(this.value);
+  let html = '';  results.forEach(r => {
+    const item = r.item;    // 1. DEFAULT STRINGS
+    let displayEng = item.eng;
+    let displayTag = item.tag;    // 2. APPLY HIGHLIGHTS IF MATCHES EXIST
+    if (r.matches) {
+      r.matches.forEach(match => {
+        if (match.key === 'eng') {
+          displayEng = highlightMatches(match.value, match.indices);
+        }
+        if (match.key === 'tag') {
+          displayTag = highlightMatches(match.value, match.indices);
+        }
+      });
+    }    // 3. BUILD HTML (Cleaned: No internal scripts)
+    html += `
+    <div class="FontChanger">
+      <div class="FontWeightChanger">
+        <table class="nondiglotresizer nondiglotLabel CustomizedTableBG" id="chapter">
+          <tr class="TITLETR">
+            <td class="tdenglishbible TITLETD TITLETDR"> 
+              <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
+                <span class="englishresulttitle">${item.bke} ${item.chapterId} : ${item.v}</span>
+                <span class="TestamentResult">${item.tes}</span>
+              </a>
+            </td>
+            <td class="tdtagalogbible TITLETDT TITLETDR"> 
+              <a href="BiblePages/${item.tesl}/${item.bookId}-${item.bkl}-chapter-${item.chapterId}.html#verse-${item.v}" style="display:block;width:100%;height:100%;text-decoration:none;color:inherit;">
+                <span class="tagalogresulttitle">${item.bkt} ${item.chapterId} : ${item.v}</span>
+                <span class="TestamentResult">${item.test}</span>
+              </a>
+            </td> 
+          </tr>
+          <tr id="verse-${item.v}" class="verse">
+            <td class="tdenglishbible">
+              <span class="verse spanenglishbible">
+                <span class="verseNo verseNoEnglishBible">${item.v}</span>
+                ${displayEng}
+              </span>
+            </td>
+            <td class="tdtagalogbible">
+              <div class="bgseparatortagalog">
+                <span class="verse spantagalogbible" lang="tl">
+                  <span class="verseNo verseNoTagalog">${item.v}</span> ${displayTag}
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>`;
+  });  // Inject the HTML
+  document.getElementById('searchResults').innerHTML = html || '<p>No results found.</p>';  // 4. RE-APPLY CUSTOMIZATIONS (This makes the table "remember" your settings)
+  restoreSettings();
+});/* -------------------------------------------------
+RESTORE SETTINGS FUNCTION
+-------------------------------------------------- */
+function restoreSettings() {
+  // Restore Language Mode (English/Tagalog/Both)
+  const savedMode = localStorage.getItem('bibleMode') || 'both';
+  if (typeof applyMode === 'function') applyMode(savedMode);  // Restore Font Family
+  const savedFont = localStorage.getItem('fontFamilyS') || 'ariF';
+  if (typeof applyFont === 'function') applyFont(savedFont);  // Restore Font Weight
+  const savedWeight = localStorage.getItem('fontFamilyWeight') || 'FW500';
+  if (typeof applyFontWeight === 'function') applyFontWeight(savedWeight);  // Restore Font Size
+  const savedSize = localStorage.getItem('bibleFontSize');
+  if (savedSize) {
+    const size = parseFloat(savedSize);
+    document.querySelectorAll('.spanenglishbible, .spantagalogbible').forEach(el => {
+      el.style.fontSize = size + 'em';
+    });
+  }
+}
