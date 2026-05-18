@@ -213,6 +213,9 @@ function refreshHeaderDisplay() {
 
 let selectedVerses = [];
 let lastClickedVerse = null;
+let allowAutoScroll = true;
+
+
 
 document.addEventListener('click', function(e) {
   const vlink = e.target.closest('.vlink');
@@ -228,9 +231,14 @@ document.addEventListener('click', function(e) {
 
   if (vlink) {
     verseNum = parseInt(vlink.getAttribute('href').split('#verse-')[1], 10);
-    e.preventDefault();
+	  e.preventDefault();
+	  allowAutoScroll = true; // ✅ clicking a link should scroll
+scrollMode = allowAutoScroll ? 'center' : null; // ✅ normal click centers, ctrl/shift disables
+	  
   } else if (row) {
-    verseNum = parseInt(row.id.replace('verse-', ''), 10);
+	  verseNum = parseInt(row.id.replace('verse-', ''), 10);
+	  allowAutoScroll = !(e.ctrlKey || e.shiftKey);
+	  scrollMode = allowAutoScroll ? 'center' : null; // ✅ normal click centers, ctrl/shift disables
   }
 
   if (verseNum === null) return;
@@ -254,10 +262,24 @@ document.addEventListener('click', function(e) {
     selectedVerses = [verseNum];
   }
 
-  lastClickedVerse = verseNum;
-  inputField.value = selectedVerses.join(',');
+	  lastClickedVerse = verseNum;
+	inputField.value = selectedVerses.join(',');
+	
+	
   applyVerseHighlight(selectedVerses);
-  refreshHeaderDisplay();
+	refreshHeaderDisplay();
+
+
+	if (allowAutoScroll && scrollMode) {
+    const rowToScroll = document.getElementById('verse-' + verseNum);
+    if (rowToScroll) {
+      rowToScroll.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      });
+    }
+  }
 });
 
 
@@ -270,7 +292,8 @@ document.addEventListener('touchstart', function(e) {
   if (!row) return;
 
   touchTimer = setTimeout(() => {
-    multiSelectMode = true;
+	  multiSelectMode = true;
+	   allowAutoScroll = false; // ✅ don’t scroll when multi‑selecting
 
     const verseNum = parseInt(row.id.replace('verse-', ''), 10);
 
@@ -299,8 +322,11 @@ document.addEventListener('touchend', function() {
 
 // Once multiSelectMode is active, allow normal taps to add/remove verses
 document.addEventListener('touchstart', function(e) {
-  if (!multiSelectMode) return;
+	if (!multiSelectMode) return;
+	
 
+	allowAutoScroll = false; // ✅ keep scroll off during multi‑select taps
+	
   const row = e.target.closest("tr[id^='verse-']");
   if (!row) return;
 
@@ -364,6 +390,7 @@ window.onload = function() {
 //HIGHLIGHT JS AND VERSE //
 //                       //
 ///////////////////////////
+
 
 
 
@@ -498,13 +525,17 @@ function applyVerseHighlight() {
       if (!firstMatch) firstMatch = row;
     }
   });
+	
+	if (firstMatch && allowAutoScroll) {
+		firstMatch.scrollIntoView({
+			behavior: 'smooth',
+			block: 'center'
+		});
+		}
+	
 
-  if (firstMatch) {
-    firstMatch.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
-    });
-  }
+
+		
 }
 
 
