@@ -262,72 +262,6 @@ document.addEventListener('click', function(e) {
 
 
 
-let touchTimer = null;
-let multiSelectMode = false;
-
-document.addEventListener('touchstart', function(e) {
-  const row = e.target.closest("tr[id^='verse-']");
-  if (!row) return;
-
-  touchTimer = setTimeout(() => {
-    multiSelectMode = true;
-
-    const verseNum = parseInt(row.id.replace('verse-', ''), 10);
-
-    // First long press: start multi-select mode
-    if (!selectedVerses.includes(verseNum)) {
-      selectedVerses.push(verseNum);
-    }
-
-    lastClickedVerse = verseNum;
-
-    const inputField = document.getElementById('verseInput');
-    if (inputField) {
-      inputField.value = selectedVerses.join(',');
-    }
-
-    applyVerseHighlight(selectedVerses);
-    refreshHeaderDisplay();
-
-    console.log("LONG PRESS ACTIVATED:", verseNum);
-  }, 500); // long press threshold
-});
-
-document.addEventListener('touchend', function() {
-  clearTimeout(touchTimer);
-});
-
-// Once multiSelectMode is active, allow normal taps to add/remove verses
-document.addEventListener('touchstart', function(e) {
-  if (!multiSelectMode) return;
-
-  const row = e.target.closest("tr[id^='verse-']");
-  if (!row) return;
-
-  const verseNum = parseInt(row.id.replace('verse-', ''), 10);
-
-  if (selectedVerses.includes(verseNum)) {
-    // Toggle off
-    selectedVerses = selectedVerses.filter(v => v !== verseNum);
-  } else {
-    // Add new verse
-    selectedVerses.push(verseNum);
-  }
-
-  lastClickedVerse = verseNum;
-
-  const inputField = document.getElementById('verseInput');
-  if (inputField) {
-    inputField.value = selectedVerses.join(',');
-  }
-
-  applyVerseHighlight(selectedVerses);
-  refreshHeaderDisplay();
-
-  console.log("MULTI-SELECT TAP:", verseNum);
-});
-
-
 
 // 3. Combined Load logic
 window.onload = function() {
@@ -621,7 +555,24 @@ function copyBoth() {
 // ---------------------------
 // LISTENERS & INITIALIZE
 // ---------------------------
+document.addEventListener('click', function(e) {
+	const vlink = e.target.closest('.vlink');
+	const row = e.target.closest("tr[id^='verse-']");
+	const inputField = document.getElementById('verseInput');
 
+	if ((vlink || row) && inputField) {
+		if (vlink) e.preventDefault();
+		const verseNum = vlink ?
+			vlink.getAttribute('href').split('#verse-')[1] :
+			row.id.replace('verse-', '');
+
+		inputField.value = decodeURIComponent(verseNum);
+		history.replaceState(null, null, '#verse-' + verseNum);
+
+		// ADD THIS LINE to ensure the highlights trigger correctly
+		applyVerseHighlight();
+	}
+});
 
 function syncFromHash() {
 	const input = document.getElementById('verseInput');
