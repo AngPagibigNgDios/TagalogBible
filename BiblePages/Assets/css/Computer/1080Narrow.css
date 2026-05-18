@@ -140,6 +140,7 @@ a.clink:visited {
 .bible-container-bg {
   height: auto;
   overflow: visible;
+
 }
 
 
@@ -529,7 +530,7 @@ a.clink:visited {
 /* Top → Right → Bottom → Left */
 
 .bible-container-bg {
-
+        padding: 2%;
   margin-bottom: 100px !important;
 }
 

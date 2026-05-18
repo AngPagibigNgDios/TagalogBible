@@ -211,24 +211,53 @@ function refreshHeaderDisplay() {
 	displayDiv.innerHTML = `${originalTitle}${verseDisplay}`;
 }
 
-// 2. Click Listener for verse links (vlink) AND clicking the rows
-document.addEventListener('click', function(e) {
-	const vlink = e.target.closest('.vlink');
-	const row = e.target.closest("tr[id^='verse-']");
-	const inputField = document.getElementById('verseInput');
+let selectedVerses = [];
+let lastClickedVerse = null;
 
-	if (vlink && inputField) {
-		const verseNum = vlink.getAttribute('href').split('#verse-')[1];
-		inputField.value = decodeURIComponent(verseNum);
-		applyVerseHighlight();
-		refreshHeaderDisplay();
-	} else if (row && inputField) {
-		const verseNum = row.id.replace('verse-', '');
-		inputField.value = verseNum;
-		applyVerseHighlight();
-		refreshHeaderDisplay();
-	}
+document.addEventListener('click', function(e) {
+  const vlink = e.target.closest('.vlink');
+  const row = e.target.closest("tr[id^='verse-']");
+  const inputField = document.getElementById('verseInput');
+  if (!inputField) return;
+
+  let verseNum = null;
+
+  if (vlink) {
+    verseNum = parseInt(vlink.getAttribute('href').split('#verse-')[1], 10);
+    e.preventDefault();
+  } else if (row) {
+    verseNum = parseInt(row.id.replace('verse-', ''), 10);
+  }
+
+  if (verseNum === null) return;
+
+  if (e.ctrlKey) {
+    // Toggle single verse
+    if (selectedVerses.includes(verseNum)) {
+      selectedVerses = selectedVerses.filter(v => v !== verseNum);
+    } else {
+      selectedVerses.push(verseNum);
+    }
+  } else if (e.shiftKey && lastClickedVerse !== null) {
+    // Select range
+    const start = Math.min(lastClickedVerse, verseNum);
+    const end = Math.max(lastClickedVerse, verseNum);
+    for (let i = start; i <= end; i++) {
+      if (!selectedVerses.includes(i)) selectedVerses.push(i);
+    }
+  } else {
+    // Normal click: clear and select only this verse
+    selectedVerses = [verseNum];
+  }
+
+  lastClickedVerse = verseNum;
+  inputField.value = selectedVerses.join(',');
+  applyVerseHighlight(selectedVerses);
+  refreshHeaderDisplay();
 });
+
+
+
 
 // 3. Combined Load logic
 window.onload = function() {
@@ -343,6 +372,7 @@ function getParsedTitle() {
 // CORE FUNCTIONS: Highlight & Clear
 // ---------------------------
 function clearHighlights() {
+
 	document.querySelectorAll('tr').forEach(tr => {
 		tr.classList.remove('highlight-verse');
 		const eng = tr.querySelector('.tdenglishbible');
@@ -353,53 +383,60 @@ function clearHighlights() {
 }
 
 function applyVerseHighlight() {
-	clearHighlights();
-	const inputField = document.getElementById('verseInput');
-	if (!inputField) return;
-	const input = inputField.value.trim();
-	if (!input) return;
+  clearHighlights();
+  const inputField = document.getElementById('verseInput');
+  if (!inputField) return;
+  const input = inputField.value.trim();
+  if (!input) return;
 
-	let targets = [];
-	let parts = input.split(/[,\s]+/);
+  let targets = [];
+  let parts = input.split(/[,\s]+/);
 
-	parts.forEach(part => {
-		part = part.trim();
-		if (!part) return;
-		if (part.includes('-')) {
-			let [start, end] = part.split('-').map(n => parseInt(n.trim(), 10));
-			if (!isNaN(start) && !isNaN(end)) {
-				let actualStart = Math.min(start, end);
-				let actualEnd = Math.max(start, end);
-				for (let i = actualStart; i <= actualEnd; i++)
-					targets.push(i);
-			}
-		} else {
-			let num = parseInt(part, 10);
-			if (!isNaN(num)) targets.push(num);
-		}
-	});
+  // First loop: collect numbers into targets
+  parts.forEach(part => {
+    part = part.trim();
+    if (!part) return;
+    if (part.includes('-')) {
+      let [start, end] = part.split('-').map(n => parseInt(n.trim(), 10));
+      if (!isNaN(start) && !isNaN(end)) {
+        let actualStart = Math.min(start, end);
+        let actualEnd = Math.max(start, end);
+        for (let i = actualStart; i <= actualEnd; i++) {
+          targets.push(i);
+        }
+      }
+    } else {
+      let num = parseInt(part.trim(), 10);
+      if (!isNaN(num)) targets.push(num);
+    }
+  });
 
-	targets = [...new Set(targets)];
-	let firstMatch = null;
+  // Remove duplicates
+  targets = [...new Set(targets)];
+  let firstMatch = null;
 
-	targets.forEach(num => {
-		const row = document.getElementById('verse-' + num);
-		if (row) {
-			row.classList.add('highlight-verse');
-			const eng = row.querySelector('.tdenglishbible');
-			const tl = row.querySelector('.tdtagalogbible');
-			if (verseLanguageMode === 'english' && tl) tl.style.display = 'none';
-			if (verseLanguageMode === 'tagalog' && eng) eng.style.display = 'none';
-			if (!firstMatch) firstMatch = row;
-		}
-	});
+  // Second loop: apply highlights
+  targets.forEach(num => {
+    console.log("Highlighting verse:", num); // <-- debug log here
+    const row = document.getElementById('verse-' + num);
+    if (row) {
+      row.classList.add('highlight-verse');
+      const eng = row.querySelector('.tdenglishbible');
+      const tl = row.querySelector('.tdtagalogbible');
+      if (verseLanguageMode === 'english' && tl) tl.style.display = 'none';
+      if (verseLanguageMode === 'tagalog' && eng) eng.style.display = 'none';
+      if (!firstMatch) firstMatch = row;
+    }
+  });
 
-	if (firstMatch)
-		firstMatch.scrollIntoView({
-			behavior: 'smooth',
-			block: 'center'
-		});
+  if (firstMatch) {
+    firstMatch.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
 }
+
 
 // ---------------------------
 // COPY FUNCTIONS
@@ -568,6 +605,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	// ✅ use shared function
 	syncFromHash();
+
+	window.addEventListener('hashchange', syncFromHash);
+
 });
 
 

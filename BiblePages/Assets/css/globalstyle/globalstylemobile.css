@@ -873,6 +873,11 @@ div.search {
   background-color: #f5e9bb !important;
 }
 
+tr.highlight-verse {
+  background-color: #fff9d5 !important;
+}
+
+
 .controls-row {
   display: flex;
   gap: 5px;

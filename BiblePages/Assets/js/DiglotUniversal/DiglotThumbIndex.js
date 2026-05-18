@@ -446,7 +446,7 @@ class DiglotThumbMenu extends HTMLElement {
                                       <td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
                                       <td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
                                   </tr>
-                                  <tr class="verse" id="verse-16">
+                                  <tr class="verse" id="">
                                       <td class="tdenglishbible">
                                         <span class="verse spanenglishbible">
                                         <span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
@@ -480,7 +480,7 @@ class DiglotThumbMenu extends HTMLElement {
                                       <td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
                                       <td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
                                   </tr>
-                                  <tr class="verse" id="verse-16">
+                                  <tr class="verse" id="">
                                       <td class="tdenglishbible">
                                         <span class="verse spanenglishbible">
                                         <span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
@@ -534,7 +534,7 @@ class DiglotThumbMenu extends HTMLElement {
                                       <td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
                                       <td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
                                   </tr>
-                                  <tr class="verse" id="verse-16">
+                                  <tr class="verse" id="">
                                       <td class="tdenglishbible">
                                         <span class="verse spanenglishbible">
                                         <span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
