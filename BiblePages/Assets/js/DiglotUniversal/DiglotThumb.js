@@ -609,756 +609,682 @@ class DiglotThumbMenu extends HTMLElement {
 
 		`;
 
-		// GO UP
-
-		// GO UP
-
-
-
-		// MENU TOGGLE
-// --- BIBLE MENU ---
-const menuButton = this.querySelector('#menuanimation');
-const menuDiv = this.querySelector('#biblemenuanimation');
-const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
-const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
-
-menuButton.onclick = function() {
-    const isHidden = window.getComputedStyle(menuDiv).display === "none";
-
-    // Toggle visibility
-    menuDiv.style.display = isHidden ? "block" : "none";
-    // Ensure the OTHER menu is closed to prevent overlap
-    othermenupage.style.display = "none"; 
-
-    // Toggle spans
-    spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
-    spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
-
-    if (isHidden) {
-        document.body.style.overflow = "hidden";
-        document.documentElement.style.overflow = "hidden";
-        menuDiv.style.overflowY = "auto";
-    } else {
-        document.body.style.overflow = "";
-        document.documentElement.style.overflow = "";
-    }
-};
-
-// --- OTHER MENU ---
-const othermenu = this.querySelector('#menuanimationright');
-const othermenupage = this.querySelector('#biblemenuanimationright');
-const openmenuright = this.querySelector('#openmenu');
-const closemenuright = this.querySelector('#closemenu');
+            // GO UP
+
+            // GO UP
 
-othermenu.onclick = function() {
-    // FIX: Use hiderightmenu consistently
-    const hiderightmenu = window.getComputedStyle(othermenupage).display === "none";
-
-    // Toggle visibility
-    othermenupage.style.display = hiderightmenu ? "block" : "none";
-    // Ensure the BIBLE menu is closed
-    menuDiv.style.display = "none"; 
-
-    // Toggle spans
-    openmenuright.style.display = hiderightmenu ? "none" : "inline";
-    closemenuright.style.display = hiderightmenu ? "inline" : "none";
-
-    if (hiderightmenu) {
-        document.body.style.overflow = "hidden";
-        document.documentElement.style.overflow = "hidden";
-        othermenupage.style.overflowY = "auto";
-    } else {
-        document.body.style.overflow = "";
-        document.documentElement.style.overflow = "";
-    }
-};
-    
-    
- 
-
-    
-   
-
-
-    
-    // --- VERSEHIGHLIGHT ---
-       const highlightermenubutton = document.querySelector('#highlightermenu');     // the HL button
-        const highlightermenupage = document.querySelector('#MenuContainer');       // the popup panel
-        const highlighteropen     = document.querySelector('#openmenuhighlighter');          // ☰ HL span
-        const highlighterclose    = document.querySelector('#closemenuhighlighter');         // ✖ HL span
-  
-
-highlightermenubutton.onclick = function() {
-    // FIX: Use highlightermenu consistently
-    const highlightermenu = window.getComputedStyle(highlightermenupage).display === "none";
-
-    // Toggle visibility
-    highlightermenupage.style.display = highlightermenu ? "block" : "none";
-    // Ensure the BIBLE menu is closed
-  menuDiv.style.display = "none"; 
-      othermenupage.style.display = "none"; 
-
-    // Toggle spans
-    highlighteropen.style.display = highlightermenu ? "none" : "inline";
-    highlighterclose.style.display = highlightermenu ? "inline" : "none";
-
-    if (highlightermenu) {
-
-        highlightermenupage.style.overflowY = "auto";
-    } else {
-        document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-      document.documentElement.style.overflow = "";
-
-    }
-};
-    
-
-    
-    
-    
-
-
-
-
-		const goUpBtn = this.querySelector("#goUpScroll");
-
-		goUpBtn.addEventListener("click", goUpAnimation);
-
-		function goUpAnimation() {
-			const arrows = document.querySelectorAll('#upnimation li');
-			arrows.forEach((li, index) => {
-				li.style.animation = "none"; // reset
-				li.offsetHeight; // force reflow    // calculate stagger delay based on index
-				const delay = 0.2 * index; // 0.2s apart
-				const opacity = 1 - (index * 0.15); // fade each arrow more    li.style.opacity = opacity > 0 ? opacity : 0.1;
-				li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
-			});
-		}
-
-
-
-		async function loadBibleData() {
-			const response = await fetch("../Assets/js/fuse/testamentsindex.json");
-			const data = await response.json();
-			return data;
-		}
-
-
-
-		const bibleBooks = {
-	
-Genesis: {
-book: document.getElementById("bkegenesis"),
-chapters: document.getElementById("bkegenesischaptersResult"),
-verses: document.getElementById("bkegenesisverseResult")
-},
-
-
-Exodus: {
-book: document.getElementById("bkeexodus"),
-chapters: document.getElementById("bkeexoduschaptersResult"),
-verses: document.getElementById("bkeexodusverseResult")
-},
-
-Leviticus: {
-book: document.getElementById("bkeleviticus"),
-chapters: document.getElementById("bkeleviticuschaptersResult"),
-verses: document.getElementById("bkeleviticusverseResult")
-},
-
-Numbers: {
-book: document.getElementById("bkenumbers"),
-chapters: document.getElementById("bkenumberschaptersResult"),
-verses: document.getElementById("bkenumbersverseResult")
-},
-
-Deuteronomy: {
-book: document.getElementById("bkedeuteronomy"),
-chapters: document.getElementById("bkedeuteronomychaptersResult"),
-verses: document.getElementById("bkedeuteronomyverseResult")
-},
-
-Josue: {
-book: document.getElementById("bkejoshua"),
-chapters: document.getElementById("bkejoshuachaptersResult"),
-verses: document.getElementById("bkejoshuaverseResult")
-},
-
-Judges: {
-book: document.getElementById("bkejudges"),
-chapters: document.getElementById("bkejudgeschaptersResult"),
-verses: document.getElementById("bkejudgesverseResult")
-},
-
-Ruth: {
-book: document.getElementById("bkeruth"),
-chapters: document.getElementById("bkeruthchaptersResult"),
-verses: document.getElementById("bkeruthverseResult")
-},
-
-FirstSamuel: {
-book: document.getElementById("bke1st-samuel"),
-chapters: document.getElementById("bke1st-samuelchaptersResult"),
-verses: document.getElementById("bke1st-samuelverseResult")
-},
-
-SecondSamuel: {
-book: document.getElementById("bke2nd-samuel"),
-chapters: document.getElementById("bke2nd-samuelchaptersResult"),
-verses: document.getElementById("bke2nd-samuelverseResult")
-},
-
-FirstKings: {
-book: document.getElementById("bke1st-kings"),
-chapters: document.getElementById("bke1st-kingschaptersResult"),
-verses: document.getElementById("bke1st-kingsverseResult")
-},
-
-SecondKings: {
-book: document.getElementById("bke2nd-kings"),
-chapters: document.getElementById("bke2nd-kingschaptersResult"),
-verses: document.getElementById("bke2nd-kingsverseResult")
-},
-
-FirstChronicles: {
-book: document.getElementById("bke1st-chronicles"),
-chapters: document.getElementById("bke1st-chronicleschaptersResult"),
-verses: document.getElementById("bke1st-chroniclesverseResult")
-},
-
-SecondChronicles: {
-book: document.getElementById("bke2nd-chronicles"),
-chapters: document.getElementById("bke2nd-chronicleschaptersResult"),
-verses: document.getElementById("bke2nd-chroniclesverseResult")
-},
-
-Ezra: {
-book: document.getElementById("bkeezra"),
-chapters: document.getElementById("bkeezrachaptersResult"),
-verses: document.getElementById("bkeezraverseResult")
-},
-
-Nehemiah: {
-book: document.getElementById("bkenehemiah"),
-chapters: document.getElementById("bkenehemiahchaptersResult"),
-verses: document.getElementById("bkenehemiahverseResult")
-},
-
-Esther: {
-book: document.getElementById("bkeesther"),
-chapters: document.getElementById("bkeestherchaptersResult"),
-verses: document.getElementById("bkeestherverseResult")
-},
-
-Job: {
-book: document.getElementById("bkejob"),
-chapters: document.getElementById("bkejobchaptersResult"),
-verses: document.getElementById("bkejobverseResult")
-},
-
-Psalms: {
-book: document.getElementById("bkepsalms"),
-chapters: document.getElementById("bkepsalmschaptersResult"),
-verses: document.getElementById("bkepsalmsverseResult")
-},
-
-Proverbs: {
-book: document.getElementById("bkeproverbs"),
-chapters: document.getElementById("bkeproverbschaptersResult"),
-verses: document.getElementById("bkeproverbsverseResult")
-},
-
-Ecclesiastes: {
-book: document.getElementById("bkeecclesiastes"),
-chapters: document.getElementById("bkeecclesiasteschaptersResult"),
-verses: document.getElementById("bkeecclesiastesverseResult")
-},
-
-SongofSolomon: {
-book: document.getElementById("bkesong-of-solomon"),
-chapters: document.getElementById("bkesong-of-solomonchaptersResult"),
-verses: document.getElementById("bkesong-of-solomonverseResult")
-},
-
-Isaiah: {
-book: document.getElementById("bkeisaiah"),
-chapters: document.getElementById("bkeisaiahchaptersResult"),
-verses: document.getElementById("bkeisaiahverseResult")
-},
-
-
-Jeremiah: {
-book: document.getElementById("bkejeremiah"),
-chapters: document.getElementById("bkejeremiahchaptersResult"),
-verses: document.getElementById("bkejeremiahverseResult")
-},
-
-
-Lamentations: {
-book: document.getElementById("bkelamentations"),
-chapters: document.getElementById("bkelamentationschaptersResult"),
-verses: document.getElementById("bkelamentationsverseResult")
-},
-
-
-Ezekiel: {
-book: document.getElementById("bkeezekiel"),
-chapters: document.getElementById("bkeezekielchaptersResult"),
-verses: document.getElementById("bkeezekielverseResult")
-},
-
-
-Daniel: {
-book: document.getElementById("bkedaniel"),
-chapters: document.getElementById("bkedanielchaptersResult"),
-verses: document.getElementById("bkedanielverseResult")
-},
-
-
-Hosea: {
-book: document.getElementById("bkehosea"),
-chapters: document.getElementById("bkehoseachaptersResult"),
-verses: document.getElementById("bkehoseaverseResult")
-},
-
-
-Joel: {
-book: document.getElementById("bkejoel"),
-chapters: document.getElementById("bkejoelchaptersResult"),
-verses: document.getElementById("bkejoelverseResult")
-},
-
 
-Amos: {
-book: document.getElementById("bkeamos"),
-chapters: document.getElementById("bkeamoschaptersResult"),
-verses: document.getElementById("bkeamosverseResult")
-},
-
-
-Obadiah: {
-book: document.getElementById("bkeobadiah"),
-chapters: document.getElementById("bkeobadiahchaptersResult"),
-verses: document.getElementById("bkeobadiahverseResult")
-},
-
-
-Jonah: {
-book: document.getElementById("bkejonah"),
-chapters: document.getElementById("bkejonahchaptersResult"),
-verses: document.getElementById("bkejonahverseResult")
-},
+
+        // MENU TOGGLE
+        // --- BIBLE MENU ---
+        const menuButton = this.querySelector('#menuanimation');
+        const menuDiv = this.querySelector('#biblemenuanimation');
+        const spanOpenBibleMenu = this.querySelector('#openbiblemenu');
+        const spanCloseBibleMenu = this.querySelector('#closebiblemenu');
+
+        menuButton.onclick = function () {
+          const isHidden = window.getComputedStyle(menuDiv).display === "none";
+
+          // Toggle visibility
+          menuDiv.style.display = isHidden ? "block" : "none";
+          // Ensure the OTHER menu is closed to prevent overlap
+          othermenupage.style.display = "none";
+          highlightermenupage.style.display = "none";
+
+          // Toggle spans
+          spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
+          spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
+
+          if (isHidden) {
+              document.body.style.overflow = "hidden";
+              document.documentElement.style.overflow = "hidden";
+              menuDiv.style.overflowY = "auto";
+          } else {
+              document.body.style.overflow = "";
+              document.documentElement.style.overflow = "";
+          }
+        };
+
+        // --- OTHER MENU ---
+        const othermenu = this.querySelector('#menuanimationright');
+        const othermenupage = this.querySelector('#biblemenuanimationright');
+        const openmenuright = this.querySelector('#openmenu');
+        const closemenuright = this.querySelector('#closemenu');
+
+        othermenu.onclick = function () {
+          // FIX: Use hiderightmenu consistently
+          const hiderightmenu = window.getComputedStyle(othermenupage).display === "none";
+
+          // Toggle visibility
+          othermenupage.style.display = hiderightmenu ? "block" : "none";
+          // Ensure the BIBLE menu is closed
+          menuDiv.style.display = "none";
+                highlightermenupage.style.display = "none";
+
+          // Toggle spans
+          openmenuright.style.display = hiderightmenu ? "none" : "inline";
+          closemenuright.style.display = hiderightmenu ? "inline" : "none";
+
+          if (hiderightmenu) {
+              document.body.style.overflow = "hidden";
+              document.documentElement.style.overflow = "hidden";
+              othermenupage.style.overflowY = "auto";
+          } else {
+              document.body.style.overflow = "";
+              document.documentElement.style.overflow = "";
+          }
+        };
+
+
+        // --- VERSEHIGHLIGHT ---
+        const highlightermenubutton = document.querySelector('#highlightermenu'); // the HL button
+        const highlightermenupage = document.querySelector('#MenuContainer'); // the popup panel
+        const highlighteropen = document.querySelector('#openmenuhighlighter'); // ☰ HL span
+        const highlighterclose = document.querySelector('#closemenuhighlighter'); // ✖ HL span
+
+
+        highlightermenubutton.onclick = function () {
+          // FIX: Use highlightermenu consistently
+          const highlightermenu = window.getComputedStyle(highlightermenupage).display === "none";
+
+          // Toggle visibility
+          highlightermenupage.style.display = highlightermenu ? "block" : "none";
+          // Ensure the BIBLE menu is closed
+          menuDiv.style.display = "none";
+          othermenupage.style.display = "none";
+
+          // Toggle spans
+          highlighteropen.style.display = highlightermenu ? "none" : "inline";
+          highlighterclose.style.display = highlightermenu ? "inline" : "none";
+
+          if (highlightermenu) {
+
+              highlightermenupage.style.overflowY = "auto";
+          } else {
+              document.body.style.overflow = "";
+              document.documentElement.style.overflow = "";
+
+          }
+        };
+
+
+        const goUpBtn = this.querySelector("#goUpScroll");
+
+        goUpBtn.addEventListener("click", goUpAnimation);
+
+        function goUpAnimation() {
+          const arrows = document.querySelectorAll('#upnimation li');
+          arrows.forEach((li, index) => {
+              li.style.animation = "none"; // reset
+              li.offsetHeight; // force reflow    // calculate stagger delay based on index
+              const delay = 0.2 * index; // 0.2s apart
+              const opacity = 1 - (index * 0.15); // fade each arrow more    li.style.opacity = opacity > 0 ? opacity : 0.1;
+              li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
+          });
+        }
+
+
+        async function loadBibleData() {
+          const response = await fetch("../Assets/js/fuse/testamentsindex.json");
+          const data = await response.json();
+          return data;
+        }
+
+              const bibleBooks = {
+
+            Genesis: {
+                book: document.getElementById("bkegenesis"),
+                chapters: document.getElementById("bkegenesischaptersResult"),
+                verses: document.getElementById("bkegenesisverseResult")
+            },
+
+
+            Exodus: {
+                book: document.getElementById("bkeexodus"),
+                chapters: document.getElementById("bkeexoduschaptersResult"),
+                verses: document.getElementById("bkeexodusverseResult")
+            },
+
+            Leviticus: {
+                book: document.getElementById("bkeleviticus"),
+                chapters: document.getElementById("bkeleviticuschaptersResult"),
+                verses: document.getElementById("bkeleviticusverseResult")
+            },
+
+            Numbers: {
+                book: document.getElementById("bkenumbers"),
+                chapters: document.getElementById("bkenumberschaptersResult"),
+                verses: document.getElementById("bkenumbersverseResult")
+            },
+
+            Deuteronomy: {
+                book: document.getElementById("bkedeuteronomy"),
+                chapters: document.getElementById("bkedeuteronomychaptersResult"),
+                verses: document.getElementById("bkedeuteronomyverseResult")
+            },
+
+            Josue: {
+                book: document.getElementById("bkejoshua"),
+                chapters: document.getElementById("bkejoshuachaptersResult"),
+                verses: document.getElementById("bkejoshuaverseResult")
+            },
+
+            Judges: {
+                book: document.getElementById("bkejudges"),
+                chapters: document.getElementById("bkejudgeschaptersResult"),
+                verses: document.getElementById("bkejudgesverseResult")
+            },
+
+            Ruth: {
+                book: document.getElementById("bkeruth"),
+                chapters: document.getElementById("bkeruthchaptersResult"),
+                verses: document.getElementById("bkeruthverseResult")
+            },
+
+            FirstSamuel: {
+                book: document.getElementById("bke1st-samuel"),
+                chapters: document.getElementById("bke1st-samuelchaptersResult"),
+                verses: document.getElementById("bke1st-samuelverseResult")
+            },
+
+            SecondSamuel: {
+                book: document.getElementById("bke2nd-samuel"),
+                chapters: document.getElementById("bke2nd-samuelchaptersResult"),
+                verses: document.getElementById("bke2nd-samuelverseResult")
+            },
+
+            FirstKings: {
+                book: document.getElementById("bke1st-kings"),
+                chapters: document.getElementById("bke1st-kingschaptersResult"),
+                verses: document.getElementById("bke1st-kingsverseResult")
+            },
+
+            SecondKings: {
+                book: document.getElementById("bke2nd-kings"),
+                chapters: document.getElementById("bke2nd-kingschaptersResult"),
+                verses: document.getElementById("bke2nd-kingsverseResult")
+            },
+
+            FirstChronicles: {
+                book: document.getElementById("bke1st-chronicles"),
+                chapters: document.getElementById("bke1st-chronicleschaptersResult"),
+                verses: document.getElementById("bke1st-chroniclesverseResult")
+            },
+
+            SecondChronicles: {
+                book: document.getElementById("bke2nd-chronicles"),
+                chapters: document.getElementById("bke2nd-chronicleschaptersResult"),
+                verses: document.getElementById("bke2nd-chroniclesverseResult")
+            },
+
+            Ezra: {
+                book: document.getElementById("bkeezra"),
+                chapters: document.getElementById("bkeezrachaptersResult"),
+                verses: document.getElementById("bkeezraverseResult")
+            },
+
+            Nehemiah: {
+                book: document.getElementById("bkenehemiah"),
+                chapters: document.getElementById("bkenehemiahchaptersResult"),
+                verses: document.getElementById("bkenehemiahverseResult")
+            },
+
+            Esther: {
+                book: document.getElementById("bkeesther"),
+                chapters: document.getElementById("bkeestherchaptersResult"),
+                verses: document.getElementById("bkeestherverseResult")
+            },
+
+            Job: {
+                book: document.getElementById("bkejob"),
+                chapters: document.getElementById("bkejobchaptersResult"),
+                verses: document.getElementById("bkejobverseResult")
+            },
+
+            Psalms: {
+                book: document.getElementById("bkepsalms"),
+                chapters: document.getElementById("bkepsalmschaptersResult"),
+                verses: document.getElementById("bkepsalmsverseResult")
+            },
+
+            Proverbs: {
+                book: document.getElementById("bkeproverbs"),
+                chapters: document.getElementById("bkeproverbschaptersResult"),
+                verses: document.getElementById("bkeproverbsverseResult")
+            },
+
+            Ecclesiastes: {
+                book: document.getElementById("bkeecclesiastes"),
+                chapters: document.getElementById("bkeecclesiasteschaptersResult"),
+                verses: document.getElementById("bkeecclesiastesverseResult")
+            },
+
+            SongofSolomon: {
+                book: document.getElementById("bkesong-of-solomon"),
+                chapters: document.getElementById("bkesong-of-solomonchaptersResult"),
+                verses: document.getElementById("bkesong-of-solomonverseResult")
+            },
+
+            Isaiah: {
+                book: document.getElementById("bkeisaiah"),
+                chapters: document.getElementById("bkeisaiahchaptersResult"),
+                verses: document.getElementById("bkeisaiahverseResult")
+            },
+
+
+            Jeremiah: {
+                book: document.getElementById("bkejeremiah"),
+                chapters: document.getElementById("bkejeremiahchaptersResult"),
+                verses: document.getElementById("bkejeremiahverseResult")
+            },
+
+
+            Lamentations: {
+                book: document.getElementById("bkelamentations"),
+                chapters: document.getElementById("bkelamentationschaptersResult"),
+                verses: document.getElementById("bkelamentationsverseResult")
+            },
+
+
+            Ezekiel: {
+                book: document.getElementById("bkeezekiel"),
+                chapters: document.getElementById("bkeezekielchaptersResult"),
+                verses: document.getElementById("bkeezekielverseResult")
+            },
+
+
+            Daniel: {
+                book: document.getElementById("bkedaniel"),
+                chapters: document.getElementById("bkedanielchaptersResult"),
+                verses: document.getElementById("bkedanielverseResult")
+            },
+
+
+            Hosea: {
+                book: document.getElementById("bkehosea"),
+                chapters: document.getElementById("bkehoseachaptersResult"),
+                verses: document.getElementById("bkehoseaverseResult")
+            },
+
+
+            Joel: {
+                book: document.getElementById("bkejoel"),
+                chapters: document.getElementById("bkejoelchaptersResult"),
+                verses: document.getElementById("bkejoelverseResult")
+            },
+
+
+            Amos: {
+                book: document.getElementById("bkeamos"),
+                chapters: document.getElementById("bkeamoschaptersResult"),
+                verses: document.getElementById("bkeamosverseResult")
+            },
+
+
+            Obadiah: {
+                book: document.getElementById("bkeobadiah"),
+                chapters: document.getElementById("bkeobadiahchaptersResult"),
+                verses: document.getElementById("bkeobadiahverseResult")
+            },
+
+
+            Jonah: {
+                book: document.getElementById("bkejonah"),
+                chapters: document.getElementById("bkejonahchaptersResult"),
+                verses: document.getElementById("bkejonahverseResult")
+            },
+
+
+            Micah: {
+                book: document.getElementById("bkemicah"),
+                chapters: document.getElementById("bkemicahchaptersResult"),
+                verses: document.getElementById("bkemicahverseResult")
+            },
+
+
+            Nahum: {
+                book: document.getElementById("bkenahum"),
+                chapters: document.getElementById("bkenahumchaptersResult"),
+                verses: document.getElementById("bkenahumverseResult")
+            },
+
+
+            Habakkuk: {
+                book: document.getElementById("bkehabakkuk"),
+                chapters: document.getElementById("bkehabakkukchaptersResult"),
+                verses: document.getElementById("bkehabakkukverseResult")
+            },
+
+
+            Zephaniah: {
+                book: document.getElementById("bkezephaniah"),
+                chapters: document.getElementById("bkezephaniahchaptersResult"),
+                verses: document.getElementById("bkezephaniahverseResult")
+            },
+
+
+            Haggai: {
+                book: document.getElementById("bkeHaggai"),
+                chapters: document.getElementById("bkeHaggaichaptersResult"),
+                verses: document.getElementById("bkeHaggaiverseResult")
+            },
+
+            Zechariah: {
+                book: document.getElementById("bkezechariah"),
+                chapters: document.getElementById("bkezechariahchaptersResult"),
+                verses: document.getElementById("bkezechariahverseResult")
+            },
+
+            Malachi: {
+                book: document.getElementById("bkemalachi"),
+                chapters: document.getElementById("bkemalachichaptersResult"),
+                verses: document.getElementById("bkemalachiverseResult")
+            },
+
+            Matthew: {
+                book: document.getElementById("bkematthew"),
+                chapters: document.getElementById("bkematthewchaptersResult"),
+                verses: document.getElementById("bkematthewverseResult")
+            },
+
+
+            Mark: {
+                book: document.getElementById("bkemark"),
+                chapters: document.getElementById("bkemarkchaptersResult"),
+                verses: document.getElementById("bkemarkverseResult")
+            },
+
+
+            Luke: {
+                book: document.getElementById("bkeluke"),
+                chapters: document.getElementById("bkelukechaptersResult"),
+                verses: document.getElementById("bkelukeverseResult")
+            },
+
+
+            John: {
+                book: document.getElementById("bkejohn"),
+                chapters: document.getElementById("bkejohnchaptersResult"),
+                verses: document.getElementById("bkejohnverseResult")
+            },
+
+
+            Acts: {
+                book: document.getElementById("bkeacts"),
+                chapters: document.getElementById("bkeactschaptersResult"),
+                verses: document.getElementById("bkeactsverseResult")
+            },
+
+
+            Romans: {
+                book: document.getElementById("bkeromans"),
+                chapters: document.getElementById("bkeromanschaptersResult"),
+                verses: document.getElementById("bkeromansverseResult")
+            },
+
+
+            FirstCorinthians: {
+                book: document.getElementById("bke1st-corinthians"),
+                chapters: document.getElementById("bke1st-corinthianschaptersResult"),
+                verses: document.getElementById("bke1st-corinthiansverseResult")
+            },
+
+
+            SecondCorinthians: {
+                book: document.getElementById("bke2nd-corinthians"),
+                chapters: document.getElementById("bke2nd-corinthianschaptersResult"),
+                verses: document.getElementById("bke2nd-corinthiansverseResult")
+            },
+
+
+            Galatians: {
+                book: document.getElementById("bkegalatians"),
+                chapters: document.getElementById("bkegalatianschaptersResult"),
+                verses: document.getElementById("bkegalatiansverseResult")
+            },
+
+
+            Ephesians: {
+                book: document.getElementById("bkeephesians"),
+                chapters: document.getElementById("bkeephesianschaptersResult"),
+                verses: document.getElementById("bkeephesiansverseResult")
+            },
+
+
+            Philippians: {
+                book: document.getElementById("bkephilippians"),
+                chapters: document.getElementById("bkephilippianschaptersResult"),
+                verses: document.getElementById("bkephilippiansverseResult")
+            },
+
+
+            Colossians: {
+                book: document.getElementById("bkecolossians"),
+                chapters: document.getElementById("bkecolossianschaptersResult"),
+                verses: document.getElementById("bkecolossiansverseResult")
+            },
+
+
+            FirstThessalonians: {
+                book: document.getElementById("bke1st-thessalonians"),
+                chapters: document.getElementById("bke1st-thessalonianschaptersResult"),
+                verses: document.getElementById("bke1st-thessaloniansverseResult")
+            },
+
+
+            SecondThessalonians: {
+                book: document.getElementById("bke2nd-thessalonians"),
+                chapters: document.getElementById("bke2nd-thessalonianschaptersResult"),
+                verses: document.getElementById("bke2nd-thessaloniansverseResult")
+            },
+
+
+            FirstTimothy: {
+                book: document.getElementById("bke1st-timothy"),
+                chapters: document.getElementById("bke1st-timothychaptersResult"),
+                verses: document.getElementById("bke1st-timothyverseResult")
+            },
+
+
+            SecondTimothy: {
+                book: document.getElementById("bke2nd-timothy"),
+                chapters: document.getElementById("bke2nd-timothychaptersResult"),
+                verses: document.getElementById("bke2nd-timothyverseResult")
+            },
+
+
+            Titus: {
+                book: document.getElementById("bketitus"),
+                chapters: document.getElementById("bketituschaptersResult"),
+                verses: document.getElementById("bketitusverseResult")
+            },
+
+
+            Philemon: {
+                book: document.getElementById("bkephilemon"),
+                chapters: document.getElementById("bkephilemonchaptersResult"),
+                verses: document.getElementById("bkephilemonverseResult")
+            },
+
+
+            Hebrews: {
+                book: document.getElementById("bkehebrews"),
+                chapters: document.getElementById("bkehebrewschaptersResult"),
+                verses: document.getElementById("bkehebrewsverseResult")
+            },
+
+
+            James: {
+                book: document.getElementById("bkejames"),
+                chapters: document.getElementById("bkejameschaptersResult"),
+                verses: document.getElementById("bkejamesverseResult")
+            },
+
+
+            FirstPeter: {
+                book: document.getElementById("bke1st-peter"),
+                chapters: document.getElementById("bke1st-peterchaptersResult"),
+                verses: document.getElementById("bke1st-peterverseResult")
+            },
+
+
+            SecondPeter: {
+                book: document.getElementById("bke2nd-peter"),
+                chapters: document.getElementById("bke2nd-peterchaptersResult"),
+                verses: document.getElementById("bke2nd-peterverseResult")
+            },
+
+
+            FirstJohn: {
+                book: document.getElementById("bke1st-john"),
+                chapters: document.getElementById("bke1st-johnchaptersResult"),
+                verses: document.getElementById("bke1st-johnverseResult")
+            },
+
+
+            SecondJohn: {
+                book: document.getElementById("bke2nd-john"),
+                chapters: document.getElementById("bke2nd-johnchaptersResult"),
+                verses: document.getElementById("bke2nd-johnverseResult")
+            },
+
+
+            ThirdJohn: {
+                book: document.getElementById("bke3rd-john"),
+                chapters: document.getElementById("bke3rd-johnchaptersResult"),
+                verses: document.getElementById("bke3rd-johnverseResult")
+            },
+
+
+            Jude: {
+                book: document.getElementById("bkejude"),
+                chapters: document.getElementById("bkejudechaptersResult"),
+                verses: document.getElementById("bkejudeverseResult")
+            },
+
+
+            Revelation: {
+                book: document.getElementById("bkerevelation"),
+                chapters: document.getElementById("bkerevelationchaptersResult"),
+                verses: document.getElementById("bkerevelationverseResult")
+            }
 
 
-Micah: {
-book: document.getElementById("bkemicah"),
-chapters: document.getElementById("bkemicahchaptersResult"),
-verses: document.getElementById("bkemicahverseResult")
-},
-
-
-Nahum: {
-book: document.getElementById("bkenahum"),
-chapters: document.getElementById("bkenahumchaptersResult"),
-verses: document.getElementById("bkenahumverseResult")
-},
-
-
-Habakkuk: {
-book: document.getElementById("bkehabakkuk"),
-chapters: document.getElementById("bkehabakkukchaptersResult"),
-verses: document.getElementById("bkehabakkukverseResult")
-},
-
-
-Zephaniah: {
-book: document.getElementById("bkezephaniah"),
-chapters: document.getElementById("bkezephaniahchaptersResult"),
-verses: document.getElementById("bkezephaniahverseResult")
-},
-
-
-Haggai: {
-book: document.getElementById("bkeHaggai"),
-chapters: document.getElementById("bkeHaggaichaptersResult"),
-verses: document.getElementById("bkeHaggaiverseResult")
-},
-
-Zechariah: {
-book: document.getElementById("bkezechariah"),
-chapters: document.getElementById("bkezechariahchaptersResult"),
-verses: document.getElementById("bkezechariahverseResult")
-},
-
-Malachi: {
-book: document.getElementById("bkemalachi"),
-chapters: document.getElementById("bkemalachichaptersResult"),
-verses: document.getElementById("bkemalachiverseResult")
-      },
-
-      Matthew: {
-book: document.getElementById("bkematthew"),
-chapters: document.getElementById("bkematthewchaptersResult"),
-verses: document.getElementById("bkematthewverseResult")
-},
-
-
-
-Mark: {
-book: document.getElementById("bkemark"),
-chapters: document.getElementById("bkemarkchaptersResult"),
-verses: document.getElementById("bkemarkverseResult")
-},
-
-
-
-Luke: {
-book: document.getElementById("bkeluke"),
-chapters: document.getElementById("bkelukechaptersResult"),
-verses: document.getElementById("bkelukeverseResult")
-},
-
-
-
-John: {
-book: document.getElementById("bkejohn"),
-chapters: document.getElementById("bkejohnchaptersResult"),
-verses: document.getElementById("bkejohnverseResult")
-},
-
-
-
-Acts: {
-book: document.getElementById("bkeacts"),
-chapters: document.getElementById("bkeactschaptersResult"),
-verses: document.getElementById("bkeactsverseResult")
-},
-
-  
-
-
-Romans: {
-book: document.getElementById("bkeromans"),
-chapters: document.getElementById("bkeromanschaptersResult"),
-verses: document.getElementById("bkeromansverseResult")
-},
-
-
-
-FirstCorinthians: {
-book: document.getElementById("bke1st-corinthians"),
-chapters: document.getElementById("bke1st-corinthianschaptersResult"),
-verses: document.getElementById("bke1st-corinthiansverseResult")
-},
-
-
-
-SecondCorinthians: {
-book: document.getElementById("bke2nd-corinthians"),
-chapters: document.getElementById("bke2nd-corinthianschaptersResult"),
-verses: document.getElementById("bke2nd-corinthiansverseResult")
-},
-
-
-
-Galatians: {
-book: document.getElementById("bkegalatians"),
-chapters: document.getElementById("bkegalatianschaptersResult"),
-verses: document.getElementById("bkegalatiansverseResult")
-},
-
-
-
-Ephesians: {
-book: document.getElementById("bkeephesians"),
-chapters: document.getElementById("bkeephesianschaptersResult"),
-verses: document.getElementById("bkeephesiansverseResult")
-},
-
-
-
-Philippians: {
-book: document.getElementById("bkephilippians"),
-chapters: document.getElementById("bkephilippianschaptersResult"),
-verses: document.getElementById("bkephilippiansverseResult")
-},
-
-
-
-Colossians: {
-book: document.getElementById("bkecolossians"),
-chapters: document.getElementById("bkecolossianschaptersResult"),
-verses: document.getElementById("bkecolossiansverseResult")
-},
-
-
-
-FirstThessalonians: {
-book: document.getElementById("bke1st-thessalonians"),
-chapters: document.getElementById("bke1st-thessalonianschaptersResult"),
-verses: document.getElementById("bke1st-thessaloniansverseResult")
-},
-
-
-
-SecondThessalonians: {
-book: document.getElementById("bke2nd-thessalonians"),
-chapters: document.getElementById("bke2nd-thessalonianschaptersResult"),
-verses: document.getElementById("bke2nd-thessaloniansverseResult")
-},
-
-
-
-FirstTimothy: {
-book: document.getElementById("bke1st-timothy"),
-chapters: document.getElementById("bke1st-timothychaptersResult"),
-verses: document.getElementById("bke1st-timothyverseResult")
-},
-
-
-
-SecondTimothy: {
-book: document.getElementById("bke2nd-timothy"),
-chapters: document.getElementById("bke2nd-timothychaptersResult"),
-verses: document.getElementById("bke2nd-timothyverseResult")
-},
-
-
-
-Titus: {
-book: document.getElementById("bketitus"),
-chapters: document.getElementById("bketituschaptersResult"),
-verses: document.getElementById("bketitusverseResult")
-},
-
-
-
-Philemon: {
-book: document.getElementById("bkephilemon"),
-chapters: document.getElementById("bkephilemonchaptersResult"),
-verses: document.getElementById("bkephilemonverseResult")
-},
-
-
-
-Hebrews: {
-book: document.getElementById("bkehebrews"),
-chapters: document.getElementById("bkehebrewschaptersResult"),
-verses: document.getElementById("bkehebrewsverseResult")
-},
-
-
-
-James: {
-book: document.getElementById("bkejames"),
-chapters: document.getElementById("bkejameschaptersResult"),
-verses: document.getElementById("bkejamesverseResult")
-},
-
-
-
-FirstPeter: {
-book: document.getElementById("bke1st-peter"),
-chapters: document.getElementById("bke1st-peterchaptersResult"),
-verses: document.getElementById("bke1st-peterverseResult")
-},
-
-
-
-SecondPeter: {
-book: document.getElementById("bke2nd-peter"),
-chapters: document.getElementById("bke2nd-peterchaptersResult"),
-verses: document.getElementById("bke2nd-peterverseResult")
-},
-
-
-
-FirstJohn: {
-book: document.getElementById("bke1st-john"),
-chapters: document.getElementById("bke1st-johnchaptersResult"),
-verses: document.getElementById("bke1st-johnverseResult")
-},
-
-
-
-SecondJohn: {
-book: document.getElementById("bke2nd-john"),
-chapters: document.getElementById("bke2nd-johnchaptersResult"),
-verses: document.getElementById("bke2nd-johnverseResult")
-},
-
-
-
-ThirdJohn: {
-book: document.getElementById("bke3rd-john"),
-chapters: document.getElementById("bke3rd-johnchaptersResult"),
-verses: document.getElementById("bke3rd-johnverseResult")
-},
-
-
-
-Jude: {
-book: document.getElementById("bkejude"),
-chapters: document.getElementById("bkejudechaptersResult"),
-verses: document.getElementById("bkejudeverseResult")
-},
-
-
-
-Revelation: {
-book: document.getElementById("bkerevelation"),
-chapters: document.getElementById("bkerevelationchaptersResult"),
-verses: document.getElementById("bkerevelationverseResult")
-}
-
-
-		};
-
-
-
-
-
-    async function loadBibleData() {
-
-
-  const response = await fetch("../Assets/js/fuse/testamentsindex.json");
-  const data = await response.json();
-  return data;
-}
-
-async function initBible() {
-  const bibleData = await loadBibleData();
-
-  const bibleBooksDynamic = {};
-
-  for (const [bookNum, book] of Object.entries(bibleData)) {
-    const name = book.bkl; // lowercase-hyphen form
-    bibleBooksDynamic[name] = {
-      book: document.getElementById(`bke${book.bkl}`),
-      chapters: document.getElementById(`bke${book.bkl}chaptersResult`),
-      verses: document.getElementById(`bke${book.bkl}verseResult`)
-    };
-
-    const refs = bibleBooksDynamic[name];
-    if (refs.book) {
-      refs.book.addEventListener("click", () => {
-        showChapters(bookNum, book, refs.chapters, refs.verses);
-      });
-    }
-  }
-}
-
-    
-    
-    
-    
-
-
-
-function showChapters(bookNum, book, chaptersDiv, versesDiv) {
-  chaptersDiv.innerHTML = "";
-
-  // Add a single "Chapter" heading
-  const chapterHeading = document.createElement("div");
-  chapterHeading.className = "chapter-heading";
-  chapterHeading.textContent = `${book.bkl} Chapters`;
-  chaptersDiv.appendChild(chapterHeading);
-
-  for (const [chapter, verseCount] of Object.entries(book.chapters)) {
-    const chapterLink = document.createElement("a");
-
-    // Build the actual file path
-    chapterLink.href = `../${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html`;
-
-    // Inner HTML is just the number, wrapped in a span for styling
-    chapterLink.innerHTML = `<span class="chapter-number">${chapter}</span>`;
-
-    chapterLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      showVerses(bookNum, chapter, verseCount, versesDiv, book);
-
-      // 👇 Scroll versesDiv into view after rendering - OKAY COPILOT, GOT IT, THANK YOU THANK YOU.
-      versesDiv.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-    });
-
-    chaptersDiv.appendChild(chapterLink);
-  }
-    }
-    
-
-
-
-
-    
-function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
-  versesDiv.innerHTML = "";
-
-  // Add a single "Verse" heading
-  const verseHeading = document.createElement("div");
-  verseHeading.className = "verse-heading";
-  verseHeading.textContent = `Chapter ${chapter} Verses`;
-  versesDiv.appendChild(verseHeading);
-
-  for (let v = 1; v <= verseCount; v++) {
-    const verseLink = document.createElement("a");
-
-    // Build the file path + verse anchor
-    verseLink.href = `../${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html#verse-${v}`;
-
-    // Inner HTML is just the number, wrapped in a span for styling
-    verseLink.innerHTML = `<span class="verse-number">${v}</span>`;
-
-    versesDiv.appendChild(verseLink);
-  }
-
-  // 👇 Ensure versesDiv is visible even if called directly
-  versesDiv.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-}
-
-
-    
-    const backUp = this.querySelector('.goupthumb');
-    const backone = this.querySelector('#biblemenuanimationright');
-    const backtwo = this.querySelector('#biblemenuanimation');
-// your scrollable div
-
-          backUp.onclick = function() {
-            // Scroll the whole page
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-
-            // Scroll the menu div
-            backone.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-                        backtwo.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
           };
-    
-    
-    const othermenupage = this.querySelector('#biblemenuanimationright');
 
-    
-    
-
-      // Run once DOM is ready
-      document.addEventListener("DOMContentLoaded", initBible);
+        async function loadBibleData() {
 
 
+          const response = await fetch("../Assets/js/fuse/testamentsindex.json");
+          const data = await response.json();
+          return data;
+        }
+
+        async function initBible() {
+          const bibleData = await loadBibleData();
+
+          const bibleBooksDynamic = {};
+
+          for (const [bookNum, book] of Object.entries(bibleData)) {
+              const name = book.bkl; // lowercase-hyphen form
+              bibleBooksDynamic[name] = {
+                book: document.getElementById(`bke${book.bkl}`),
+                chapters: document.getElementById(`bke${book.bkl}chaptersResult`),
+                verses: document.getElementById(`bke${book.bkl}verseResult`)
+              };
+
+              const refs = bibleBooksDynamic[name];
+              if (refs.book) {
+                refs.book.addEventListener("click", () => {
+                    showChapters(bookNum, book, refs.chapters, refs.verses);
+                });
+              }
+          }
+        }
 
 
+        function showChapters(bookNum, book, chaptersDiv, versesDiv) {
+          chaptersDiv.innerHTML = "";
+
+          // Add a single "Chapter" heading
+          const chapterHeading = document.createElement("div");
+          chapterHeading.className = "chapter-heading";
+          chapterHeading.textContent = `${book.bkl} Chapters`;
+          chaptersDiv.appendChild(chapterHeading);
+
+          for (const [chapter, verseCount] of Object.entries(book.chapters)) {
+              const chapterLink = document.createElement("a");
+
+              // Build the actual file path
+              chapterLink.href = `../${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html`;
+
+              // Inner HTML is just the number, wrapped in a span for styling
+              chapterLink.innerHTML = `<span class="chapter-number">${chapter}</span>`;
+
+              chapterLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                showVerses(bookNum, chapter, verseCount, versesDiv, book);
+
+                // 👇 Scroll versesDiv into view after rendering - OKAY COPILOT, GOT IT, THANK YOU THANK YOU.
+                versesDiv.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+              });
+
+              chaptersDiv.appendChild(chapterLink);
+          }
+        }
+
+
+        function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
+          versesDiv.innerHTML = "";
+
+          // Add a single "Verse" heading
+          const verseHeading = document.createElement("div");
+          verseHeading.className = "verse-heading";
+          verseHeading.textContent = `Chapter ${chapter} Verses`;
+          versesDiv.appendChild(verseHeading);
+
+          for (let v = 1; v <= verseCount; v++) {
+              const verseLink = document.createElement("a");
+
+              // Build the file path + verse anchor
+              verseLink.href = `../${book.tesl}/${bookNum}-${book.bkl}-chapter-${chapter}.html#verse-${v}`;
+
+              // Inner HTML is just the number, wrapped in a span for styling
+              verseLink.innerHTML = `<span class="verse-number">${v}</span>`;
+
+              versesDiv.appendChild(verseLink);
+          }
+
+          // 👇 Ensure versesDiv is visible even if called directly
+          versesDiv.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+          });
+        }
+
+
+        const backUp = this.querySelector('.goupthumb');
+
+        // your scrollable div
+
+        backUp.onclick = function () {
+          // Scroll the whole page
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+
+          // Scroll the menu div
+
+        };
+
+
+  
+        // Run once DOM is ready
+        document.addEventListener("DOMContentLoaded", initBible);
 
 	}
 

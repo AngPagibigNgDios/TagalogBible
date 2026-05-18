@@ -927,12 +927,23 @@ html {
 .textresizerButton:active,
 .fontchoiceButton:active,
 #buttonclick:active,
-.fontweightButton:active {
+.fontweightButton:active, .smallfont:active  {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
+
+.smallfont {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+  background-color: #0f0f46;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  display:flex;
+          padding: 3%;
+}
 #fontfacebox {
   display: flex;
   border: 2px solid rgb(10, 10, 14);
@@ -1546,6 +1557,16 @@ html {
 
 }
 
+
+.goupthumbindex
+{
+  width: 20% !important;
+
+
+}
+
+.biblecontrollthumbindx, .bibleversethumbindex {width:40% !important;}
+
 .biblecontrollthumb {
   width: 30%;
   background-color: #16166b;
@@ -1680,7 +1701,6 @@ border-left: 2px solid #3c5984;
 
 .oldrow {
   display: flex;
-  background-color: #e8f7fa;
   flex-direction: column;
   width: 100%;
 }

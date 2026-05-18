@@ -943,7 +943,16 @@ a.clink:visited {
 }
 
 
-
+.smallfont {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+  background-color: #0f0f46;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  display:flex;
+          padding: 3%;
+}
 
 
 
@@ -952,11 +961,13 @@ a.clink:visited {
 .fontchoiceButton:hover,
 #buttonclick:hover,
 .fontweightButton:hover,
-.colorpage2:hover {
+.colorpage2:hover,
+.smallfont:hover {
   background-color: #daff06 !important;
   color: rgb(0, 0, 0) !important;
   cursor: pointer;
 }
+
 
 
 #fontfacebox {
@@ -1708,6 +1719,18 @@ a.clink:visited {
 }
 
 
+
+.goupthumbindex
+{
+  width: 20% !important;
+
+
+}
+
+.biblecontrollthumbindx, .bibleversethumbindex {width:40% !important;}
+
+
+
 .goupthumb, .highlighterpopup {
   width: 15%;
   background-color: #0f0f46;
@@ -1841,7 +1864,7 @@ a.clink:visited {
 
 .oldrow {
   display: flex;
-  background-color: #e8f7fa;
+
   flex-direction: column;
   width: 100%;
 }

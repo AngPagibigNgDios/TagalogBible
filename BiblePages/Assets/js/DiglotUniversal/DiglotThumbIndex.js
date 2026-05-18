@@ -569,27 +569,22 @@ class DiglotThumbMenu extends HTMLElement {
                       <div class="controlheader marginhere"> </div>
                       <div id="GodYouReign" class="NewTestamentbke"><br/>
                           GOD YOU REIGN FOREVER MORE! <br/>ADONAI REIGN! YESHUA REIGN!<br/>
-                          <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="BiblePages/ssets/images/PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
+                          <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="BiblePages/Assets/images/PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
                       </div>
                     </div>
 
 
                 <div id="thumbmenuholder">
-                  <div class="bibleversesthumb" id="menuanimation">
+                  <div class="bibleversesthumb bibleversethumbindex" id="menuanimation">
                       <span id="openbiblemenu">BIBLE MENU ☰</span>
                       <span id="closebiblemenu">BIBLE MENU ✖</span>
                   </div>
-                  <div class="goupthumb" id="goUpScroll">
-                      <div>&nbsp;▲&nbsp;</div>
+                  <div class="goupthumb goupthumbindex" id="goUpScroll">
+                      <div>GO&nbsp;▲&nbsp;UP</div>
                   </div>
                   
-                  <div class="highlighterpopup" id="highlightermenu">
-                      <span id="openmenuhighlighter">☰ HL</span>
-                      <span id="closemenuhighlighter">✖ HL</span>
-                  </div>
 
-
-                  <div class="biblecontrollthumb" id="menuanimationright">
+                  <div class="biblecontrollthumb biblecontrolltrhumbindex" id="menuanimationright">
                       <span id="openmenu">☰ OTHER MENU</span>
                       <span id="closemenu">✖ OTHER MENU</span>
                   </div>
@@ -676,39 +671,7 @@ othermenu.onclick = function() {
     
  
 
-    
-    // --- VERSEHIGHLIGHT ---
-    
-        const highlightermenubutton = document.querySelector('#highlightermenu');     // the HL button
-        const highlightermenupage = document.querySelector('#MenuContainer');       // the popup panel
-        const highlighteropen     = document.querySelector('#openmenuhighlighter');          // ☰ HL span
-        const highlighterclose    = document.querySelector('#closemenuhighlighter');         // ✖ HL span
-  
 
-highlightermenubutton.onclick = function() {
-    // FIX: Use highlightermenu consistently
-    const highlightermenu = window.getComputedStyle(highlightermenupage).display === "none";
-
-    // Toggle visibility
-    highlightermenupage.style.display = highlightermenu ? "block" : "none";
-    // Ensure the BIBLE menu is closed
-  menuDiv.style.display = "none"; 
-        othermenupage.style.display = "none"; 
-
-    // Toggle spans
-    highlighteropen.style.display = highlightermenu ? "none" : "inline";
-    highlighterclose.style.display = highlightermenu ? "inline" : "none";
-
-    if (highlightermenu) {
-
-        highlightermenupage.style.overflowY = "auto";
-    } else {
-        document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-
-    }
-};
-    
     
     
 
@@ -733,7 +696,7 @@ highlightermenubutton.onclick = function() {
 
 
 		async function loadBibleData() {
-			const response = await fetch("BiblePages/ssets/js/fuse/testamentsindex.json");
+			const response = await fetch("BiblePages/Assets/js/fuse/testamentsindex.json");
 			const data = await response.json();
 			return data;
 		}
@@ -1216,7 +1179,7 @@ verses: document.getElementById("bkerevelationverseResult")
     async function loadBibleData() {
 
 
-  const response = await fetch("BiblePages/ssets/js/fuse/testamentsindex.json");
+  const response = await fetch("BiblePages/Assets/js/fuse/testamentsindex.json");
   const data = await response.json();
   return data;
 }
@@ -1318,32 +1281,22 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
 
 
     
+        const backUp = this.querySelector('.goupthumb');
 
-    const backUp = this.querySelector('.goupthumb');
-    const backone = this.querySelector('#biblemenuanimationright');
-    const backtwo = this.querySelector('#biblemenuanimation');
-// your scrollable div
+        // your scrollable div
 
-          backUp.onclick = function() {
-            // Scroll the whole page
-            window.scrollTo({
+        backUp.onclick = function () {
+          // Scroll the whole page
+          window.scrollTo({
               top: 0,
               behavior: 'smooth'
-            });
+          });
 
-            // Scroll the menu div
-            backone.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-                        backtwo.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-          };
-    
-    
-    
+          // Scroll the menu div
+
+        };
+
+
 
       // Run once DOM is ready
       document.addEventListener("DOMContentLoaded", initBible);
