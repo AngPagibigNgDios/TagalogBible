@@ -648,9 +648,9 @@ a.clink:visited {
 .remainhere {
 
   background-color: white;
-  height:auto;
+  height: auto;
 
-      width: 100%;
+  width: 100%;
 
 }
 
@@ -950,8 +950,8 @@ a.clink:visited {
   color: white;
   cursor: pointer;
   text-align: center;
-  display:flex;
-          padding: 3%;
+  display: flex;
+  padding: 3%;
 }
 
 
@@ -1690,10 +1690,13 @@ a.clink:visited {
   display: flex;
   z-index: 7777777;
   flex-direction: row;
-  bottom: 0; left:0;
+  bottom: 0;
+  left: 0;
 }
 
-#closemenuhighlighter{display:none;}
+#closemenuhighlighter {
+  display: none;
+}
 
 
 
@@ -1720,18 +1723,21 @@ a.clink:visited {
 
 
 
-.goupthumbindex
-{
+.goupthumbindex {
   width: 25% !important;
 
 
 }
 
-.biblecontrolltrhumbindex, .bibleversethumbindex {width:40% !important;}
+.biblecontrolltrhumbindex,
+.bibleversethumbindex {
+  width: 40% !important;
+}
 
 
 
-.goupthumb, .highlighterpopup {
+.goupthumb,
+.highlighterpopup {
   width: 15%;
   background-color: #0f0f46;
   color: white;
@@ -1790,9 +1796,10 @@ a.clink:visited {
 
 .bibleversesthumb,
 .goupthumb,
-.biblecontrollthumb, .highlighterpopup {
+.biblecontrollthumb,
+.highlighterpopup {
   transition: background-color 0.3s ease;
-  border-left:2px solid #3c5984;
+  border-left: 2px solid #3c5984;
 
 }
 
@@ -1800,7 +1807,8 @@ a.clink:visited {
 
 .bibleversesthumb:hover,
 .goupthumb:hover,
-.biblecontrollthumb:hover, .highlighterpopup:hover {
+.biblecontrollthumb:hover,
+.highlighterpopup:hover {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -2491,9 +2499,28 @@ a.clink:visited {
 
 
 
-#searchhere{display:flex; flex-direction: row; gap:5%; justify-content: space-evenly; align-items: center; align-self: center;}
-.searchside {display: flex; justify-content: center; align-items: center; align-content: center; font-size: 1.2em; font-weight: bold;}
-.searchright {display:flex; margin-right:5%}
+#searchhere {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+}
+
+.searchside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.searchright {
+  display: flex;
+  margin-right: 5%
+}
 
 
 
@@ -2527,7 +2554,8 @@ a.clink:visited {
   gap: 5%;
 }
 
-.dualplacement, .dualespecial  {
+.dualplacement,
+.dualespecial {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2560,11 +2588,30 @@ a.clink:visited {
 
 
 
+#revealhighlighter {
+  width: 100%;
+  display: block;
+  height: 100%;
+  z-index: 77777;
+  max-width: 100vw;
+}
 
-#revealhighlighter {width:100%; display: block; height:100%; z-index:77777; max-width: 100vw;}
+#MenuContainer {
+  display: none;
+  z-index: 77777;
+  width: 100%;
+  height: 25%;
+  position: fixed;
+  bottom: 5%;
+  left: 0;
+  max-width: 100vw;
+}
 
+.THUMBINDEXHIDER {
+  display: none !important;
+}
 
-#MenuContainer {display: none; z-index: 77777; width:100%; height: 25%; position: fixed; bottom:5%; left:0; max-width: 100vw;}
-
-.THUMBINDEXHIDER{ display: none !important;}
-
+#MenuContainer {
+  -webkit-box-shadow: -1px 1px 21px -1px rgba(0, 0, 0, 0.59);
+  box-shadow: -1px 1px 21px -1px rgba(0, 0, 0, 0.59);
+}

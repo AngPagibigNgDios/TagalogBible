@@ -907,7 +907,7 @@ a.clink:visited {
 .fontchoiceButton:hover,
 #buttonclick:hover,
 .fontweightButton:hover,
-.colorpage2:hover,
+.colorpage2:hover, .colorpage:hover,
 .smallfont:hover {
   background-color: #daff06 !important;
   color: rgb(0, 0, 0) !important;

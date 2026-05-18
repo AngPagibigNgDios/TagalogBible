@@ -564,7 +564,7 @@ class DiglotThumbMenu extends HTMLElement {
                           <div class="bcbgvisionimpaired colorpage" onclick="bcbgvisionimpairedB()">Dark Mode</div>
                       </div>
                       <div class="soloplacement">
-                          <div class="bcbgreset colorpage" onclick="bcbgresetB()">Default</div>
+                          <div class="bcbgreset colorpage" style="border:2px solid black;"  onclick="bcbgresetB()">Default</div>
                       </div>
                       <div class="controlheader marginhere"> </div>
                       <div id="GodYouReign" class="NewTestamentbke"><br/>
@@ -1287,7 +1287,7 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
 }
 
 
-    
+
         const backUp = this.querySelector('.goupthumb');
 
         // your scrollable div
@@ -1299,10 +1299,18 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
               behavior: 'smooth'
           });
 
+          menuDiv.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+          othermenupage.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+
           // Scroll the menu div
 
         };
-
 
 
       // Run once DOM is ready

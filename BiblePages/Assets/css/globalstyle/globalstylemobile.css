@@ -1471,7 +1471,7 @@ mark {
 
 .bcbgsepia {
   background-color: #b8a88a;
-  color: #ffffff;
+  color: #434343;
 
 
   .highlight-verse td {
@@ -1804,3 +1804,8 @@ mark {
   background-color: #3a80c1;
   border-color: #3a80c1;
 }
+
+
+
+#MenuContainer {-webkit-box-shadow: -1px 1px 21px -1px rgba(0,0,0,0.59); 
+box-shadow: -1px 1px 21px -1px rgba(0,0,0,0.59);}

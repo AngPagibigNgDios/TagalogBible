@@ -1,4 +1,4 @@
-
+ 
 
 class DiglotMenuFocused extends HTMLElement {
    connectedCallback() {
@@ -251,7 +251,7 @@ class DiglotMenuFocused extends HTMLElement {
                         <div class="bcbgvisionimpaired colorpage" onclick="bcbgvisionimpairedB()">Dark Mode</div>
                      </div>
                      <div class="soloplacement">
-                        <div class="bcbgreset colorpage" onclick="bcbgresetB()">Default</div>
+                        <div class="bcbgreset colorpage" style="border:2px solid black;" onclick="bcbgresetB()">Default</div>
                      </div>
 
             </div>
