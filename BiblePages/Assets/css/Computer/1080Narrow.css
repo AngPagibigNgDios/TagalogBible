@@ -1679,8 +1679,11 @@ a.clink:visited {
   display: flex;
   z-index: 7777777;
   flex-direction: row;
-  bottom: 0;
+  bottom: 0; left:0;
 }
+
+#closemenuhighlighter{display:none;}
+
 
 
 .bibleversesthumb {
@@ -1705,8 +1708,8 @@ a.clink:visited {
 }
 
 
-.goupthumb {
-  width: 30%;
+.goupthumb, .highlighterpopup {
+  width: 15%;
   background-color: #0f0f46;
   color: white;
   font-size: 1.2em;
@@ -1764,7 +1767,7 @@ a.clink:visited {
 
 .bibleversesthumb,
 .goupthumb,
-.biblecontrollthumb {
+.biblecontrollthumb, .highlighterpopup {
   transition: background-color 0.3s ease;
 
 }
@@ -1773,7 +1776,7 @@ a.clink:visited {
 
 .bibleversesthumb:hover,
 .goupthumb:hover,
-.biblecontrollthumb:hover {
+.biblecontrollthumb:hover, .highlighterpopup:hover {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -2500,7 +2503,7 @@ a.clink:visited {
   gap: 5%;
 }
 
-.dualplacement {
+.dualplacement, .dualespecial  {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2530,3 +2533,14 @@ a.clink:visited {
   padding: 2% 5%;
   height: 30px;
 }
+
+
+
+
+#revealhighlighter {width:100%; display: block; height:100%; z-index:77777; max-width: 100vw;}
+
+
+#MenuContainer {display: none; z-index: 77777; width:100%; height: 25%; position: fixed; bottom:5%; left:0; max-width: 100vw;}
+
+.THUMBINDEXHIDER{ display: none !important;}
+

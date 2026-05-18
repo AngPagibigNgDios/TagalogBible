@@ -907,7 +907,8 @@ a.clink:visited {
 .fontchoiceButton:hover,
 #buttonclick:hover,
 .fontweightButton:hover,
-.colorpage2:hover {
+.colorpage2:hover,
+.smallfont:hover {
   background-color: #daff06 !important;
   color: rgb(0, 0, 0) !important;
   cursor: pointer;
@@ -1681,6 +1682,29 @@ form#searchPassage>input#qry {
   gap: 5%;
   text-align: center;
 }
+
+
+.dualespecial {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  height: auto;
+  justify-content: center;
+  gap: 2%;
+}
+
+.smallfont {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+  background-color: #0f0f46;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.smallfont:last-child:nth-child(2n - 1) {
+  grid-column-end: 5;
+}
+
 
 .soloplacement {
   display: flex;

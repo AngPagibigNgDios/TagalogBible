@@ -211,10 +211,12 @@ a.clink:visited {
 }
 
 
-.HomeURLheader, #display-title, #display-title2 {
-       
-        font-size: 1em;
-    }
+.HomeURLheader,
+#display-title,
+#display-title2 {
+
+  font-size: 1em;
+}
 
 
 
@@ -513,14 +515,17 @@ a.clink:visited {
 .remainhere {
 
   background-color: white;
-height:auto;
+  height: auto;
 
-    width: 100%;
+  width: 100%;
 
 }
 
 
-  .smallfont{font-size:.9em;}
+.smallfont {
+  font-size: .9em;
+}
+
 /* DIGLOT POST BUTTON */
 
 
@@ -773,31 +778,40 @@ height:auto;
 
 .textresizerButton,
 .controldiglot,
-.fontchoiceButton, .colorpage2 {
+.fontchoiceButton,
+.colorpage2 {
   display: flex;
 
 }
 
 
-    #header{
-    top: 0px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: #122051 !important;
-    font-size: 1.3em;
+#header {
+  top: 0px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #122051 !important;
+  font-size: 1.3em;
 }
 
 
 
-.colorpage{width:90%; height:50px; cursor: pointer; justify-content: center; text-align: center; align-items: center; align-content: center;}
+.colorpage {
+  width: 90%;
+  height: 50px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
 
 
 .philnavsfloat {
@@ -824,7 +838,9 @@ height:auto;
 .textresizerButton:hover,
 .fontchoiceButton:hover,
 #buttonclick:hover,
-.fontweightButton:hover, .colorpage2:hover {
+.fontweightButton:hover,
+.colorpage2:hover,
+.smallfont:hover {
   background-color: #daff06;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -1413,7 +1429,7 @@ height:auto;
   left: 0;
   bottom: 0;
   max-width: 250px;
-  overflow:auto;
+  overflow: auto;
 }
 
 
@@ -1520,7 +1536,14 @@ height:auto;
 
 
 
-.diglotfooterdiv {position:relative; bottom:0px; width: 100%; height: 10%; background-color: white; height:100px}
+.diglotfooterdiv {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  height: 100px
+}
 
 
 
@@ -1531,28 +1554,105 @@ height:auto;
 
 
 
-.OtherMenu {overflow-y: auto; overflow-x: hidden;}
+.OtherMenu {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
 
 
-.controlheader{font-weight: bold; text-align: center; border-top: 2px solid #0f0f46;padding:3px; border-bottom:2px solid #0f0f46;} 
+.controlheader {
+  font-weight: bold;
+  text-align: center;
+  border-top: 2px solid #0f0f46;
+  padding: 3px;
+  border-bottom: 2px solid #0f0f46;
+}
 
-.versehighlight {text-align: center;}
+.versehighlight {
+  text-align: center;
+}
 
 
-.copybuttons{display:flex; flex-direction: column; gap:5%; }
-.dualplacement{display:flex; flex-direction: row; justify-content: center; align-items: center; align-content: center; gap:5%; text-align: center;}
-.soloplacement{display: flex; width:100%; margin-top: 3%; height: auto; justify-content: center; align-items: center; align-content: center; margin-bottom:3%;}
+.copybuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.dualplacement {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5%;
+  text-align: center;
+}
 
 
-.marginhere {margin-top: 5%; margin-bottom: 5%;}
+.dualespecial {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  height: auto;
+  justify-content: center;
+  gap: 2%;
+}
+
+.smallfont {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+  background-color: #0f0f46;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+.smallfont:last-child:nth-child(2n - 1) {
+  grid-column-end: 5;
+}
 
 
 
-.resizebutton {width: 100% !important; display:flex; display: flex;}
+.soloplacement {
+  display: flex;
+  width: 100%;
+  margin-top: 3%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 3%;
+}
 
-.resizebutton2 {width: 50% !important; display:flex; display: flex;}
 
-.diglot2 {padding-top:5% !important; padding-bottom:5% !important;}
+.marginhere {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
-.changedcolor {background-color: #ffffff; border: 1px solid #0f0f46; color:rgb(0, 0, 0); padding-bottom: 5%; padding-top:5%;}
+
+
+.resizebutton {
+  width: 100% !important;
+  display: flex;
+  display: flex;
+}
+
+.resizebutton2 {
+  width: 50% !important;
+  display: flex;
+  display: flex;
+}
+
+.diglot2 {
+  padding-top: 5% !important;
+  padding-bottom: 5% !important;
+}
+
+.changedcolor {
+  background-color: #ffffff;
+  border: 1px solid #0f0f46;
+  color: rgb(0, 0, 0);
+  padding-bottom: 5%;
+  padding-top: 5%;
+}

@@ -1,0 +1,291 @@
+
+
+class DiglotMenuFocused extends HTMLElement {
+   connectedCallback() {
+      // 1. Set the HTML structure
+      this.innerHTML = `
+      
+
+
+<div id="MenuContainer">
+
+<div class="BibleChaptersMenu THUMBINDEXHIDER" id="book-links">
+<div class="remainhere"><hr class="lefthrliner"/>
+<span class="diglotnav">
+   DIGLOT
+  </span>
+<br/>
+<span class="bibleduo">
+ KJV - Ang Biblia
+  </span>
+  <hr/>
+  </div>
+
+
+<div id="OLDTB"><br/>
+<span class="LCOldTestament">
+<sub>OLD TESTAMENT</sub>
+<br/>
+<b>LUMANG TIPAN</b><br/><br/>
+  </span></div>
+
+<div class="books" id="divOLDbg">
+            <a href="../OldTestament/01-genesis.html"><div class="BMONTgenesis divgenesis"><span class="english englishLabel">Genesis</span><br/><span class="tagalogleft tagalogLabel">Genesis</span></div></a>
+            <a href="../OldTestament/02-exodus.html"><div class="BMONTexodus divexodus"><span class="english englishLabel">Exodus</span><br/><span class="tagalogleft tagalogLabel">Exodo</span></div></a>
+            <a href="../OldTestament/03-leviticus.html"><div class="BMONTleviticus divleviticus"><span class="english englishLabel">Leviticus</span><br/><span class="tagalogleft tagalogLabel">Levitico</span></div></a>
+            <a href="../OldTestament/04-numbers.html"><div class="BMONTnumbers divnumbers"><span class="english englishLabel">Numbers</span><br/><span class="tagalogleft tagalogLabel">Mga Bilang</span></div></a>
+            <a href="../OldTestament/05-deuteronomy.html"><div class="BMONTdeuteronomy divdeuteronomy"><span class="english englishLabel">Deuteronomy</span><br/><span class="tagalogleft tagalogLabel">Deuteronomio</span></div></a>
+            <a href="../OldTestament/06-joshua.html"><div class="BMONTjoshua divjoshua"><span class="english englishLabel">Joshua</span><br/><span class="tagalogleft tagalogLabel">Josue</span></div></a>
+            <a href="../OldTestament/07-judges.html"><div class="BMONTjudges divjudges"><span class="english englishLabel">Judges</span><br/><span class="tagalogleft tagalogLabel">Mga Hukom</span></div></a>
+            <a href="../OldTestament/08-ruth.html"><div class="BMONTruth divruth"><span class="english englishLabel">Ruth</span><br/><span class="tagalogleft tagalogLabel">Ruth</span></div></a>
+            <a href="../OldTestament/09-1st-samuel.html"><div class="BMONT1samuel div1samuel"><span class="english englishLabel">1 Samuel</span><br/><span class="tagalogleft tagalogLabel">1 Samuel</span></div></a>
+            <a href="../OldTestament/10-2nd-samuel.html"><div class="BMONT2samuel div2samuel"><span class="english englishLabel">2 Samuel</span><br/><span class="tagalogleft tagalogLabel">2 Samuel</span></div></a>
+            <a href="../OldTestament/11-1st-kings.html"><div class="BMONT1kings div1kings"><span class="english englishLabel">1 Kings</span><br/><span class="tagalogleft tagalogLabel">1 Mga Hari</span></div></a>
+            <a href="../OldTestament/12-2nd-kings.html"><div class="BMONT2kings div2kings"><span class="english englishLabel">2 Kings</span><br/><span class="tagalogleft tagalogLabel">2 Mga Hari</span></div></a>
+            <a href="../OldTestament/13-1st-chronicles.html"><div class="BMONT1chronicles div1chronicles"><span class="english englishLabel">1 Chronicles</span><br/><span class="tagalogleft tagalogLabel">1 Mga Cronica</span></div></a>
+            <a href="../OldTestament/14-2nd-chronicles.html"><div class="BMONT2chronicles div2chronicles"><span class="english englishLabel">2 Chronicles</span><br/><span class="tagalogleft tagalogLabel">2 Mga Cronica</span></div></a>
+            <a href="../OldTestament/15-ezra.html"><div class="BMONTezra divezra"><span class="english englishLabel">Ezra</span><br/><span class="tagalogleft tagalogLabel">Ezra</span></div></a>
+            <a href="../OldTestament/16-nehemiah.html"><div class="BMONTnehemiah divnehemiah"><span class="english englishLabel">Nehemiah</span><br/><span class="tagalogleft tagalogLabel">Nehemias</span></div></a>
+            <a href="../OldTestament/17-esther.html"><div class="BMONTesther divesther"><span class="english englishLabel">Esther</span><br/><span class="tagalogleft tagalogLabel">Ester</span></div></a>
+            <a href="../OldTestament/18-job.html"><div class="BMONTjob divjob"><span class="english englishLabel">Job</span><br/><span class="tagalogleft tagalogLabel">Job</span></div></a>
+            <a href="../OldTestament/19-psalms.html"><div class="BMONTpsalms divpsalms"><span class="english englishLabel">Psalms</span><br/><span class="tagalogleft tagalogLabel">Mga Awit</span></div></a>
+            <a href="../OldTestament/20-proverbs.html"><div class="BMONTproverbs divproverbs"><span class="english englishLabel">Proverbs</span><br/><span class="tagalogleft tagalogLabel">Kawikaan</span></div></a>
+            <a href="../OldTestament/21-ecclesiastes.html"><div class="BMONTecclesiastes divecclesiastes"><span class="english englishLabel">Ecclesiastes</span><br/><span class="tagalogleft tagalogLabel">Eclesiastes</span></div></a>
+            <a href="../OldTestament/22-song-of-solomon.html"><div class="BMONTsongofsolomon divsongofsolomon"><span class="english englishLabel">Song of Solomon</span><br/><span class="tagalogleft tagalogLabel">Awit ng Mga Awit</span></div></a>
+            <a href="../OldTestament/23-isaiah.html"><div class="BMONTisaiah divisaiah"><span class="english englishLabel">Isaiah</span><br/><span class="tagalogleft tagalogLabel">Isaias</span></div></a>
+            <a href="../OldTestament/24-jeremiah.html"><div class="BMONTjeremiah divjeremiah"><span class="english englishLabel">Jeremiah</span><br/><span class="tagalogleft tagalogLabel">Jeremias</span></div></a>
+            <a href="../OldTestament/25-lamentations.html"><div class="BMONTlamentations divlamentations"><span class="english englishLabel">Lamentations</span><br/><span class="tagalogleft tagalogLabel">Mga Panaghoy</span></div></a>
+            <a href="../OldTestament/26-ezekiel.html"><div class="BMONTezekiel divezekiel"><span class="english englishLabel">Ezekiel</span><br/><span class="tagalogleft tagalogLabel">Ezekiel</span></div></a>
+            <a href="../OldTestament/27-daniel.html"><div class="BMONTdaniel divdaniel"><span class="english englishLabel">Daniel</span><br/><span class="tagalogleft tagalogLabel">Daniel</span></div></a>
+            <a href="../OldTestament/28-hosea.html"><div class="BMONThosea divhosea"><span class="english englishLabel">Hosea</span><br/><span class="tagalogleft tagalogLabel">Oseas</span></div></a>
+            <a href="../OldTestament/29-joel.html"><div class="BMONTjoel divjoel"><span class="english englishLabel">Joel</span><br/><span class="tagalogleft tagalogLabel">Joel</span></div></a>
+            <a href="../OldTestament/30-amos.html"><div class="BMONTamos divamos"><span class="english englishLabel">Amos</span><br/><span class="tagalogleft tagalogLabel">Amos</span></div></a>
+            <a href="../OldTestament/31-obadiah.html"><div class="BMONTobadiah divobadiah"><span class="english englishLabel">Obadiah</span><br/><span class="tagalogleft tagalogLabel">Obadias</span></div></a>
+            <a href="../OldTestament/32-jonah.html"><div class="BMONTjonah divjonah"><span class="english englishLabel">Jonah</span><br/><span class="tagalogleft tagalogLabel">Jonas</span></div></a>
+            <a href="../OldTestament/33-micah.html"><div class="BMONTmicah divmicah"><span class="english englishLabel">Micah</span><br/><span class="tagalogleft tagalogLabel">Mikas</span></div></a>
+            <a href="../OldTestament/34-nahum.html"><div class="BMONTnahum divnahum"><span class="english englishLabel">Nahum</span><br/><span class="tagalogleft tagalogLabel">Naum</span></div></a>
+            <a href="../OldTestament/35-habakkuk.html"><div class="BMONThabakkuk divhabakkuk"><span class="english englishLabel">Habakkuk</span><br/><span class="tagalogleft tagalogLabel">Habacuc</span></div></a>
+            <a href="../OldTestament/36-zephaniah.html"><div class="BMONTzephaniah divzephaniah"><span class="english englishLabel">Zephaniah</span><br/><span class="tagalogleft tagalogLabel">Sofonias</span></div></a>
+            <a href="../OldTestament/37-haggai.html"><div class="BMONThaggai divhaggai"><span class="english englishLabel">Haggai</span><br/><span class="tagalogleft tagalogLabel">Ageo</span></div></a>
+            <a href="../OldTestament/38-zechariah.html"><div class="BMONTzechariah divzechariah"><span class="english englishLabel">Zechariah</span><br/><span class="tagalogleft tagalogLabel">Zacarias</span></div></a>
+            <a href="../OldTestament/39-malachi.html"><div class="BMONTmalachi divmalachi"><span class="english englishLabel">Malachi</span><br/><span class="tagalogleft tagalogLabel">Malakias</span></div></a>
+      
+</div>
+<div id="NEWTB">
+<br/>
+<span class="LCNewTestament"><sub>NEW TESTAMENT</sub><br><b>BAGONG TIPAN</b><br/><br/></span></div>
+
+<div class="books" id="divNEWbg">
+              <a href="../NewTestament/40-matthew.html"><div class="BMONTmatthew divmatthew"><span class="english englishLabel">Matthew</span><br/><span class="tagalogleft tagalogLabel">Mateo</span></div></a>
+            <a href="../NewTestament/41-mark.html"><div class="BMONTmark divmark"><span class="english englishLabel">Mark</span><br/><span class="tagalogleft tagalogLabel">Marcos</span></div></a>
+            <a href="../NewTestament/42-luke.html"><div class="BMONTluke divluke"><span class="english englishLabel">Luke</span><br/><span class="tagalogleft tagalogLabel">Lucas</span></div></a>
+            <a href="../NewTestament/43-john.html"><div class="BMONTjohn divjohn"><span class="english englishLabel">John</span><br/><span class="tagalogleft tagalogLabel">Juan</span></div></a>
+            <a href="../NewTestament/44-acts.html"><div class="BMONTacts divacts"><span class="english englishLabel">Acts</span><br/><span class="tagalogleft tagalogLabel">Mga Gawa</span></div></a>
+            <a href="../NewTestament/45-romans.html"><div class="BMONTromans divromans"><span class="english englishLabel">Romans</span><br/><span class="tagalogleft tagalogLabel">Mga Taga Roma</span></div></a>
+            <a href="../NewTestament/46-1st-corinthians.html"><div class="BMONT1corinthians div1corinthians"><span class="english englishLabel">1 Corinthians</span><br/><span class="tagalogleft tagalogLabel">1 Mga Taga Corinto</span></div></a>
+            <a href="../NewTestament/47-2nd-corinthians.html"><div class="BMONT2corinthians div2corinthians"><span class="english englishLabel">2 Corinthians</span><br/><span class="tagalogleft tagalogLabel">2 Mga Taga Corinto</span></div></a>
+            <a href="../NewTestament/48-galatians.html"><div class="BMONTgalatians divgalatians"><span class="english englishLabel">Galatians</span><br/><span class="tagalogleft tagalogLabel">Mga Taga Galacia</span></div></a>
+            <a href="../NewTestament/49-ephesians.html"><div class="BMONTephesians divephesians"><span class="english englishLabel">Ephesians</span><br/><span class="tagalogleft tagalogLabel">Mga Taga Efeso</span></div></a>
+            <a href="../NewTestament/50-philippians.html"><div class="BMONTphilippians divPhillippians"><span class="english englishLabel">Phillippians</span><br/><span class="tagalogleft tagalogLabel">Mga Taga Filipos</span></div></a>
+            <a href="../NewTestament/51-colossians.html"><div class="BMONTcolossians divcolossians"><span class="english englishLabel">Colossians</span><br/><span class="tagalogleft tagalogLabel">Mga Taga Colosas</span></div></a>
+            <a href="../NewTestament/52-1st-thessalonians.html"><div class="BMONT1thessalonians div1thessalonians"><span class="english englishLabel">1 Thessalonians</span><br/><span class="tagalogleft tagalogLabel">1 Mga Taga Tesalonica</span></div></a>
+            <a href="../NewTestament/53-2nd-thessalonians.html"><div class="BMONT2thessalonians div2thessalonians"><span class="english englishLabel">2 Thessalonians</span><br/><span class="tagalogleft tagalogLabel">2 Mga Taga Tesalonica</span></div></a>
+            <a href="../NewTestament/54-1st-timothy.html"><div class="BMONT1timothy div1timothy"><span class="english englishLabel">1 Timothy</span><br/><span class="tagalogleft tagalogLabel">1 Timoteo</span></div></a>
+            <a href="../NewTestament/55-2nd-timothy.html"><div class="BMONT2timothy div2timothy"><span class="english englishLabel">2 Timothy</span><br/><span class="tagalogleft tagalogLabel">2 Timoteo</span></div></a>
+            <a href="../NewTestament/56-titus.html"><div class="BMONTtitus divtitus"><span class="english englishLabel">Titus</span><br/><span class="tagalogleft tagalogLabel">Tito</span></div></a>
+            <a href="../NewTestament/57-philemon.html"><div class="BMONTphilemon divphilemon"><span class="english englishLabel">Philemon</span><br/><span class="tagalogleft tagalogLabel">Filemon</span></div></a>
+            <a href="../NewTestament/58-hebrews.html"><div class="BMONThebrews divhebrews"><span class="english englishLabel">Hebrews</span><br/><span class="tagalogleft tagalogLabel">Mga Hebreo</span></div></a>
+            <a href="../NewTestament/59-james.html"><div class="BMONTjames divjames"><span class="english englishLabel">James</span><br/><span class="tagalogleft tagalogLabel">Santiago</span></div></a>
+            <a href="../NewTestament/60-1st-peter.html"><div class="BMONT1peter div1peter"><span class="english englishLabel">1 Peter</span><br/><span class="tagalogleft tagalogLabel">1 Pedro</span></div></a>
+            <a href="../NewTestament/61-2nd-peter.html"><div class="BMONT2peter div2peter"><span class="english englishLabel">2 Peter</span><br/><span class="tagalogleft tagalogLabel">2 Pedro</span></div></a>
+            <a href="../NewTestament/62-1st-john.html"><div class="BMONT1john div1john"><span class="english englishLabel">1 John</span><br/><span class="tagalogleft tagalogLabel">1 Juan</span></div></a>
+            <a href="../NewTestament/63-2nd-john.html"><div class="BMONT2john div2john"><span class="english englishLabel">2 John</span><br/><span class="tagalogleft tagalogLabel">2 Juan</span></div></a>
+            <a href="../NewTestament/64-3rd-john.html"><div class="BMONT3john div3john"><span class="english englishLabel">3 John</span><br/><span class="tagalogleft tagalogLabel">3 Juan</span></div></a>
+            <a href="../NewTestament/65-jude.html"><div class="BMONTjude divjude"><span class="english englishLabel">Jude</span><br/><span class="tagalogleft tagalogLabel">Judas</span></div></a>
+            <a href="../NewTestament/66-revelation.html"><div class="BMONTrevelation divrevelation"><span class="english englishLabel">Revelation</span><br/><span class="tagalogleft tagalogLabel">Pahayag</span></div></a>
+      
+</div>
+<br>
+<hr class="lefthrLiner"/>
+</br>
+</div>
+
+
+                  <div class="OtherMenu" id="more-links">
+                     <div class="controlheader THUMBINDEXHIDER">CONTROL PANEL</div>
+                     <div id="revealhighlighter">
+                        <div class="versehighlight">
+                           Type Range or Random or Both. Press Enter<br/>
+                           <hr style="width:100%;">
+                           <strong>VERSE HIGHLIGHT</strong>
+                        </div>
+                        <div class="controls-row input-row">
+                           <input id="verseInput" placeholder="1-10, 2,5,9, Press Enter" type="text"/>
+                        </div>
+                        <div class="copybuttons">
+                           <div class="dualespecial">
+                              <div class="smallfont" onclick="copyEnglish()">COPY ENGLISH</div>
+                              <div class="smallfont" onclick="copyTagalog()">COPY TAGALOG</div>
+                      
+                              <div class="smallfont" onclick="copyBoth()">COPY DIGLOT</div>
+                           </div>
+                        </div>
+                     </div>
+
+            <div class="THUMBINDEXHIDER">
+                     <div class="controlheader marginhere">TEXT SIZE</div>
+                     <div class="copybuttons marginhere">
+                        <div class="dualplacement">
+                           <div class="textresizerButton resizebutton" onclick="decreaseFont()"> SMALLER TEXT </div>
+                           <div class="textresizerButton resizebutton" onclick="increaseFont()"> BIGGER TEXT </div>
+                        </div>
+                        <div class="soloplacement">
+                           <div class="textresizerButton resizebutton2" onclick="resetFont()"> RESET SIZE</div>
+                        </div>
+                     </div>
+                     <div class="controlheader marginhere">SHOW / HIDE BIBLE</div>
+                     <div class="copybuttons marginhere">
+                        <div class="dualplacement">
+                           <div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
+                           <div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
+                        </div>
+                        <div class="soloplacement">
+                           <div class="controldiglot" onclick="showAll()"> DIGLOT </div>
+                        </div>
+                     </div>
+                     <div class="controlheader marginhere">CHOOSE FONT</div>
+                     <div class="dualplacement">
+                        <div class="fontchoiceButton litF changedcolor" onclick="LiterataSF()">LITERATA<br />Serif</div>
+                        <div class="fontchoiceButton lorF changedcolor" onclick="LoraSF()">LORA <br />Serif </div>
+                     </div>
+                     <div class="dualplacement">
+                        <div class="fontchoiceButton  elaF changedcolor" onclick="GelasioSF()"> GELASIO <br /> Serif </div>
+                        <div class="fontchoiceButton  opsF changedcolor" onclick="OpenSS()"> OPEN <br /> Sans-Serif </div>
+                     </div>
+                     <div class="dualplacement">
+                        <div class="fontchoiceButton  indF changedcolor" onclick="InterSS()"> INTER <br /> Sans-Serif </div>
+                        <div class="fontchoiceButton lexF changedcolor" onclick="LexendSS()"> LEXEND <br /> Sans-Serif </div>
+                     </div>
+                     <div class="dualplacement">
+                        <div class="fontchoiceButton  pbsF changedcolor" onclick="PublicSS()"> PUBLIC <br /> Sans-Serif </div>
+                        <div class="fontchoiceButton  ariF changedcolor" onclick="ArimoSS()"> ARIMO <br /> Sans-Serif </div>
+                     </div>
+                     <div class="controlheader marginhere">FONT THICKNESS</div>
+                     <div class="dualplacement">
+                        <div class="fontweightButton FW350" onclick="FW350FF()">Weight <br />350</div>
+                        <div class="fontweightButton FW400" onclick="FW400FF()">Weight <br />400</div>
+                     </div>
+                     <div class="dualplacement">
+                        <div class="fontweightButton FW500" onclick="FW500FF()">Weight <br />500</div>
+                        <div class="fontweightButton FW600" onclick="FW600FF()">Weight <br />600</div>
+                     </div>
+                     <div class="dualplacement">
+                        <div class="fontweightButton FW700" onclick="FW700FF()">Weight <br />700</div>
+                        <div class="fontweightButton FW800" onclick="FW800FF()">Weight <br />800</div>
+                     </div>
+                     <div id="plaincoloronly" style="width: 100% !important; height:auto !important;">
+                        <div class="uploadholder3">
+                           <div class="BackgroundImageFlex">
+                              <h3>WEBSITE PLAIN BACKGROUND COLOR</h3>
+                              Click the square to drag and choose color. Click outside and apply.
+                           </div>
+                           <div id="labelTitleFlex">
+                              <div id="labelTitleFlex2">
+                                 <label id="labelTitle">
+                                 </label>
+                                 <input type="color" id="bgColor" value="#ffffff">
+                              </div>
+                           </div>
+                           <div onclick="applyColorTheme()" id="buttonclick">Apply Color</div>
+                        </div>
+                     </div>
+                     <div id="plainimageonly" style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+                        <div class="BackgroundImageFlex">
+                           <h3>WEBSITE BACKGROUND IMAGE</h3>
+                        </div>
+                        <div class="uploadholder"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+                           <div id="labelTitleFlex"  style="width: 100% !important;">
+                              <label id="labelTitle">( 1 ) Upload Image:</label>
+                           </div>
+                           <div id="bgUploadFlex"  style="width: 100% !important;">
+                              <input type="file" id="bgUpload" accept="image/*">
+                           </div>
+                        </div>
+                        <br/><br/>
+                        <div class="uploadholder"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+                           <div id="labelTitleFlex"  style="width: 100% !important;">
+                              <label id="labelTitle">( 2 ) Layout Style:</label>
+                           </div>
+                           <div id="bgStyleFlex" style="width: 100% !important;">
+                              <select id="bgStyle">
+                                 <option value="repeat">Repeat (Tiled)</option>
+                                 <option value="cover">Cover (Fill Screen)</option>
+                                 <option value="contain">Fit (Show Whole)</option>
+                              </select>
+                           </div>
+                        </div>
+                        <br/><br/>
+                        <div class="uploadholder2">
+                           <div id="applyImageThemFlex">
+                              <div class="overridebutton" onclick="applyImageTheme()" id="buttonclick">Apply Image</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="controlheader marginhere">BIBLE PAGE COLOR</div>
+                     <div class="soloplacement">
+                        <div class="bcbggray colorpage" onclick="bcbggrayB()">Gray</div>
+                     </div>
+                     <div class="soloplacement">
+                        <div class="bcbgblue colorpage" onclick="bcbgblueB()">Blue</div>
+                     </div>
+                     <div class="soloplacement">
+                        <div class="bcbgbrown colorpage" onclick="bcbgbrownB()">Brown</div>
+                     </div>
+                     <div class="soloplacement">
+                        <div class="bcbgsepia colorpage" onclick="bcbgsepiaB()">Sepia</div>
+                     </div>
+                     <div class="soloplacement">
+                        <div class="bcbgbrownish colorpage" onclick="bcbgbrownishB()">Brownish</div>
+                     </div>
+                     <div class="soloplacement">
+                        <div class="bcbgvisionimpaired colorpage" onclick="bcbgvisionimpairedB()">Dark Mode</div>
+                     </div>
+                     <div class="soloplacement">
+                        <div class="bcbgreset colorpage" onclick="bcbgresetB()">Default</div>
+                     </div>
+
+            </div>
+                  </div>
+
+</div>
+
+        `;
+      setTimeout(() => {
+         // 1. Collect style tags and find the dynamic class
+         const styles = document.head.querySelectorAll('style');
+         let activeClass = null;
+
+         for (const style of styles) {
+            const match = style.textContent.match(/\.BMONT[a-z0-9]+/i);
+            if (match) {
+               activeClass = match[0].substring(1);
+               break; // Optimization: stop searching once found
+            }
+         }
+
+         if (!activeClass) return;
+
+         // 2. Find and scroll the element
+         const activeBook = this.querySelector(`.${activeClass}`);
+
+         if (activeBook) {
+            activeBook.scrollIntoView({
+               block: 'center',
+               behavior: 'auto'
+            });
+         }
+      }, 1000);
+   }
+}
+
+customElements.define('diglot-menu-focused', DiglotMenuFocused);

@@ -52,13 +52,14 @@ html {
     display: flex;
     z-index: 7777777;
     flex-direction: row;
-    bottom: 0;
+    bottom: 0; left:0;
   }
 
 
 }
 
 
+#closemenuhighlighter{display:none;}
 
 #hrdivider,
 .HomeURLheader,
@@ -1494,7 +1495,7 @@ html {
 
 
 .bibleversesthumb {
-  width: 35%;
+  width: 30%;
   background-color: #16166b;
   color: white;
   font-size: 1.2em;
@@ -1515,8 +1516,8 @@ html {
 }
 
 
-.goupthumb {
-  width: 30%;
+.goupthumb, .highlighterpopup {
+  width: 20%;
   background-color: #0f0f46;
   color: white;
   font-size: 1.2em;
@@ -1533,7 +1534,7 @@ html {
 }
 
 .biblecontrollthumb {
-  width: 35%;
+  width: 30%;
   background-color: #16166b;
   color: white;
   font-size: 1.2em;
@@ -1572,7 +1573,7 @@ html {
 
 .bibleversesthumb,
 .goupthumb,
-.biblecontrollthumb {
+.biblecontrollthumb, .highlighterpopup {
   transition: background-color 0.3s ease;
 
 }
@@ -1581,7 +1582,7 @@ html {
 
 .bibleversesthumb:hover,
 .goupthumb:hover,
-.biblecontrollthumb:hover {
+.biblecontrollthumb:hover, .highlighterpopup:hover {
   background-color: #ebff7a;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -2246,7 +2247,7 @@ html {
   gap: 5%;
 }
 
-.dualplacement {
+.dualplacement, .dualespecial  {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2266,3 +2267,10 @@ html {
   align-content: center;
   margin-bottom: 3%;
 }
+
+
+
+
+#revealhighlighter {width:100%; display: block; height:100%; z-index:77777; max-width: 100vw;}
+#MenuContainer {   display:none; z-index: 77777; width:100%; height: 25%; position: fixed; bottom:5%; left:0; max-width: 100vw;}
+.THUMBINDEXHIDER{ display: none !important;}

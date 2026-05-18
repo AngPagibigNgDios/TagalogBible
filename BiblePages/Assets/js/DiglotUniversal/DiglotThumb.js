@@ -421,235 +421,192 @@ class DiglotThumbMenu extends HTMLElement {
                         </div>
                       </div>
 
-
-
-                       <div id="biblemenuanimationright">
-
-                        <div class="topspacer">
-                            </div>
-                            <div class="menuheader">
-                              CONTROL PANEL
-                            </div>
-
-
-   <div class="versehighlight">
-      Type Range or Random or Both. Press Enter<br/>
-      <hr style="width:100%;">
-      <strong>VERSE HIGHLIGHT</strong>
-   </div>
-   <div class="controls-row input-row">
-      <input id="verseInput" placeholder="1-10, 2,5,9, Press Enter" type="text"/>
-   </div>
-   <div class="copybuttons">
-      <div class="dualplacement">
-         <div class="controldiglot diglot2" onclick="copyEnglish()">COPY ENGLISH</div>
-         <div class="controldiglot diglot2" onclick="copyTagalog()">COPY TAGALOG</div>
-    
-         <div class="controldiglot diglot2" onclick="copyBoth()">COPY DIGLOT</div>
-      </div>
-
-   </div>
-   <div class="controlheader marginhere">TEXT SIZE</div>
-   <div class="copybuttons marginhere">
-      <div class="dualplacement">
-         <div class="textresizerButton resizebutton" onclick="decreaseFont()"> SMALLER TEXT </div>
-         <div class="textresizerButton resizebutton" onclick="increaseFont()"> BIGGER TEXT </div>
-         <div class="textresizerButton resizebutton2" onclick="resetFont()"> RESET SIZE</div>
-      </div>
-   </div>
-
-   <div class="bcbpages">
-   <div class="FontChanger ariF">
-<div class="FontWeightChanger FW500">
-<table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
-<tr class="TITLETR">
-<td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
-<td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
-</tr>
-<tr class="verse" id="verse-16">
-<td class="tdenglishbible">
-<span class="verse spanenglishbible">
-<span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
-</span>
-</td>
-<td class="tdtagalogbible">
-<div class="bgseparatortagalog">
-<span class="verse spantagalogbible" lang="tl">
-<span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
-</span>
-</div>
-</td>
-</tr>
-
-</table>
-</div>
-</div>
-  </div>
-
-
-   <div class="controlheader marginhere">SHOW / HIDE BIBLE</div>
-   <div class="copybuttons marginhere">
-      <div class="dualplacement">
-         <div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
-         <div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
-         <div class="controldiglot" onclick="showAll()"> DIGLOT </div>
-      </div>
-   </div>
-
-   <div class="bcbpages">
-   <div class="FontChanger ariF">
-<div class="FontWeightChanger FW500">
-<table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
-<tr class="TITLETR">
-<td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
-<td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
-</tr>
-<tr class="verse" id="verse-16">
-<td class="tdenglishbible">
-<span class="verse spanenglishbible">
-<span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
-</span>
-</td>
-<td class="tdtagalogbible">
-<div class="bgseparatortagalog">
-<span class="verse spantagalogbible" lang="tl">
-<span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
-</span>
-</div>
-</td>
-</tr>
-
-</table>
-</div>
-</div>
-  </div>
-
-   <div class="controlheader marginhere">CHOOSE FONT</div>
-   <div class="dualplacement">
-      <div class="fontchoiceButton litF changedcolor" onclick="LiterataSF()">LITERATA<br />Serif</div>
-      <div class="fontchoiceButton lorF changedcolor" onclick="LoraSF()">LORA <br />Serif </div>
-
-      <div class="fontchoiceButton  elaF changedcolor" onclick="GelasioSF()"> GELASIO <br /> Serif </div>
-
-         </div>
-   <div class="dualplacement">
-      <div class="fontchoiceButton  opsF changedcolor" onclick="OpenSS()"> OPEN <br /> Sans-Serif </div>
-
-      <div class="fontchoiceButton  indF changedcolor" onclick="InterSS()"> INTER <br /> Sans-Serif </div>
-      <div class="fontchoiceButton lexF changedcolor" onclick="LexendSS()"> LEXEND <br /> Sans-Serif </div>
-   </div>
-   <div class="dualplacement">
-      <div class="fontchoiceButton  pbsF changedcolor" onclick="PublicSS()"> PUBLIC <br /> Sans-Serif </div>
-      <div class="fontchoiceButton  ariF changedcolor" onclick="ArimoSS()"> ARIMO <br /> Sans-Serif </div>
-   </div>
-
-    <div class="controlheader marginhere">FONT THICKNESS</div>
-
-   <div class="dualplacement">
-      <div class="fontweightButton FW350" onclick="FW350FF()">Weight <br />350</div>
-      <div class="fontweightButton FW400" onclick="FW400FF()">Weight <br />400</div>
-   </div>
-   <div class="dualplacement">
-      <div class="fontweightButton FW500" onclick="FW500FF()">Weight <br />500</div>
-      <div class="fontweightButton FW600" onclick="FW600FF()">Weight <br />600</div>
-   </div>
-   <div class="dualplacement">
-      <div class="fontweightButton FW700" onclick="FW700FF()">Weight <br />700</div>
-      <div class="fontweightButton FW800" onclick="FW800FF()">Weight <br />800</div>
-   </div>
-
-   
-<div class="bcbpages">
-   <div class="FontChanger ariF">
-<div class="FontWeightChanger FW500">
-<table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
-<tr class="TITLETR">
-<td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
-<td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
-</tr>
-<tr class="verse" id="verse-16">
-<td class="tdenglishbible">
-<span class="verse spanenglishbible">
-<span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
-</span>
-</td>
-<td class="tdtagalogbible">
-<div class="bgseparatortagalog">
-<span class="verse spantagalogbible" lang="tl">
-<span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
-</span>
-</div>
-</td>
-</tr>
-
-</table>
-</div>
-</div>
-  </div>
-
-    <div class="controlheader marginhere">BIBLE PAGE COLOR</div>
-
-   <div class="dualplacement" style="margin-bottom:5%;">
-      <div class="bcbggray colorpage" onclick="bcbggrayB()">Gray</div>
-      
-
-      <div class="bcbgblue colorpage" onclick="bcbgblueB()">Blue</div>
-      
-
-      <div class="bcbgbrown colorpage" onclick="bcbgbrownB()">Brown</div>
-      
-   </div>
-
-     <div class="dualplacement">
-      <div class="bcbgsepia colorpage" onclick="bcbgsepiaB()">Sepia</div>
-      
-
-      <div class="bcbgbrownish colorpage" onclick="bcbgbrownishB()">Brownish</div>
-      
-
-      <div class="bcbgvisionimpaired colorpage" onclick="bcbgvisionimpairedB()">Dark Mode</div>
-      
-   </div>   <div class="soloplacement">
-      <div class="bcbgreset colorpage" onclick="bcbgresetB()">Default</div>
-
-   </div>  
-
-       <div class="controlheader marginhere"> </div>
-
-      <div id="GodYouReign" class="NewTestamentbke"><br/>
-                                GOD YOU REIGN FOREVER MORE! <br/>ADONAI REIGN! YESHUA REIGN!<br/>
-                                <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="../Assets/images/PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
-                                </div>
-
-
-
-  </div>
-
-                      <div id="thumbmenuholder">
-                        <div class="bibleversesthumb" id="menuanimation">
-                            <span id="openbiblemenu">BIBLE MENU ☰</span>
-                            <span id="closebiblemenu">BIBLE MENU ✖</span>
-                        </div>
-                        <div class="goupthumb" id="goUpScroll">
-                            <div>GO            </div>
-                            <div>&nbsp;▲&nbsp;</div>
-                            <div>UP</div>
-                        </div>
-                        <div class="biblecontrollthumb" id="menuanimationright">
-                            <span id="openmenu">☰ OTHER MENU</span>
-                            <span id="closemenu">✖ OTHER MENU</span>
-                        </div>
+                    <div id="biblemenuanimationright">
+                      <div class="topspacer">
                       </div>
+                      <div class="menuheader">
+                          CONTROL PANEL
+                      </div>
+                      <div class="versehighlight">
+                          Choose Verse To Highlight
+                      </div>
+                      <div class="controlheader marginhere">TEXT SIZE</div>
+                      <div class="copybuttons marginhere">
+                          <div class="dualplacement">
+                            <div class="textresizerButton resizebutton" onclick="decreaseFont()"> SMALLER TEXT </div>
+                            <div class="textresizerButton resizebutton" onclick="increaseFont()"> BIGGER TEXT </div>
+                            <div class="textresizerButton resizebutton2" onclick="resetFont()"> RESET SIZE</div>
+                          </div>
+                      </div>
+                      <div class="bcbpages">
+                          <div class="FontChanger ariF">
+                            <div class="FontWeightChanger FW500">
+                                <table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
+                                  <tr class="TITLETR">
+                                      <td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
+                                      <td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
+                                  </tr>
+                                  <tr class="verse" id="verse-16">
+                                      <td class="tdenglishbible">
+                                        <span class="verse spanenglishbible">
+                                        <span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
+                                        </span>
+                                      </td>
+                                      <td class="tdtagalogbible">
+                                        <div class="bgseparatortagalog">
+                                            <span class="verse spantagalogbible" lang="tl">
+                                            <span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
+                                            </span>
+                                        </div>
+                                      </td>
+                                  </tr>
+                                </table>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="controlheader marginhere">SHOW / HIDE BIBLE</div>
+                      <div class="copybuttons marginhere">
+                          <div class="dualplacement">
+                            <div class="controldiglot" onclick="showEnglishOnly()"> ENGLISH </div>
+                            <div class="controldiglot" onclick="showTagalogOnly()"> TAGALOG </div>
+                            <div class="controldiglot" onclick="showAll()"> DIGLOT </div>
+                          </div>
+                      </div>
+                      <div class="bcbpages">
+                          <div class="FontChanger ariF">
+                            <div class="FontWeightChanger FW500">
+                                <table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
+                                  <tr class="TITLETR">
+                                      <td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
+                                      <td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
+                                  </tr>
+                                  <tr class="verse" id="verse-16">
+                                      <td class="tdenglishbible">
+                                        <span class="verse spanenglishbible">
+                                        <span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
+                                        </span>
+                                      </td>
+                                      <td class="tdtagalogbible">
+                                        <div class="bgseparatortagalog">
+                                            <span class="verse spantagalogbible" lang="tl">
+                                            <span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
+                                            </span>
+                                        </div>
+                                      </td>
+                                  </tr>
+                                </table>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="controlheader marginhere">CHOOSE FONT</div>
+                      <div class="dualplacement">
+                          <div class="fontchoiceButton litF changedcolor" onclick="LiterataSF()">LITERATA<br />Serif</div>
+                          <div class="fontchoiceButton lorF changedcolor" onclick="LoraSF()">LORA <br />Serif </div>
+                          <div class="fontchoiceButton  elaF changedcolor" onclick="GelasioSF()"> GELASIO <br /> Serif </div>
+                      </div>
+                      <div class="dualplacement">
+                          <div class="fontchoiceButton  opsF changedcolor" onclick="OpenSS()"> OPEN <br /> Sans-Serif </div>
+                          <div class="fontchoiceButton  indF changedcolor" onclick="InterSS()"> INTER <br /> Sans-Serif </div>
+                          <div class="fontchoiceButton lexF changedcolor" onclick="LexendSS()"> LEXEND <br /> Sans-Serif </div>
+                      </div>
+                      <div class="dualplacement">
+                          <div class="fontchoiceButton  pbsF changedcolor" onclick="PublicSS()"> PUBLIC <br /> Sans-Serif </div>
+                          <div class="fontchoiceButton  ariF changedcolor" onclick="ArimoSS()"> ARIMO <br /> Sans-Serif </div>
+                      </div>
+                      <div class="controlheader marginhere">FONT THICKNESS</div>
+                      <div class="dualplacement">
+                          <div class="fontweightButton FW350" onclick="FW350FF()">Weight <br />350</div>
+                          <div class="fontweightButton FW400" onclick="FW400FF()">Weight <br />400</div>
+                      </div>
+                      <div class="dualplacement">
+                          <div class="fontweightButton FW500" onclick="FW500FF()">Weight <br />500</div>
+                          <div class="fontweightButton FW600" onclick="FW600FF()">Weight <br />600</div>
+                      </div>
+                      <div class="dualplacement">
+                          <div class="fontweightButton FW700" onclick="FW700FF()">Weight <br />700</div>
+                          <div class="fontweightButton FW800" onclick="FW800FF()">Weight <br />800</div>
+                      </div>
+                      <div class="bcbpages">
+                          <div class="FontChanger ariF">
+                            <div class="FontWeightChanger FW500">
+                                <table class="nondiglotresizer nondiglotLabel CustomizedTableBG chaptertable">
+                                  <tr class="TITLETR">
+                                      <td class="tdenglishbible TITLETD">BEGOTTEN SON</td>
+                                      <td class="tdtagalogbible TITLETDT">BUGTONG NA ANAK</td>
+                                  </tr>
+                                  <tr class="verse" id="verse-16">
+                                      <td class="tdenglishbible">
+                                        <span class="verse spanenglishbible">
+                                        <span class="verseNo verseNoEnglishBible"> 16 </span> For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
+                                        </span>
+                                      </td>
+                                      <td class="tdtagalogbible">
+                                        <div class="bgseparatortagalog">
+                                            <span class="verse spantagalogbible" lang="tl">
+                                            <span class="verseNo verseNoTagalog"> 16 </span> Sapagka't gayon na lamang ang pagsinta ng Dios sa sanglibutan, na ibinigay niya ang kaniyang bugtong na Anak, upang ang sinomang sa kaniya'y sumampalataya ay huwag mapahamak, kundi magkaroon ng buhay na walang hanggan.
+                                            </span>
+                                        </div>
+                                      </td>
+                                  </tr>
+                                </table>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="controlheader marginhere">BIBLE PAGE COLOR</div>
+                      <div class="dualplacement" style="margin-bottom:5%;">
+                          <div class="bcbggray colorpage" onclick="bcbggrayB()">Gray</div>
+                          <div class="bcbgblue colorpage" onclick="bcbgblueB()">Blue</div>
+                          <div class="bcbgbrown colorpage" onclick="bcbgbrownB()">Brown</div>
+                      </div>
+                      <div class="dualplacement">
+                          <div class="bcbgsepia colorpage" onclick="bcbgsepiaB()">Sepia</div>
+                          <div class="bcbgbrownish colorpage" onclick="bcbgbrownishB()">Brownish</div>
+                          <div class="bcbgvisionimpaired colorpage" onclick="bcbgvisionimpairedB()">Dark Mode</div>
+                      </div>
+                      <div class="soloplacement">
+                          <div class="bcbgreset colorpage" onclick="bcbgresetB()">Default</div>
+                      </div>
+                      <div class="controlheader marginhere"> </div>
+                      <div id="GodYouReign" class="NewTestamentbke"><br/>
+                          GOD YOU REIGN FOREVER MORE! <br/>ADONAI REIGN! YESHUA REIGN!<br/>
+                          <img alt="Book Image" class="horizontalimageindexNOTE nothinglasts" id="himageHoriz" src="../Assets/images/PersonalBlog/800/LoveOfGod200.webp" /><br/><br/><br/><br/>JESUS, SAVE ALL OF US.
+                      </div>
+                    </div>
 
-                      <ul id="upnimation" class="animate">
-                        <li>▲</li>
-                        <li>▲</li>
-                        <li>▲</li>
-                        <li>▲</li>
-                        <li>▲</li>
-                        <li>▲</li>
-                        <li>▲</li>
-                      </ul>
+
+                <div id="thumbmenuholder">
+                  <div class="bibleversesthumb" id="menuanimation">
+                      <span id="openbiblemenu">BIBLE MENU ☰</span>
+                      <span id="closebiblemenu">BIBLE MENU ✖</span>
+                  </div>
+                  <div class="goupthumb" id="goUpScroll">
+                      <div>&nbsp;▲&nbsp;</div>
+                  </div>
+                  
+        <div class="highlighterpopup" id="highlightermenu">
+                      <span id="openmenuhighlighter">☰ HL</span>
+                      <span id="closemenuhighlighter">✖ HL</span>
+                  </div>
+
+
+                  <div class="biblecontrollthumb" id="menuanimationright">
+                      <span id="openmenu">☰ OTHER MENU</span>
+                      <span id="closemenu">✖ OTHER MENU</span>
+                  </div>
+                </div>
+
+                <ul id="upnimation" class="animate">
+                  <li>▲</li>
+                  <li>▲</li>
+                  <li>▲</li>
+                  <li>▲</li>
+                  <li>▲</li>
+                  <li>▲</li>
+                  <li>▲</li>
+                </ul>
+
+
+
 		`;
 
 		// GO UP
@@ -715,6 +672,52 @@ othermenu.onclick = function() {
         document.documentElement.style.overflow = "";
     }
 };
+    
+    
+ 
+
+    
+   
+
+
+    
+    // --- VERSEHIGHLIGHT ---
+       const highlightermenubutton = document.querySelector('#highlightermenu');     // the HL button
+        const highlightermenupage = document.querySelector('#MenuContainer');       // the popup panel
+        const highlighteropen     = document.querySelector('#openmenuhighlighter');          // ☰ HL span
+        const highlighterclose    = document.querySelector('#closemenuhighlighter');         // ✖ HL span
+  
+
+highlightermenubutton.onclick = function() {
+    // FIX: Use highlightermenu consistently
+    const highlightermenu = window.getComputedStyle(highlightermenupage).display === "none";
+
+    // Toggle visibility
+    highlightermenupage.style.display = highlightermenu ? "block" : "none";
+    // Ensure the BIBLE menu is closed
+  menuDiv.style.display = "none"; 
+      othermenupage.style.display = "none"; 
+
+    // Toggle spans
+    highlighteropen.style.display = highlightermenu ? "none" : "inline";
+    highlighterclose.style.display = highlightermenu ? "inline" : "none";
+
+    if (highlightermenu) {
+
+        highlightermenupage.style.overflowY = "auto";
+    } else {
+        document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      document.documentElement.style.overflow = "";
+
+    }
+};
+    
+
+    
+    
+    
+
 
 
 
@@ -1322,7 +1325,9 @@ function showVerses(bookNum, chapter, verseCount, versesDiv, book) {
 
     
     const backUp = this.querySelector('.goupthumb');
-const backUpMenu= this.querySelector('.newoldholder'); // your scrollable div
+    const backone = this.querySelector('#biblemenuanimationright');
+    const backtwo = this.querySelector('#biblemenuanimation');
+// your scrollable div
 
           backUp.onclick = function() {
             // Scroll the whole page
@@ -1332,11 +1337,18 @@ const backUpMenu= this.querySelector('.newoldholder'); // your scrollable div
             });
 
             // Scroll the menu div
-            backUpMenu.scrollTo({
+            backone.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+                        backtwo.scrollTo({
               top: 0,
               behavior: 'smooth'
             });
           };
+    
+    
+    const othermenupage = this.querySelector('#biblemenuanimationright');
 
     
     
