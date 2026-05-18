@@ -576,8 +576,8 @@ class DiglotThumbMenu extends HTMLElement {
 
                 <div id="thumbmenuholder">
                   <div class="bibleversesthumb" id="menuanimation">
-                      <span id="openbiblemenu">BIBLE MENU ☰</span>
-                      <span id="closebiblemenu">BIBLE MENU ✖</span>
+                      <span id="openbiblemenu">BIBLE ☰</span>
+                      <span id="closebiblemenu">BIBLE ✖</span>
                   </div>
                   <div class="goupthumb" id="goUpScroll">
                       <div>&nbsp;▲&nbsp;</div>
@@ -590,8 +590,8 @@ class DiglotThumbMenu extends HTMLElement {
 
 
                   <div class="biblecontrollthumb" id="menuanimationright">
-                      <span id="openmenu">☰ OTHER MENU</span>
-                      <span id="closemenu">✖ OTHER MENU</span>
+                      <span id="openmenu">☰ OTHER</span>
+                      <span id="closemenu">✖ OTHER</span>
                   </div>
                 </div>
 
@@ -629,11 +629,18 @@ class DiglotThumbMenu extends HTMLElement {
           menuDiv.style.display = isHidden ? "block" : "none";
           // Ensure the OTHER menu is closed to prevent overlap
           othermenupage.style.display = "none";
-          highlightermenupage.style.display = "none";
+          highlightermenupage.style.display = "none"
 
           // Toggle spans
           spanOpenBibleMenu.style.display = isHidden ? "none" : "inline";
           spanCloseBibleMenu.style.display = isHidden ? "inline" : "none";
+
+          openmenuright.style.display = "inline";
+          closemenuright.style.display = "none";
+
+          highlighteropen.style.display = "inline";
+          highlighterclose.style.display = "none";
+
 
           if (isHidden) {
               document.body.style.overflow = "hidden";
@@ -659,11 +666,19 @@ class DiglotThumbMenu extends HTMLElement {
           othermenupage.style.display = hiderightmenu ? "block" : "none";
           // Ensure the BIBLE menu is closed
           menuDiv.style.display = "none";
-                highlightermenupage.style.display = "none";
 
           // Toggle spans
           openmenuright.style.display = hiderightmenu ? "none" : "inline";
           closemenuright.style.display = hiderightmenu ? "inline" : "none";
+
+
+          spanOpenBibleMenu.style.display = "inline";
+          spanCloseBibleMenu.style.display = "none";
+          
+
+          highlighteropen.style.display = "inline";
+          highlighterclose.style.display = "none";
+
 
           if (hiderightmenu) {
               document.body.style.overflow = "hidden";
@@ -696,6 +711,14 @@ class DiglotThumbMenu extends HTMLElement {
           // Toggle spans
           highlighteropen.style.display = highlightermenu ? "none" : "inline";
           highlighterclose.style.display = highlightermenu ? "inline" : "none";
+
+          openmenuright.style.display = "inline";
+          closemenuright.style.display = "none";
+
+
+          spanOpenBibleMenu.style.display = "inline";
+          spanCloseBibleMenu.style.display = "none";
+          
 
           if (highlightermenu) {
 

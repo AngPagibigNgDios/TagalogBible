@@ -575,7 +575,7 @@ class DiglotThumbMenu extends HTMLElement {
 
 
                 <div id="thumbmenuholder">
-                  <div class="bibleversesthumb bibleversethumbindex" id="menuanimation">
+                  <div class="bibleversesthumb" id="menuanimation">
                       <span id="openbiblemenu">BIBLE MENU ☰</span>
                       <span id="closebiblemenu">BIBLE MENU ✖</span>
                   </div>
@@ -627,7 +627,12 @@ menuButton.onclick = function() {
 
     // Toggle spans
     spanOpenBibleMenu.style.display = highilighterhidden ? "none" : "inline";
-    spanCloseBibleMenu.style.display = highilighterhidden ? "inline" : "none";
+  spanCloseBibleMenu.style.display = highilighterhidden ? "inline" : "none";
+  
+
+            openmenuright.style.display = "inline";
+          closemenuright.style.display = "none";
+
 
     if (highilighterhidden) {
         document.body.style.overflow = "hidden";
@@ -656,7 +661,10 @@ othermenu.onclick = function() {
 
     // Toggle spans
     openmenuright.style.display = hiderightmenu ? "none" : "inline";
-    closemenuright.style.display = hiderightmenu ? "inline" : "none";
+  closemenuright.style.display = hiderightmenu ? "inline" : "none";
+  
+      spanOpenBibleMenu.style.display =  "inline";
+  spanCloseBibleMenu.style.display =  "none";
 
     if (hiderightmenu) {
         document.body.style.overflow = "hidden";
@@ -692,7 +700,6 @@ othermenu.onclick = function() {
 				li.style.animation = `upanimations 1.5s ease-in-out forwards ${delay}s`;
 			});
 		}
-
 
 
 		async function loadBibleData() {
