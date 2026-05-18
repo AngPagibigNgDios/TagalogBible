@@ -1754,7 +1754,7 @@ a.clink:visited {
   left: 0;
   color: black;
   margin-top: 60px;
-  background-image: url('../../images/journal/colorbookmark.webp');
+
   background-attachment: fixed;
   background-repeat: repeat;
 
@@ -1769,6 +1769,7 @@ a.clink:visited {
 .goupthumb,
 .biblecontrollthumb, .highlighterpopup {
   transition: background-color 0.3s ease;
+  border-left:2px solid #3c5984;
 
 }
 
