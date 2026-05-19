@@ -215,30 +215,33 @@ let selectedVerses = [];
 let lastClickedVerse = null;
 let allowAutoScroll = true;
 
+// Prevent text selection on verse rows// Block text selection only when Shift (or Ctrl+Shift) is pressed inside verse rows
+document.addEventListener("selectstart", (e) => {
+  if (e.shiftKey && e.target.closest("tr[id^='verse-']")) {
+    e.preventDefault();
+  }
+});
 
 
-document.addEventListener('click', function(e) {
-  const vlink = e.target.closest('.vlink');
+
+document.addEventListener("click", function(e) {
+  const vlink = e.target.closest(".vlink");
   const row = e.target.closest("tr[id^='verse-']");
-	const inputField = document.getElementById('verseInput');
-	console.log(e.target);
-	console.log("ROW:", row);
-	 console.log("DOCUMENT CLICK WORKS");
-	
+  const inputField = document.getElementById("verseInput");
+
   if (!inputField) return;
 
   let verseNum = null;
 
   if (vlink) {
-    verseNum = parseInt(vlink.getAttribute('href').split('#verse-')[1], 10);
-	  e.preventDefault();
-	  allowAutoScroll = true; // ✅ clicking a link should scroll
-scrollMode = allowAutoScroll ? 'center' : null; // ✅ normal click centers, ctrl/shift disables
-	  
+    verseNum = parseInt(vlink.getAttribute("href").split("#verse-")[1], 10);
+    e.preventDefault();
+    allowAutoScroll = true;
+    scrollMode = allowAutoScroll ? "center" : null;
   } else if (row) {
-	  verseNum = parseInt(row.id.replace('verse-', ''), 10);
-	  allowAutoScroll = !(e.ctrlKey || e.shiftKey);
-	  scrollMode = allowAutoScroll ? 'center' : null; // ✅ normal click centers, ctrl/shift disables
+    verseNum = parseInt(row.id.replace("verse-", ""), 10);
+    allowAutoScroll = !(e.ctrlKey || e.shiftKey);
+    scrollMode = allowAutoScroll ? "center" : null;
   }
 
   if (verseNum === null) return;
@@ -251,7 +254,7 @@ scrollMode = allowAutoScroll ? 'center' : null; // ✅ normal click centers, ctr
       selectedVerses.push(verseNum);
     }
   } else if (e.shiftKey && lastClickedVerse !== null) {
-    // Select range
+    // Select range (works for Shift alone or Ctrl+Shift)
     const start = Math.min(lastClickedVerse, verseNum);
     const end = Math.max(lastClickedVerse, verseNum);
     for (let i = start; i <= end; i++) {
@@ -262,21 +265,19 @@ scrollMode = allowAutoScroll ? 'center' : null; // ✅ normal click centers, ctr
     selectedVerses = [verseNum];
   }
 
-	  lastClickedVerse = verseNum;
-	inputField.value = selectedVerses.join(',');
-	
-	
+  lastClickedVerse = verseNum;
+  inputField.value = selectedVerses.join(",");
+
   applyVerseHighlight(selectedVerses);
-	refreshHeaderDisplay();
+  refreshHeaderDisplay();
 
-
-	if (allowAutoScroll && scrollMode) {
-    const rowToScroll = document.getElementById('verse-' + verseNum);
+  if (allowAutoScroll && scrollMode) {
+    const rowToScroll = document.getElementById("verse-" + verseNum);
     if (rowToScroll) {
       rowToScroll.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'nearest'
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
       });
     }
   }

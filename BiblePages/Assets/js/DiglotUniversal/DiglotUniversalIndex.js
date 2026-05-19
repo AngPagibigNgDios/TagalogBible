@@ -346,7 +346,7 @@ class DiglotPostButton extends HTMLElement {
       </div>
     </a>    <a href="http://philnavs.org">
       <div class="OtherLinks">
-        <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
+        <span class="tr5" style="display:inline;">The Free Bible Online is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
         <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>  </div></div>`;

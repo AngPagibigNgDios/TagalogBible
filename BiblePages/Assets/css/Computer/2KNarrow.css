@@ -1,5 +1,5 @@
 body {
-  font-size: 1em;
+  font-size: 1.3em;
   overflow-x: hidden;
   ;
 }
@@ -1538,7 +1538,6 @@ a.clink:visited {
 
 
 
-
 /*spacerawayfrommenubarito*/
 
 .bible-container {
@@ -1546,7 +1545,8 @@ a.clink:visited {
   width: 100%;
   height: auto;
   margin-bottom: 100px;
-
+        margin-left: 0 !important;
+        margin-right: 0 !important;
   left: 0;
 }
 

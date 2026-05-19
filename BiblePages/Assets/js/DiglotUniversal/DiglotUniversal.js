@@ -535,7 +535,7 @@ class JoinerDiglotPostA extends HTMLElement {
 
     <a href="http://philnavs.org">
       <div class="OtherLinks philnavsflex">
-        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr5 philsflex" style="display:inline;">The Free Bible Online is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
         <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
@@ -641,7 +641,7 @@ class JoinerDiglotPostB extends HTMLElement {
 
     <a href="http://philnavs.org">
       <div class="OtherLinks philnavsflex">
-        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr5 philsflex" style="display:inline;">The Free Bible Online is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
         <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
@@ -1124,7 +1124,7 @@ class JoinerDiglotPostAIndex extends HTMLElement {
 
     <a href="http://philnavs.org">
       <div class="OtherLinks philnavsflex">
-        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr5 philsflex" style="display:inline;">The Free Bible Online is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
         <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
@@ -1228,7 +1228,7 @@ class JoinerDiglotPostBIndex extends HTMLElement {
 
     <a href="http://philnavs.org">
       <div class="OtherLinks philnavsflex">
-        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr5 philsflex" style="display:inline;">The Free Bible Online is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
         <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
