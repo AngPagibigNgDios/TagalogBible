@@ -42,7 +42,8 @@ a.clink:visited {
 }
 
 
-
+.h3menufocused {margin-top:.5% !important; margin-bottom:.5% !important; }
+.menufocusedspacer{margin-bottom:7% !important;}
 
 /*spacerawayfrommenubarito*/
 .bible-container {
@@ -1656,3 +1657,6 @@ a.clink:visited {
   padding-bottom: 5%;
   padding-top: 5%;
 }
+
+
+

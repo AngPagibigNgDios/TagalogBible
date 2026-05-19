@@ -40,7 +40,8 @@ a.clink:visited {
 }
 
 
-
+.h3menufocused {margin-top:.5% !important; margin-bottom:.5% !important; }
+.menufocusedspacer{margin-bottom:7% !important;}
 .verseLinks,
 .chapterLinks {
   flex-wrap: wrap;
@@ -1515,9 +1516,11 @@ a.clink:visited {
   font-size: 1.2em;
   height: 1.5em;
 
-  margin-top: 4%;
+
 
 }
+
+.spacerforinput {height:5%; margin-top: 2%;}
 
 #searchResults {
   width: 100%;

@@ -186,7 +186,7 @@ class DiglotMenuFocused extends HTMLElement {
                      <div id="plaincoloronly" style="width: 100% !important; height:auto !important;">
                         <div class="uploadholder3">
                            <div class="BackgroundImageFlex">
-                              <h3>WEBSITE PLAIN BACKGROUND COLOR</h3>
+                                 <h3 class="h3menufocused">WEBSITE PLAIN BACKGROUND COLOR</h3>
                               Click the square to drag and choose color. Click outside and apply.
                            </div>
                            <div id="labelTitleFlex">
@@ -201,18 +201,18 @@ class DiglotMenuFocused extends HTMLElement {
                      </div>
                      <div id="plainimageonly" style="width: 100% !important; height:auto !important; flex-direction:column !important;">
                         <div class="BackgroundImageFlex">
-                           <h3>WEBSITE BACKGROUND IMAGE</h3>
+                           <h3 class="h3menufocused menufocusedspacer">WEBSITE BACKGROUND IMAGE</h3>
                         </div>
-                        <div class="uploadholder"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+                        <div class="uploadholder menufocusedspacer"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
                            <div id="labelTitleFlex"  style="width: 100% !important;">
                               <label id="labelTitle">( 1 ) Upload Image:</label>
                            </div>
-                           <div id="bgUploadFlex"  style="width: 100% !important;">
+                           <div id="bgUploadFlex removerofmargin"  style="width: 100% !important;">
                               <input type="file" id="bgUpload" accept="image/*">
                            </div>
                         </div>
-                        <br/><br/>
-                        <div class="uploadholder"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
+                      
+                        <div class="uploadholder menufocusedspacer"  style="width: 100% !important; height:auto !important; flex-direction:column !important;">
                            <div id="labelTitleFlex"  style="width: 100% !important;">
                               <label id="labelTitle">( 2 ) Layout Style:</label>
                            </div>
@@ -224,8 +224,8 @@ class DiglotMenuFocused extends HTMLElement {
                               </select>
                            </div>
                         </div>
-                        <br/><br/>
-                        <div class="uploadholder2">
+           
+                        <div class="uploadholder2 menufocusedspacer">
                            <div id="applyImageThemFlex">
                               <div class="overridebutton" onclick="applyImageTheme()" id="buttonclick">Apply Image</div>
                            </div>

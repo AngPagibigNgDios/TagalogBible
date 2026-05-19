@@ -534,9 +534,9 @@ class JoinerDiglotPostA extends HTMLElement {
     </a>
 
     <a href="http://philnavs.org">
-      <div class="OtherLinks">
-        <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
-        <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
+      <div class="OtherLinks philnavsflex">
+        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
 
@@ -640,9 +640,9 @@ class JoinerDiglotPostB extends HTMLElement {
     </a>
 
     <a href="http://philnavs.org">
-      <div class="OtherLinks">
-        <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
-        <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
+      <div class="OtherLinks philnavsflex">
+        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
 
@@ -787,6 +787,7 @@ class DiglotMenu extends HTMLElement {
             <a href="../NewTestament/64-3rd-john.html"><div class="BMONT3john div3john"><span class="english englishLabel">3 John</span><br/><span class="tagalogleft tagalogLabel">3 Juan</span></div></a>
             <a href="../NewTestament/65-jude.html"><div class="BMONTjude divjude"><span class="english englishLabel">Jude</span><br/><span class="tagalogleft tagalogLabel">Judas</span></div></a>
             <a href="../NewTestament/66-revelation.html"><div class="BMONTrevelation divrevelation"><span class="english englishLabel">Revelation</span><br/><span class="tagalogleft tagalogLabel">Pahayag</span></div></a>
+            
       
 </div>
 <br>
@@ -1122,9 +1123,9 @@ class JoinerDiglotPostAIndex extends HTMLElement {
     </a>
 
     <a href="http://philnavs.org">
-      <div class="OtherLinks">
-        <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
-        <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
+      <div class="OtherLinks philnavsflex">
+        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
 
@@ -1226,9 +1227,9 @@ class JoinerDiglotPostBIndex extends HTMLElement {
     </a>
 
     <a href="http://philnavs.org">
-      <div class="OtherLinks">
-        <span class="tr5" style="display:inline;">This website is</span><br /><span class="tr5" style="display:inLine;">a ministry of the </span><br><span style="display:inLine;" class="navigatorslink">NAVIGATORS</span><br>
-        <span class="tr8" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
+      <div class="OtherLinks philnavsflex">
+        <span class="tr5 philsflex" style="display:inline;">This website is </span><span class="tr5 philsflex" style="display:inLine;">a ministry of the </span><span style="display:inLine;" class="navigatorslink philsflex">NAVIGATORS</span>
+        <span class="tr8 philsflex" style="color:maroon; text-adivgn:center !important;">PhilNavs.Org</span>
       </div>
     </a>
 
@@ -1329,49 +1330,41 @@ class DiglotSearchBar extends HTMLElement {
   
       <div id="modulesearch">
         <input type="text" id="searchBox" placeholder="Search Bible and Press Enter.">
-        <button id="searchButton" onclick="submitData()">CLICK HERE OR PRESS ENTER</button>
-        <div style="opacity:.1">PRAY.</div>
+             <div style="opacity:.1">PRAY.</div>
       </div>
     `;
 
-    const inputSearchBox = this.querySelector("#searchBox");
-       const divSearchResults = document.getElementById("searchResults");
-    const searchButton = this.querySelector("#searchButton");
+    
+    
 
-    // Shared function for both Enter and button click
-   
-        searchButton.addEventListener("click", function() {
-  // Create a synthetic "Enter" keypress event
-  var enterEvent = new KeyboardEvent("keypress", {
-    key: "Enter",
-    code: "Enter",
-    keyCode: 13,
-    which: 13,
-    bubbles: true
-  });
-  inputSearchBox.dispatchEvent(enterEvent);
-        });
+  const inputSearchBox = document.querySelector("#searchBox");
+  const divSearchResults = document.getElementById("searchResults");
+  const searchButton = document.querySelector("#searchButton");
 
-    // Enter key triggers the same function
-    inputSearchBox.addEventListener("keydown", function(event) {
-      if (event.key === "Enter") {
-          submitData();
-      }
+  // Shared function
+  function submitData() {
+    // Do your search logic here (AJAX, filtering, etc.)
+    console.log("Search triggered:", inputSearchBox.value);
+
+    // Scroll results into view
+    divSearchResults.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
     });
+  }
 
-    // Button click also triggers the same function
-    searchButton.addEventListener("click", submitData);
+  // Enter key triggers submitData
+  inputSearchBox.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      submitData();
+    }
+  });
+
+  // Button click also triggers submitData
+  searchButton.addEventListener("click", submitData);
 
 
     
-     function submitData() {
-      // Do your search logic here (AJAX, filtering, etc.)
-      // Then scroll results into view
-      divSearchResults.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
 
   }
 }
